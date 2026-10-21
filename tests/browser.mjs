@@ -24,12 +24,12 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
     assert.equal(await page.locator('#book-title').innerText(),load('data/books.json').books[0].title);
     result.coverLoaded=await page.locator('#cover').evaluate(e=>e.complete&&e.naturalWidth>0);
-    assert.ok((await page.locator('article:not([hidden])').innerText()).length>2000);check('book, cover, original Markdown and subpath assets');
+    assert.ok((await page.locator('article:not([hidden])').innerText()).length>2000);check('book, original Markdown and subpath assets');
     const duration=await page.locator('audio').evaluate(a=>a.duration);assert.ok(duration>300);check('chapter 1 metadata',{duration});
     await page.getByRole('button',{name:'播放',exact:true}).click();
     await page.waitForFunction(()=>document.querySelector('audio').currentTime>1,{},{timeout:45000});check('actual playback time advances');
     await page.getByRole('button',{name:'暫停',exact:true}).click();const paused=await page.locator('audio').evaluate(a=>({paused:a.paused,time:a.currentTime}));assert.ok(paused.paused);check('pause');
-    await page.getByLabel('播放速度',{exact:true}).selectOption('1.5');assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('playback rate 1.5x');
+    await page.getByRole('button',{name:'1.5 倍',exact:true}).click();assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('playback rate 1.5x');
     // Real pointer interaction with the visible range control, not just assigning currentTime.
     const box=await page.getByLabel('播放進度',{exact:true}).boundingBox();assert.ok(box);
     await page.mouse.move(box.x+box.width*.08,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width*.55,box.y+box.height/2,{steps:8});await page.mouse.up();

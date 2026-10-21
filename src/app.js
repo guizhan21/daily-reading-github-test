@@ -1,10 +1,11 @@
 const $ = id => document.getElementById(id);
 const audio = $('audio'), storageKey = 'daily-reading-github:v1';
-$('cover').addEventListener('error',()=>{$('cover').hidden=true;$('description').textContent='公開測試版 · 兩章原音訊已就緒，既有封面等待取回';});
+$('cover').addEventListener('error',()=>{$('cover').hidden=true;$('cover-pending').hidden=false;$('description').textContent='公開測試版 · 兩章原音訊已就緒，既有封面等待取回';});
 let state = {schema:1, books:{}}, catalog, book, index=0, loading=false, lastSave=0;
 try { const saved=JSON.parse(localStorage.getItem(storageKey)); if(saved?.schema===1 && saved.books && typeof saved.books==='object') state=saved; } catch { /* Storage may be unavailable; playback still works. */ }
 const finite = (n, fallback=0) => Number.isFinite(n) && n>=0 ? n : fallback;
 const time = n => `${Math.floor(finite(n)/60)}:${String(Math.floor(finite(n)%60)).padStart(2,'0')}`;
+function rateUI(){for(const button of $('rate').children)button.setAttribute('aria-pressed',String(Number(button.dataset.rate)===audio.playbackRate));}
 function currentState(){return state.books[book.bookId] ||= {chapters:{}};}
 function persist(){
   if(!book || loading || !audio.readyState) return;
@@ -29,7 +30,7 @@ function selectChapter(next, autoplay=false){
   $('previous').disabled=index===0;$('next').disabled=index===book.chapters.length-1;
   audio.onloadedmetadata=()=>{
     const max=finite(audio.duration);audio.currentTime=Math.min(finite(saved?.positionSec),Math.max(0,max-.1));
-    const rate=[.75,1,1.25,1.5,2].includes(saved?.rate)?saved.rate:1;audio.playbackRate=rate;$('rate').value=String(rate);
+    const rate=[.75,1,1.25,1.5,2].includes(saved?.rate)?saved.rate:1;audio.playbackRate=rate;rateUI();
     loading=false;display();$('status').textContent='已就緒 · 進度儲存在本機';persist();
     if(autoplay)void play();
   };
@@ -38,7 +39,8 @@ function selectChapter(next, autoplay=false){
 }
 function selectBook(id){
   persist();loading=true;book=catalog.books.find(b=>b.bookId===id)||catalog.books[0];
-  $('book-title').textContent=book.title;$('cover').src=book.cover;$('book-select').value=book.bookId;
+  $('book-title').textContent=book.title;$('cover').hidden=false;$('cover-pending').hidden=true;$('cover').src=book.cover;
+  for(const button of $('book-select').children)button.setAttribute('aria-current',String(button.dataset.book===book.bookId));
   $('chapters').replaceChildren(...book.chapters.map((ch,i)=>{const button=document.createElement('button');button.textContent=`${i+1}. ${ch.title}`;button.addEventListener('click',()=>selectChapter(i,false));return button;}));
   const active=state.books[book.bookId]?.activeChapter;
   selectChapter(Math.max(0,book.chapters.findIndex(ch=>ch.chapterId===active)));
@@ -48,8 +50,7 @@ $('previous').addEventListener('click',()=>{if(index>0)selectChapter(index-1,tru
 $('next').addEventListener('click',()=>{if(index<book.chapters.length-1)selectChapter(index+1,true);});
 $('seek').addEventListener('input',()=>{if(!loading&&audio.readyState){audio.currentTime=Number($('seek').value);display();}});
 $('seek').addEventListener('change',persist);
-$('rate').addEventListener('change',()=>{audio.playbackRate=Number($('rate').value);persist();});
-$('book-select').addEventListener('change',()=>selectBook($('book-select').value));
+for(const button of $('rate').children)button.addEventListener('click',()=>{audio.playbackRate=Number(button.dataset.rate);rateUI();persist();});
 audio.addEventListener('timeupdate',()=>{display();if(Date.now()-lastSave>5000)persist();});
 audio.addEventListener('pause',()=>{display();persist();if(!loading)$('status').textContent='已暫停 · 本機進度已保存';});
 audio.addEventListener('play',display);audio.addEventListener('seeked',persist);
@@ -60,6 +61,6 @@ $('export-progress').addEventListener('click',()=>{persist();const link=document
 try{
   const response=await fetch('data/books.json');if(!response.ok)throw Error(`HTTP ${response.status}`);catalog=await response.json();
   if(!catalog.books.length)throw Error('尚無已驗證書籍');
-  $('book-select').replaceChildren(...catalog.books.map(b=>{const option=document.createElement('option');option.value=b.bookId;option.textContent=b.title;return option;}));
+  $('book-select').replaceChildren(...catalog.books.map(b=>{const button=document.createElement('button');button.dataset.book=b.bookId;button.textContent=b.title;button.addEventListener('click',()=>selectBook(b.bookId));return button;}));
   selectBook(catalog.books[0].bookId);
 }catch(e){$('book-title').textContent='書庫未能載入';$('status').textContent=e.message;}

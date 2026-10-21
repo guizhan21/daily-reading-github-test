@@ -24,4 +24,6 @@ for (const file of files) {
   if (buffer.length > 2_000_000) throw Error(`Unexpected large Git file: ${file}`);
   if (!/\.(png|jpe?g|webp)$/i.test(file) && secret.test(buffer.toString('utf8'))) throw Error(`Credential pattern: ${file}`);
 }
+const historical=execFileSync('git',['rev-list','--objects','--all'],{cwd:root,encoding:'utf8'});
+for(const line of historical.split('\n')){const space=line.indexOf(' ');if(space>0&&forbidden.test(line.slice(space+1)))throw Error('Forbidden file in Git history');}
 console.log(`Validated catalog, unchanged Markdown and ${files.length} tracked files; no audio, SQL, backups or secrets.`);
