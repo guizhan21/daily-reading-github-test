@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title><base href="{{BASE}}">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src https://github.com https://release-assets.githubusercontent.com https://objects.githubusercontent.com; connect-src 'self'; object-src 'none'; base-uri 'self'">
+<link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script></head>
+<body><header><a class="brand" href="./">每日讀書<span>GitHub 測試書庫</span></a><a href="https://github.com/guizhan21/daily-reading-github-test">專案與驗收紀錄 ↗</a></header>
+<main><section class="hero"><img id="cover" alt="書籍封面" width="220" height="330"><div><p class="eyebrow">閱讀，然後聽見新的理解。</p><h1 id="book-title">載入書庫…</h1><p id="description">公開測試版 · 兩章原文與原始音訊</p><p class="notice">文字由 ChatGPT、封面由 Image、音訊由 NotebookLM 生成。數字與英文術語仍有待人工核對。本測試不代表相關服務商背書。</p><label>選擇書籍 <select id="book-select" aria-label="選擇書籍"></select></label></div></section>
+<div class="layout"><aside><h2>章節目錄</h2><nav id="chapters" aria-label="章節目錄"></nav><p class="muted">進度只保存在這台裝置的瀏覽器；清除網站資料會一併清除進度。</p><button id="export-progress">匯出本機進度</button></aside><section id="reading" aria-label="章節正文">{{CHAPTERS}}</section></div></main>
+<footer class="player" aria-label="音訊播放器"><div class="now"><strong id="now-title">選擇章節</strong><span id="status" role="status">準備載入</span></div>
+<div class="controls"><button id="previous" aria-label="上一章">上一章</button><button id="play" aria-label="播放">播放</button><button id="next" aria-label="下一章">下一章</button><label>速度 <select id="rate" aria-label="播放速度"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label></div>
+<div class="timeline"><output id="current">0:00</output><input id="seek" type="range" aria-label="播放進度" min="0" max="0" value="0" step="0.1"><output id="duration">0:00</output></div><audio id="audio" preload="metadata"></audio></footer>
+</body></html>

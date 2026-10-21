@@ -1,0 +1,21 @@
+{
+  "name": "daily-reading-github-test",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/unit.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "release:audio": "node scripts/publish-audio.mjs",
+    "export": "node scripts/export.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1"
+  },
+  "devDependencies": { "playwright": "1.64.1" }
+}

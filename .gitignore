@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.cache/
+.tmp/
+test-results/
+incoming/
+.env*
+*.m4a
+*.aac
+*.mp3
+*.mp4
+*.wav
+*.db
+*.sqlite*
+*.zip
+*.pem
+*.key

@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {audioURL,safeRelative,validate,load} from '../scripts/catalog.mjs';
+const repo='guizhan21/daily-reading-github-test';
+test('canonical release URL accepted',()=>assert.ok(audioURL(`https://github.com/${repo}/releases/download/audio-v1/ch1.m4a`,repo)));
+test('expiring CDN URL rejected',()=>assert.throws(()=>audioURL('https://release-assets.githubusercontent.com/x?signature=abc',repo)));
+test('another repository rejected',()=>assert.throws(()=>audioURL('https://github.com/other/repo/releases/download/v1/ch1.m4a',repo)));
+test('credentials/query rejected',()=>assert.throws(()=>audioURL(`https://github.com/${repo}/releases/download/v1/ch1.m4a?token=abc`,repo)));
+test('path traversal and absolute paths rejected',()=>{for(const p of ['../secret','/secret','C:/secret','a/../b','a//b'])assert.throws(()=>safeRelative(p));});
+test('catalog valid',()=>assert.ok(validate(load('data/books.json'),load('data/site.json'))));
+test('duplicate books rejected',()=>{const c=structuredClone(load('data/books.json'));if(c.books.length){c.books.push(c.books[0]);assert.throws(()=>validate(c,load('data/site.json')));}});
+test('duplicate chapters rejected',()=>{const c=structuredClone(load('data/books.json'));if(c.books.length){c.books[0].chapters.push(c.books[0].chapters[0]);assert.throws(()=>validate(c,load('data/site.json')));}});
+test('wrong base path rejected',()=>assert.throws(()=>validate(load('data/books.json'),{repository:repo,basePath:'/'})));
