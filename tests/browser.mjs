@@ -15,11 +15,13 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   let browser;
   try{
     browser=await engine.launch({headless:true,...options});result.version=browser.version();
-    const context=await browser.newContext({viewport:{width:1280,height:900}}),page=await context.newPage();
-    page.on('pageerror',e=>result.errors.push(e.message));
-    page.on('console',m=>{if(m.type()==='error')result.errors.push(m.text());});
-    page.on('download',d=>result.downloads.push(d.suggestedFilename()));
-    page.on('response',async response=>{if(/release-assets\.githubusercontent\.com|github\.com\/.*\/releases\/download\//.test(response.url())){const h=await response.allHeaders();result.mediaResponses.push({origin:new URL(response.url()).origin,status:response.status(),requestRange:response.request().headers()['range']||null,contentType:h['content-type'],contentRange:h['content-range']||null,acceptRanges:h['accept-ranges']||null,disposition:h['content-disposition']||null});}});
+    const context=await browser.newContext({viewport:{width:1280,height:900}});let page=await context.newPage();
+    function observe(p){
+      p.on('pageerror',e=>result.errors.push(e.message));
+      p.on('console',m=>{if(m.type()==='error')result.errors.push(m.text());});
+      p.on('download',d=>result.downloads.push(d.suggestedFilename()));
+      p.on('response',async response=>{try{if(/release-assets\.githubusercontent\.com|github\.com\/.*\/releases\/download\//.test(response.url())){const h=await response.allHeaders();result.mediaResponses.push({origin:new URL(response.url()).origin,status:response.status(),requestRange:response.request().headers()['range']||null,contentType:h['content-type'],contentRange:h['content-range']||null,acceptRanges:h['accept-ranges']||null,disposition:h['content-disposition']||null});}}catch{/* A deliberately closed page can cancel header inspection. */}});
+    }observe(page);
     await page.goto(site,{waitUntil:'domcontentloaded',timeout:60000});
     await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
     assert.equal(await page.locator('#book-title').innerText(),load('data/books.json').books[0].title);
@@ -38,10 +40,10 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.getByRole('button',{name:'播放',exact:true}).click();await page.waitForFunction(t=>document.querySelector('audio').currentTime>t+1,target,{timeout:45000});check('playback after middle seek');
     await page.getByRole('button',{name:'暫停',exact:true}).click();const saved=await page.locator('audio').evaluate(a=>a.currentTime);
     await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
-    await page.waitForFunction(t=>Math.abs(document.querySelector('audio').currentTime-t)<2,saved,{timeout:30000});assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('refresh restores position and speed');
-    // A new tab in the same browser context represents closing/reopening the page on this device.
-    const reopened=await context.newPage();await reopened.bringToFront();await reopened.goto(site,{waitUntil:'domcontentloaded'});
-    await reopened.waitForFunction(t=>{const a=document.querySelector('audio');return a?.readyState>=1&&Math.abs(a.currentTime-t)<2;},saved,{timeout:60000});check('reopen restores same-device progress');await reopened.close();
+    await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-t)<2;},saved,{timeout:30000});assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('refresh restores position and speed');
+    // Close the original page, then reopen within the same device's storage context.
+    await page.close();page=await context.newPage();observe(page);await page.bringToFront();await page.goto(site,{waitUntil:'domcontentloaded'});
+    await page.waitForFunction(t=>{const a=document.querySelector('audio');return a?.readyState>=1&&!a.seeking&&Math.abs(a.currentTime-t)<2;},saved,{timeout:60000});check('close/reopen restores same-device progress');
     await page.getByRole('button',{name:'下一章',exact:true}).click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return a?.duration>380&&a.currentTime>1;},{},{timeout:60000});check('chapter 2 switch and actual playback');
     await page.getByRole('button',{name:'暫停',exact:true}).click();
     await page.getByLabel('播放進度',{exact:true}).focus();await page.keyboard.press('Home');await page.keyboard.press('ArrowRight');

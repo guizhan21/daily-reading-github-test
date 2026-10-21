@@ -1,9 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import React from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import {renderMarkdown} from './render.mjs';
 import {root, load, validate, safeRelative} from './catalog.mjs';
 const config = load('data/site.json'), catalog = load('data/books.json');
 validate(catalog, config);
@@ -20,7 +17,7 @@ const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<'
 let body = '';
 for (const book of catalog.books) for (const ch of book.chapters) {
   const source = fs.readFileSync(path.join(root, 'public', safeRelative(ch.markdown)), 'utf8');
-  body += `<article class="prose" id="text-${escape(ch.chapterId)}" hidden>${renderToStaticMarkup(React.createElement(Markdown, {remarkPlugins:[remarkGfm]}, source))}</article>`;
+  body += `<article class="prose" id="text-${escape(ch.chapterId)}" hidden>${renderMarkdown(source)}</article>`;
 }
 let html = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
 html = html.replaceAll('{{BASE}}', escape(config.basePath)).replace('{{TITLE}}', escape(config.title)).replace('{{CHAPTERS}}', body);
