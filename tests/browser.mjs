@@ -38,12 +38,20 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.waitForFunction(()=>{const a=document.querySelector('audio');return a.currentTime>150&&!a.seeking;},{},{timeout:45000});
     const target=await page.locator('audio').evaluate(a=>a.currentTime);check('pointer seek into middle',{positionSec:target});
     await page.getByRole('button',{name:'播放',exact:true}).click();await page.waitForFunction(t=>document.querySelector('audio').currentTime>t+1,target,{timeout:45000});check('playback after middle seek');
-    await page.getByRole('button',{name:'暫停',exact:true}).click();const saved=await page.locator('audio').evaluate(a=>a.currentTime);
+    await page.getByRole('button',{name:'暫停',exact:true}).click();let saved=await page.locator('audio').evaluate(a=>a.currentTime);
     await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
-    await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-t)<2;},saved,{timeout:30000});assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('refresh restores position and speed');
+    assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);
+    // Some native media engines finish a restored seek only after the user presses Play.
+    // Verify actual resumed playback near the saved point, rather than paused decoder internals.
+    await page.getByRole('button',{name:'播放',exact:true}).click();
+    await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&a.currentTime>t+.5&&a.currentTime<t+15;},saved,{timeout:45000});
+    await page.getByRole('button',{name:'暫停',exact:true}).click();saved=await page.locator('audio').evaluate(a=>a.currentTime);check('refresh restores position, speed and actual playback');
     // Close the original page, then reopen within the same device's storage context.
     await page.close();page=await context.newPage();observe(page);await page.bringToFront();await page.goto(site,{waitUntil:'domcontentloaded'});
-    await page.waitForFunction(t=>{const a=document.querySelector('audio');return a?.readyState>=1&&!a.seeking&&Math.abs(a.currentTime-t)<2;},saved,{timeout:60000});check('close/reopen restores same-device progress');
+    await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
+    await page.getByRole('button',{name:'播放',exact:true}).click();
+    await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&a.currentTime>t+.5&&a.currentTime<t+15;},saved,{timeout:45000});
+    await page.getByRole('button',{name:'暫停',exact:true}).click();check('close/reopen restores same-device progress and actual playback');
     await page.getByRole('button',{name:'下一章',exact:true}).click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return a?.duration>380&&a.currentTime>1;},{},{timeout:60000});check('chapter 2 switch and actual playback');
     await page.getByRole('button',{name:'暫停',exact:true}).click();
     await page.getByLabel('播放進度',{exact:true}).focus();await page.keyboard.press('Home');await page.keyboard.press('ArrowRight');
