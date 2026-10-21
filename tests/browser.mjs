@@ -49,8 +49,12 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.getByLabel('播放進度',{exact:true}).focus();await page.keyboard.press('Home');await page.keyboard.press('ArrowRight');
     await page.waitForFunction(()=>document.querySelector('audio').currentTime<2,{},{timeout:20000});check('intentional backward seek');
     await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.duration>380,{},{timeout:60000});check('selected chapter persists on refresh');
-    // caret:initial avoids Playwright's injected caret-hiding inline style under WebKit CSP.
-    await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(output,`${name}-mobile.png`),caret:'initial'});
+    await page.setViewportSize({width:390,height:844});
+    // Playwright WebKit screenshot preparation inserts an inline `body {}` style
+    // (syncAnimations), which the site's CSP correctly refuses. Keep the policy;
+    // run the actual layout check below and capture Chrome/Firefox screenshots.
+    if(name!=='webkit')await page.screenshot({path:path.join(output,`${name}-mobile.png`),caret:'initial'});
+    else result.screenshot='Not captured: Playwright WebKit syncAnimations style conflicts with CSP; responsive geometry is tested.';
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));check('390px responsive layout (not physical iPhone)');
     assert.equal(result.downloads.length,0);check('audio element does not trigger attachment download');
     assert.equal(result.errors.filter(e=>!e.includes('404')).length,0);check('no page, CSP or CORS errors');
