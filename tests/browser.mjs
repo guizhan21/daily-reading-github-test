@@ -40,14 +40,15 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
     await page.waitForFunction(t=>Math.abs(document.querySelector('audio').currentTime-t)<2,saved,{timeout:30000});assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('refresh restores position and speed');
     // A new tab in the same browser context represents closing/reopening the page on this device.
-    const reopened=await context.newPage();await reopened.goto(site,{waitUntil:'domcontentloaded'});
+    const reopened=await context.newPage();await reopened.bringToFront();await reopened.goto(site,{waitUntil:'domcontentloaded'});
     await reopened.waitForFunction(t=>{const a=document.querySelector('audio');return a?.readyState>=1&&Math.abs(a.currentTime-t)<2;},saved,{timeout:60000});check('reopen restores same-device progress');await reopened.close();
     await page.getByRole('button',{name:'下一章',exact:true}).click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return a?.duration>380&&a.currentTime>1;},{},{timeout:60000});check('chapter 2 switch and actual playback');
     await page.getByRole('button',{name:'暫停',exact:true}).click();
     await page.getByLabel('播放進度',{exact:true}).focus();await page.keyboard.press('Home');await page.keyboard.press('ArrowRight');
     await page.waitForFunction(()=>document.querySelector('audio').currentTime<2,{},{timeout:20000});check('intentional backward seek');
     await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.duration>380,{},{timeout:60000});check('selected chapter persists on refresh');
-    await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(output,`${name}-mobile.png`)});
+    // caret:initial avoids Playwright's injected caret-hiding inline style under WebKit CSP.
+    await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(output,`${name}-mobile.png`),caret:'initial'});
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));check('390px responsive layout (not physical iPhone)');
     assert.equal(result.downloads.length,0);check('audio element does not trigger attachment download');
     assert.equal(result.errors.filter(e=>!e.includes('404')).length,0);check('no page, CSP or CORS errors');
