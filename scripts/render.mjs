@@ -8,5 +8,7 @@ export function renderMarkdown(source){
   return renderToStaticMarkup(React.createElement(Markdown,{
     remarkPlugins:[remarkGfm],
     urlTransform:value=>defaultUrlTransform(value).split(encodeURI('；查閱日期：'))[0].split('；查閱日期：')[0],
+    skipHtml:true,
+    components:{a:props=>React.createElement('a',{...props,target:'_blank',rel:'noopener noreferrer'}),img:()=>React.createElement('em',null,'〔外部圖片不載入〕')},
   },source));
 }

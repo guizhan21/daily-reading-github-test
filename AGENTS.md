@@ -1,9 +1,9 @@
-# Isolated public GitHub experiment
-
-This directory is an independent repository authorized by the 2026-10-21 user request.
-Only the reviewed original book excerpt, generated cover and two original audio assets
-may be published. Audio belongs in Releases, never Git or the Pages artifact.
-Do not change the original private repository, production deployment, its storage,
-automation, access controls or database. No runtime servers, secrets or external proxies.
-Local storage is device-local and must never be described as cross-device sync.
-All local files, caches and test profiles remain under D:\每日讀書.
+# Daily Reading — public library migration
+The user authorized full migration on 2026-10-21. Develop on the migration branch.
+Keep the original private application and the verified baseline until acceptance.
+Only reviewed original books may be published. Preserve book/chapter IDs and audio bytes.
+Audio belongs in one Release per book, never Git or the Pages artifact.
+No runtime servers, database dependencies, accounts, secrets or external proxies.
+Progress is device-local. All local files and test profiles stay inside the parent project.
+Do not delete source data or circumvent blocked cleanup. Retain old books and assets.
+Deploy main only after complete migration tests pass.

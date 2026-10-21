@@ -1,0 +1,4 @@
+import {spawn} from 'node:child_process';import {setTimeout as delay} from 'node:timers/promises';import {root,load} from '../scripts/catalog.mjs';
+const port=process.env.PORT||'4173',url='http://127.0.0.1:'+port+load('data/site.json').basePath;
+const server=spawn(process.execPath,['scripts/serve.mjs'],{cwd:root,env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe'],windowsHide:true});
+try{let ready=false;for(let n=0;n<50;n++){try{const r=await fetch(url);if(r.ok){ready=true;break;}}catch{}await delay(100);}if(!ready)throw Error('Static server did not start');const test=spawn(process.execPath,['tests/browser.mjs'],{cwd:root,env:{...process.env,SITE_URL:url},stdio:'inherit',windowsHide:true});process.exitCode=await new Promise(resolve=>test.on('exit',code=>resolve(code??1)));}finally{server.kill();}

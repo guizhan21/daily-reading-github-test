@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';
+export function inside(workspace,value){const p=path.resolve(workspace,value),rel=path.relative(workspace,p);if(rel==='..'||rel.startsWith('..'+path.sep)||path.isAbsolute(rel))throw Error('Outside authorized workspace');let current=workspace;for(const part of rel.split(path.sep).filter(Boolean)){current=path.join(current,part);if(fs.existsSync(current)&&fs.realpathSync(current)!==current)throw Error('Linked workspace path');}return p;}
+export function localEnvironment(workspace){const temp=inside(workspace,'.tmp'),cache=inside(workspace,'.cache/npm');fs.mkdirSync(temp,{recursive:true});fs.mkdirSync(cache,{recursive:true});return {...process.env,TEMP:temp,TMP:temp,TMPDIR:temp,npm_config_cache:cache};}

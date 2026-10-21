@@ -16,14 +16,14 @@ export function audioURL(url, repository) {
 export function validate(catalog, config) {
   if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.books)) throw Error('Invalid catalog');
   if (!/^[\w.-]+\/[\w.-]+$/.test(config.repository) || config.basePath !== `/${config.repository.split('/')[1]}/`) throw Error('Invalid Pages basePath');
-  const ids = new Set();
+  const ids = new Set(),chapterIds=new Set();
   for (const book of catalog.books) {
-    if (!book.bookId || ids.has(book.bookId) || typeof book.title !== 'string' || !Array.isArray(book.chapters) || !book.chapters.length) throw Error('Invalid/duplicate book');
+    if (!/^[A-Za-z0-9][A-Za-z0-9_-]{0,100}$/.test(book.bookId) || ids.has(book.bookId) || typeof book.title !== 'string' || !Array.isArray(book.chapters) || !book.chapters.length) throw Error('Invalid/duplicate book');
     ids.add(book.bookId); safeRelative(book.cover);
     const chapters = new Set();
     for (const ch of book.chapters) {
-      if (!ch.chapterId || chapters.has(ch.chapterId) || typeof ch.title !== 'string' || !Number.isFinite(ch.durationSec) || ch.durationSec <= 0 || !Number.isSafeInteger(ch.bytes) || ch.bytes <= 0 || !/^[a-f0-9]{64}$/.test(ch.sha256)) throw Error('Invalid/duplicate chapter');
-      chapters.add(ch.chapterId); safeRelative(ch.markdown); audioURL(ch.audioUrl, config.repository);
+      if (!/^[A-Za-z0-9][A-Za-z0-9_-]{0,120}$/.test(ch.chapterId) || chapters.has(ch.chapterId) || chapterIds.has(ch.chapterId) || typeof ch.title !== 'string' || !Number.isFinite(ch.durationSec) || ch.durationSec <= 0 || !Number.isSafeInteger(ch.bytes) || ch.bytes <= 0 || !/^[a-f0-9]{64}$/.test(ch.sha256)||!/^[a-f0-9]{64}$/.test(ch.textSha256)) throw Error('Invalid/duplicate chapter');
+      chapters.add(ch.chapterId);chapterIds.add(ch.chapterId); safeRelative(ch.markdown); audioURL(ch.audioUrl, config.repository);
     }
   }
   return true;

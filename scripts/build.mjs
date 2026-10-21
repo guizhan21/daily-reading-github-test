@@ -19,6 +19,10 @@ for (const book of catalog.books) for (const ch of book.chapters) {
   const source = fs.readFileSync(path.join(root, 'public', safeRelative(ch.markdown)), 'utf8');
   body += `<article class="prose" id="text-${escape(ch.chapterId)}" hidden>${renderMarkdown(source)}</article>`;
 }
+for (const book of catalog.books) if(book.references){
+ const source=fs.readFileSync(path.join(root,'public',safeRelative(book.references)),'utf8');
+ body+=`<article class="prose" id="text-references-${escape(book.bookId)}" hidden>${renderMarkdown(source)}</article>`;
+}
 let html = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
 html = html.replaceAll('{{BASE}}', escape(config.basePath)).replace('{{TITLE}}', escape(config.title)).replace('{{CHAPTERS}}', body);
 fs.writeFileSync(path.join(dist,'index.html'), html);

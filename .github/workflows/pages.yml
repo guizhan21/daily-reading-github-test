@@ -1,12 +1,12 @@
 name: Test and deploy Pages
 on:
   push:
-    branches: [main]
+    branches: [main, 'migration/**']
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   build:
@@ -24,12 +24,49 @@ jobs:
       - run: npm test
       - run: node scripts/probe.mjs
       - run: npm run build
+      - run: npm run acceptance
+        if: github.ref == 'refs/heads/main'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: migration-build-and-http
+          path: |
+            dist
+            test-results/http.json
       - uses: actions/configure-pages@v5
+        if: github.ref == 'refs/heads/main'
       - uses: actions/upload-pages-artifact@v4
+        if: github.ref == 'refs/heads/main'
         with:
           path: dist
-  deploy:
+  browser:
     needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, firefox, webkit]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npm run build
+      - name: Test isolated migration before deployment
+        run: node tests/run-local.mjs
+        env:
+          BROWSER: ${{ matrix.browser }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: predeploy-${{ matrix.browser }}
+          path: test-results
+          retention-days: 14
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: [build, browser]
     permissions:
       pages: write
       id-token: write
@@ -38,10 +75,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy
+      - name: Deploy only after all migration checks pass
         id: deployment
         uses: actions/deploy-pages@v4
-  browser:
+  external:
     needs: deploy
     strategy:
       fail-fast: false
@@ -56,7 +93,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npx playwright install --with-deps chromium firefox webkit
-      - name: Test actual public Pages and Release audio
+      - name: Verify actual public website and Release playback
         run: npm run test:browser
         env:
           BROWSER: ${{ matrix.browser }}
@@ -64,6 +101,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playback-${{ matrix.browser }}
+          name: public-playback-${{ matrix.browser }}
           path: test-results
           retention-days: 14

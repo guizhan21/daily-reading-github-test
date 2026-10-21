@@ -4,7 +4,14 @@
     {
       "bookId": "2026-10-21_ai-consultant",
       "title": "讓 AI 真正把事做完",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-21",
+      "description": "接續模型基礎與 RAG，深入工具呼叫、工作流程、Agent 自主性、持久化任務、冪等重試、權限防線和可驗收的持續交付，重點在讓 AI 的執行結果可觀察、可恢復、可控制。\n\n面向知識型 AI 應用與具外部工具能力的任務執行系統，討論通用設計取捨；不聲稱本書已實際部署任何代理、與特定服務的安全效能經過實驗或目前網站已支援全部流程。",
+      "version": 1,
       "cover": "covers/2026-10-21_ai-consultant.jpg",
+      "coverKind": "original-image",
+      "references": "references/2026-10-21_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-21-ai-v1",
       "chapters": [
         {
           "chapterId": "2026-10-21_ai-consultant_ch01",
@@ -25,6 +32,194 @@
           "sha256": "5bd51671860d59cba38acc8ccf71fc1c2855181e3773fe855f1f585aee8b7744",
           "bytes": 12536223,
           "durationSec": 389.4915192743764
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch03",
+          "title": "讓流程記住自己做過什麼：狀態、重試與可恢復執行",
+          "markdown": "chapters/2026-10-21_ai-consultant_ch03.md",
+          "textSha256": "3f6f451906e37b368baf4939af37384cdc106097427d35edf49dbf14b73362ff",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-21-ai-v1/2026-10-21_ai-consultant_ch03-c28a21544e85.m4a",
+          "sha256": "c28a21544e85813617d1878b190c08d6426480f4f0e7857b2d567ce57c8a79e6",
+          "bytes": 11802295,
+          "durationSec": 366.6895238095238
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch04",
+          "title": "自主決策與核准的位置：讓模型選擇，但不讓風險失控",
+          "markdown": "chapters/2026-10-21_ai-consultant_ch04.md",
+          "textSha256": "3c2d0f3d2b4e7ca23fdb0650b85c054b03e491d12a4fd35fdf6fff10c0c13b7f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-21-ai-v1/2026-10-21_ai-consultant_ch04-a329fba374c3.m4a",
+          "sha256": "a329fba374c378530b4e16783f47b6801eeba3860b2933bdd72d63c623b81f01",
+          "bytes": 11426419,
+          "durationSec": 355.0098866213152
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch05",
+          "title": "外部資料不能變成命令：代理系統的安全與權限",
+          "markdown": "chapters/2026-10-21_ai-consultant_ch05.md",
+          "textSha256": "d923af46bdfecf8a2069a387c4fc267b56ba05c47e91c62e65a2145f166f1e72",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-21-ai-v1/2026-10-21_ai-consultant_ch05-d88c5881b3e3.m4a",
+          "sha256": "d88c5881b3e332d86143fe6a68664b244aab29af4829a00a8c8eac336dfe5735",
+          "bytes": 11480206,
+          "durationSec": 356.68172335600906
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch06",
+          "title": "從演示走向可靠交付：評測、追蹤與成本效益",
+          "markdown": "chapters/2026-10-21_ai-consultant_ch06.md",
+          "textSha256": "bdaa1a4610eaeaaa87e8825a4507dd729a7e51822a650b9224ba129ef4bcde04",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-21-ai-v1/2026-10-21_ai-consultant_ch06-42a24346f51d.m4a",
+          "sha256": "42a24346f51d17952827424e42020a9fb5c0b492d359fd7a55e5c30fe7e88b6b",
+          "bytes": 10453427,
+          "durationSec": 324.7775056689342
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-19_ai-consultant",
+      "title": "看懂生成式 AI",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-19",
+      "description": "先區分模型、產品與工具，再理解詞元、注意力、訓練、上下文、檢索與代理，最後建立能用於講課、需求分析與專案驗收的判斷方式。\n\n以自回歸大型語言模型為主，不把文字生成機制外推為所有圖片、聲音或影片模型的唯一原理。",
+      "version": 1,
+      "cover": "covers/2026-10-19_ai-consultant.svg",
+      "coverKind": "original-template",
+      "references": "references/2026-10-19_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-19-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch01",
+          "title": "模型、產品與工具：先分清你正在使用什麼",
+          "markdown": "chapters/2026-10-19_ai-consultant_ch01.md",
+          "textSha256": "6ec9c44db2686964e99a4e533f4694bc75187288bdd24d299db9c35e9caef314",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-ai-consultant-v1/2026-10-19_ai-consultant_ch01-b86d8f6ae01a.m4a",
+          "sha256": "b86d8f6ae01a83c4968a7563e05d233d122af6efb9c106a57df6af7560827fff",
+          "bytes": 11735062,
+          "durationSec": 364.5997278911565
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch02",
+          "title": "文字如何變成計算：詞元、向量與注意力",
+          "markdown": "chapters/2026-10-19_ai-consultant_ch02.md",
+          "textSha256": "f1457028ae6daafd2b1d43ac127a152be9ccea063927229bda367e535a576c23",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-ai-consultant-v1/2026-10-19_ai-consultant_ch02-1d55ca638423.m4a",
+          "sha256": "1d55ca63842392e3941e3c43cb41581735a246d889af6372790b5ae0e365061b",
+          "bytes": 11462277,
+          "durationSec": 356.12444444444446
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch03",
+          "title": "能力如何形成：預訓練、微調與偏好學習",
+          "markdown": "chapters/2026-10-19_ai-consultant_ch03.md",
+          "textSha256": "7e52db0c0c5a0b8e1391ea557cbdc5b9e4a1508392bfc3fc5da48f1f775e7340",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-ai-consultant-v1/2026-10-19_ai-consultant_ch03-7195370b4c9a.m4a",
+          "sha256": "7195370b4c9ab63fcdc33530ec4d2fc88ef691395ad061d01f5112da48f8afd1",
+          "bytes": 12124385,
+          "durationSec": 376.6973242630385
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch04",
+          "title": "回答如何產生：上下文、解碼與推理",
+          "markdown": "chapters/2026-10-19_ai-consultant_ch04.md",
+          "textSha256": "c71d957ff4b6fe5d79990b795ce69681ae192508a87a0f20c182108f65aede2a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-ai-consultant-v1/2026-10-19_ai-consultant_ch04-9fa457f5f0d4.m4a",
+          "sha256": "9fa457f5f0d4722a60762340bd102561080a2680868eef7c8764bce7d5975024",
+          "bytes": 12163978,
+          "durationSec": 377.9279818594104
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch05",
+          "title": "模型如何連接資料與行動：檢索、工具與代理",
+          "markdown": "chapters/2026-10-19_ai-consultant_ch05.md",
+          "textSha256": "bbb735d2e9cf2c3b3473f28b88f733639406df7b201efe1551af9b85f538f5ec",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-ai-consultant-v1/2026-10-19_ai-consultant_ch05-ceea79784c59.m4a",
+          "sha256": "ceea79784c59d0ceb82fb6045c91d377ea661703145a35396b3f4dc3dbc4cdbe",
+          "bytes": 10391422,
+          "durationSec": 322.85024943310657
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch06",
+          "title": "從會回答到可交付：評測、風險與顧問判斷",
+          "markdown": "chapters/2026-10-19_ai-consultant_ch06.md",
+          "textSha256": "63732b324a127997c575fb1932776452199f6c24276bc83636a85180eb7d7cdd",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-ai-consultant-v1/2026-10-19_ai-consultant_ch06-6a9d321e7286.m4a",
+          "sha256": "6a9d321e728602aaa3a9f13050ab4864afc95d3544474aeeb3da518e2bad9474",
+          "bytes": 10724718,
+          "durationSec": 333.2063492063492
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-19_general-knowledge",
+      "title": "科學如何建立可靠知識",
+      "category": "跨領域知識探索",
+      "date": "2026-10-19",
+      "description": "從可受檢驗的解釋出發，學會辨認測量與抽樣偏差、區分相關和因果、讀懂機率與統計，再將多項研究轉成範圍清楚的判斷。\n\n科學方法與證據判讀入門；不提供個人醫療、法律或投資建議，也不將本書稱為完整系統性回顧。",
+      "version": 1,
+      "cover": "covers/2026-10-19_general-knowledge.svg",
+      "coverKind": "original-template",
+      "references": "references/2026-10-19_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-19-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch01",
+          "title": "科學不是答案清單，而是可受檢驗的解釋",
+          "markdown": "chapters/2026-10-19_general-knowledge_ch01.md",
+          "textSha256": "0c4ef1c3c7aa64abeb5881e185a3ed7e297e4cc83a870c08918a4ebe92b9a550",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-general-knowledge-v1/2026-10-19_general-knowledge_ch01-0246c6b10ddc.m4a",
+          "sha256": "0246c6b10ddc9a443dc16b5fb050d11b8f6fd4d42875ca71c273851c1c4e95b9",
+          "bytes": 9330280,
+          "durationSec": 289.87791383219957
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch02",
+          "title": "先弄清楚量到了什麼：測量、抽樣與偏差",
+          "markdown": "chapters/2026-10-19_general-knowledge_ch02.md",
+          "textSha256": "faa6199590b5caaf3c19964167b20900b951936829a89f627a0f2930607ea324",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-general-knowledge-v1/2026-10-19_general-knowledge_ch02-8943e8ac14a8.m4a",
+          "sha256": "8943e8ac14a8163175d52157fdbd54326fc3f6359942a740960c1713e5892cd9",
+          "bytes": 12098239,
+          "durationSec": 375.8846258503401
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch03",
+          "title": "從一起發生到真正造成：因果推論",
+          "markdown": "chapters/2026-10-19_general-knowledge_ch03.md",
+          "textSha256": "95bbcc4c932b569de0ab2f2664a95fc8206017bbf121b1658b40203e4d3b546f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-general-knowledge-v1/2026-10-19_general-knowledge_ch03-47c45e0a408a.m4a",
+          "sha256": "47c45e0a408a2b67372539ebd448feafe5bd74e069093cd8ca553bc6133c3041",
+          "bytes": 9135187,
+          "durationSec": 283.81750566893425
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch04",
+          "title": "機率不是保證：用不確定性理解數據",
+          "markdown": "chapters/2026-10-19_general-knowledge_ch04.md",
+          "textSha256": "f49880436c6e6ac7850505b16eb4cff204ae34b18db47d3b30b4eef031cbc57e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-general-knowledge-v1/2026-10-19_general-knowledge_ch04-c63b935bf247.m4a",
+          "sha256": "c63b935bf247f8e1123c322207f2ee91f2e005e5d8f1b40e9d921f683c527242",
+          "bytes": 14287873,
+          "durationSec": 443.91909297052155
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch05",
+          "title": "一篇研究之後：重現、出版偏差與證據整合",
+          "markdown": "chapters/2026-10-19_general-knowledge_ch05.md",
+          "textSha256": "8cb81e530617270e79eada93a65115f2a5eac3158ca99444625b251ef4814f09",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-general-knowledge-v1/2026-10-19_general-knowledge_ch05-b7673df6e735.m4a",
+          "sha256": "b7673df6e73569501577ac8a7ee1f621cd428e68616da5cd6aa7d977ee9b797b",
+          "bytes": 14074104,
+          "durationSec": 437.2781859410431
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch06",
+          "title": "把證據變成判斷：閱讀研究與做決策",
+          "markdown": "chapters/2026-10-19_general-knowledge_ch06.md",
+          "textSha256": "ea4882e85bc37926e5a4a33a4fb245123e7984c03ef6aefb1dc20f4b3d4669bb",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-19-general-knowledge-v1/2026-10-19_general-knowledge_ch06-61abd3f3dd91.m4a",
+          "sha256": "61abd3f3dd91279823ce439ff0ec8709efec62a030837d48c510786860ba5cda",
+          "bytes": 11998135,
+          "durationSec": 372.77315192743765
         }
       ]
     }

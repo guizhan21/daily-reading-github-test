@@ -16,14 +16,17 @@ for (const book of load('data/books.json').books) {
 let files;
 try { files = execFileSync('git', ['ls-files', '-z'], {cwd:root, encoding:'utf8'}).split('\0').filter(Boolean); }
 catch { throw Error('Run validation inside the isolated Git repository'); }
-const forbidden = /(^|\/)(\.env[^/]*|storage|backups?|\.vercel|node_modules|incoming)(\/|$)|\.(m4a|aac|mp3|mp4|wav|db|sqlite[^.]*|zip|pem|key)$/i;
+const working=execFileSync('git',['ls-files','--cached','--others','--exclude-standard','-z'],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean);
+const forbidden = /(^|\/)(\.env[^/]*|storage|backups?|\.vercel|node_modules|incoming|\.tmp|\.cache|\.tools|test-results|\.publish-jobs|\.jobs|cookies?[^/]*|credentials?[^/]*)(\/|$)|\.(m4a|aac|mp3|mp4|wav|db|sqlite[^.]*|zip|pem|key)$/i;
 const secret = /(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{30,}|vercel_blob_rw_[A-Za-z0-9_]+|-----BEGIN [A-Z ]*PRIVATE KEY-----)/;
+const privatePath=/[A-Za-z]:[\\/](?:Users|Downloads|每日讀書)[\\/]/;
+for(const file of working){if(forbidden.test(file))throw Error('Forbidden public working file: '+file);if(fs.lstatSync(path.join(root,file)).isSymbolicLink())throw Error('Linked public file');if(!/\.(png|jpe?g|webp)$/i.test(file)){const text=fs.readFileSync(path.join(root,file),'utf8');if(secret.test(text)||privatePath.test(text))throw Error('Private bytes in public working file: '+file);}}
 for (const file of files) {
   if (forbidden.test(file)) throw Error(`Forbidden tracked path: ${file}`);
   // Inspect the staged bytes, including partial staging, before they can be committed.
   const buffer = execFileSync('git',['show',`:${file}`],{cwd:root,maxBuffer:2_100_000});
   if (buffer.length > 2_000_000) throw Error(`Unexpected large Git file: ${file}`);
-  if (!/\.(png|jpe?g|webp)$/i.test(file) && secret.test(buffer.toString('utf8'))) throw Error(`Credential pattern: ${file}`);
+  if (!/\.(png|jpe?g|webp)$/i.test(file) && (secret.test(buffer.toString('utf8'))||privatePath.test(buffer.toString('utf8')))) throw Error(`Private bytes in staged file: ${file}`);
 }
 const historical=execFileSync('git',['rev-list','--objects','--all'],{cwd:root,encoding:'utf8'});
 for(const line of historical.split('\n')){const space=line.indexOf(' ');if(space>0&&forbidden.test(line.slice(space+1)))throw Error('Forbidden file in Git history');}

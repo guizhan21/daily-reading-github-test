@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "bookId": "2026-10-19_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-10-21T07:58:21.027Z",
+      "decision": "approved",
+      "basis": "User-authorized public full-library migration (2026-10-21). Original ChatGPT-authored explanatory chapters, cited links retained, own generated Image covers or original CSS templates, and existing NotebookLM outputs made from isolated original chapters. No third-party books or source documents are republished. AI-generated; terminology and numbers remain pending human review.",
+      "coverSha256": "7ccbf295b95dd1c6b3eb02d00cc1316aa38b3aa0f2a5d526e5bc285d733fa1e2",
+      "chapters": [
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch01",
+          "textSha256": "6ec9c44db2686964e99a4e533f4694bc75187288bdd24d299db9c35e9caef314",
+          "audioSha256": "b86d8f6ae01a83c4968a7563e05d233d122af6efb9c106a57df6af7560827fff"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch02",
+          "textSha256": "f1457028ae6daafd2b1d43ac127a152be9ccea063927229bda367e535a576c23",
+          "audioSha256": "1d55ca63842392e3941e3c43cb41581735a246d889af6372790b5ae0e365061b"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch03",
+          "textSha256": "7e52db0c0c5a0b8e1391ea557cbdc5b9e4a1508392bfc3fc5da48f1f775e7340",
+          "audioSha256": "7195370b4c9ab63fcdc33530ec4d2fc88ef691395ad061d01f5112da48f8afd1"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch04",
+          "textSha256": "c71d957ff4b6fe5d79990b795ce69681ae192508a87a0f20c182108f65aede2a",
+          "audioSha256": "9fa457f5f0d4722a60762340bd102561080a2680868eef7c8764bce7d5975024"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch05",
+          "textSha256": "bbb735d2e9cf2c3b3473f28b88f733639406df7b201efe1551af9b85f538f5ec",
+          "audioSha256": "ceea79784c59d0ceb82fb6045c91d377ea661703145a35396b3f4dc3dbc4cdbe"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch06",
+          "textSha256": "63732b324a127997c575fb1932776452199f6c24276bc83636a85180eb7d7cdd",
+          "audioSha256": "6a9d321e728602aaa3a9f13050ab4864afc95d3544474aeeb3da518e2bad9474"
+        }
+      ],
+      "contentReview": "Numbers and English terminology pending human review; file/playback acceptance is separate."
+    },
+    {
+      "bookId": "2026-10-19_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-10-21T07:58:21.032Z",
+      "decision": "approved",
+      "basis": "User-authorized public full-library migration (2026-10-21). Original ChatGPT-authored explanatory chapters, cited links retained, own generated Image covers or original CSS templates, and existing NotebookLM outputs made from isolated original chapters. No third-party books or source documents are republished. AI-generated; terminology and numbers remain pending human review.",
+      "coverSha256": "37b1d7f729ea9c051495cb57e49189fcd6367f5340cf96ed71f3bee1a334c95f",
+      "chapters": [
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch01",
+          "textSha256": "0c4ef1c3c7aa64abeb5881e185a3ed7e297e4cc83a870c08918a4ebe92b9a550",
+          "audioSha256": "0246c6b10ddc9a443dc16b5fb050d11b8f6fd4d42875ca71c273851c1c4e95b9"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch02",
+          "textSha256": "faa6199590b5caaf3c19964167b20900b951936829a89f627a0f2930607ea324",
+          "audioSha256": "8943e8ac14a8163175d52157fdbd54326fc3f6359942a740960c1713e5892cd9"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch03",
+          "textSha256": "95bbcc4c932b569de0ab2f2664a95fc8206017bbf121b1658b40203e4d3b546f",
+          "audioSha256": "47c45e0a408a2b67372539ebd448feafe5bd74e069093cd8ca553bc6133c3041"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch04",
+          "textSha256": "f49880436c6e6ac7850505b16eb4cff204ae34b18db47d3b30b4eef031cbc57e",
+          "audioSha256": "c63b935bf247f8e1123c322207f2ee91f2e005e5d8f1b40e9d921f683c527242"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch05",
+          "textSha256": "8cb81e530617270e79eada93a65115f2a5eac3158ca99444625b251ef4814f09",
+          "audioSha256": "b7673df6e73569501577ac8a7ee1f621cd428e68616da5cd6aa7d977ee9b797b"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch06",
+          "textSha256": "ea4882e85bc37926e5a4a33a4fb245123e7984c03ef6aefb1dc20f4b3d4669bb",
+          "audioSha256": "61abd3f3dd91279823ce439ff0ec8709efec62a030837d48c510786860ba5cda"
+        }
+      ],
+      "contentReview": "Numbers and English terminology pending human review; file/playback acceptance is separate."
+    },
+    {
+      "bookId": "2026-10-20_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-10-21T07:58:21.036Z",
+      "decision": "approved",
+      "basis": "User-authorized public full-library migration (2026-10-21). Original ChatGPT-authored explanatory chapters, cited links retained, own generated Image covers or original CSS templates, and existing NotebookLM outputs made from isolated original chapters. No third-party books or source documents are republished. AI-generated; terminology and numbers remain pending human review.",
+      "coverSha256": "b9dfa6cc8b5f8bba4c24f3410f19fc6c8e6e5c3a25d2d91121b58fb836577cda",
+      "chapters": [
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch01",
+          "textSha256": "28871f980ec63cd47d71518491cc409ae0ac3f83bfb2ad83c53c2e9b0b055675",
+          "audioSha256": "d3cbee4555c8052ee020bb1c3a7d6023d96a9583483e8b8aa037d0e93133d344"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch02",
+          "textSha256": "b19356109033533cf9116b8d3ae0593e8d86fabc3f925fdcdc4d352a50f70bd6",
+          "audioSha256": "7c7f072211d6ce654b5b05e8fdcab6ad0c635dedcbff87a39fa1b6330353a44d"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch03",
+          "textSha256": "5414d487ee31349d32b6d0b5eae3af44b2a0dcf1e02a5f050db691cde7ca2e3e",
+          "audioSha256": "4884cd07157a61c5e689a6bde9a054fdfe1f090d614946855713e055d23ab6a2"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch04",
+          "textSha256": "312d5013ad3d4cf9bf3768d2784426ef6be490be7ffe8d3ebff2f5d5372970f4",
+          "audioSha256": "148d79678471795b3c7f02b4a3ed4111e6232a5cf99a87d2c86c4fccf0983cd4"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch05",
+          "textSha256": "124ce1bb15726e5f80e8d58720f5511c32efb9dc8412aab7e2961558bf340f78",
+          "audioSha256": "35f8fdc034d3b917a4566434401a81a95004359a9ff54233d4d21b01963510dd"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch06",
+          "textSha256": "4aed92b8e2b2d343e8a934151d7a247c99984ba7a85ba0f6011d20b4a47b83e6",
+          "audioSha256": "26070d0cc8b0d32daf7efbe9bc52104bf4f23d58b7a8826631a1f027af9b51c0"
+        }
+      ],
+      "contentReview": "Numbers and English terminology pending human review; file/playback acceptance is separate."
+    },
+    {
+      "bookId": "2026-10-20_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-10-21T07:58:21.040Z",
+      "decision": "approved",
+      "basis": "User-authorized public full-library migration (2026-10-21). Original ChatGPT-authored explanatory chapters, cited links retained, own generated Image covers or original CSS templates, and existing NotebookLM outputs made from isolated original chapters. No third-party books or source documents are republished. AI-generated; terminology and numbers remain pending human review.",
+      "coverSha256": "08d6bcef181490cd51c78b6de8fe701e3ea7d1de5577b0007289a7d740b465a3",
+      "chapters": [
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch01",
+          "textSha256": "438ca2ab6baace1f33d91a36fa671aa1e549a1d1a715c2233b12b74c70086417",
+          "audioSha256": "ac6cce016d2286d8a0f0b3f2f9d66fe828e64d4f72fc36129a9d08164bc3e49c"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch02",
+          "textSha256": "522ef1dcdd6050613cdaf89bfa84441e3b6e0eaff95da20a81c747cdd5f568d7",
+          "audioSha256": "1a3b0382124bb47e8660a3bb2943835cdf62333d6f72e6b204b50cffb3133945"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch03",
+          "textSha256": "f776573b3cc90a39b4bbde8c9a42890cf18733bd7897d46ec071a6041a917c05",
+          "audioSha256": "1114e7c5e50707dad58c7536ddd344e554ee34743bc187dce27a27eab2447f69"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch04",
+          "textSha256": "aa4b8710b409c5f42efc6184f0330387ae96c2cd3c7a0be5432b8afaa2962291",
+          "audioSha256": "dc6c431f199d455c28d319e59c1a5099ec3474493a9ab35566649228b697df41"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch05",
+          "textSha256": "9a13d4e7c0da1234ec28647bd2bfbd8e0ad4fbfb4c8abf75afce32a3821a6083",
+          "audioSha256": "5ccf6b9fd93327f85ab93230200c58e4acd963c4b754d433ffda360da467e496"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch06",
+          "textSha256": "fa2732604ffd5b50cd4b9f8d19b92854f0820563198b1bc2b7f6279d6c1db1b5",
+          "audioSha256": "345cdf5f200819c2fd416a5a19c31fd3a32a57f9a808aabfa0b7f794bb448a8d"
+        }
+      ],
+      "contentReview": "Numbers and English terminology pending human review; file/playback acceptance is separate."
+    },
+    {
+      "bookId": "2026-10-21_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-10-21T07:58:21.044Z",
+      "decision": "approved",
+      "basis": "User-authorized public full-library migration (2026-10-21). Original ChatGPT-authored explanatory chapters, cited links retained, own generated Image covers or original CSS templates, and existing NotebookLM outputs made from isolated original chapters. No third-party books or source documents are republished. AI-generated; terminology and numbers remain pending human review.",
+      "coverSha256": "5f952b32213d89714d0dd5fd04d535db5e61478ea721dcd814cd543271130c14",
+      "chapters": [
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch01",
+          "textSha256": "24302d3444c5137f4c0d2575cf60ce055643f71e24a02b20d3248d8e4b3a2efc",
+          "audioSha256": "9987a08f9c7ea7357a559754c0f48982233412376572a6871a355858a822932f"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch02",
+          "textSha256": "3f9469005d3722f0c5bb129e41ab355b30e29f655013cd7f00967f0da817e8a3",
+          "audioSha256": "5bd51671860d59cba38acc8ccf71fc1c2855181e3773fe855f1f585aee8b7744"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch03",
+          "textSha256": "3f6f451906e37b368baf4939af37384cdc106097427d35edf49dbf14b73362ff",
+          "audioSha256": "c28a21544e85813617d1878b190c08d6426480f4f0e7857b2d567ce57c8a79e6"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch04",
+          "textSha256": "3c2d0f3d2b4e7ca23fdb0650b85c054b03e491d12a4fd35fdf6fff10c0c13b7f",
+          "audioSha256": "a329fba374c378530b4e16783f47b6801eeba3860b2933bdd72d63c623b81f01"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch05",
+          "textSha256": "d923af46bdfecf8a2069a387c4fc267b56ba05c47e91c62e65a2145f166f1e72",
+          "audioSha256": "d88c5881b3e332d86143fe6a68664b244aab29af4829a00a8c8eac336dfe5735"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch06",
+          "textSha256": "bdaa1a4610eaeaaa87e8825a4507dd729a7e51822a650b9224ba129ef4bcde04",
+          "audioSha256": "42a24346f51d17952827424e42020a9fb5c0b492d359fd7a55e5c30fe7e88b6b"
+        }
+      ],
+      "contentReview": "Numbers and English terminology pending human review; file/playback acceptance is separate."
+    },
+    {
+      "bookId": "2026-10-21_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-10-21T07:58:21.048Z",
+      "decision": "approved",
+      "basis": "User-authorized public full-library migration (2026-10-21). Original ChatGPT-authored explanatory chapters, cited links retained, own generated Image covers or original CSS templates, and existing NotebookLM outputs made from isolated original chapters. No third-party books or source documents are republished. AI-generated; terminology and numbers remain pending human review.",
+      "coverSha256": "0879256caff69a29d36d7a4d259686a2bb2b4e6c1362e10f586b5d03e1b60e9f",
+      "chapters": [
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch01",
+          "textSha256": "c83f55520e16f783c67db1b3eb6ab9961f0ba248b8524a443cc376208553dc35",
+          "audioSha256": "3014e2df521741e08925f536e4887ac48bd07362c00cd0b3edf16897c2f55ad3"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch02",
+          "textSha256": "a2e51f0691d8e06dbb929920991156b037fdcea49325b91ce593853736c37c25",
+          "audioSha256": "168b714d4d0c990a02d9dd2b6327509a8a423819d3ac8bcea8293df82f9209b0"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch03",
+          "textSha256": "7bd19f0dde3ef8928724ef6c06e1d659a7faae869ef5496e21865124eec1c5d6",
+          "audioSha256": "58dc3926b23a0f12d11f4c11300d35802e395db3743889a583ed6d0041417f4b"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch04",
+          "textSha256": "e6640f396275ab1dd9c95cae1d6ac421a93e54ae5352c27ca66c77a66dac0989",
+          "audioSha256": "908f1f0ae48fdef2d7d728d5a092fca2924c4c154b8e8ad7dec25f5c8bae7db1"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch05",
+          "textSha256": "028f1e8618c2600c8073512f86d86140e7b9dcc80492d092d2ea37df5c87ec62",
+          "audioSha256": "6262fea9db9d571bfdccd249336de413b0f17e372ce139fd95c50fb22fe0c190"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch06",
+          "textSha256": "947b237eed7147197611523398fd8ecf9b8e088f2d70c16635969c00fd2b05da",
+          "audioSha256": "1152029a35a4d2e5cabe64dda8641b6501efa0dd54189a73143bc6542598eab8"
+        }
+      ],
+      "contentReview": "Numbers and English terminology pending human review; file/playback acceptance is separate."
+    }
+  ],
+  "skipped": []
+}
