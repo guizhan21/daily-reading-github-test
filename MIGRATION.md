@@ -3,7 +3,7 @@
 基準：`31265a0177129090553f39513d7669933fdd4c68`。
 分支：`migration/full-library-20261021`。
 
-目標 6 本、36 章、36 個原 M4A，共 410,849,574 bytes。
+原書庫目標 6 本、36 章、36 個原 M4A，共 410,849,574 bytes；另有 2026-10-22 的兩本真實日更書，共 8 本、48 章的已審核發布範圍。
 原音訊均已取回，SHA-256 與既有交付紀錄完全相同，通過 AAC 格式、時長及完整解碼。
 
 | 書籍 | 候選目錄 | Release |
@@ -34,7 +34,15 @@
 獨立 Release：[audio-2026-10-22-ai-consultant-v1](https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-22-ai-consultant-v1)。6 個公開音檔完整 bytes SHA 通過；再次執行上傳 0／重用 6／新增書籍 0。
 新增候選書後共 4 本、24 章。24 項新增音檔 HTTP 檢查通過，包含 HEAD、兩處 Range 206 與完整 SHA；Chrome 49 checks／24 實際播放，Firefox 33／8，WebKit 33／8，均無 console error 或強制附件下載。
 
-《睡眠不是關機》已接書、生成 Image 封面並逐章處理。內容初核發現與原文不同的醫學延伸或過強概括時，保留初稿與時間點，只修正未接受的單章；整本音訊未通過前不發布其目錄或 Release。
+《睡眠不是關機》6 章已完成各自獨立來源、繁體中文深入討論生成及完整解碼／全檔轉寫初核。原 M4A 共 61,870,083 bytes，新封面使用內建 Image。初核發現與原文不同的醫學延伸或過強概括時，保留初稿與時間點，只修正未接受的單章；未將不合格草稿當成完成成果。
+
+獨立 Release：[audio-2026-10-22-general-knowledge-v1](https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-22-general-knowledge-v1)。6 個公開音檔的完整 bytes SHA 通過。再次實際執行上傳 0／重用 6／新增書籍 0；這次重複執行使用原公開驗證的 asset 身分與雜湊紀錄，沒有重複上傳。
+
+今日兩本共 12 個已接受原音檔，128,459,570 bytes，均保留原始 M4A。現有候選目錄 5 本／30 章，與仍受阻的三本原書分開計數。19 次實際生成包含 7 次針對不合格新章草稿的修正；成功音訊未重做。所有草稿、原指令、版本、Notebook／來源／生成項目身分及內容核對證據保存於本機生產流程紀錄，不包含在公開 Git 或 Pages 中。
+
+最終五本候選版本：26 個單元測試通過；Chrome 57 項／30 章實際播放、Firefox 37 項／10 章、WebKit 37 項／10 章通過，無頁面錯誤或附件下載事件。今日 12 章各自的 HEAD、起點 Range、中段 Range、公開全檔 SHA 共 48 項 HTTP 檢查通過。Range 為 206；即使 GitHub 轉址後標頭為 application/octet-stream／attachment，實測 audio 播放與拖曳正常。這些是本機隔離前端加上真實公開 Release 音源的測試。
+
+建置包 7,682,073 bytes，音訊 0 bytes。完整部署驗收實際拒絕目前的 5／8 本差額，沒有停用門檻、合併 main 或部署不完整書庫。iPhone 實機和正式 Pages 新版仍未驗證。
 
 00:30 heartbeat 已銜接 GitHub 接書佇列，原 Vercel／Blob 發布與清理指令不在新流程執行。這些是真實新書生成及 Release 證據，但尚未完成今日新書的正式 Pages 發布，不能把整合測試、候選測試或 Release 完成當成已部署。
 

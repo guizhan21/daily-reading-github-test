@@ -26,7 +26,7 @@ for (const file of files) {
   if (forbidden.test(file)) throw Error(`Forbidden tracked path: ${file}`);
   // Inspect the staged bytes, including partial staging, before they can be committed.
   const buffer = readStagedFile(root,file);
-  if (!/\.(png|jpe?g|webp)$/i.test(file) && (secret.test(buffer.toString('utf8'))||privatePath.test(buffer.toString('utf8')))) throw Error(`Private bytes in staged file: ${file}`);
+  if (secret.test(buffer.toString('utf8'))||privatePath.test(buffer.toString('utf8'))) throw Error(`Private bytes in staged file: ${file}`);
 }
 const historical=execFileSync('git',['rev-list','--objects','--all'],{cwd:root,encoding:'utf8'});
 for(const line of historical.split('\n')){const space=line.indexOf(' ');if(space>0&&forbidden.test(line.slice(space+1)))throw Error('Forbidden file in Git history');}

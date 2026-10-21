@@ -287,6 +287,47 @@
         }
       ],
       "contentReview": "File integrity and initial topic/chapter review passed; numbers, English pronunciation and noted rhetorical wording remain pending human review."
+    },
+    {
+      "bookId": "2026-10-22_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-10-21T17:54:05.359Z",
+      "decision": "approved",
+      "basis": "User-authorized public original-book library and daily publication pipeline (2026-10-21). This book was retrieved from the two existing ChatGPT original-writing tasks; original explanatory prose and cited links are retained, not third-party book files or source PDFs. Cover is a new built-in Image creation authorized for this project. Each accepted NotebookLM audio uses its one isolated original chapter and was compared via full local ASR with that chapter. Numbers and English terminology remain pending human confirmation; no claim of human full listening or complete factual verification.",
+      "coverSha256": "13dc5dfe1b6abca781f8094794add2ae2ab2cd85548ee934ad6b63fa6226fc8b",
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch01",
+          "textSha256": "43a4b2c3a6892b89770593c99defcf40d204c2595de8d4111a0a2df72606f7e8",
+          "audioSha256": "61206363b536a1803e7d59b2d7d9a270ce23c5d687217017d3d06a40621d8543"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch02",
+          "textSha256": "fb182979e68c9fe7db9ca7446419d3ad6229279079c73af47f59c842602c79b8",
+          "audioSha256": "ccf4f537e063dd1c26129651e300228e97d960652dfe3e1e8ab352d1d717f5f0"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch03",
+          "textSha256": "0db74dfce590e2a504ddb7f9e6022f7278a422a2c62136cf4638115b136ed6c4",
+          "audioSha256": "1fe9576f2535e4f9c339788d27bde5a3a92d25941145a8eddb17ff7de70aeb38"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch04",
+          "textSha256": "536b65a496fab9d40ad6381a8dfc2184aa956216c055f551ad0b9076cc891229",
+          "audioSha256": "46dfca11836464dbee6a8e28d0acf109792c8b233c8a08cd8c3c45d57dd86e28"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch05",
+          "textSha256": "701e3f2b64f162e0155f830462809e4ad95978a7a254721a343db9b9c191fce7",
+          "audioSha256": "a5b3b4a171de07a5c5b9a3e751d7860f3f59d0b6b9d1b403cb46c5fc89aa8b39"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch06",
+          "textSha256": "3ceaddc69d5d6ef34b7893af95a252d27d00848a4c6597a27adfb60b1164b7d8",
+          "audioSha256": "5ee18603c3c95cab2c98bb5e50e10554c7a18a8e132bbd6441a478f8d2a5baf8"
+        }
+      ],
+      "contentReview": "File integrity and initial topic/chapter review passed; numbers, English pronunciation and noted rhetorical wording remain pending human review."
     }
   ],
   "skipped": []

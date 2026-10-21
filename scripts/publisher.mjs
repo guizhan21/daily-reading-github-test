@@ -42,7 +42,8 @@ export async function publish(input,{root,dir,jobs,config,stopAfterUploads=Infin
   }
   release=find();for(const a of input.files){const remote=release.assets.find(r=>r.name===a.file);if(!remote||remote.state!=='uploaded'||remote.size!==a.bytes||remote.digest!=='sha256:'+a.sha256)throw Error('UPLOAD_UNVERIFIED: catalog unchanged');}
   event('upload_verified');if(stageOnly){event('draft_ready_awaiting_cover',{uploads,reused});return {bookId:input.book.bookId,tag:input.tag,uploads,reused,status:job.status,published:false};}
-  if(release.draft)gh(['api',`repos/${input.repository}/releases/${release.id}`,'--method','PATCH','-F','draft=false']);
+  if(release.draft)release=JSON.parse(gh(['api',`repos/${input.repository}/releases/${release.id}`,'--method','PATCH','-F','draft=false']));
+  if(release.draft||release.tag_name!==input.tag)throw Error('PUBLICATION_UNCONFIRMED: catalog unchanged');
   for(const ch of input.book.chapters){const a=release.assets.find(r=>r.name===path.posix.basename(new URL(ch.audioUrl).pathname)),old=job.verified[ch.chapterId];
    if(old?.assetId===a.id&&old.sha256===ch.sha256&&old.updatedAt===a.updated_at)continue;
    const response=await fetch(ch.audioUrl,{signal:AbortSignal.timeout(90000)});if(!response.ok)throw Error('PUBLIC_UNAVAILABLE: '+response.status);const b=Buffer.from(await response.arrayBuffer());if(b.length!==ch.bytes||hash(b)!==ch.sha256)throw Error('PUBLIC_HASH_MISMATCH: catalog unchanged');

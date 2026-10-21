@@ -296,6 +296,80 @@
           "durationSec": 357.378322
         }
       ]
+    },
+    {
+      "bookId": "2026-10-22_general-knowledge",
+      "title": "睡眠不是關機",
+      "category": "跨領域知識探索",
+      "date": "2026-10-22",
+      "description": "從睡眠壓力、身體時鐘與睡眠分期的生理機制出發，依序解釋光線與作息、睡眠日誌和穿戴裝置的證據限制、失眠與呼吸障礙的判別、CBT-I及助眠產品的風險，最後討論輪班、疲勞駕駛與清楚就醫溝通的實際判斷。\n\n一般醫學與健康素養教育；不提供個人診斷、處方、停換藥指示或自行睡眠限制療程。",
+      "version": 1,
+      "cover": "covers/2026-10-22_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-22_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-22-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch01",
+          "title": "睡眠不是關機：兩套驅動與一夜之間的變化",
+          "markdown": "chapters/2026-10-22_general-knowledge_ch01.md",
+          "textSha256": "43a4b2c3a6892b89770593c99defcf40d204c2595de8d4111a0a2df72606f7e8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-general-knowledge-v1/2026-10-22_general-knowledge_ch01-61206363b536.m4a",
+          "sha256": "61206363b536a1803e7d59b2d7d9a270ce23c5d687217017d3d06a40621d8543",
+          "bytes": 10468367,
+          "durationSec": 325.241905
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch02",
+          "title": "光與時間如何改變睡意：作息不是單純的意志力問題",
+          "markdown": "chapters/2026-10-22_general-knowledge_ch02.md",
+          "textSha256": "fb182979e68c9fe7db9ca7446419d3ad6229279079c73af47f59c842602c79b8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-general-knowledge-v1/2026-10-22_general-knowledge_ch02-ccf4f537e063.m4a",
+          "sha256": "ccf4f537e063dd1c26129651e300228e97d960652dfe3e1e8ab352d1d717f5f0",
+          "bytes": 9135934,
+          "durationSec": 283.840726
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch03",
+          "title": "睡眠品質如何測量：日誌、手環與睡眠檢查各能回答什麼",
+          "markdown": "chapters/2026-10-22_general-knowledge_ch03.md",
+          "textSha256": "0db74dfce590e2a504ddb7f9e6022f7278a422a2c62136cf4638115b136ed6c4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-general-knowledge-v1/2026-10-22_general-knowledge_ch03-1fe9576f2535.m4a",
+          "sha256": "1fe9576f2535e4f9c339788d27bde5a3a92d25941145a8eddb17ff7de70aeb38",
+          "bytes": 11247014,
+          "durationSec": 349.437098
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch04",
+          "title": "不同的「睡不好」不是同一種病：失眠、呼吸中止與白天嗜睡",
+          "markdown": "chapters/2026-10-22_general-knowledge_ch04.md",
+          "textSha256": "536b65a496fab9d40ad6381a8dfc2184aa956216c055f551ad0b9076cc891229",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-general-knowledge-v1/2026-10-22_general-knowledge_ch04-46dfca118364.m4a",
+          "sha256": "46dfca11836464dbee6a8e28d0acf109792c8b233c8a08cd8c3c45d57dd86e28",
+          "bytes": 9165815,
+          "durationSec": 284.769524
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch05",
+          "title": "改善睡眠的證據與界線：健康習慣、失眠認知行為治療與助眠產品",
+          "markdown": "chapters/2026-10-22_general-knowledge_ch05.md",
+          "textSha256": "701e3f2b64f162e0155f830462809e4ad95978a7a254721a343db9b9c191fce7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-general-knowledge-v1/2026-10-22_general-knowledge_ch05-a5b3b4a171de.m4a",
+          "sha256": "a5b3b4a171de07a5c5b9a3e751d7860f3f59d0b6b9d1b403cb46c5fc89aa8b39",
+          "bytes": 10624615,
+          "durationSec": 330.094875
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch06",
+          "title": "在現實生活中保護睡眠：輪班、補眠、風險與就醫溝通",
+          "markdown": "chapters/2026-10-22_general-knowledge_ch06.md",
+          "textSha256": "3ceaddc69d5d6ef34b7893af95a252d27d00848a4c6597a27adfb60b1164b7d8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-general-knowledge-v1/2026-10-22_general-knowledge_ch06-5ee18603c3c9.m4a",
+          "sha256": "5ee18603c3c95cab2c98bb5e50e10554c7a18a8e132bbd6441a478f8d2a5baf8",
+          "bytes": 11228338,
+          "durationSec": 348.856599
+        }
+      ]
     }
   ]
 }
