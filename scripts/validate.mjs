@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {root, load, validate, hash} from './catalog.mjs';
+import {readStagedFile} from './git-staged.mjs';
 validate(load('data/books.json'), load('data/site.json'));
 for (const book of load('data/books.json').books) {
   if (!fs.existsSync(path.join(root, 'public', book.cover))) {
@@ -24,8 +25,7 @@ for(const file of working){if(forbidden.test(file))throw Error('Forbidden public
 for (const file of files) {
   if (forbidden.test(file)) throw Error(`Forbidden tracked path: ${file}`);
   // Inspect the staged bytes, including partial staging, before they can be committed.
-  const buffer = execFileSync('git',['show',`:${file}`],{cwd:root,maxBuffer:2_100_000});
-  if (buffer.length > 2_000_000) throw Error(`Unexpected large Git file: ${file}`);
+  const buffer = readStagedFile(root,file);
   if (!/\.(png|jpe?g|webp)$/i.test(file) && (secret.test(buffer.toString('utf8'))||privatePath.test(buffer.toString('utf8')))) throw Error(`Private bytes in staged file: ${file}`);
 }
 const historical=execFileSync('git',['rev-list','--objects','--all'],{cwd:root,encoding:'utf8'});

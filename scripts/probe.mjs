@@ -16,8 +16,13 @@ async function request(url,method,headers={}){
   }
   throw Error('Redirect loop');
 }
-const results=[];
-for(const book of load('data/books.json').books)for(const chapter of book.chapters){
+const results=[],allBooks=load('data/books.json').books;
+const requested=new Set((process.env.BOOK_IDS||'').split(',').filter(Boolean));
+for(const id of requested)if(!allBooks.some(b=>b.bookId===id))throw Error('Unknown probe book: '+id);
+const selectedBooks=requested.size?allBooks.filter(b=>requested.has(b.bookId)):allBooks;
+const reportName=process.env.HTTP_REPORT||'http.json';
+if(!/^[a-zA-Z0-9_-]+\.json$/.test(reportName))throw Error('Unsafe report name');
+for(const book of selectedBooks)for(const chapter of book.chapters){
   const row={chapterId:chapter.chapterId,url:chapter.audioUrl,checks:[]};
   for(const [name,method,range] of [['HEAD','HEAD',null],['start-range','GET','bytes=0-1023'],['middle-range','GET',`bytes=${Math.floor(chapter.bytes/2)}-${Math.floor(chapter.bytes/2)+1023}`],['full-hash','GET',null]]){
     const {response,chain}=await request(chapter.audioUrl,method,range?{Range:range}:{});
@@ -30,5 +35,5 @@ for(const book of load('data/books.json').books)for(const chapter of book.chapte
   }
   results.push(row);
 }
-fs.mkdirSync(path.join(root,'test-results'),{recursive:true});fs.writeFileSync(path.join(root,'test-results/http.json'),JSON.stringify(results,null,2));
+fs.mkdirSync(path.join(root,'test-results'),{recursive:true});fs.writeFileSync(path.join(root,'test-results',reportName),JSON.stringify(results,null,2));
 console.log(JSON.stringify(results,null,2));

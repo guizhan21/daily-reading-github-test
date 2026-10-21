@@ -222,6 +222,80 @@
           "durationSec": 372.77315192743765
         }
       ]
+    },
+    {
+      "bookId": "2026-10-22_ai-consultant",
+      "title": "從需求到成效：AI 顧問的試點設計與交付判斷",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-22",
+      "description": "從一次需求訪談開始，解析如何辨認真問題、還原工作流程、建立可信成效基準、設計有限風險的試點、估算全生命週期成本，並使 AI 系統在交付後仍能被負責任地使用、監測與退出。\n\n供AI講師與顧問理解小型AI專案的需求發現、評測、試點與治理決策；不涉及特定服務的效能排名、價格保證、在地法律結論或實際客戶試點成果。",
+      "version": 1,
+      "cover": "covers/2026-10-22_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-22_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-22-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch01",
+          "title": "先辨認問題，再決定是否需要 AI",
+          "markdown": "chapters/2026-10-22_ai-consultant_ch01.md",
+          "textSha256": "42dbd604fe3e2be29f583de08e1fdedf509a0d4679d339c40cce0644ea43bf39",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant-v1/2026-10-22_ai-consultant_ch01-db7530c50c50.m4a",
+          "sha256": "db7530c50c50e42cc19cc60f1a0bfbe95936a51b4aecda881d7a61a5ba13dc37",
+          "bytes": 13076460,
+          "durationSec": 406.279546
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch02",
+          "title": "把口頭需求還原成真實流程",
+          "markdown": "chapters/2026-10-22_ai-consultant_ch02.md",
+          "textSha256": "1be1738613733d09a2d5eb144ede7b3016f9810dac3cb27f1ed6b983874f3759",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant-v1/2026-10-22_ai-consultant_ch02-82b7a34ab2a5.m4a",
+          "sha256": "82b7a34ab2a5f425d25ddd1e91e814abe18e10dc1b47b2b939ed1d46419b1b67",
+          "bytes": 9697192,
+          "durationSec": 301.278912
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch03",
+          "title": "從省時宣稱到可信的成效證據",
+          "markdown": "chapters/2026-10-22_ai-consultant_ch03.md",
+          "textSha256": "99b78a2a12e5cfc1dc52bdfb01d0c61fc91bbd2b481ef0a604b99cb814ea09ce",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant-v1/2026-10-22_ai-consultant_ch03-d3b36a7f672f.m4a",
+          "sha256": "d3b36a7f672fb9eea8e5f139f8fdde412f4dd1a9ba43a82f0304882adc3ed904",
+          "bytes": 10318213,
+          "durationSec": 320.574694
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch04",
+          "title": "小試點先驗證最可能失敗的地方",
+          "markdown": "chapters/2026-10-22_ai-consultant_ch04.md",
+          "textSha256": "2b7f56a04c6bfab7311c53c75c291db4e3a43ae2571ae8b5f801ed81793958bb",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant-v1/2026-10-22_ai-consultant_ch04-f353250b1851.m4a",
+          "sha256": "f353250b1851ca1757cf75b0fd25bda73553f9ef0a0bb8cc8dae3178dc189f4d",
+          "bytes": 10641049,
+          "durationSec": 330.605714
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch05",
+          "title": "算清總成本與資料責任",
+          "markdown": "chapters/2026-10-22_ai-consultant_ch05.md",
+          "textSha256": "0888b5cbbb07c84a02881c9596536627a4fc51f2f9782bc032391db7d9bc6b32",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant-v1/2026-10-22_ai-consultant_ch05-d71030c83224.m4a",
+          "sha256": "d71030c832246bd5ef527d08214968c782116425252f50f405d02b9f8f4f7034",
+          "bytes": 11353956,
+          "durationSec": 352.757551
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch06",
+          "title": "交付之後才開始的責任",
+          "markdown": "chapters/2026-10-22_ai-consultant_ch06.md",
+          "textSha256": "9e86b2b51df40ac0389a01f609bcb1e3459975795ad5c286787dd225179d50b1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant-v1/2026-10-22_ai-consultant_ch06-158cebed18f0.m4a",
+          "sha256": "158cebed18f06eeca54c281fe95abe3f0abf9f37788d715655b42715cb68d682",
+          "bytes": 11502617,
+          "durationSec": 357.378322
+        }
+      ]
     }
   ]
 }

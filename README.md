@@ -49,7 +49,9 @@ Git hooks 與 CI 掃描真正暫存的 bytes、Git 歷史、私密檔案、音�
 
 `release:audio -- <publish.json> --stage-only` 只準備草稿，不發布 Release 或更新書籍目錄。來源、封面、公開權利、完整音訊、公開 bytes 任一項未就緒，都不能宣稱上架。新的版本衝突安全停止，禁止盲目覆寫。
 
-NotebookLM 仍依賴本機、Codex 和已登入瀏覽器；00:30 是開始接書時間，並非保證音訊上架時間。未聲稱 Windows 關機後仍會生成。下一次真實每日 ZIP → NotebookLM → 上架仍須另有完整執行證據；整合測試的既有成品／重建封裝不當成新生成成果。
+NotebookLM 仍依賴本機、Codex 和已登入瀏覽器；00:30 是開始接書時間，並非保證音訊上架時間。未聲稱 Windows 關機後仍會生成。2026-10-22 已實測真實 ZIP → 獨立 NotebookLM → 原 M4A 核對 → Release 與候選書庫；正式 Pages 仍受完整遷移門檻保護，沒有把候選或 Release 完成當成已部署。整合測試的既有成品／重建封裝不當成新生成成果，細節見 MIGRATION.md。
+
+日更只檢查新增書音源時，可設定 `BOOK_IDS`（逗號分隔的現有 bookId）執行 `node scripts/probe.mjs`，以 `HTTP_REPORT` 指定 test-results 中的 JSON 檔名。未指定時仍驗證全部候選音源；未知 ID 或不安全檔名會拒絕，避免空集合假通過。成功重試的目前章節狀態會清除舊失敗原因，歷史初稿及核對紀錄仍保留。
 
 ## 匯出、回滾與服務限制
 
