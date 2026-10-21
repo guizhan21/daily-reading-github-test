@@ -4,6 +4,9 @@ import {execFileSync} from 'node:child_process';
 import {root,load,validate,hash} from './catalog.mjs';
 const gh=(args)=>execFileSync('gh',args,{cwd:root,encoding:'utf8',maxBuffer:4*1024*1024});
 const manifestPath=path.resolve(process.argv[2]||'incoming/publish.json');
+const stagingRoot=fs.realpathSync(process.env.AUDIO_STAGING_ROOT||root);
+const relative=path.relative(stagingRoot,manifestPath);
+if(relative==='..'||relative.startsWith('..'+path.sep)||path.isAbsolute(relative)||fs.realpathSync(manifestPath)!==manifestPath)throw Error('Manifest must be a real file within the authorized staging root');
 const input=JSON.parse(fs.readFileSync(manifestPath,'utf8')), config=load('data/site.json');
 if(input.repository!==config.repository||input.repository==='guizhan21/daily-audio-library'||input.rightsReviewed!==true||!input.rightsBasis||!/^audio-[\w.-]+$/.test(input.tag))throw Error('Wrong target or missing public-sharing review');
 validate({schemaVersion:1,books:[input.book]},config);
@@ -11,7 +14,9 @@ const repository=JSON.parse(gh(['repo','view',input.repository,'--json','visibil
 if(repository.visibility!=='PUBLIC'||repository.nameWithOwner!==input.repository)throw Error('Dedicated PUBLIC test repository required');
 for(const asset of input.files){
   if(path.basename(asset.file)!==asset.file||!/^.+\.(m4a|aac)$/.test(asset.file))throw Error('Invalid filename');
-  const file=path.join(path.dirname(manifestPath),asset.file),data=fs.readFileSync(file);
+  const file=path.join(path.dirname(manifestPath),asset.file);
+  if(fs.realpathSync(file)!==file)throw Error('Linked staging assets are not allowed');
+  const data=fs.readFileSync(file);
   const chapter=input.book.chapters.find(ch=>ch.chapterId===asset.chapterId);
   if(!chapter||chapter.sha256!==asset.sha256||chapter.bytes!==data.length||hash(data)!==asset.sha256||!chapter.audioUrl.endsWith(`/${input.tag}/${asset.file}`))throw Error('Source manifest mismatch');
 }

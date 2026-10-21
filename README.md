@@ -14,6 +14,7 @@
 ## 建置與驗證
 
 Node 24：`npm ci --ignore-scripts`、`npm run validate`、`npm test`、`npm run build`。
+在本倉庫執行 `git config core.hooksPath .githooks` 啟用提交/推送前檢查；不改動全域 Git 設定。檢查包含真正暫存的位元組及歷史禁止檔案路徑，CI 再次驗證。
 瀏覽器：`BROWSER=chrome|firefox|webkit SITE_URL=<public Pages URL> npm run test:browser`。
 Windows 的 TEMP、TMP、npm cache、PLAYWRIGHT_BROWSERS_PATH 均須指向 D:\每日讀書 之內。
 
@@ -24,14 +25,16 @@ Workflow 在 push main 或手動觸發後驗證、建置並部署 Pages，再對
 本機 NotebookLM 流程完成來源隔離、下載、內容及格式核對後，在本專案內建立 staging 目錄，放入已完成原音檔及 `publish.json`。檔案不進 Git。參考本次 `data/books.json` 的 book/chapters 結構，manifest 包含 `schemaVersion:1, repository, tag, rightsReviewed:true, rightsBasis, book, files:[{chapterId,file,sha256,bytes}]`。
 
 1. 將已核准公開的 Markdown/封面放入 `public/`。
-2. `npm run release:audio -- <project-contained-staging>/publish.json`。
+2. `npm run release:audio -- <project-contained-staging>/publish.json`。預設只准倉庫內的真實檔案；若既有產書暫存位於專案內、此測試倉庫之外，先把 `AUDIO_STAGING_ROOT` 設成那個經核對的專案內暫存目錄。拒絕連結及路徑越界。
 3. 上傳器先核對每個本機 hash，建立 draft Release，完成全部資產及 GitHub SHA-256 核對後才發布；再下載公開位元組核對。全部通過才原子更新目錄。
 4. 同名資產且 hash 相同則重用，hash 不同拒絕覆寫；相同書籍不重複新增。失敗不提前發布無效目錄。修訂內容須新版本/Release，不破壞舊音源。
 5. 執行 validate/test/build 後提交經審核內容，push main 觸發 Actions。GitHub Actions 不能讀取 Windows D:，上傳由這個本機交接程式完成；目前未宣稱 NotebookLM 生成已由 Actions 自動完成。
 
 ## 匯出、保存與限制
 
-`npm run export` 產生含 bookId、chapterId、原文、封面路徑、永久格式 Release URL、位元組大小及 SHA-256 的 `.tmp/library-export.json`。可由此逐一下載完整音檔並再次核對 SHA；Git clone 保存程式/正文/封面。匯出本機進度按鈕另下載個人進度 JSON。
+`npm run export` 產生含 bookId、chapterId、原文、封面路徑、原始碼 Commit、靜態文件雜湊、永久格式 Release URL、音訊位元組大小及 SHA-256 的 `.tmp/library-export.json`。可由此逐一下載完整音檔並再次核對 SHA；Git clone 保存程式/正文/封面。匯出本機進度按鈕另下載個人進度 JSON。
+
+本次實測 CDN 回傳 `application/octet-stream` 與 `Content-Disposition: attachment`；原生 HTML audio 仍可解碼/播放並作 Range 拖曳。播放器不設定 `crossOrigin=anonymous`、不以瀏覽器 fetch 讀取音訊；GitHub 沒提供 ACAO 時，跨來源 fetch/Web Audio 分析不在已驗證能力內。
 
 只保存 `github.com/.../releases/download/<tag>/<asset>`，每次播放由 GitHub 產生新的短效轉址；不保存簽章 CDN URL。舊 Release 不刪除、不替換資產。新增 Release 不需重新上傳舊音訊，Pages 大小只隨文字、封面及程式增加。
 

@@ -20,7 +20,8 @@ const forbidden = /(^|\/)(\.env[^/]*|storage|backups?|\.vercel|node_modules|inco
 const secret = /(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{30,}|vercel_blob_rw_[A-Za-z0-9_]+|-----BEGIN [A-Z ]*PRIVATE KEY-----)/;
 for (const file of files) {
   if (forbidden.test(file)) throw Error(`Forbidden tracked path: ${file}`);
-  const buffer = fs.readFileSync(path.join(root, file));
+  // Inspect the staged bytes, including partial staging, before they can be committed.
+  const buffer = execFileSync('git',['show',`:${file}`],{cwd:root,maxBuffer:2_100_000});
   if (buffer.length > 2_000_000) throw Error(`Unexpected large Git file: ${file}`);
   if (!/\.(png|jpe?g|webp)$/i.test(file) && secret.test(buffer.toString('utf8'))) throw Error(`Credential pattern: ${file}`);
 }
