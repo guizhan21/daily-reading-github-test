@@ -1,1 +1,32 @@
-{ "schemaVersion": 1, "books": [] }
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "bookId": "2026-10-21_ai-consultant",
+      "title": "讓 AI 真正把事做完",
+      "cover": "covers/2026-10-21_ai-consultant.jpg",
+      "chapters": [
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch01",
+          "title": "從回答到完成任務：什麼時候需要 Agent",
+          "markdown": "chapters/2026-10-21_ai-consultant_ch01.md",
+          "textSha256": "24302d3444c5137f4c0d2575cf60ce055643f71e24a02b20d3248d8e4b3a2efc",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-21-ai-v1/2026-10-21_ai-consultant_ch01-9987a08f9c7e.m4a",
+          "sha256": "9987a08f9c7ea7357a559754c0f48982233412376572a6871a355858a822932f",
+          "bytes": 10231440,
+          "durationSec": 317.881179138322
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch02",
+          "title": "工具呼叫與執行邊界：模型提出請求，系統承擔動作",
+          "markdown": "chapters/2026-10-21_ai-consultant_ch02.md",
+          "textSha256": "3f9469005d3722f0c5bb129e41ab355b30e29f655013cd7f00967f0da817e8a3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-21-ai-v1/2026-10-21_ai-consultant_ch02-5bd51671860d.m4a",
+          "sha256": "5bd51671860d59cba38acc8ccf71fc1c2855181e3773fe855f1f585aee8b7744",
+          "bytes": 12536223,
+          "durationSec": 389.4915192743764
+        }
+      ]
+    }
+  ]
+}

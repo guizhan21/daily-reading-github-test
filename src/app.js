@@ -1,5 +1,6 @@
 const $ = id => document.getElementById(id);
 const audio = $('audio'), storageKey = 'daily-reading-github:v1';
+$('cover').addEventListener('error',()=>{$('cover').hidden=true;$('description').textContent='公開測試版 · 兩章原音訊已就緒，既有封面等待取回';});
 let state = {schema:1, books:{}}, catalog, book, index=0, loading=false, lastSave=0;
 try { const saved=JSON.parse(localStorage.getItem(storageKey)); if(saved?.schema===1 && saved.books && typeof saved.books==='object') state=saved; } catch { /* Storage may be unavailable; playback still works. */ }
 const finite = (n, fallback=0) => Number.isFinite(n) && n>=0 ? n : fallback;

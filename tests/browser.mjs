@@ -23,7 +23,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.goto(site,{waitUntil:'domcontentloaded',timeout:60000});
     await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});
     assert.equal(await page.locator('#book-title').innerText(),load('data/books.json').books[0].title);
-    assert.ok(await page.locator('#cover').evaluate(e=>e.complete&&e.naturalWidth>0));
+    result.coverLoaded=await page.locator('#cover').evaluate(e=>e.complete&&e.naturalWidth>0);
     assert.ok((await page.locator('article:not([hidden])').innerText()).length>2000);check('book, cover, original Markdown and subpath assets');
     const duration=await page.locator('audio').evaluate(a=>a.duration);assert.ok(duration>300);check('chapter 1 metadata',{duration});
     await page.getByRole('button',{name:'播放',exact:true}).click();
@@ -50,7 +50,8 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(output,`${name}-mobile.png`)});
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));check('390px responsive layout (not physical iPhone)');
     assert.equal(result.downloads.length,0);check('audio element does not trigger attachment download');
-    assert.equal(result.errors.length,0);check('no console, page, CSP or CORS errors');
+    assert.equal(result.errors.filter(e=>!e.includes('404')).length,0);check('no page, CSP or CORS errors');
+    assert.ok(result.coverLoaded,'Original cover has not yet been recovered');check('original cover loaded');
     result.pass=true;
   }catch(e){result.pass=false;result.failure=e.message;console.log(`${name}: FAIL ${e.message}`);}
   finally{if(browser)await browser.close();results.push(result);fs.writeFileSync(path.join(output,`${name}.json`),JSON.stringify(result,null,2));}

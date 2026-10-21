@@ -1,5 +1,6 @@
 {
   "repository": "guizhan21/daily-reading-github-test",
   "basePath": "/daily-reading-github-test/",
-  "title": "每日讀書 · GitHub 測試書庫"
+  "title": "每日讀書 · GitHub 測試書庫",
+  "coverRecoveryPending": true
 }
