@@ -5,6 +5,7 @@ import fs from 'node:fs';import path from 'node:path';import {pathToFileURL} fro
 import {root,hash} from './catalog.mjs';import {atomic} from './publisher.mjs';import {inside,localEnvironment,lease} from './local-paths.mjs';
 const args=process.argv.slice(2),flags=new Map();for(let i=0;i<args.length;i++){if(args[i]==='--ad-hoc'){flags.set('ad-hoc',true);continue;}if(!args[i].startsWith('--')||!args[i+1])throw Error('Use --name value');flags.set(args[i].slice(2),args[++i]);}
 const workspace=fs.realpathSync(path.resolve(flags.get('workspace')||root));inside(workspace,root);Object.assign(process.env,localEnvironment(workspace));
+process.chdir(workspace);
 const release=lease(workspace,'github-intake');process.once('exit',release);
 try{
 const dir=inside(workspace,flags.get('state-dir')||'storage/github-publishing');fs.mkdirSync(dir,{recursive:true});const catalogPath=path.join(dir,'source-catalog.json'),ledgerPath=path.join(dir,'intake.json'),stateRoot=path.join(dir,'notebooklm');
@@ -24,7 +25,7 @@ if(flags.has('job')){
   ledger.receipts.push({bookId:m.id,version:m.version,zipSha256:hash(raw),downloadJobId:job.id,kind:flags.get('ad-hoc')?'ad_hoc':'daily',receivedAt:new Date().toISOString(),receipt:'verified',generation:'awaiting_audio',download:'awaiting_generation',publication:'awaiting_audio'});
  }
  if(!flags.get('ad-hoc')){const slot=ledger.slots.find(s=>s.date===m.date&&s.category===m.category);if(!slot)throw Error('No matching daily slot; use the source date or --ad-hoc');if(slot.bookId&&slot.bookId!==m.id)throw Error('Daily slot occupied; an ad-hoc book must not consume it');Object.assign(slot,{bookId:m.id,status:'awaiting_audio'});}
- save();console.log(JSON.stringify({bookId:m.id,version:m.version,duplicate:!!old,status:'awaiting_audio',chapters:parsed.chapters.length}));
+ save();console.log(JSON.stringify({bookId:m.id,version:m.version,duplicate:!!old,status:ledger.receipts.find(r=>r.bookId===m.id&&r.version===m.version).publication,chapters:parsed.chapters.length}));
 }else if(flags.has('record')){
  const ch=catalog.tables.chapters.find(c=>c.id===flags.get('record'));if(!ch)throw Error('Unknown chapter');const target=inside(workspace,path.join(stateRoot,ch.id,ch.content_hash.slice(0,16),'state.json')),s=JSON.parse(fs.readFileSync(target)),proof=JSON.parse(fs.readFileSync(inside(workspace,flags.get('proof')||'')));
  if(s.status==='playable'){console.log(JSON.stringify({chapterId:ch.id,status:s.status,duplicate:true}));process.exit(0);}
