@@ -65,7 +65,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     else result.screenshot='Not captured: Playwright WebKit syncAnimations style conflicts with CSP; responsive geometry is tested.';
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1));check('390px responsive layout (not physical iPhone)');
     assert.equal(result.downloads.length,0);check('audio element does not trigger attachment download');
-    assert.equal(result.errors.filter(e=>!e.includes('404')).length,0);check('no page, CSP or CORS errors');
+    assert.equal(result.errors.length,0);check('no console, page, CSP or CORS errors');
     assert.ok(result.coverLoaded,'Original cover has not yet been recovered');check('original cover loaded');
     result.pass=true;
   }catch(e){result.pass=false;result.failure=e.message;console.log(`${name}: FAIL ${e.message}`);}

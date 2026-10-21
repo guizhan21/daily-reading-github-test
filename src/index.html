@@ -2,7 +2,7 @@
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{{TITLE}}</title><base href="{{BASE}}">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src https://github.com https://release-assets.githubusercontent.com https://objects.githubusercontent.com; connect-src 'self'; object-src 'none'; base-uri 'self'">
-<link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script></head>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script></head>
 <body><header><a class="brand" href="./">每日讀書<span>GitHub 測試書庫</span></a><a href="https://github.com/guizhan21/daily-reading-github-test">專案與驗收紀錄 ↗</a></header>
 <main><section class="hero"><div class="cover-frame"><img id="cover" alt="書籍封面" width="220" height="330"><p id="cover-pending" hidden>原封面等待取回<br>不重新生成</p></div><div><p class="eyebrow">閱讀，然後聽見新的理解。</p><h1 id="book-title">載入書庫…</h1><p id="description">公開測試版 · 兩章原文與原始音訊</p><p class="notice">文字由 ChatGPT、封面由 Image、音訊由 NotebookLM 生成。數字與英文術語仍有待人工核對。本測試不代表相關服務商背書。</p><nav id="book-select" aria-label="選擇書籍"></nav></div></section>
 <div class="layout"><aside><h2>章節目錄</h2><nav id="chapters" aria-label="章節目錄"></nav><p class="muted">進度只保存在這台裝置的瀏覽器；清除網站資料會一併清除進度。</p><button id="export-progress">匯出本機進度</button></aside><section id="reading" aria-label="章節正文">{{CHAPTERS}}</section></div></main>
