@@ -18,7 +18,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   async function ready(){await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});}
   for(const b of books){
    await openBook(b);assert.equal(await page.locator('[data-play]').count(),b.chapters.length);
-   assert.ok(await page.locator('#cover').evaluate(e=>e.tagName==='IMG'?e.complete&&e.naturalWidth>0:e.getBoundingClientRect().width>0));check('book detail, chapter order and original cover: '+b.bookId);
+   await page.waitForFunction(()=>{const e=document.querySelector('#cover');return e&&(e.tagName==='IMG'?e.complete&&e.naturalWidth>0:e.getBoundingClientRect().width>0);},{},{timeout:60000});check('book detail, chapter order and original cover: '+b.bookId);
    await page.locator('[data-read="'+b.chapters[0].chapterId+'"]').click();assert.ok((await page.locator('#reader-content').innerText()).length>1500);assert.ok((await page.locator('#markdown-download').getAttribute('href')).endsWith('.md'));check('complete original Markdown and source download: '+b.bookId);
    await page.locator('#close-reader').click();
    const sample=name==='chrome'?b.chapters:b.chapters.slice(0,2);
