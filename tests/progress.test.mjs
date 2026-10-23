@@ -1,9 +1,13 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {chapterProgress, continueIndex} from '../src/progress.js';
+import {chapterProgress, continueIndex, bookStatus} from '../src/progress.js';
 const book={chapters:[{chapterId:'a',durationSec:100},{chapterId:'b',durationSec:150}]};
 test('unfinished chapter restores its exact position and speed',()=>assert.deepEqual(chapterProgress({positionSec:37.25,rate:1.5},100),{positionSec:37.25,rate:1.5,completed:false}));
 test('finished and legacy near-end chapters replay from zero',()=>{for(const s of [{positionSec:100},{positionSec:99.5},{positionSec:50,completed:true}])assert.deepEqual(chapterProgress(s,100),{positionSec:0,rate:1,completed:true});});
 test('invalid progress cannot seek outside audio or use invalid speed',()=>{for(const p of [-4,NaN,Infinity,'12'])assert.equal(chapterProgress({positionSec:p,rate:20},100).positionSec,0);assert.equal(chapterProgress({positionSec:200},100).completed,true);});
 test('continue uses the active unfinished chapter and does not mix chapter positions',()=>{assert.equal(continueIndex(book,{activeChapter:'b',chapters:{a:{positionSec:12},b:{positionSec:25}}}),1);});
 test('completed active chapter advances to first unfinished; completed book can replay',()=>{assert.equal(continueIndex(book,{activeChapter:'a',chapters:{a:{positionSec:100}}}),1);assert.equal(continueIndex(book,{chapters:{a:{completed:true},b:{completed:true}}}),0);});
+test('new books and metadata-only saved state remain unread',()=>{for(const s of [undefined,{}, {activeChapter:'a',chapters:{a:{positionSec:0,rate:1.5}}}])assert.equal(bookStatus(book,s),'unread');});
+test('legacy audio, reading and completion records are classified without migration',()=>{for(const s of [{chapters:{a:{positionSec:37}}},{readChapter:'b'},{chapters:{a:{readingY:500}}},{chapters:{b:{completed:true}}},{started:true}])assert.equal(bookStatus(book,s),'reading');});
+test('only completion of every known chapter finishes the whole book',()=>{assert.equal(bookStatus(book,{chapters:{a:{completed:true},b:{positionSec:149.5}}}),'completed');assert.equal(bookStatus(book,{chapters:{a:{completed:true},missing:{completed:true}}}),'reading');assert.equal(bookStatus({chapters:[]},{}),'unread');});
+test('manual text-reading completion or shelf reset preserves chapter progress',()=>{const chapters={a:{positionSec:37,rate:1.5},b:{readingY:500}};for(const status of ['unread','reading','completed']){const saved={shelfOverride:status,chapters};assert.equal(bookStatus(book,saved),status);assert.equal(saved.chapters.a.positionSec,37);assert.equal(saved.chapters.a.rate,1.5);}assert.equal(bookStatus(book,{shelfOverride:'invalid'}),'unread');});

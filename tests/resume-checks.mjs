@@ -20,7 +20,7 @@ export async function resumeChecks(page, book, check) {
  await select(first);assert.ok(Math.abs(await media().evaluate(a=>a.currentTime)-position)<3);
  check('chapter A and B keep separate exact positions across switches');
  position=(await saved(first.chapterId)).positionSec;
- await page.locator('nav[aria-label="主選單"] a[href="#library"]').click();
+ await page.locator('nav[aria-label="主選單"] a[href="#library/reading"]').click();
  await page.locator('#book-select [data-book="'+book.bookId+'"]').click();
  await page.locator('#start-book').click();await playing(first);await pause();assert.ok(Math.abs(await media().evaluate(a=>a.currentTime)-position)<3);
  check('reopening a book and Continue uses the last unfinished chapter and position');

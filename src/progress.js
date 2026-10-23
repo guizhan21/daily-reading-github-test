@@ -11,3 +11,15 @@ export function continueIndex(book, saved = {}) {
  if (active >= 0 && !chapterProgress(saved.chapters?.[book.chapters[active].chapterId], book.chapters[active].durationSec).completed) return active;
  return Math.max(0, book.chapters.findIndex(c => !chapterProgress(saved.chapters?.[c.chapterId], c.durationSec).completed));
 }
+
+export const shelves = ['unread', 'reading', 'completed'];
+export function bookStatus(book, saved = {}) {
+ if (shelves.includes(saved.shelfOverride)) return saved.shelfOverride;
+ if (book.chapters.length && book.chapters.every(ch => chapterProgress(saved.chapters?.[ch.chapterId], ch.durationSec).completed)) return 'completed';
+ // Metadata preloading can save an active chapter at zero. That is not reading.
+ if (saved.started === true || saved.readChapter || book.chapters.some(ch => {
+  const p = saved.chapters?.[ch.chapterId];
+  return nonnegative(p?.positionSec) > 0 || nonnegative(p?.readingY) > 0 || p?.completed === true;
+ })) return 'reading';
+ return 'unread';
+}

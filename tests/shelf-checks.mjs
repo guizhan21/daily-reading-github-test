@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+
+export async function shelfChecks(browser, site, books, check, observe) {
+ const context=await browser.newContext({viewport:{width:1280,height:900}}),page=await context.newPage();observe(page);
+ const nav=async shelf=>{await page.locator('.sidebar nav a[href="#library/'+shelf+'"]').click();await page.locator('#book-select[data-shelf="'+shelf+'"]').waitFor();};
+ const cards=()=>page.locator('#book-select [data-book]');
+ const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));
+ const b=books[0],ch=b.chapters[0];
+ try {
+  await page.goto(site,{waitUntil:'domcontentloaded'});await page.locator('.shelf-portals').waitFor();
+  assert.equal(await page.locator('.shelf-portal').count(),3);assert.equal(await page.locator('#view [data-book]').count(),0);check('home offers three separate shelf pages without repeated book grids');
+  await nav('unread');assert.equal(await cards().count(),books.length);await nav('reading');assert.equal(await cards().count(),0);await nav('completed');assert.equal(await cards().count(),0);check('fresh browser and metadata preloading leave all books unread');
+  await nav('unread');await page.locator('[data-book="'+b.bookId+'"]').click();await page.locator('[data-read="'+ch.chapterId+'"]').click();await page.locator('#close-reader').click();
+  await nav('unread');assert.equal(await cards().count(),books.length-1);await nav('reading');assert.equal(await cards().count(),1);await page.locator('[data-book="'+b.bookId+'"]').click();check('reading original text moves only that book to Reading');
+  await page.locator('[data-play="'+ch.chapterId+'"]').click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.error&&!a.paused&&a.currentTime>.2;},{},{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();await page.locator('audio').evaluate(a=>a.currentTime=32);await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-32)<.5;},{},{timeout:45000});
+  await page.getByLabel('閱讀狀態',{exact:true}).selectOption('completed');assert.ok(Math.abs((await saved()).books[b.bookId].chapters[ch.chapterId].positionSec-32)<.5);await nav('completed');assert.equal(await cards().count(),1);await nav('reading');assert.equal(await cards().count(),0);check('manual Finished moves text-reading books without resetting listening position');
+  await nav('completed');await page.reload({waitUntil:'domcontentloaded'});await page.locator('[data-book="'+b.bookId+'"]').waitFor();assert.equal(await cards().count(),1);check('shelf selection and manual completion survive refresh');
+  await page.locator('[data-book="'+b.bookId+'"]').click();await page.getByLabel('閱讀狀態',{exact:true}).selectOption('unread');await nav('unread');assert.equal(await cards().count(),books.length);await page.locator('[data-book="'+b.bookId+'"]').click();await page.locator('[data-play="'+ch.chapterId+'"]').click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.error&&!a.seeking&&!a.paused&&a.currentTime>=32&&a.currentTime<40;},{},{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();await nav('reading');assert.equal(await cards().count(),1);check('marking Unread keeps the exact position and actual playback starts Reading again');
+  await page.getByLabel('搜尋書籍',{exact:true}).fill(b.title);assert.equal(await cards().count(),1);await nav('unread');await page.getByLabel('搜尋書籍',{exact:true}).fill(b.title);assert.equal(await cards().count(),0);check('search is scoped to the selected shelf');
+  await nav('unread');await page.setViewportSize({width:360,height:800});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.locator('.shelf-tabs a[href="#library/reading"]').click();await page.getByRole('heading',{name:'正在讀',exact:true}).waitFor();assert.equal(await cards().count(),1);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));check('360px shelf navigation, counts and responsive layout');
+ } finally {await context.close();}
+ // A legacy book with five finished chapters finishes naturally on its last chapter.
+ const last=b.chapters.at(-1),legacy={schema:1,activeBook:b.bookId,books:{[b.bookId]:{activeChapter:last.chapterId,chapters:Object.fromEntries(b.chapters.map(c=>[c.chapterId,c===last?{positionSec:c.durationSec-2}:{completed:true}]))}}};
+ const restored=await browser.newContext({viewport:{width:1280,height:900}});await restored.addInitScript(value=>localStorage.setItem('daily-reading-github:v1',JSON.stringify(value)),legacy);const p=await restored.newPage();observe(p);
+ try {await p.goto(site+'#book/'+b.bookId,{waitUntil:'domcontentloaded'});await p.locator('[data-play="'+last.chapterId+'"]').click();await p.waitForFunction(()=>document.querySelector('audio').ended,{},{timeout:60000});await p.locator('.sidebar nav a[href="#library/completed"]').click();await p.locator('#book-select [data-book="'+b.bookId+'"]').waitFor();check('finishing the final real audio chapter automatically moves the whole book to Finished');} finally {await restored.close();}
+}
