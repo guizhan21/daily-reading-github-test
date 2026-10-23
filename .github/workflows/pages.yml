@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: pages-${{ github.ref }}
+  group: pages-${{ github.ref == 'refs/heads/main' && github.ref || github.run_id }}
   cancel-in-progress: false
 jobs:
   build:
@@ -52,7 +52,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Install the selected browser and its dependencies
+        run: npx playwright install --with-deps ${{ matrix.browser }}
       - run: npm run build
       - name: Test isolated migration before deployment
         run: node tests/run-local.mjs
@@ -92,7 +93,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Install the selected browser and its dependencies
+        run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Verify actual public website and Release playback
         run: npm run test:browser
         env:
