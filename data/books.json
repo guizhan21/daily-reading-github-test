@@ -370,6 +370,80 @@
           "durationSec": 348.856599
         }
       ]
+    },
+    {
+      "bookId": "2026-10-22_ai-consultant_adult-teaching",
+      "title": "把 AI 教到會：成人學習、課程設計與教學成效的證據方法",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-22",
+      "description": "面向已有 AI 講座與成人教學經驗的講師，從可觀察成果倒推課程內容，研究如何診斷差異、減少理解負荷、安排操作與回饋、協助學員遷移到生活任務，並誠實評估成效與數位風險。\n\n成人AI教育、學習設計、評量與數位教學倫理；不包含模型技術原理、RAG/Agent工程或企業試點導入。",
+      "version": 1,
+      "cover": "covers/2026-10-22_ai-consultant_adult-teaching.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-22_ai-consultant_adult-teaching.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-22-ai-consultant_adult-teaching-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch01",
+          "title": "從工具介紹到可驗證的學習成果",
+          "markdown": "chapters/2026-10-22_ai-consultant_adult-teaching_ch01.md",
+          "textSha256": "ddc25b80c76001c7e6fa13ffb7a6575fbd016f8178dca60865ce99629743f0d5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant_adult-teaching-v1/2026-10-22_ai-consultant_adult-teaching_ch01-f6bd209343d6.m4a",
+          "sha256": "f6bd209343d64ce5b2c82960d5a80b95def2a2b22cfae1d78dd8f36fd7fd700d",
+          "bytes": 9138922,
+          "durationSec": 283.933605
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch02",
+          "title": "學員差異與教學前診斷",
+          "markdown": "chapters/2026-10-22_ai-consultant_adult-teaching_ch02.md",
+          "textSha256": "b7a3a9d6f72cc113d98b0509e43e8dc9990bbbacc8f447961badc1f52aa1532c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant_adult-teaching-v1/2026-10-22_ai-consultant_adult-teaching_ch02-1d04fb141081.m4a",
+          "sha256": "1d04fb141081eadadd834333107954e98eb1453193f1a490142e20836bc3692e",
+          "bytes": 12156508,
+          "durationSec": 377.695782
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch03",
+          "title": "把抽象概念講到能理解",
+          "markdown": "chapters/2026-10-22_ai-consultant_adult-teaching_ch03.md",
+          "textSha256": "ff691cc6d62dedd1574fe9396176d36a4a13ed02c41acf9fd933292ed33d258e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant_adult-teaching-v1/2026-10-22_ai-consultant_adult-teaching_ch03-f89f21ad19b5.m4a",
+          "sha256": "f89f21ad19b55d5cbfa7dc2e0064fe68f7de98dcfe8c86e37dc86237fc128835",
+          "bytes": 10382458,
+          "durationSec": 322.57161
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch04",
+          "title": "從示範走向獨立操作與回饋",
+          "markdown": "chapters/2026-10-22_ai-consultant_adult-teaching_ch04.md",
+          "textSha256": "d94230da4d15aba7b40d0003a38f05503b4ad6370537e6e21c282c7a67a00ece",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant_adult-teaching-v1/2026-10-22_ai-consultant_adult-teaching_ch04-8a07a9347269.m4a",
+          "sha256": "8a07a9347269559137f256db9b4fde9182a56da0a6a8f4e627c0885ea178c953",
+          "bytes": 9424407,
+          "durationSec": 292.803628
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch05",
+          "title": "讓能力離開教室後仍可使用",
+          "markdown": "chapters/2026-10-22_ai-consultant_adult-teaching_ch05.md",
+          "textSha256": "34de037ce4592321d8f0d919d7f23ce59100292080015aa3ed2f72c6c1108276",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant_adult-teaching-v1/2026-10-22_ai-consultant_adult-teaching_ch05-67554e8b44a3.m4a",
+          "sha256": "67554e8b44a3271ba8dd33bc6477ec36394b7889fe2593c3a7c0921781a33e7a",
+          "bytes": 10714259,
+          "durationSec": 332.88127
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch06",
+          "title": "以證據檢查教學品質與倫理",
+          "markdown": "chapters/2026-10-22_ai-consultant_adult-teaching_ch06.md",
+          "textSha256": "4329612f99a3c15e5c123553954aa956228ba3f5b420828bc5cce2890f27dc9e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-22-ai-consultant_adult-teaching-v1/2026-10-22_ai-consultant_adult-teaching_ch06-1d4b46f01525.m4a",
+          "sha256": "1d4b46f0152520dd091ed4597c1a45987f5502e7a800bdd112a2720d922573f2",
+          "bytes": 14059164,
+          "durationSec": 436.813787
+        }
+      ]
     }
   ]
 }

@@ -36,10 +36,12 @@ Git hooks 與 CI 掃描真正暫存的 bytes、Git 歷史、私密檔案、音�
 
 ## 每日產書的本機交接
 
-上游兩個既有成書任務與 Pro 模型保持不變。GitHub Actions 無法讀取個人電腦上的檔案；發布必須由本機執行，然後 push main 觸發部署。
+上游兩個既有成書任務保持不變；使用者已於 2026-10-23 永久取消 Pro 專屬模型限制，不再以模型標籤阻擋接書或發布。GitHub Actions 無法讀取個人電腦上的檔案；發布必須由本機執行，然後 push main 觸發部署。
 
 1. 既有下載器確認真實 ZIP 完成，驗證 CRC 與 SHA-256。尚未到達是 `waiting_book`。
 2. 從保留的產書專案執行 `node --import tsx <site>/scripts/intake.mjs --workspace <project> --job <download-id>`。這只重用既有純 ZIP 驗證與下載模組，建立獨立 JSON 來源、逐章原文／提示詞及持久檢查點，不載入舊網站的資料儲存模組。臨時書籍加 `--ad-hoc`，不佔每日固定位置。
+
+   跨午夜的來源保留原 bookId、章節 ID 與出版日期，用 `--received-date YYYY-MM-DD` 分別記錄接收日。極少數原包只有輔助 `quality_report.json` 未列入其 checksum 時，可使用逐檔核對且已明確授權的 `--reviewed-source <local-review.json>`；原 ZIP 不修改，正文與 prompt 的雜湊必須完全一致，原嚴格轉換器仍再次驗證所有已列檔案。其他缺失或不同版本不會自動放行。
 3. 逐章在既有已登入 NotebookLM 正常介面完成來源隔離、設定與生成；`intake.mjs --record <chapterId> --proof <project-contained-json>` 保存實際 provider IDs 和階段，不因等待逾時重生。登入、驗證碼、配額須遵守平台限制。此處沒有冒稱官方生成 API。
 4. 既有下載器保存原 M4A，實際核對主題及語言；`intake.mjs --attach <chapterId> --file <original> --proof <review-json>` 驗證原檔雜湊、有效 AAC、時長、完整解碼及來源／內容核對證據。數字及術語未確認必須保留標記。附入的原音檔永不轉碼。
 5. 每本新書沿用 Image 原封面與核對紀錄；只傳入專案內已驗證的原封面。建立與正文、音訊和封面雜湊綁定的公開權利核對紀錄。
