@@ -97,3 +97,12 @@ NotebookLM 仍依賴本機、Codex 和已登入瀏覽器；00:30 是開始接書
 - [Release 限制](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)：每個 asset 小於 2 GiB、每 Release 最多 1000 assets。
 - [Pages 限制](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)：站點容量與流量仍有限制。
 - [合理使用政策 §9](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies#9-excessive-bandwidth-use)：過量使用可被限流或暫停；「保留所有舊書」是本專案政策，不能當成 GitHub 無條件永久無限儲存／串流保證。
+
+
+## 播放連線與背景接章
+
+使用同一個原生 audio 元件跨頁播放，章節轉換期間保留系統 Media Session 的播放狀態；支援時設定 Audio Session 為 playback。ended 事件負責主要接章，頁面返回時再次核對，定時觀察只作補充，不能阻止手機 OS 凍結頁面。
+
+持續 3 秒沒有實際時間進展會顯示緩衝；15 秒沒有進展才在原 canonical Release URL 重新連線，保留原章節、位置與倍速，每次選章最多自動兩次。仍未回應會繼續等待並提供「重新連線」，不宣稱下載失敗，也不清零。離線不消耗自動重試；明確暫停不被自動重啟。自動重試不會新增、轉碼或重傳音檔。
+
+單元測試涵蓋離線、無 error 的時鐘停滯、重試上限、背景計時暫停及 OS 接章狀態；Chrome 故障注入另驗證真正的新 loadstart、73.25 秒與 1.5 倍速恢復。WebKit 原生媒體可能繞過 Playwright request interception，因此不能把攔截測試無法製造故障冒稱恢復通過。各引擎正常原音檔播放仍須通過。真實 hidden Chrome 加入下一章慢載入與連續接章；桌面 WebKit 不代表 iPhone 實機、鎖屏或系統省電狀態已通過。

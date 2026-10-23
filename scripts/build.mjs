@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
 import {renderMarkdown} from './render.mjs';
 import {root, load, validate, safeRelative, buildTarget} from './catalog.mjs';
 const config = load('data/site.json'), catalog = load('data/books.json');
-const assets=['app.js','progress.js','preferences.js','ambience.js','media-session.js','style.css','storybook.css'];
+const assets=['app.js','progress.js','preferences.js','ambience.js','media-session.js','playback-health.js','style.css','storybook.css'];
 const assetVersion=crypto.createHash('sha256').update(assets.map(file=>fs.readFileSync(path.join(root,'src',file),'utf8').replaceAll('\r\n','\n')).join('\n')).digest('hex').slice(0,16);
 validate(catalog, config);
 const args=process.argv.slice(2);if(args.length>1||args.some(a=>a!=='--root'))throw Error('Unsupported build argument');

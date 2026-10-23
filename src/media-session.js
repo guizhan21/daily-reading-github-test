@@ -10,7 +10,8 @@ export function bindMediaSession(audio, hooks, platform = navigator) {
   try{
    const next=current.bookId+'/'+current.chapterId;
    if(next!==key&&typeof MediaMetadata!=='undefined'){session.metadata=new MediaMetadata({title:current.chapterTitle,artist:current.bookTitle,album:'日讀 · 每日讀書',artwork:current.cover?[{src:new URL(current.cover,document.baseURI).href}]:[]});key=next;}
-   session.playbackState=audio.paused?'paused':'playing';
+   // Keep one OS session across ended->next-source instead of releasing it.
+   session.playbackState=audio.paused&&!hooks.transitioning?.()?'paused':'playing';
    if(session.setPositionState&&Number.isFinite(audio.duration)&&audio.duration>0&&Number.isFinite(audio.playbackRate)&&audio.playbackRate>0)session.setPositionState({duration:audio.duration,playbackRate:audio.playbackRate,position:Math.min(audio.duration,Math.max(0,audio.currentTime||0))});
   }catch{/* Media playback itself remains authoritative on unsupported platforms. */}
  }
