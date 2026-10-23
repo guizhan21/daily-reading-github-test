@@ -12,6 +12,20 @@ GitHub Pages 提供自然風格書房、三個獨立書架、分類搜尋、書�
 
 [網站](https://guizhan21.github.io/daily-reading-github-test/) · [原始音檔](https://github.com/guizhan21/daily-reading-github-test/releases) · [Actions](https://github.com/guizhan21/daily-reading-github-test/actions)
 
+## 動態書房與外觀
+
+右上角可直接切換日夜，也可在「字體與外觀」選擇跟隨系統、宋體／黑體及三段正文字級。設定使用獨立的 `daily-reading-github:appearance:v1`，不改動既有書架及播放紀錄。
+
+場景使用分層流雲、波光、像素小屋與煙霧、星光及 Canvas 微光粒子。原創 SVG 場景與 CSS 像素元件是程式繪製，沒有冒稱 Image 生成圖片。動態只在場景內，不遮擋閱讀或接管滑鼠；粒子最高約25幀／秒、手機減少數量，隱藏分頁停止繪製。可關閉動態；系統「減少動態」優先，與音訊播放互不依賴。原書籍封面與音訊保持原版本。
+
+## 跨頁播放與自動接章
+
+播放器的原生 audio 常駐於頁面外層，書架、書籍頁、外觀變更不更換這個物件。正在聽 A 書而閱讀 B 書時，重新整理也先還原 A 書的實際收聽章節。自動接下一章從零秒開始並沿用目前倍速；手動選章則繼續該章上次的位置。同一本最後一章結束後停止，不跳到別本書。只跳著聽到最後一章，不會誤報整本已聽完。
+
+支援瀏覽器提供的 [Media Session](https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API) 標題、播放／暫停、前後章及定位控制；不支援的選項安全略過。瀏覽器若拒絕自動播放，保留下一章狀態並顯示需要按播放，不偷偷放寬瀏覽器政策。
+
+`tests/background.mjs` 使用專案隔離的有視窗 Chrome，透過受支援的 CDP `noDefaults` 連線避免測試框架的強制前景覆寫，並恢復正常背景節流。另開真實分頁後，必須觀察到原頁 `document.hidden=true`，再以實際音訊 ended 連續接兩章、保留倍速、還原章節位置；沒有改寫 hidden getter 或假發 visibility 事件。測試分開保存背景驗收 JSON。Firefox／WebKit 另有實際播放、頁內切換與接章驗收；真正背景狀態尚未驗證，不能以自動化的常駐前景狀態冒稱通過。iPhone實機、鎖屏、系統休眠／凍結、關閉或離開整個網站仍需分別驗證。
+
 ## 遷移與部署保護
 
 基準為 `31265a0177129090553f39513d7669933fdd4c68`。完整遷移在獨立 migration 分支開發；該分支只建置、測試及保存 Actions artifact，不能覆蓋目前 Pages。只有 main 的完整權利清單、資料、HTTP 與三種瀏覽器測試通過，才能部署。部署後再次由外部 Actions 測試真實 Pages / Release。

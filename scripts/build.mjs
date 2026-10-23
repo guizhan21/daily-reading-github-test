@@ -1,8 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import {renderMarkdown} from './render.mjs';
 import {root, load, validate, safeRelative} from './catalog.mjs';
 const config = load('data/site.json'), catalog = load('data/books.json');
+const assets=['app.js','progress.js','preferences.js','ambience.js','media-session.js','style.css','storybook.css'];
+const assetVersion=crypto.createHash('sha256').update(assets.map(file=>fs.readFileSync(path.join(root,'src',file),'utf8').replaceAll('\r\n','\n')).join('\n')).digest('hex').slice(0,16);
 validate(catalog, config);
 const dist = path.join(root, 'dist');
 // Only this computed, fixed child directory is ever removed.
@@ -24,11 +27,14 @@ for (const book of catalog.books) if(book.references){
  body+=`<article class="prose" id="text-references-${escape(book.bookId)}" hidden>${renderMarkdown(source)}</article>`;
 }
 let html = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
-html = html.replaceAll('{{BASE}}', escape(config.basePath)).replace('{{TITLE}}', escape(config.title)).replace('{{CHAPTERS}}', body);
+html = html.replaceAll('{{BASE}}', escape(config.basePath)).replaceAll('{{ASSET_VERSION}}',assetVersion).replace('{{TITLE}}', escape(config.title)).replace('{{CHAPTERS}}', body);
 fs.writeFileSync(path.join(dist,'index.html'), html);
-for (const file of ['app.js','progress.js','style.css']) fs.copyFileSync(path.join(root,'src',file), path.join(dist,file));
+for (const file of assets) {
+ const source=fs.readFileSync(path.join(root,'src',file),'utf8');
+ fs.writeFileSync(path.join(dist,file),file.endsWith('.js')?source.replace(/from '(\.\/[^'?]+\.js)'/g,(_,module)=>"from '"+module+'?v='+assetVersion+"'"):source);
+}
 fs.mkdirSync(path.join(dist,'data'),{recursive:true});
 fs.copyFileSync(path.join(root,'data/books.json'),path.join(dist,'data/books.json'));
 fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 let bytes=0;function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else bytes+=fs.statSync(p).size;}}walk(dist);
-console.log(JSON.stringify({books:catalog.books.length,chapters:catalog.books.flatMap(b=>b.chapters).length,pagesBytes:bytes,audioBytesInPages:0,basePath:config.basePath}));
+console.log(JSON.stringify({books:catalog.books.length,chapters:catalog.books.flatMap(b=>b.chapters).length,pagesBytes:bytes,audioBytesInPages:0,basePath:config.basePath,assetVersion}));

@@ -136,6 +136,12 @@ jobs:
         env:
           BROWSER: ${{ matrix.browser }}
           SITE_URL: https://guizhan21.github.io/daily-reading-github-test/
+      - name: Verify real background-tab playback with a headed browser
+        if: matrix.browser == 'chrome'
+        run: xvfb-run -a node tests/background.mjs
+        env:
+          BROWSER: ${{ matrix.browser }}
+          SITE_URL: https://guizhan21.github.io/daily-reading-github-test/
       - name: Verify actual Pages and Release playback with official WebKit
         if: matrix.browser == 'webkit'
         run: |
