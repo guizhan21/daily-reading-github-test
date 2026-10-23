@@ -24,6 +24,8 @@ jobs:
       - run: npm test
       - run: node scripts/probe.mjs
       - run: npm run build
+      - run: npm run build:root
+      - run: node scripts/acceptance.mjs --root
       - run: npm run acceptance
         if: github.ref == 'refs/heads/main'
       - uses: actions/upload-artifact@v4
@@ -52,9 +54,17 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --ignore-scripts
-      - name: Install the selected browser and its dependencies
-        if: matrix.browser != 'webkit'
-        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Use the runner's real Chrome, installing only if absent
+        if: matrix.browser == 'chrome'
+        run: |
+          if ! command -v google-chrome || ! command -v xvfb-run; then
+            npx playwright install --with-deps chrome
+          fi
+          google-chrome --version
+          command -v xvfb-run
+      - name: Install Firefox and its dependencies
+        if: matrix.browser == 'firefox'
+        run: npx playwright install --with-deps firefox
       - name: Provide a real audio output service for headless Firefox
         if: matrix.browser == 'firefox'
         run: |
@@ -114,9 +124,17 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --ignore-scripts
-      - name: Install the selected browser and its dependencies
-        if: matrix.browser != 'webkit'
-        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Use the runner's real Chrome, installing only if absent
+        if: matrix.browser == 'chrome'
+        run: |
+          if ! command -v google-chrome || ! command -v xvfb-run; then
+            npx playwright install --with-deps chrome
+          fi
+          google-chrome --version
+          command -v xvfb-run
+      - name: Install Firefox and its dependencies
+        if: matrix.browser == 'firefox'
+        run: npx playwright install --with-deps firefox
       - name: Provide a real audio output service for headless Firefox
         if: matrix.browser == 'firefox'
         run: |

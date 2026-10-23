@@ -2,6 +2,7 @@ import fs from 'node:fs';import path from 'node:path';import assert from 'node:a
 import {resumeChecks} from './resume-checks.mjs';
 import {shelfChecks} from './shelf-checks.mjs';
 import {appearanceChecks} from './appearance-checks.mjs';
+import {shortURLChecks} from './short-url-checks.mjs';
 const site=process.env.SITE_URL||'https://guizhan21.github.io/daily-reading-github-test/',selected=process.env.BROWSER||'chrome',books=load('data/books.json').books;
 const engines={chrome:[chromium,process.env.CHROME_EXECUTABLE?{executablePath:process.env.CHROME_EXECUTABLE}:{channel:'chrome'}],firefox:[firefox,{}],webkit:[webkit,{}]};
 const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true});const results=[];
@@ -16,6 +17,8 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   let releaseMetadata;
   if(name==='chrome'){const gate=new Promise(resolve=>releaseMetadata=resolve);await page.route('**/releases/download/**',async route=>{await gate;try{await route.continue();}catch{/* A source replaced by selectChapter may already be aborted. Actual playback is still required. */}});}
   await page.goto(site,{waitUntil:'domcontentloaded'});await page.getByRole('heading',{name:'今日書房.'}).waitFor();check('nature landscape home and three shelf entry points');
+  await page.locator('.brand-icon img').evaluate(e=>e.decode());assert.equal(await page.locator('.brand-icon img').evaluate(e=>e.naturalWidth),128);
+  const favicon=await page.locator('link[rel="icon"][sizes="32x32"]').getAttribute('href'),icon=await context.request.get(new URL(favicon,await page.evaluate(()=>document.baseURI)).href);assert.equal(icon.status(),200);assert.ok(icon.headers()['content-type'].includes('image/png'));assert.equal((await icon.body()).subarray(0,8).toString('hex'),'89504e470d0a1a0a');check('Image-generated brand mark and PNG favicon load under the deployment prefix');
   async function openBook(b){for(const shelf of ['unread','reading','completed']){await page.locator('.sidebar nav a[href="#library/'+shelf+'"]').click();await page.locator('#book-select[data-shelf="'+shelf+'"]').waitFor();if(await page.locator('#book-select [data-book="'+b.bookId+'"]').count())break;}await page.locator('#book-select [data-book="'+b.bookId+'"]').click();await page.locator('#book-title').waitFor();assert.equal(await page.locator('#book-title').innerText(),b.title);}
   async function ready(){await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});}
   for(const b of books){
@@ -58,6 +61,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   await page.setViewportSize({width:1280,height:900});await resumeChecks(page,books[0],check);
   await shelfChecks(browser,site,books,check,observe);
   await appearanceChecks(browser,site,books,check,observe);
+  await shortURLChecks(browser,site,books,check,observe);
   assert.equal(r.errors.length,0,r.errors.join('\n'));assert.equal(r.downloads.length,0);
   r.pass=true;
  }catch(e){r.pass=false;r.failure=e.message;try{if(lastPage&&!lastPage.isClosed()){r.lastMedia=await lastPage.locator('audio').evaluate(a=>({src:a.currentSrc,time:a.currentTime,duration:Number.isFinite(a.duration)?a.duration:null,paused:a.paused,seeking:a.seeking,readyState:a.readyState,networkState:a.networkState,error:a.error?.message||null}));r.playerStatus=await lastPage.locator('#status').innerText();await lastPage.screenshot({path:path.join(output,name+'-failure.png'),caret:'initial'});}}catch(d){r.diagnosticError=d.message;}console.log(name+': FAIL '+e.message);}finally{if(browser)await browser.close();results.push(r);fs.writeFileSync(path.join(output,name+'.json'),JSON.stringify(r,null,2));}

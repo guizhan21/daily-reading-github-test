@@ -1,5 +1,9 @@
 # 日讀｜每日讀書有聲書庫
 
+短網址為 <https://guizhan21.github.io/>，原專案網址仍保留。根網址發布器只從本倉庫完整驗收成功的 main Commit 建置同一份網站，不複製原始音訊或建立第二套書庫。`npm run build:root` 輸出固定的 `dist-root/` 與根路徑 base，正常 `npm run build` 仍輸出原 `dist/`；不更改 Release URL、書籍 ID 或本機進度 key。同一來源的兩個網址可沿用既有瀏覽器進度。
+
+網站標誌及分頁圖示為內建 Image 生成的森林書本圖標；衍生 PNG 只調整尺寸，檔名含原圖 SHA 前綴供快取更新。書籍封面及音訊不重做。短址的發布及外網驗收見 [短址 Actions](https://github.com/guizhan21/guizhan21.github.io/actions)，其公開 publication.json 記錄實際來源版本。
+
 GitHub Pages 提供自然風格書房、三個獨立書架、分類搜尋、書籍簡介、全文閱讀與常駐播放器；原始 M4A 只保存在 GitHub Releases。JSON / Markdown 保存內容，localStorage 保存本瀏覽器的書架狀態、閱讀章節、閱讀位置、播放章節、播放位置和倍速。沒有帳號、跨裝置同步、伺服器、SQL 或其他託管服務的執行依賴。
 
 ## 三個獨立書架

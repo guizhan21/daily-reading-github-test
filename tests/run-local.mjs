@@ -1,5 +1,5 @@
-import {spawn} from 'node:child_process';import {setTimeout as delay} from 'node:timers/promises';import {root,load} from '../scripts/catalog.mjs';
-const port=process.env.PORT||'4173',url='http://127.0.0.1:'+port+load('data/site.json').basePath;
+import {spawn} from 'node:child_process';import {setTimeout as delay} from 'node:timers/promises';import {root,load,buildTarget} from '../scripts/catalog.mjs';
+const port=process.env.PORT||'4173',target=buildTarget(load('data/site.json'),process.env.ROOT_SITE==='1'?'root':'project'),url='http://127.0.0.1:'+port+target.basePath;
 const server=spawn(process.execPath,['scripts/serve.mjs'],{cwd:root,env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe'],windowsHide:true});
 async function test(file,headed=false){
  const xvfb=headed&&process.platform==='linux'&&!process.env.DISPLAY;

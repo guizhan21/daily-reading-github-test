@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {audioURL,safeRelative,validate,load} from '../scripts/catalog.mjs';
+import {audioURL,safeRelative,validate,load,buildTarget} from '../scripts/catalog.mjs';
 import {renderMarkdown} from '../scripts/render.mjs';
 const repo='guizhan21/daily-reading-github-test';
 test('canonical release URL accepted',()=>assert.ok(audioURL(`https://github.com/${repo}/releases/download/audio-v1/ch1.m4a`,repo)));
@@ -12,5 +12,8 @@ test('catalog valid',()=>assert.ok(validate(load('data/books.json'),load('data/s
 test('duplicate books rejected',()=>{const c=structuredClone(load('data/books.json'));if(c.books.length){c.books.push(c.books[0]);assert.throws(()=>validate(c,load('data/site.json')));}});
 test('duplicate chapters rejected',()=>{const c=structuredClone(load('data/books.json'));if(c.books.length){c.books[0].chapters.push(c.books[0].chapters[0]);assert.throws(()=>validate(c,load('data/site.json')));}});
 test('wrong base path rejected',()=>assert.throws(()=>validate(load('data/books.json'),{repository:repo,basePath:'/'})));
+test('short root deployment leaves authoritative Release repository unchanged',()=>{const c=load('data/site.json');assert.deepEqual(buildTarget(c,'root'),{basePath:'/',directory:'dist-root'});assert.equal(c.repository,repo);assert.ok(validate(load('data/books.json'),c));});
+test('legacy project deployment retains its independent output and prefix',()=>assert.deepEqual(buildTarget(load('data/site.json')),{basePath:'/daily-reading-github-test/',directory:'dist'}));
+test('unknown build targets cannot choose paths outside fixed output directories',()=>{for(const mode of ['../outside','https://other.example','ROOT',''])assert.throws(()=>buildTarget(load('data/site.json'),mode));});
 test('Chinese citation suffix remains visible but is not appended to reference URL',()=>{const html=renderMarkdown('直接網址：https://example.com/docs；查閱日期：2026-10-21。');assert.ok(html.includes('href="https://example.com/docs"'));assert.ok(html.includes('查閱日期：2026-10-21'));});
 test('Markdown cannot introduce a JavaScript link',()=>assert.ok(!renderMarkdown('[bad](javascript:alert%281%29)').includes('href="javascript:')));

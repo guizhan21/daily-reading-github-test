@@ -4,6 +4,10 @@ import crypto from 'node:crypto';
 export const root = path.resolve(import.meta.dirname, '..');
 export const hash = buffer => crypto.createHash('sha256').update(buffer).digest('hex');
 export const load = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+export function buildTarget(config, mode='project') {
+  if(!['project','root'].includes(mode))throw Error('Unknown Pages build target');
+  return mode==='root'?{basePath:'/',directory:'dist-root'}:{basePath:config.basePath,directory:'dist'};
+}
 export function safeRelative(value) {
   if (typeof value !== 'string' || !/^[a-zA-Z0-9_./-]+$/.test(value) || value.startsWith('/') || value.split('/').some(p => !p || p === '..' || p === '.')) throw Error('Unsafe relative path');
   return value;
