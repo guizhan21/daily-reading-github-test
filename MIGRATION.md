@@ -66,3 +66,7 @@
 已發布 [網頁書 Release](https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-23-general-knowledge-v1)，6個公開全檔SHA通過；實際重跑上傳0／重用6／新增書籍0。兩個真實原ZIP再次接書均duplicate:true，4本日更來源的24個已接受音訊與章節state完全不變。
 
 候選現為7本42章，核准範圍10本60章；同三本原書仍缺封面，所以尚未合併main或更新Pages。接收紀錄會依匹配的下載任務／bookId／ZIP SHA更新為真正的catalog_ready，新增3項防誤報測試後本機共35項單元測試通過。Chrome/Firefox/WebKit、HTTP與最終建置結果由本次實際Actions artifacts記錄；migration成功不會觸發正式部署。
+
+補做真正瀏覽器程序關閉／重開（專案內獨立Chromium156設定檔）時，重現了載入音訊前選1.5倍卻被metadata舊快照改回1倍的問題。播放器現在即時保存倍速選擇，metadata完成時讀最新值；修正後同一原音源的播放位置與1.5倍均在程序重啟後恢復。新增的瀏覽器回歸檢查會暫緩真實Release回應，實測metadata尚未到達時選倍速。
+
+中間版本Actions 39904187993的WebKit曾在已收到200/206、沒有頁面錯誤的情況下播放等待逾時，失敗紀錄保留；當時未保存播放器DOM，不能斷言唯一根因。播放請求也改為在使用者點擊時立即呼叫play()，避免等metadata回呼才開始、失去使用者操作關聯；這與[WebKit官方的使用者手勢說明](https://webkit.org/blog/6784/new-video-policies-for-ios/)一致。沒有放寬瀏覽器保護、改音檔或增加外部代理。後續失敗會保存真實播放器狀態與畫面，最終三引擎結果另看最新Actions及交付檔，不以這次推論冒充已證實原因。

@@ -4,11 +4,14 @@ const engines={chrome:[chromium,process.env.CHROME_EXECUTABLE?{executablePath:pr
 const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true});const results=[];
 for(const [name,[engine,options]] of Object.entries(engines)){
  if(selected!=='all'&&name!==selected)continue;
- const r={browser:name,site,checkedAt:new Date().toISOString(),checks:[],audio:[],errors:[],downloads:[],mediaResponses:[],iPhonePhysical:false,lockScreen:false};let browser;
+ const r={browser:name,site,checkedAt:new Date().toISOString(),checks:[],audio:[],errors:[],downloads:[],mediaResponses:[],iPhonePhysical:false,lockScreen:false};let browser,lastPage;
  const check=(name,data={})=>{r.checks.push({name,pass:true,...data});console.log(r.browser+': PASS '+name);};
  try{
   browser=await engine.launch({headless:true,...options});r.version=browser.version();const context=await browser.newContext({viewport:{width:1280,height:900}});let page=await context.newPage();
-  const observe=p=>{p.on('pageerror',e=>r.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')r.errors.push(m.text());});p.on('download',d=>r.downloads.push(d.suggestedFilename()));p.on('response',async response=>{try{if(/release-assets\.githubusercontent\.com/.test(response.url())){const h=await response.allHeaders();r.mediaResponses.push({origin:new URL(response.url()).origin,status:response.status(),range:h['content-range'],type:h['content-type'],disposition:h['content-disposition']});}}catch{}});};observe(page);
+  const observe=p=>{lastPage=p;p.on('pageerror',e=>r.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')r.errors.push(m.text());});p.on('download',d=>r.downloads.push(d.suggestedFilename()));p.on('response',async response=>{try{if(/release-assets\.githubusercontent\.com/.test(response.url())){const h=await response.allHeaders();r.mediaResponses.push({origin:new URL(response.url()).origin,status:response.status(),range:h['content-range'],type:h['content-type'],disposition:h['content-disposition']});}}catch{}});};observe(page);
+  // Hold only the first real media request so an early user rate change precedes metadata.
+  let releaseMetadata;
+  if(name==='chrome'){const gate=new Promise(resolve=>releaseMetadata=resolve);await page.route('**/releases/download/**',async route=>{await gate;try{await route.continue();}catch{/* A source replaced by selectChapter may already be aborted. Actual playback is still required. */}});}
   await page.goto(site,{waitUntil:'domcontentloaded'});await page.getByRole('heading',{name:'今日書房.'}).waitFor();check('original home banner, library sections and statistics');
   async function openBook(b){await page.locator('nav[aria-label="主選單"] a[href="#library"]').click();await page.locator('#book-select [data-book="'+b.bookId+'"]').click();await page.locator('#book-title').waitFor();assert.equal(await page.locator('#book-title').innerText(),b.title);}
   async function ready(){await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});}
@@ -20,8 +23,11 @@ for(const [name,[engine,options]] of Object.entries(engines)){
    const sample=name==='chrome'?b.chapters:b.chapters.slice(0,2);
    for(const ch of sample){
     await page.locator('[data-play="'+ch.chapterId+'"]').click();
+    const earlyRate=name==='chrome'&&b.bookId===books[0].bookId&&ch.chapterId===b.chapters[0].chapterId;
+    if(earlyRate){await page.getByRole('button',{name:'1.5 倍',exact:true}).click();assert.equal(await page.locator('audio').evaluate(a=>a.readyState),0);releaseMetadata();}
     await page.waitForFunction(u=>{const a=document.querySelector('audio');return a.currentSrc===u&&a.readyState>=2&&!a.paused&&a.currentTime>.3;},ch.audioUrl,{timeout:60000});
     const actual=await page.locator('audio').evaluate(a=>({duration:a.duration,time:a.currentTime}));assert.ok(Math.abs(actual.duration-ch.durationSec)<1);
+    if(earlyRate){assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('early rate choice survives metadata loading');await page.unroute('**/releases/download/**');}
     await page.getByRole('button',{name:'暫停',exact:true}).click();r.audio.push({bookId:b.bookId,chapterId:ch.chapterId,actualPlayback:true,durationSec:actual.duration});check('Release playback: '+ch.chapterId);
    }
   }
@@ -47,6 +53,6 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   assert.equal(r.downloads.length,0);check('audio element never triggers attachment download');assert.equal(r.errors.length,0,r.errors.join('\n'));check('no console, CSP, CORS or page errors');
   const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));assert.ok(Object.keys(progress.books).length>=books.length);fs.writeFileSync(path.join(output,name+'-progress.json'),JSON.stringify(progress,null,2));check('independent multi-book local progress');
   r.pass=true;
- }catch(e){r.pass=false;r.failure=e.message;console.log(name+': FAIL '+e.message);}finally{if(browser)await browser.close();results.push(r);fs.writeFileSync(path.join(output,name+'.json'),JSON.stringify(r,null,2));}
+ }catch(e){r.pass=false;r.failure=e.message;try{if(lastPage&&!lastPage.isClosed()){r.lastMedia=await lastPage.locator('audio').evaluate(a=>({src:a.currentSrc,time:a.currentTime,duration:Number.isFinite(a.duration)?a.duration:null,paused:a.paused,seeking:a.seeking,readyState:a.readyState,networkState:a.networkState,error:a.error?.message||null}));r.playerStatus=await lastPage.locator('#status').innerText();await lastPage.screenshot({path:path.join(output,name+'-failure.png')});}}catch(d){r.diagnosticError=d.message;}console.log(name+': FAIL '+e.message);}finally{if(browser)await browser.close();results.push(r);fs.writeFileSync(path.join(output,name+'.json'),JSON.stringify(r,null,2));}
 }
 fs.writeFileSync(path.join(output,'summary.json'),JSON.stringify(results,null,2));if(results.some(r=>!r.pass))process.exitCode=1;
