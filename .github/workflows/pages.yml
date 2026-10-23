@@ -62,14 +62,18 @@ jobs:
           fi
           google-chrome --version
           command -v xvfb-run
-      - name: Install Firefox and its dependencies
-        if: matrix.browser == 'firefox'
-        run: npx playwright install --with-deps firefox
-      - name: Provide a real audio output service for headless Firefox
+      - name: Install Firefox, its AAC decoder and an audio output service
         if: matrix.browser == 'firefox'
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pulseaudio pulseaudio-utils
+          npx playwright install firefox
+          if ! node --input-type=module -e "import {firefox} from 'playwright'; const browser=await firefox.launch(); await browser.close();"; then
+            npx playwright install-deps firefox
+          fi
+          # AAC is loaded at playback time; browser launch is not a codec test.
+          if ! sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60; then
+            sudo apt-get update
+            sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60
+          fi
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
@@ -132,14 +136,18 @@ jobs:
           fi
           google-chrome --version
           command -v xvfb-run
-      - name: Install Firefox and its dependencies
-        if: matrix.browser == 'firefox'
-        run: npx playwright install --with-deps firefox
-      - name: Provide a real audio output service for headless Firefox
+      - name: Install Firefox, its AAC decoder and an audio output service
         if: matrix.browser == 'firefox'
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pulseaudio pulseaudio-utils
+          npx playwright install firefox
+          if ! node --input-type=module -e "import {firefox} from 'playwright'; const browser=await firefox.launch(); await browser.close();"; then
+            npx playwright install-deps firefox
+          fi
+          # AAC is loaded at playback time; browser launch is not a codec test.
+          if ! sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60; then
+            sudo apt-get update
+            sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60
+          fi
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
