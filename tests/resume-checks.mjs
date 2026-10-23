@@ -5,7 +5,7 @@ export async function resumeChecks(page, book, check) {
  const [first,second]=book.chapters;
  const media=()=>page.locator('audio');
  const saved=id=>page.evaluate(({bookId,id})=>JSON.parse(localStorage.getItem('daily-reading-github:v1')).books[bookId].chapters[id],{bookId:book.bookId,id});
- const playing=ch=>page.waitForFunction(url=>{const a=document.querySelector('audio');return a.currentSrc===url&&!a.paused&&!a.seeking&&a.currentTime>.2;},ch.audioUrl,{timeout:60000});
+ const playing=ch=>page.waitForFunction(url=>{const a=document.querySelector('audio');return a.currentSrc===url&&!a.error&&!a.paused&&!a.seeking&&a.currentTime>.2;},ch.audioUrl,{timeout:60000});
  const pause=()=>page.getByRole('button',{name:'暫停',exact:true}).click();
  const seek=async seconds=>{await media().evaluate((a,t)=>a.currentTime=t,seconds);await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-t)<1;},seconds,{timeout:45000});};
  const select=async ch=>{await page.locator('[data-play="'+ch.chapterId+'"]').click();await playing(ch);await pause();};
