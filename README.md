@@ -28,6 +28,10 @@ GitHub Pages 提供首頁、分類、搜尋、書籍簡介、全文閱讀與常�
 
 ## 建置與測試
 
+播放進度按穩定 bookId / chapterId 分開保存。再次按同章播放會直接續聽，不重新載入音源；切章、暫停、拖曳、隱藏頁面和離開前保存進度。還原跳轉完成前不寫回零秒，慢速載入或連續重新整理也保留原位置。已聽完的章節標記「已聽完」，再按會從頭重聽；播放器另有「從頭播放」按鈕，只重設目前一章。倍速和刻意倒退的位置一併保留。舊測試版 v1 本機紀錄沿用，沒有換 key 清空進度；不同網站來源與不同裝置的紀錄不會自動互通。
+
+瀏覽器測試使用真實 Release 原音檔，額外涵蓋同章連點不重載、兩章位置隔離、書籍重開、慢速載入中再次重整、真正播到結束、自動下一章、完成章節重聽及主動倒退後還原。
+
 Node 24，執行 `npm ci --ignore-scripts`、`npm run validate`、`npm test`、`npm run build`。
 `npm run acceptance` 檢查全部核准書籍都已進入目錄、無音檔進入部署包且無禁止的執行依賴。
 `BROWSER=chrome|firefox|webkit npm run test:local` 在隔離本機伺服器測試；`SITE_URL=<Pages URL> npm run test:browser` 測試實際外網。

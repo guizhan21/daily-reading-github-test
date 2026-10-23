@@ -26,7 +26,7 @@ for (const book of catalog.books) if(book.references){
 let html = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
 html = html.replaceAll('{{BASE}}', escape(config.basePath)).replace('{{TITLE}}', escape(config.title)).replace('{{CHAPTERS}}', body);
 fs.writeFileSync(path.join(dist,'index.html'), html);
-for (const file of ['app.js','style.css']) fs.copyFileSync(path.join(root,'src',file), path.join(dist,file));
+for (const file of ['app.js','progress.js','style.css']) fs.copyFileSync(path.join(root,'src',file), path.join(dist,file));
 fs.mkdirSync(path.join(dist,'data'),{recursive:true});
 fs.copyFileSync(path.join(root,'data/books.json'),path.join(dist,'data/books.json'));
 fs.writeFileSync(path.join(dist,'.nojekyll'),'');

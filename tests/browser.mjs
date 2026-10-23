@@ -1,10 +1,11 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {chromium,firefox,webkit} from 'playwright';import {root,load} from '../scripts/catalog.mjs';
+import {resumeChecks} from './resume-checks.mjs';
 const site=process.env.SITE_URL||'https://guizhan21.github.io/daily-reading-github-test/',selected=process.env.BROWSER||'chrome',books=load('data/books.json').books;
 const engines={chrome:[chromium,process.env.CHROME_EXECUTABLE?{executablePath:process.env.CHROME_EXECUTABLE}:{channel:'chrome'}],firefox:[firefox,{}],webkit:[webkit,{}]};
 const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true});const results=[];
 for(const [name,[engine,options]] of Object.entries(engines)){
  if(selected!=='all'&&name!==selected)continue;
- const r={browser:name,site,checkedAt:new Date().toISOString(),checks:[],audio:[],errors:[],downloads:[],mediaResponses:[],iPhonePhysical:false,lockScreen:false};let browser,lastPage;
+ const r={browser:name,engine:name==='chrome'?(process.env.CHROME_EXECUTABLE?'project-installed Chromium executable':'Google Chrome'):name,site,checkedAt:new Date().toISOString(),checks:[],audio:[],errors:[],downloads:[],mediaResponses:[],iPhonePhysical:false,lockScreen:false};let browser,lastPage;
  const check=(name,data={})=>{r.checks.push({name,pass:true,...data});console.log(r.browser+': PASS '+name);};
  try{
   browser=await engine.launch({headless:true,...options});r.version=browser.version();const context=await browser.newContext({viewport:{width:1280,height:900}});let page=await context.newPage();
@@ -52,6 +53,8 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   if(name!=='webkit')await page.screenshot({path:path.join(output,name+'-mobile.png'),caret:'initial'});
   assert.equal(r.downloads.length,0);check('audio element never triggers attachment download');assert.equal(r.errors.length,0,r.errors.join('\n'));check('no console, CSP, CORS or page errors');
   const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));assert.ok(Object.keys(progress.books).length>=books.length);fs.writeFileSync(path.join(output,name+'-progress.json'),JSON.stringify(progress,null,2));check('independent multi-book local progress');
+  await page.setViewportSize({width:1280,height:900});await resumeChecks(page,books[0],check);
+  assert.equal(r.errors.length,0,r.errors.join('\n'));assert.equal(r.downloads.length,0);
   r.pass=true;
  }catch(e){r.pass=false;r.failure=e.message;try{if(lastPage&&!lastPage.isClosed()){r.lastMedia=await lastPage.locator('audio').evaluate(a=>({src:a.currentSrc,time:a.currentTime,duration:Number.isFinite(a.duration)?a.duration:null,paused:a.paused,seeking:a.seeking,readyState:a.readyState,networkState:a.networkState,error:a.error?.message||null}));r.playerStatus=await lastPage.locator('#status').innerText();await lastPage.screenshot({path:path.join(output,name+'-failure.png')});}}catch(d){r.diagnosticError=d.message;}console.log(name+': FAIL '+e.message);}finally{if(browser)await browser.close();results.push(r);fs.writeFileSync(path.join(output,name+'.json'),JSON.stringify(r,null,2));}
 }
