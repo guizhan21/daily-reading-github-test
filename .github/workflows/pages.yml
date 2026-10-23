@@ -54,6 +54,19 @@ jobs:
       - run: npm ci --ignore-scripts
       - name: Install the selected browser and its dependencies
         run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Provide a real audio output service for headless Firefox
+        if: matrix.browser == 'firefox'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pulseaudio pulseaudio-utils
+          export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
+          mkdir -p "$XDG_RUNTIME_DIR"
+          chmod 700 "$XDG_RUNTIME_DIR"
+          echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" >> "$GITHUB_ENV"
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=ci_audio
+          pactl set-default-sink ci_audio
+          pactl list short sinks
       - run: npm run build
       - name: Test isolated migration before deployment
         run: node tests/run-local.mjs
@@ -95,6 +108,19 @@ jobs:
       - run: npm ci --ignore-scripts
       - name: Install the selected browser and its dependencies
         run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Provide a real audio output service for headless Firefox
+        if: matrix.browser == 'firefox'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pulseaudio pulseaudio-utils
+          export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
+          mkdir -p "$XDG_RUNTIME_DIR"
+          chmod 700 "$XDG_RUNTIME_DIR"
+          echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" >> "$GITHUB_ENV"
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=ci_audio
+          pactl set-default-sink ci_audio
+          pactl list short sinks
       - name: Verify actual public website and Release playback
         run: npm run test:browser
         env:
