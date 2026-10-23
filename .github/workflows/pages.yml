@@ -53,6 +53,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Install the selected browser and its dependencies
+        if: matrix.browser != 'webkit'
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Provide a real audio output service for headless Firefox
         if: matrix.browser == 'firefox'
@@ -69,9 +70,16 @@ jobs:
           pactl list short sinks
       - run: npm run build
       - name: Test isolated migration before deployment
+        if: matrix.browser != 'webkit'
         run: node tests/run-local.mjs
         env:
           BROWSER: ${{ matrix.browser }}
+      - name: Test WebKit with the official matching preinstalled dependencies
+        if: matrix.browser == 'webkit'
+        run: |
+          docker run --rm --init -v "$PWD:/work" -w /work -e BROWSER=webkit \
+            mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea \
+            node tests/run-local.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -107,6 +115,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Install the selected browser and its dependencies
+        if: matrix.browser != 'webkit'
         run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Provide a real audio output service for headless Firefox
         if: matrix.browser == 'firefox'
@@ -122,10 +131,18 @@ jobs:
           pactl set-default-sink ci_audio
           pactl list short sinks
       - name: Verify actual public website and Release playback
+        if: matrix.browser != 'webkit'
         run: npm run test:browser
         env:
           BROWSER: ${{ matrix.browser }}
           SITE_URL: https://guizhan21.github.io/daily-reading-github-test/
+      - name: Verify actual Pages and Release playback with official WebKit
+        if: matrix.browser == 'webkit'
+        run: |
+          docker run --rm --init -v "$PWD:/work" -w /work -e BROWSER=webkit \
+            -e SITE_URL=https://guizhan21.github.io/daily-reading-github-test/ \
+            mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea \
+            node tests/browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
