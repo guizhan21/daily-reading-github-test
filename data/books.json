@@ -740,6 +740,154 @@
           "durationSec": 365.8071655328798
         }
       ]
+    },
+    {
+      "bookId": "2026-10-23_ai-consultant_security-governance",
+      "title": "把 AI 用得安全：資料、權限與風險治理的工程判斷",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-23",
+      "description": "幫 AI 講師與顧問把生成式 AI 的資料、權限、提示注入、供應鏈、營運韌性與治理驗收變成可解釋、可檢查的工程與交付決策。\n\nAI系統資安、資料治理、權限、提示注入、供應鏈與安全驗收；不重述AI模型基礎、RAG檢索工程、Agent任務設計、AI ROI試點或成人教學設計。",
+      "version": 1,
+      "cover": "covers/2026-10-23_ai-consultant_security-governance.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-23_ai-consultant_security-governance.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-23-ai-consultant_security-governance-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch01",
+          "title": "從用途畫出風險地圖",
+          "markdown": "chapters/2026-10-23_ai-consultant_security-governance_ch01.md",
+          "textSha256": "028202f1d431611268022dc0e2a1f0ca33d902979796eb6261787a9ad45c34b6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-ai-consultant_security-governance-v1/2026-10-23_ai-consultant_security-governance_ch01-3053972ea464.m4a",
+          "sha256": "3053972ea464222c5957b346f35d77c7ccbe0a3eb98f0dfc1b186124b50008b3",
+          "bytes": 10312983,
+          "durationSec": 320.412154
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch02",
+          "title": "資料進出與供應商責任",
+          "markdown": "chapters/2026-10-23_ai-consultant_security-governance_ch02.md",
+          "textSha256": "4256745d0bdeb4627393dc10eaf5a09aa6522bf08979ed00c0406cb8c2f7b26a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-ai-consultant_security-governance-v1/2026-10-23_ai-consultant_security-governance_ch02-345e1221f816.m4a",
+          "sha256": "345e1221f816247be0e7d962d53a7321d8b6b5ba211753d056cc566cca86cbe2",
+          "bytes": 10056633,
+          "durationSec": 312.44771
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch03",
+          "title": "提示注入與不可信內容邊界",
+          "markdown": "chapters/2026-10-23_ai-consultant_security-governance_ch03.md",
+          "textSha256": "49b3ce396d1466201ac6f5132203eb7c744f27e9c252e0563fd2fdb90bfdc72d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-ai-consultant_security-governance-v1/2026-10-23_ai-consultant_security-governance_ch03-6778aac80082.m4a",
+          "sha256": "6778aac80082865555e0fd81427687dabe2e1095d5137afcb48c7ab12519970f",
+          "bytes": 12509226,
+          "durationSec": 388.655601
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch04",
+          "title": "授權與工具的最後防線",
+          "markdown": "chapters/2026-10-23_ai-consultant_security-governance_ch04.md",
+          "textSha256": "d586182589977ff753abffe1e967976a557f8a9cc2578e6e174e3697c2f96b0a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-ai-consultant_security-governance-v1/2026-10-23_ai-consultant_security-governance_ch04-c1395a29b383.m4a",
+          "sha256": "c1395a29b383977522adc9bafdc56be1474536958d2dc6cc4f1825231396e55d",
+          "bytes": 12659496,
+          "durationSec": 393.322812
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch05",
+          "title": "供應鏈版本與營運韌性",
+          "markdown": "chapters/2026-10-23_ai-consultant_security-governance_ch05.md",
+          "textSha256": "8a7d60dcb25ebace5371d6b0daf804bfb046fc67cf1a0bfb06f964549fd28186",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-ai-consultant_security-governance-v1/2026-10-23_ai-consultant_security-governance_ch05-edbbad5eb948.m4a",
+          "sha256": "edbbad5eb94839ac9ce5e1dd37c191508189bfffa0541ba1f8be97c3fd901787",
+          "bytes": 12205065,
+          "durationSec": 379.205079
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch06",
+          "title": "把治理做成可驗收的交付",
+          "markdown": "chapters/2026-10-23_ai-consultant_security-governance_ch06.md",
+          "textSha256": "6ea7cc5af5eca5dde65e2a9eda06d5d257f71a29ecbcc62a46ba2788996d16bd",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-ai-consultant_security-governance-v1/2026-10-23_ai-consultant_security-governance_ch06-7ccfe73a235d.m4a",
+          "sha256": "7ccfe73a235dc06368a97cb71ea13dd6e4bb4806b6833990c0ca3a4d90870d34",
+          "bytes": 11394296,
+          "durationSec": 354.011429
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-24_general-knowledge",
+      "title": "判斷力如何失準：認知偏誤、風險與可修正的決策",
+      "category": "跨領域知識探索",
+      "date": "2026-10-24",
+      "description": "從直覺、機率、框架、預測、沉沒成本走到可修正的決策程序，幫助讀者辨識訊息與風險，在生活、課程與技術工作中建立更可靠的判斷。",
+      "version": 1,
+      "cover": "covers/2026-10-24_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-24_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-24-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch01",
+          "title": "直覺是工具，不是裁判",
+          "markdown": "chapters/2026-10-24_general-knowledge_ch01.md",
+          "textSha256": "a62773ab598253ee66309e397e3a7cd2ac725034ff90ec46abbaeafafac2bca6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-24-general-knowledge-v1/2026-10-24_general-knowledge_ch01-42e65f65c21f.m4a",
+          "sha256": "42e65f65c21fd6fe0395b9dcc93dbec91bc031ac18a8b47f91ab20a7edc510f5",
+          "bytes": 13956072,
+          "durationSec": 433.609433
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch02",
+          "title": "機率要先看母數：從故事回到比例",
+          "markdown": "chapters/2026-10-24_general-knowledge_ch02.md",
+          "textSha256": "f49f13c3409824e853a4344672ba557f2cb421102c4ecffb6f9a39e027fe4ead",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-24-general-knowledge-v1/2026-10-24_general-knowledge_ch02-39473b492275.m4a",
+          "sha256": "39473b492275a9ba49cde842725b60e337a226d9b65dd23411f7134496a9fdd8",
+          "bytes": 9780860,
+          "durationSec": 303.879546
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch03",
+          "title": "同一件事，換個說法為何改變選擇",
+          "markdown": "chapters/2026-10-24_general-knowledge_ch03.md",
+          "textSha256": "2c161a89dd109f514e6803c4ced8642b0f420c40a2bb0a92a5f3b528a2f47cf0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-24-general-knowledge-v1/2026-10-24_general-knowledge_ch03-f4a2b31a565d.m4a",
+          "sha256": "f4a2b31a565d53b07232a3a4af1cf51b451cf439fd86bb7af1604ed5c3a0576b",
+          "bytes": 11933890,
+          "durationSec": 370.776236
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch04",
+          "title": "為什麼總覺得自己估得準：自信、預測與工期",
+          "markdown": "chapters/2026-10-24_general-knowledge_ch04.md",
+          "textSha256": "dd216c117ea61ffbdecf2dc8bc2066f1ba9d64e27b894a0c5b6525ed037ca9ea",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-24-general-knowledge-v1/2026-10-24_general-knowledge_ch04-e25a9557a2e4.m4a",
+          "sha256": "e25a9557a2e4211a16a851b817e9b3fbdeb919443f2a2f9287ad5aeae0a3fc6c",
+          "bytes": 11992906,
+          "durationSec": 372.610612
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch05",
+          "title": "決定之後，為什麼更難回頭",
+          "markdown": "chapters/2026-10-24_general-knowledge_ch05.md",
+          "textSha256": "219145d86da22dec5f148d9449015d708c6173ef2c76278e525d1955ad61de38",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-24-general-knowledge-v1/2026-10-24_general-knowledge_ch05-220e0d477dbc.m4a",
+          "sha256": "220e0d477dbccb614fe53f254ede00be2ab4d88145ecfa48e284e470cb325034",
+          "bytes": 9165815,
+          "durationSec": 284.769524
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch06",
+          "title": "讓判斷可以被修正：從心理知識到決策制度",
+          "markdown": "chapters/2026-10-24_general-knowledge_ch06.md",
+          "textSha256": "8d87c6b1b46394306d492b8a26627a7d57b39a9124d5b2df70e462a0590bed02",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-24-general-knowledge-v1/2026-10-24_general-knowledge_ch06-2a7df73c9bea.m4a",
+          "sha256": "2a7df73c9beaef08d6af3f70f074c6efcc0cc3ed57b2274a16384aa53e8b8a1e",
+          "bytes": 10897284,
+          "durationSec": 338.570159
+        }
+      ]
     }
   ]
 }
