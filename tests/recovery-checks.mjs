@@ -22,12 +22,14 @@ export async function recoveryChecks(browser,site,book,check,observe){
   await page.getByRole('button',{name:'暫停',exact:true}).click();
   const count=events.length;await page.waitForTimeout(3500);assert.equal(events.length,count);assert.equal(await page.locator('audio').evaluate(a=>a.paused),true);
   check('explicit pause cancels stall recovery and preserves user intent');
-  // State fault injection only: simulate a native seek that never reports
-  // completion. The real source must reload and settle at 95s without playing.
-  await page.locator('audio').evaluate(a=>{Object.defineProperty(a,'seeking',{configurable:true,get:()=>true});a.addEventListener('loadstart',()=>{delete a.seeking;},{once:true});a.currentTime=95;});
+  // State fault injection only: simulate a dropped native seek command, with
+  // paused=true and seeking=false. Verify the application range-input contract
+  // and a real source reload to 95s without starting playback.
+  await page.locator('audio').evaluate(a=>{const native=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'currentTime');Object.defineProperty(a,'currentTime',{configurable:true,get(){return native.get.call(this);},set(){/* Simulate the engine dropping a requested seek. */}});a.addEventListener('loadstart',()=>{delete a.currentTime;},{once:true});});
+  await page.locator('#seek').evaluate(input=>{input.value='95';input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));});
   await page.waitForEvent('console',{predicate:m=>m.text().startsWith('audio-recovery '),timeout:25000});
   await page.waitForFunction(()=>{const a=document.querySelector('audio');return a.paused&&!a.seeking&&a.readyState>=2&&Math.abs(a.currentTime-95)<.5;},{},{timeout:60000,polling:100});
   assert.equal(events.length,2);assert.equal(events[1].positionSec,95);assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);
-  check('simulated missing seek completion recovers the real source at 95 seconds while remaining paused');
+  check('simulated dropped seek command recovers the real source at 95 seconds while remaining paused');
  }catch(e){e.message+='\nRecovery diagnostic: '+JSON.stringify(await page.locator('audio').evaluate(a=>({time:a.currentTime,paused:a.paused,seeking:a.seeking,ready:a.readyState,network:a.networkState,error:a.error?.message,status:document.querySelector('#status').textContent})));throw e;}finally{release();await context.close();}
 }
