@@ -791,17 +791,24 @@ input,select {
   flex-wrap:wrap;
   margin-top:8px;
 }
-.reading-status-row label {
-  font-size:12px;
+#reading-status {
   display:flex;
-  align-items:center;
-  gap:12px;
-}
-.reading-status-row select {
-  font-size:12px;
-  padding:6px 12px;
+  padding:3px;
+  gap:3px;
   background:#edf3e9;
-  border-color:#d6e3d2;
+  border:1px solid #d6e3d2;
+  border-radius:10px;
+}
+#reading-status button {
+  font-size:11px;
+  padding:5px 12px;
+  border-radius:7px;
+  min-height:32px;
+}
+#reading-status button[aria-pressed=true] {
+  background:white;
+  color:var(--green);
+  box-shadow:0 1px 4px #314e3010;
 }
 .reading-status-row>span {
   font-size:10px;
@@ -1610,9 +1617,6 @@ audio {
   }
   .reading-status-row {
     padding:13px 0;
-  }
-  .reading-status-row label {
-    font-size:11px;
   }
   .book-intro .local-note {
     font-size:10px;
