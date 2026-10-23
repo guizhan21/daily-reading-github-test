@@ -60,3 +60,9 @@
 目前候選 6 本／36 章，核准範圍 9 本／54 章，仍缺同三本舊書原封面；正式完整遷移門檻實際拒絕 6／9 差額，Pages 基準保持不變。新增 6 項來源防篡改測試後共 32 項單元測試通過。六本候選的本機 Firefox / WebKit 各 41 checks、12 次真實 Release 播放通過；本機無 Chrome channel，沒有冒稱該本機檢查通過，Chrome 留待 GitHub runner 實測。
 
 數字與英文術語仍待人工確認。教學書第六章 283–301 秒的 WCAG 說明省略大字 3:1 例外及網頁／投影片適用範圍，已列入內容核對限制；原章正文保留完整條件。檔案、主題與播放測試不代表完整事實查核。
+
+《網頁為什麼打不開》6 章也已完成獨立來源、原 M4A 解碼／靜音／全檔 ASR 與來源初核，74,031,049 bytes。兩本新書合計 12 個接受音檔、139,906,767 bytes、19 次生成（7 個未接受草稿的時間點與原因保留）；沒有重做已成功原書音訊。HTTPS 章111–223秒有重複開場，列為已知編輯限制，原始音訊未剪輯或轉碼；技術用語、數字與部分修辭仍待人工確認，不宣稱完美旁白或完整事實查核。
+
+已發布 [網頁書 Release](https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-23-general-knowledge-v1)，6個公開全檔SHA通過；實際重跑上傳0／重用6／新增書籍0。兩個真實原ZIP再次接書均duplicate:true，4本日更來源的24個已接受音訊與章節state完全不變。
+
+候選現為7本42章，核准範圍10本60章；同三本原書仍缺封面，所以尚未合併main或更新Pages。接收紀錄會依匹配的下載任務／bookId／ZIP SHA更新為真正的catalog_ready，新增3項防誤報測試後本機共35項單元測試通過。Chrome/Firefox/WebKit、HTTP與最終建置結果由本次實際Actions artifacts記錄；migration成功不會觸發正式部署。

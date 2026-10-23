@@ -444,6 +444,80 @@
           "durationSec": 436.813787
         }
       ]
+    },
+    {
+      "bookId": "2026-10-23_general-knowledge",
+      "title": "網頁為什麼打不開",
+      "category": "跨領域知識探索",
+      "date": "2026-10-23",
+      "description": "以開啟與維護網站的完整路徑為主軸，從網址、DNS 解析、IP 與傳輸、TLS 憑證、HTTP 與快取、同源政策和登入，逐步學會把「網站不能用」分解為可觀察、可驗證、可修復的工程問題。\n\n一般網路技術知識與教學用途；無對使用者目前真實網站進行連線檢測，所有故障案例均明標假設。",
+      "version": 1,
+      "cover": "covers/2026-10-23_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-23_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-23-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch01",
+          "title": "網址不是地址：瀏覽器如何找到網站",
+          "markdown": "chapters/2026-10-23_general-knowledge_ch01.md",
+          "textSha256": "5a9217f0dcfd1c10b41cf8bd8605ae460c42f677cddd448081bc6b1f06e1cd7d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-general-knowledge-v1/2026-10-23_general-knowledge_ch01-a8a56e88ffce.m4a",
+          "sha256": "a8a56e88ffce7cdfeaeda77bb6267475f8734a62003d481b0402bdf160ed18be",
+          "bytes": 10557265,
+          "durationSec": 328.005079
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch02",
+          "title": "連上不等於傳到：IP、TCP 與 QUIC 如何運送資料",
+          "markdown": "chapters/2026-10-23_general-knowledge_ch02.md",
+          "textSha256": "4835e78f91746616183f900a5a7fe6592186e9cb04c23d8be708cb0ff7e1d4c0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-general-knowledge-v1/2026-10-23_general-knowledge_ch02-c776582db834.m4a",
+          "sha256": "c776582db8349eefd5eea3efbfa1c230d34ba507c6c59818aa8cfa5d880bc509",
+          "bytes": 11544451,
+          "durationSec": 358.678639
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch03",
+          "title": "小鎖頭能證明什麼：HTTPS、憑證與信任鏈",
+          "markdown": "chapters/2026-10-23_general-knowledge_ch03.md",
+          "textSha256": "7e7299b6513e2f86df556f8653b17e5968e9b0e6cec663368ca71e2dbbc1a244",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-general-knowledge-v1/2026-10-23_general-knowledge_ch03-4ec552ac4ffb.m4a",
+          "sha256": "4ec552ac4ffb213983434c7d0a6d0b2b48fe4ca7d3af9bab6406f62b5e03af6c",
+          "bytes": 17688175,
+          "durationSec": 549.569887
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch04",
+          "title": "頁面已回覆，事情卻沒完成：HTTP 與快取的真正語意",
+          "markdown": "chapters/2026-10-23_general-knowledge_ch04.md",
+          "textSha256": "214cb5adf5648bd26eb06532800fa7b110c3b4f6de1b2e6c1c48bedc2e67cbbe",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-general-knowledge-v1/2026-10-23_general-knowledge_ch04-34436cb990f7.m4a",
+          "sha256": "34436cb990f77d75c97e86f4e985c1c071b19491de6e35605e3a90f0ccae7660",
+          "bytes": 9996123,
+          "durationSec": 310.566893
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch05",
+          "title": "同一個人，為什麼在不同網站不能互讀資料：CORS、Cookie 與瀏覽器邊界",
+          "markdown": "chapters/2026-10-23_general-knowledge_ch05.md",
+          "textSha256": "5478ef4a84b6ca5fc49f7dd3932435b41452c3db1ad81acb9e78f3493b2fbbb0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-general-knowledge-v1/2026-10-23_general-knowledge_ch05-c1e04fc077d9.m4a",
+          "sha256": "c1e04fc077d9efd23702c5019dbf20ec04e9e5283c38276ed84b6bf3f6f4ffa5",
+          "bytes": 11850853,
+          "durationSec": 368.198821
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch06",
+          "title": "不要再靠猜：用分層證據找出網站故障",
+          "markdown": "chapters/2026-10-23_general-knowledge_ch06.md",
+          "textSha256": "38b82786e1a7c154db4557f556153fdde6e72562b7ac1c0b5720525290ce5d9f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-23-general-knowledge-v1/2026-10-23_general-knowledge_ch06-b873acdf08f5.m4a",
+          "sha256": "b873acdf08f5eed7acc2586011db990ec5cd7f24f77aa2e95507e86e30130fcf",
+          "bytes": 12394182,
+          "durationSec": 385.079728
+        }
+      ]
     }
   ]
 }

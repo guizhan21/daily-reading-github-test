@@ -4,6 +4,7 @@
 import fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';import {execFileSync} from 'node:child_process';
 import {root,hash} from './catalog.mjs';import {atomic} from './publisher.mjs';import {inside,localEnvironment,lease} from './local-paths.mjs';
 import {readReviewedSource} from './reviewed-intake.mjs';
+import {syncIncomingReceipts} from './intake-state.mjs';
 const args=process.argv.slice(2),flags=new Map();for(let i=0;i<args.length;i++){if(args[i]==='--ad-hoc'){flags.set('ad-hoc',true);continue;}if(!args[i].startsWith('--')||!args[i+1])throw Error('Use --name value');flags.set(args[i].slice(2),args[++i]);}
 const workspace=fs.realpathSync(path.resolve(flags.get('workspace')||root));inside(workspace,root);Object.assign(process.env,localEnvironment(workspace));
 process.chdir(workspace);
@@ -13,6 +14,7 @@ const dir=inside(workspace,flags.get('state-dir')||'storage/github-publishing');
 const catalog=fs.existsSync(catalogPath)?JSON.parse(fs.readFileSync(catalogPath)):{schema:1,tables:{books:[],chapters:[],audio_assets:[],cover_assets:[],book_versions:[]}};
 const ledger=catalog.pipeline||(fs.existsSync(ledgerPath)?JSON.parse(fs.readFileSync(ledgerPath)):{schema:1,slots:[],receipts:[]}),date=flags.get('date')||new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 function save(){const published=JSON.parse(fs.readFileSync(path.join(root,'data/books.json'))).books;for(const r of ledger.receipts){const chapters=catalog.tables.chapters.filter(c=>c.book_id===r.bookId),complete=chapters.length>0&&chapters.every(c=>catalog.tables.audio_assets.some(a=>a.chapter_id===c.id&&a.content_hash===c.content_hash));r.import='complete';r.generation=complete?'complete':'awaiting_audio';r.download=complete?'verified':'awaiting_generation';const book=published.find(b=>b.bookId===r.bookId&&b.version===r.version);r.publication=complete&&book&&chapters.length===book.chapters.length&&chapters.every(c=>{const a=catalog.tables.audio_assets.find(a=>a.chapter_id===c.id&&a.content_hash===c.content_hash);return book.chapters.some(ch=>ch.chapterId===c.id&&ch.sha256===a.hash);})?'catalog_ready':complete?'ready_to_publish':'awaiting_audio';}
+ syncIncomingReceipts(ledger);
  for(const slot of ledger.slots){if(!slot.bookId)continue;const source=catalog.tables.books.find(b=>b.id===slot.bookId),receipt=ledger.receipts.find(r=>r.bookId===slot.bookId&&r.version===source?.version);if(receipt)slot.status=receipt.publication;}
  catalog.pipeline=ledger;atomic(catalogPath,catalog);atomic(ledgerPath,ledger);}
 for(const category of ['AI 講師與顧問專業養成','跨領域知識探索'])if(!ledger.slots.some(s=>s.date===date&&s.category===category))ledger.slots.push({date,category,status:'waiting_book',bookId:null});
