@@ -1,4 +1,5 @@
 /* Single 24px optical grid. Hit targets are independent of artwork size. */
+:root{--sans:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft JhengHei',sans-serif;}
 .ui-icon{display:inline-block;vertical-align:middle;flex-shrink:0;width:24px;height:24px;pointer-events:none;}
 .player-top button,#player-favorite,#close-reader{display:grid;place-items:center;padding:0;min-width:44px;min-height:44px;border:0;background:transparent;line-height:1;border-radius:50%;}
 .player[data-expanded='true'] .player-top{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;height:46px;flex-shrink:0;}
