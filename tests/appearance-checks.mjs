@@ -6,7 +6,7 @@ export async function appearanceChecks(browser,site,books,check,observe) {
  await context.addInitScript(p=>{if(!localStorage.getItem('daily-reading-github:v1'))localStorage.setItem('daily-reading-github:v1',JSON.stringify(p));},progress);
  const page=await context.newPage();observe(page);
  try {
-  await page.goto(site,{waitUntil:'domcontentloaded'});await page.locator('.scene-particles').waitFor();
+  await page.goto(site+'#home',{waitUntil:'domcontentloaded'});await page.locator('.scene-particles').waitFor();
   await page.waitForFunction(()=>Number(document.querySelector('.scene-particles').dataset.frames)>2);
   const canvas=page.locator('.scene-particles');let frames=Number(await canvas.getAttribute('data-frames'));await page.waitForTimeout(180);assert.ok(Number(await canvas.getAttribute('data-frames'))>frames);check('real decorative particle frames advance while the scene is visible');
   await page.getByRole('button',{name:'切換夜晚模式',exact:true}).click();assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');assert.equal(await page.locator('.scene-night').isVisible(),true);assert.equal(await page.locator('.scene-day').isVisible(),false);check('one-click night mode swaps scene and page colors');

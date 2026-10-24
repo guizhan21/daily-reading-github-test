@@ -122,3 +122,21 @@
 
 .reader-toolbar .reader-label{position:absolute;left:50%;translate:-50% 0;margin:0;}.reader-toolbar .reader-type-tools{margin-left:auto;}
 @media(max-width:560px){.shelf-item .card-title h3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;font-size:14px;line-height:1.45;min-height:2.9em;}}
+
+/* Image B content coordinates: strip only the illustrated phone/status frame,
+   then scale its 427px content width to the actual viewport. */
+@media(max-width:560px){
+ .reference-masthead{height:122px;}
+ :root[data-skin="coast"] .reference-masthead .scene-art{background-size:357.2093% auto;}
+ :root[data-skin="coast"] .reference-masthead .search-box{top:66px;left:18px;width:69.3%;height:39px;}
+ .player[data-expanded="true"]{padding-top:6px;gap:8px;}
+ .player[data-expanded="true"] .player-art{margin-top:0;}
+ .player[data-expanded="true"] .player-top>button{font-size:0;}
+ #collapse-player:before{content:'⌄';font:32px/1 system-ui;color:var(--ink);}
+ #player-queue-toggle:before{content:'☷';font:27px/1 system-ui;color:var(--ink);}
+ .player[data-expanded="true"] #previous:after{content:'上一章';}
+ .player[data-expanded="true"] #rewind:after,.player[data-expanded="true"] #forward:after{content:'15 秒';}
+ .player[data-expanded="true"] #next:after{content:'下一章';}
+ .player[data-expanded="true"] .controls>button:after{display:block;margin-top:6px;font:11px/1.4 var(--sans);color:var(--muted);}
+ :root[data-skin="coast"] .player[data-expanded="true"]:before{height:102.34vw;background-size:359.71897% auto;background-position:50.1353% 24.0204%;opacity:1;mask-image:linear-gradient(#000 0%,#000 45%,transparent 100%);}
+}

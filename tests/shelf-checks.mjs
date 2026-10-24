@@ -7,7 +7,7 @@ export async function shelfChecks(browser, site, books, check, observe) {
  const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));
  const b=books[0],ch=b.chapters[0];
  try {
-  await page.goto(site,{waitUntil:'domcontentloaded'});await page.locator('.shelf-portals').waitFor();
+  await page.goto(site+'#home',{waitUntil:'domcontentloaded'});await page.locator('.shelf-portals').waitFor();
   assert.equal(await page.locator('.shelf-portal').count(),3);assert.equal(await page.locator('#view [data-book]').count(),0);check('home offers three separate shelf pages without repeated book grids');
   await nav('unread');assert.equal(await cards().count(),books.length);await nav('reading');assert.equal(await cards().count(),0);await nav('completed');assert.equal(await cards().count(),0);check('fresh browser and metadata preloading leave all books unread');
   await nav('unread');await page.locator('[data-book="'+b.bookId+'"]').click();await page.locator('[data-read="'+ch.chapterId+'"]').click();await page.locator('#close-reader').click();
