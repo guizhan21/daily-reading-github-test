@@ -6,7 +6,7 @@ export async function resumeChecks(page, book, check) {
  const [first,second]=book.chapters;
  const media=()=>page.locator('audio');
  const saved=id=>page.evaluate(({bookId,id})=>JSON.parse(localStorage.getItem('daily-reading-github:v1')).books[bookId].chapters[id],{bookId:book.bookId,id});
- const playing=async (ch,startOverride)=>{const start=startOverride??chapterProgress(await saved(ch.chapterId),ch.durationSec).positionSec;await page.waitForFunction(({url,start})=>{const a=document.querySelector('audio');return a.currentSrc===url&&!a.error&&!a.paused&&!a.seeking&&a.readyState>=2&&a.currentTime>start+.2&&a.currentTime<start+15;},{url:ch.audioUrl,start},{timeout:60000});};
+ const playing=async (ch,startOverride)=>{const start=startOverride??chapterProgress(await saved(ch.chapterId),ch.durationSec).positionSec;console.log('resume-expect '+JSON.stringify({chapterId:ch.chapterId,start}));try{await page.waitForFunction(({url,start})=>{const a=document.querySelector('audio');return a.currentSrc===url&&!a.error&&!a.paused&&!a.seeking&&a.readyState>=2&&a.currentTime>start+.2&&a.currentTime<start+15;},{url:ch.audioUrl,start},{timeout:60000});}catch(error){error.message+='\nResume expectation: '+JSON.stringify({url:ch.audioUrl,start,saved:await saved(ch.chapterId),native:await media().evaluate(a=>({src:a.currentSrc,time:a.currentTime,paused:a.paused,ready:a.readyState,seeking:a.seeking,error:a.error?.message,status:document.querySelector('#status').textContent}))});throw error;}};
  const pause=()=>page.getByRole('button',{name:'暫停',exact:true}).click();
  const seek=async seconds=>{await media().evaluate((a,t)=>a.currentTime=t,seconds);await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-t)<1;},seconds,{timeout:45000});};
  const select=async ch=>{await page.locator('[data-play="'+ch.chapterId+'"]').click();await playing(ch);await pause();};
@@ -49,8 +49,8 @@ export async function resumeChecks(page, book, check) {
  await page.waitForFunction(t=>{const a=document.querySelector('audio');return a.readyState>=2&&!a.seeking&&Math.abs(a.currentTime-t)<1;},position,{timeout:60000});await page.unroute('**/releases/download/**',fallbackHold);
  assert.ok(Math.abs((await saved(first.chapterId)).positionSec-position)<1);
  check('native loadeddata and canplay restore the same position when metadata callback is not delivered');
- await page.getByRole('button',{name:'從頭播放本章',exact:true}).click();await playing(first);assert.ok(await media().evaluate(a=>a.currentTime)<4);await pause();
- check('explicit Restart clears only the chosen chapter position');
+ const loadsBeforeRestart=Number(await media().getAttribute('data-test-loads'));await page.getByRole('button',{name:'從頭播放本章',exact:true}).click();await playing(first,0);assert.equal(Number(await media().getAttribute('data-test-loads')),loadsBeforeRestart);assert.ok(await media().evaluate(a=>a.currentTime)<4);await pause();
+ check('explicit Restart seeks the existing stream to zero without reloading and clears only its chapter');
  assert.ok(Math.abs((await saved(second.chapterId)).positionSec-63)<1);
  await select(first);const duration=await media().evaluate(a=>a.duration);await seek(duration-.35);
  await page.getByRole('button',{name:'播放',exact:true}).click();await playing(second,0);await pause();

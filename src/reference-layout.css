@@ -117,3 +117,5 @@
 
 :root[data-skin="coast"] .reference-masthead .scene-art{background-size:357.2093% 682.6667%;background-position:8.1374% 16.0183%;}
 @media(max-width:560px){:root[data-skin="coast"] .reference-masthead .masthead-brand{color:transparent;}:root[data-skin="coast"] .reference-masthead .search-box{top:82px;bottom:auto;left:14px;width:calc(100% - 28px);background:var(--surface);}.reference-masthead .search-box button{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);padding:0;}.reference-masthead .search-box>span{display:flex;align-items:center;}.reference-masthead .search-box>span svg{width:20px;height:20px;}}
+
+.reader-type-tools #reader-light,.reader-type-tools #reader-dark{font-family:system-ui;font-size:20px;min-width:29px;color:var(--muted);}.reader-type-tools #reader-light[aria-pressed="true"],.reader-type-tools #reader-dark[aria-pressed="true"]{color:var(--accent);}
