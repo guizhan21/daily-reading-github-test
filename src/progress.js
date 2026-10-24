@@ -13,13 +13,46 @@ export function continueIndex(book, saved = {}) {
 }
 
 export const shelves = ['unread', 'reading', 'completed'];
+// Listening history is independent of a replay's current position. An explicit
+// false starts a new reading cycle; absent values retain legacy completion.
+export function chapterWasFinished(saved, duration) {
+ return typeof saved?.completedOnce === 'boolean' ? saved.completedOnce : chapterProgress(saved, duration).completed;
+}
+export function allChaptersFinished(book, saved = {}) {
+ return book.chapters.length > 0 && book.chapters.every(ch => chapterWasFinished(saved.chapters?.[ch.chapterId], ch.durationSec));
+}
+export function updateChapterProgress(saved, duration, changes, ended = false) {
+ return {...saved, ...changes, completedOnce: ended || chapterWasFinished(saved, duration)};
+}
+export function reconcileBookProgress(book, saved) {
+ const legacyUnreadReset = saved.shelfOverride === 'unread' && allChaptersFinished(book, saved) && book.chapters.every(ch => typeof saved.chapters?.[ch.chapterId]?.completedOnce !== 'boolean');
+ const result = {...saved, chapters: {...saved.chapters}};
+ for (const ch of book.chapters) {
+  const p = result.chapters[ch.chapterId];
+  if (p && typeof p.completedOnce !== 'boolean' && chapterWasFinished(p, ch.durationSec)) result.chapters[ch.chapterId] = {...p, completedOnce:true};
+ }
+ if (legacyUnreadReset) return setBookShelf(book, result, 'unread');
+ if (result.shelfOverride === 'reading' && allChaptersFinished(book, result)) delete result.shelfOverride;
+ return result;
+}
+export function setBookShelf(book, saved, shelf) {
+ if (!shelves.includes(shelf)) return saved;
+ const result = {...saved, shelfOverride:shelf, chapters:{...saved.chapters}};
+ // Deliberately reclassifying an already finished book starts a new cycle.
+ // Keep every listening position, speed, reader offset and current-pass flag.
+ if (shelf !== 'completed' && allChaptersFinished(book, saved)) {
+  for (const ch of book.chapters) result.chapters[ch.chapterId] = {...result.chapters[ch.chapterId], completedOnce:false};
+ }
+ return result;
+}
 export function bookStatus(book, saved = {}) {
- if (shelves.includes(saved.shelfOverride)) return saved.shelfOverride;
- if (book.chapters.length && book.chapters.every(ch => chapterProgress(saved.chapters?.[ch.chapterId], ch.durationSec).completed)) return 'completed';
+ if (saved.shelfOverride === 'unread' || saved.shelfOverride === 'completed') return saved.shelfOverride;
+ if (allChaptersFinished(book, saved)) return 'completed';
+ if (saved.shelfOverride === 'reading') return 'reading';
  // Metadata preloading can save an active chapter at zero. That is not reading.
  if (saved.started === true || saved.readChapter || book.chapters.some(ch => {
   const p = saved.chapters?.[ch.chapterId];
-  return nonnegative(p?.positionSec) > 0 || nonnegative(p?.readingY) > 0 || p?.completed === true;
+  return nonnegative(p?.positionSec) > 0 || nonnegative(p?.readingY) > 0 || p?.completed === true || p?.completedOnce === true;
  })) return 'reading';
  return 'unread';
 }

@@ -1,6 +1,6 @@
 import {icon} from './icons.js';
 import {canonicalAudioURL,retryAudioURL} from './media-source.js';
-import {chapterProgress,continueIndex,validRate,bookStatus,shelves} from './progress.js';
+import {chapterProgress,continueIndex,validRate,bookStatus,shelves,chapterWasFinished,allChaptersFinished,updateChapterProgress,reconcileBookProgress,setBookShelf} from './progress.js';
 import {initAppearance} from './preferences.js';
 import {initAmbience} from './ambience.js';
 import {bindMediaSession} from './media-session.js';
@@ -18,16 +18,23 @@ const finite=(n,f=0)=>Number.isFinite(n)&&n>=0?n:f;
 const time=n=>Math.floor(finite(n)/60)+':'+String(Math.floor(finite(n)%60)).padStart(2,'0');
 const professional='AI 講師與顧問專業養成',exploration='跨領域知識探索';
 const shelfInfo={unread:{label:'未讀',caption:'讓好奇心，從這裡發芽。',intro:'還沒翻開的故事，靜靜等你出發。',landscape:'forest'},reading:{label:'正在讀',caption:'沿著自己的節奏，慢慢走。',intro:'接上上次停留的地方，繼續這一段旅程。',landscape:'coast'},completed:{label:'已讀完',caption:'走過的風景，留在心裡。',intro:'讀過、聽過的篇章，隨時歡迎你再回來。',landscape:'mountains'}};
-let state={schema:1,books:{}},catalog,book,index=0,loading=false,lastSave=0,reader=null,viewBook=null,selection=0,playbackSelection=0,pendingRestore=null,restoreCurrent=null,previewSeek=null,recoveryCount=0,wantsPlayback=false,requestedSeek=null,refreshLibrary=null,shelfSignature='',pendingUserSeek=null,userSeekStarted=0;
+let state={schema:1,books:{}},catalog,book,index=0,loading=false,lastSave=0,reader=null,viewBook=null,selection=0,playbackSelection=0,pendingRestore=null,restoreCurrent=null,previewSeek=null,recoveryCount=0,wantsPlayback=false,requestedSeek=null,refreshLibrary=null,shelfSignature='',pendingUserSeek=null,userSeekStarted=0,endedRecorded=false;
 try{const s=JSON.parse(localStorage.getItem(storageKey));if(s?.schema===1&&s.books&&typeof s.books==='object'&&!Array.isArray(s.books))state=s;}catch{/* Playback remains available without storage. */}
 const playerView=initPlayerView(audio,{current:()=>book?{book,index,favorite:localBook(book.bookId).favorite===true,started:bookStatus(book,localBook(book.bookId))!=='unread'}:null,favorite:()=>{if(book){const b=localBook(book.bookId);b.favorite=!b.favorite;store();}},select:(next,b)=>{const saved=localBook(b.bookId),ch=b.chapters[next];saved.chapters[ch.chapterId]={...saved.chapters[ch.chapterId],rate:validRate(audio.playbackRate)};selectChapter(next,true,b);},read:(b,id)=>{if(viewBook?.bookId===b.bookId)read(b,id);else{window.addEventListener('hashchange',()=>read(b,id),{once:true});location.hash='book/'+b.bookId;}}});
 const sleepTimer=createSleepTimer({pause:()=>{wantsPlayback=false;audio.pause();persist();$('status').textContent='睡眠定時已停止播放 · 原進度已保留';},changed:value=>{$('sleep-label').textContent=value.chapter?'本章播完停止':value.deadline?'定時已開啟':'睡眠定時';}});
 for(const button of document.querySelectorAll('[data-sleep]'))button.onclick=()=>{sleepTimer.set(button.dataset.sleep);button.closest('details').open=false;};
 function localBook(id){const b=state.books[id]||={chapters:{}};b.chapters||={};return b;}
 function store(){try{localStorage.setItem(storageKey,JSON.stringify(state));}catch{$('status').textContent='瀏覽器無法保存進度；仍可播放';}}
+function recordNativeEnd(){
+ if(endedRecorded||!book||!audio.ended||audio.error||currentSource()!==book.chapters[index].audioUrl)return;
+ endedRecorded=true;loading=false;pendingRestore=null;restoreCurrent=null;pendingUserSeek=null;requestedSeek=null;
+ const s=localBook(book.bookId),ch=book.chapters[index];
+ s.chapters[ch.chapterId]=updateChapterProgress(s.chapters[ch.chapterId],ch.durationSec,{positionSec:finite(audio.duration,finite(audio.currentTime)),pendingSeekSec:undefined,rate:audio.playbackRate,completed:true},true);
+}
 function persist(){
+ recordNativeEnd();
  if(loading&&audio.readyState>=1)restoreCurrent?.();
- if(book&&!loading&&pendingUserSeek===null&&!audio.seeking&&!audio.error&&audio.readyState&&currentSource()===book.chapters[index].audioUrl){const s=localBook(book.bookId),ch=book.chapters[index],positionSec=finite(audio.currentTime);s.activeChapter=ch.chapterId;state.activeBook=book.bookId;s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],positionSec,pendingSeekSec:undefined,rate:audio.playbackRate,completed:audio.ended||(s.chapters[ch.chapterId]?.completed===true&&(positionSec>=audio.duration-1||(audio.paused&&positionSec===0)))};}
+ if(book&&!loading&&pendingUserSeek===null&&!audio.seeking&&!audio.error&&audio.readyState&&currentSource()===book.chapters[index].audioUrl){const s=localBook(book.bookId),ch=book.chapters[index],positionSec=finite(audio.currentTime);s.activeChapter=ch.chapterId;state.activeBook=book.bookId;s.chapters[ch.chapterId]=updateChapterProgress(s.chapters[ch.chapterId],ch.durationSec,{positionSec,pendingSeekSec:undefined,rate:audio.playbackRate,completed:audio.ended||(s.chapters[ch.chapterId]?.completed===true&&(positionSec>=audio.duration-1||(audio.paused&&positionSec===0)))});}
  if(reader){const s=localBook(reader.bookId);s.readChapter=reader.chapterId;s.chapters[reader.chapterId]={...s.chapters[reader.chapterId],readingY:window.scrollY};}
  store();lastSave=Date.now();refreshProgressLabels();
 }
@@ -53,7 +60,7 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  // URL needlessly tears down Firefox's decoder and can report old abort errors.
  if(same&&restart&&!recovering&&!loading&&!audio.error&&audio.readyState>=2&&Number.isFinite(audio.duration)&&currentSource()===targetBook.chapters[next].audioUrl){seekTo(0);if(autoplay)void play();return;}
  persist();if(!recovering){recoveryCount=0;requestedSeek=null;pendingUserSeek=null;}wantsPlayback=autoplay;loading=true;pendingRestore=null;previewSeek=null;const token=++selection;audio.pause();book=targetBook;index=next;const ch=book.chapters[index],s=localBook(book.bookId),saved=chapterProgress(s.chapters[ch.chapterId],ch.durationSec),position=recovering&&requestedSeek!==null?requestedSeek:restart?0:saved.positionSec;
- if(restart)s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],positionSec:0,completed:false};
+ if(restart)s.chapters[ch.chapterId]=updateChapterProgress(s.chapters[ch.chapterId],ch.durationSec,{positionSec:0,completed:false});
  // Selection is user intent and can be saved before bytes arrive. Position stays
  // untouched until restoration is verified, so a quick reopen cannot pick the
  // previously selected chapter while the current chapter is still loading.
@@ -65,7 +72,7 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  // Native data/canplay events retry the same guarded restore; a completed restore
  // is never applied again, and a source from an older selection is ignored.
  restoreCurrent=restore;audio.onloadedmetadata=restore;audio.onloadeddata=restore;audio.oncanplay=restore;
- audio.removeAttribute('src');audio.load();audio.preload=autoplay||recovering?'auto':'metadata';audio.src=retryAudioURL(ch.audioUrl,recovering?Math.max(1,recoveryCount):0,Date.now()+'-'+token);audio.load();/* Reset the previous native resource synchronously; restore only from the selected resource metadata/data events. */restore();display();markActive();playerView.update();if(autoplay)void play();
+ audio.removeAttribute('src');audio.load();audio.preload=autoplay||recovering?'auto':'metadata';audio.src=retryAudioURL(ch.audioUrl,recovering?Math.max(1,recoveryCount):0,Date.now()+'-'+token);audio.load();endedRecorded=false;/* Reset the previous native resource synchronously; restore only from the selected resource metadata/data events. */restore();display();markActive();playerView.update();if(autoplay)void play();
 }
 function restartChapter(){if(book)selectChapter(index,true,book,true);}
 function advanceChapter(){
@@ -77,14 +84,16 @@ function advanceChapter(){
  selectChapter(index+1,true,book,true);audio.playbackRate=rate;
 }
 function chapterEnded(){
- if(!book||loading||!audio.ended||audioSession.interrupted()||currentSource()!==book.chapters[index].audioUrl)return;
- pendingUserSeek=null;requestedSeek=null;
- persist();const s=localBook(book.bookId),complete=book.chapters.every(ch=>chapterProgress(s.chapters[ch.chapterId],ch.durationSec).completed);
+ if(!book||!audio.ended||audio.error||currentSource()!==book.chapters[index].audioUrl)return;
+ // A verified native end is authoritative even if the final seek/data callback
+ // was late. Record completion before sleep/OS handling or advancing the source.
+ recordNativeEnd();persist();const s=localBook(book.bookId),complete=allChaptersFinished(book,s);
  if(s.shelfOverride==='reading'&&complete){delete s.shelfOverride;store();refreshShelves();}
- sleepTimer.chapterEnded();if(wantsPlayback&&index+1<book.chapters.length)advanceChapter();
+ sleepTimer.chapterEnded();if(audioSession.interrupted())return;
+ if(wantsPlayback&&index+1<book.chapters.length)advanceChapter();
  else{wantsPlayback=false;$('status').textContent=complete?'本書已聽完 · 可從頭重聽':index+1===book.chapters.length?'已到本書最後一章 · 其他章節仍可選擇收聽':'本章已聽完';refreshProgressLabels();}
 }
-function seekTo(position){if(loading||!audio.readyState)return;requestedSeek=Math.min(Math.max(0,position),finite(audio.duration));pendingUserSeek=requestedSeek;userSeekStarted=performance.now();health.reset();if(book&&currentSource()===book.chapters[index].audioUrl){const s=localBook(book.bookId),id=book.chapters[index].chapterId;s.chapters[id]={...s.chapters[id],positionSec:requestedSeek,pendingSeekSec:requestedSeek,rate:audio.playbackRate,completed:false};store();}audio.currentTime=requestedSeek;display();persist();}
+function seekTo(position){if(loading||!audio.readyState)return;requestedSeek=Math.min(Math.max(0,position),finite(audio.duration));pendingUserSeek=requestedSeek;userSeekStarted=performance.now();health.reset();if(book&&currentSource()===book.chapters[index].audioUrl){const s=localBook(book.bookId),ch=book.chapters[index];s.chapters[ch.chapterId]=updateChapterProgress(s.chapters[ch.chapterId],ch.durationSec,{positionSec:requestedSeek,pendingSeekSec:requestedSeek,rate:audio.playbackRate,completed:false});store();}audio.currentTime=requestedSeek;endedRecorded=false;display();persist();}
 function settleUserSeek(){
  if(loading||audio.seeking||audio.error)return;
  if(pendingUserSeek!==null){const advance=wantsPlayback&&!audio.paused?Math.max(0,performance.now()-userSeekStarted)/1000*2:0;if(audio.currentTime<pendingUserSeek-.5||audio.currentTime>pendingUserSeek+.5+advance)return;}
@@ -120,7 +129,7 @@ $('retry-load').onclick=()=>recoverAudio('manual',true);
 function refreshProgressLabels(){
  refreshShelves();
  if(!viewBook)return;const s=localBook(viewBook.bookId);
- for(const ch of viewBook.chapters){const p=chapterProgress(s.chapters[ch.chapterId],ch.durationSec),label=document.querySelector('[data-progress="'+ch.chapterId+'"]'),button=document.querySelector('[data-play="'+ch.chapterId+'"]');if(label)label.textContent=time(ch.durationSec)+(p.completed?' · 已聽完':p.positionSec>0?' · 上次聽到 '+time(p.positionSec):' · 尚未收聽');if(button){button.textContent=p.completed?'重聽':p.positionSec>0?'續聽':'播放';button.title=p.completed?'已聽完，從頭重聽':p.positionSec>0?'從 '+time(p.positionSec)+' 續聽':'從頭開始';}}
+ for(const ch of viewBook.chapters){const p=chapterProgress(s.chapters[ch.chapterId],ch.durationSec),finished=chapterWasFinished(s.chapters[ch.chapterId],ch.durationSec),label=document.querySelector('[data-progress="'+ch.chapterId+'"]'),button=document.querySelector('[data-play="'+ch.chapterId+'"]');if(label)label.textContent=time(ch.durationSec)+(p.completed?' · 已聽完':finished?p.positionSec>0?' · 已聽完 · 重聽至 '+time(p.positionSec):' · 已聽完 · 可重聽':p.positionSec>0?' · 上次聽到 '+time(p.positionSec):' · 尚未收聽');if(button){button.textContent=p.positionSec>0?'續聽':p.completed||finished?'重聽':'播放';button.title=p.positionSec>0?'從 '+time(p.positionSec)+' 續聽':p.completed||finished?'已聽完，從頭重聽':'從頭開始';}}
  const ch=viewBook.chapters[continueIndex(viewBook,s)],p=chapterProgress(s.chapters[ch.chapterId],ch.durationSec),start=$('start-book');if(start)start.textContent=p.completed?'重新收聽':p.positionSec>0?'續聽第 '+(viewBook.chapters.indexOf(ch)+1)+' 章 · '+time(p.positionSec):'開始第 '+(viewBook.chapters.indexOf(ch)+1)+' 章';
 }
 function markActive(){for(const b of document.querySelectorAll('[data-play]'))b.setAttribute('aria-current',String(b.dataset.play===book?.chapters[index]?.chapterId));}
@@ -152,7 +161,7 @@ function detail(id){
  const b=viewBook,s=localBook(id);
  $('view').innerHTML='<a class="back-link" href="#library">'+icon('back')+' 返回書庫</a><section class="book-hero">'+cover(b,true)+'<div class="book-intro"><span class="eyebrow">'+esc(b.category)+'</span><h1 id="book-title">'+esc(b.title)+'</h1><p id="description">'+esc(b.description)+'</p><div class="detail-meta"><span>'+b.chapters.length+' 個章節</span><span>♫ '+time(b.chapters.reduce((n,c)=>n+c.durationSec,0))+' · '+b.chapters.length+' 章可聽</span><span>'+esc(b.date)+' · v'+esc(b.version)+'</span></div><div class="button-row"><button class="button primary" id="start-book">繼續收聽</button><a class="button secondary" href="'+esc(b.releaseUrl)+'" target="_blank" rel="noreferrer">原始音檔與雜湊 ↗</a></div><p class="local-note">文字由 ChatGPT、音訊由 NotebookLM 生成。數字與英文術語仍待人工核對。</p></div></section><section class="chapters-section"><div class="section-title"><div><span class="eyebrow">TABLE OF CONTENTS</span><h2>一章一章，慢慢理解</h2></div><span>'+b.chapters.length+' / '+b.chapters.length+' 章音訊已完成</span></div><nav id="chapters" class="chapter-list" aria-label="章節目錄">'+b.chapters.map((ch,i)=>'<article class="chapter-row"><div class="chapter-summary"><span class="chapter-number">'+String(i+1).padStart(2,'0')+'</span><div class="chapter-name"><h3>'+esc(ch.title)+'</h3><span data-progress="'+esc(ch.chapterId)+'">'+time(ch.durationSec)+'</span></div><div class="chapter-actions"><button class="read-button" data-read="'+esc(ch.chapterId)+'" aria-label="閱讀 '+esc(ch.title)+'">閱讀原文 ⌄</button><button class="chapter-play" data-play="'+esc(ch.chapterId)+'" aria-label="播放 '+esc(ch.title)+'">▶</button></div></div></article>').join('')+'</nav></section><details class="references"><summary>參考來源與書籍資訊</summary><div class="prose" id="references-content"></div></details>';
  const statusRow=document.createElement('div');statusRow.className='reading-status-row';statusRow.innerHTML='<span class="status-label">我的書架</span><div id="reading-status" role="group" aria-label="閱讀狀態">'+shelves.map(status=>'<button data-set-shelf="'+status+'" aria-pressed="'+(bookStatus(b,s)===status)+'">'+shelfInfo[status].label+'</button>').join('')+'</div><span id="shelf-message" role="status">可手動標記；保留原本播放位置。</span>';$('description').after(statusRow);
- for(const button of $('reading-status').children)button.onclick=()=>{const next=button.dataset.setShelf;if(!shelves.includes(next))return;localBook(id).shelfOverride=next;store();refreshShelves();$('shelf-message').textContent='已移至「'+shelfInfo[next].label+'」，播放位置不變。';};
+ for(const button of $('reading-status').children)button.onclick=()=>{const next=button.dataset.setShelf;if(!shelves.includes(next))return;state.books[id]=setBookShelf(b,localBook(id),next);store();refreshShelves();$('shelf-message').textContent='已移至「'+shelfInfo[next].label+'」，播放位置不變。';};
  document.querySelector('.back-link').href='#library/'+bookStatus(b,s);
  $('start-book').onclick=()=>selectChapter(continueIndex(b,localBook(b.bookId)),true,b);
  for(const btn of document.querySelectorAll('[data-play]'))btn.onclick=()=>selectChapter(b.chapters.findIndex(c=>c.chapterId===btn.dataset.play),true,b);
@@ -183,4 +192,4 @@ for(const mode of ['light','dark'])$('reader-'+mode).onclick=()=>appearance.set(
 matchMedia('(max-width:560px)').addEventListener('change',event=>{const menu=document.querySelector('.category-menu');if(menu)menu.open=!event.matches;});
 $('export-progress').onclick=()=>{persist();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='reading-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 document.querySelector('.skip-link').onclick=e=>{e.preventDefault();$('view').focus();};
-try{const r=await fetch('data/books.json');if(!r.ok)throw Error('HTTP '+r.status);catalog=await r.json();if(!catalog.books.length)throw Error('等待書籍');route();const b=catalog.books.find(b=>b.bookId===state.activeBook)||viewBook||catalog.books[0];selectChapter(continueIndex(b,localBook(b.bookId)),false,b);}catch(e){$('view').textContent='書庫未能載入：'+e.message;}
+try{const r=await fetch('data/books.json');if(!r.ok)throw Error('HTTP '+r.status);catalog=await r.json();if(!catalog.books.length)throw Error('等待書籍');for(const b of catalog.books)if(state.books[b.bookId])state.books[b.bookId]=reconcileBookProgress(b,state.books[b.bookId]);store();route();const b=catalog.books.find(b=>b.bookId===state.activeBook)||viewBook||catalog.books[0];selectChapter(continueIndex(b,localBook(b.bookId)),false,b);}catch(e){$('view').textContent='書庫未能載入：'+e.message;}
