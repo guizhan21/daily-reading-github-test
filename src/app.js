@@ -1,3 +1,4 @@
+import {canonicalAudioURL,retryAudioURL} from './media-source.js';
 import {chapterProgress,continueIndex,validRate,bookStatus,shelves} from './progress.js';
 import {initAppearance} from './preferences.js';
 import {initAmbience} from './ambience.js';
@@ -7,6 +8,7 @@ import {createAudioSession} from './audio-session.js';
 import {initPlayerView} from './player-view.js';
 import {createSleepTimer} from './sleep-timer.js';
 const $=id=>document.getElementById(id),audio=$('audio'),storageKey='daily-reading-github:v1';
+const currentSource=()=>canonicalAudioURL(audio.currentSrc);
 const audioSession=createAudioSession();
 const appearance=initAppearance();const ambience=initAmbience();
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -23,7 +25,7 @@ function localBook(id){const b=state.books[id]||={chapters:{}};b.chapters||={};r
 function store(){try{localStorage.setItem(storageKey,JSON.stringify(state));}catch{$('status').textContent='瀏覽器無法保存進度；仍可播放';}}
 function persist(){
  if(loading&&audio.readyState>=1)restoreCurrent?.();
- if(book&&!loading&&pendingUserSeek===null&&!audio.seeking&&!audio.error&&audio.readyState&&audio.currentSrc===book.chapters[index].audioUrl){const s=localBook(book.bookId),ch=book.chapters[index],positionSec=finite(audio.currentTime);s.activeChapter=ch.chapterId;state.activeBook=book.bookId;s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],positionSec,pendingSeekSec:undefined,rate:audio.playbackRate,completed:audio.ended||(s.chapters[ch.chapterId]?.completed===true&&(positionSec>=audio.duration-1||(audio.paused&&positionSec===0)))};}
+ if(book&&!loading&&pendingUserSeek===null&&!audio.seeking&&!audio.error&&audio.readyState&&currentSource()===book.chapters[index].audioUrl){const s=localBook(book.bookId),ch=book.chapters[index],positionSec=finite(audio.currentTime);s.activeChapter=ch.chapterId;state.activeBook=book.bookId;s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],positionSec,pendingSeekSec:undefined,rate:audio.playbackRate,completed:audio.ended||(s.chapters[ch.chapterId]?.completed===true&&(positionSec>=audio.duration-1||(audio.paused&&positionSec===0)))};}
  if(reader){const s=localBook(reader.bookId);s.readChapter=reader.chapterId;s.chapters[reader.chapterId]={...s.chapters[reader.chapterId],readingY:window.scrollY};}
  store();lastSave=Date.now();refreshProgressLabels();
 }
@@ -32,7 +34,7 @@ function started(b){const s=localBook(b.bookId);s.started=true;state.lastReading
 function interruptionStatus(){persist();$('status').textContent='系統暫時中斷音訊 · 原進度已保留';}
 async function play(){if(!book)return;wantsPlayback=true;playbackSelection=selection;if(pendingRestore)pendingRestore.allowAdvance=true;if(!audioSession.prepare()){interruptionStatus();return;}if(audio.ended&&pendingUserSeek===null){restartChapter();return;}const token=selection;audio.preload='auto';try{await audio.play();if(token===selection){restoreCurrent?.();started(book);playerView.update();$('status').textContent='播放中 · 本機進度自動保存';}}catch(e){if(token===selection&&e.name!=='AbortError'){if(audioSession.interrupted()){interruptionStatus();return;}$('status').textContent=e.name==='NotAllowedError'?'瀏覽器暫停了自動接播；按播放繼續本章。':'無法播放：'+e.message;wantsPlayback=false;$('retry-load').hidden=false;}}}
 function finishRestore(){
- const pending=pendingRestore;if(!pending||pending.token!==selection||audio.currentSrc!==book?.chapters[index]?.audioUrl||audio.seeking||audio.error||!Number.isFinite(audio.currentTime))return;
+ const pending=pendingRestore;if(!pending||pending.token!==selection||currentSource()!==book?.chapters[index]?.audioUrl||audio.seeking||audio.error||!Number.isFinite(audio.currentTime))return;
  if(pending.position>0&&audio.readyState<2)return;
  // A native event can arrive after playback has already advanced from its saved
  // starting point. Accept that real elapsed playback, while rejecting zero or a
@@ -47,7 +49,7 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  if(same&&!restart&&!recovering&&!audio.error){if(autoplay)void play();return;}
  // Restart a ready chapter by seeking its existing stream. Reloading the same
  // URL needlessly tears down Firefox's decoder and can report old abort errors.
- if(same&&restart&&!recovering&&!loading&&!audio.error&&audio.readyState>=2&&Number.isFinite(audio.duration)&&audio.currentSrc===targetBook.chapters[next].audioUrl){seekTo(0);if(autoplay)void play();return;}
+ if(same&&restart&&!recovering&&!loading&&!audio.error&&audio.readyState>=2&&Number.isFinite(audio.duration)&&currentSource()===targetBook.chapters[next].audioUrl){seekTo(0);if(autoplay)void play();return;}
  persist();if(!recovering){recoveryCount=0;requestedSeek=null;pendingUserSeek=null;}wantsPlayback=autoplay;loading=true;pendingRestore=null;previewSeek=null;const token=++selection;audio.pause();book=targetBook;index=next;const ch=book.chapters[index],s=localBook(book.bookId),saved=chapterProgress(s.chapters[ch.chapterId],ch.durationSec),position=recovering&&requestedSeek!==null?requestedSeek:restart?0:saved.positionSec;
  if(restart)s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],positionSec:0,completed:false};
  // Selection is user intent and can be saved before bytes arrive. Position stays
@@ -56,12 +58,12 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  s.activeChapter=ch.chapterId;state.activeBook=book.bookId;store();
  $('now-title').textContent=ch.title;$('status').textContent='載入原始音訊…';$('retry-load').hidden=true;$('previous').disabled=index===0;$('next').disabled=index===book.chapters.length-1;
  const loadStarted=performance.now();
- const restore=()=>{if(token!==selection||!loading||audio.error||audio.currentSrc!==ch.audioUrl||audio.readyState<1||!Number.isFinite(audio.duration))return;if(pendingRestore){if(!pendingRestore.dataRetry&&!audio.seeking&&audio.readyState>=2&&audio.currentTime<pendingRestore.position-.5){pendingRestore.dataRetry=true;audio.currentTime=pendingRestore.position;}finishRestore();return;}const target=Math.min(position,Math.max(0,audio.duration-.1)),latest=localBook(book.bookId).chapters[ch.chapterId];if(saved.completed&&!restart)s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],completed:true};pendingRestore={token,position:target,startedAt:loadStarted,allowAdvance:playbackSelection===token};audio.playbackRate=validRate(latest?.rate);finishRestore();if(!loading)return;if(Math.abs(audio.currentTime-target)>.01)audio.currentTime=target;finishRestore();display();};
+ const restore=()=>{if(token!==selection||!loading||audio.error||currentSource()!==ch.audioUrl||audio.readyState<1||!Number.isFinite(audio.duration))return;if(pendingRestore){if(!pendingRestore.dataRetry&&!audio.seeking&&audio.readyState>=2&&audio.currentTime<pendingRestore.position-.5){pendingRestore.dataRetry=true;audio.currentTime=pendingRestore.position;}finishRestore();return;}const target=Math.min(position,Math.max(0,audio.duration-.1)),latest=localBook(book.bookId).chapters[ch.chapterId];if(saved.completed&&!restart)s.chapters[ch.chapterId]={...s.chapters[ch.chapterId],completed:true};pendingRestore={token,position:target,startedAt:loadStarted,allowAdvance:playbackSelection===token};audio.playbackRate=validRate(latest?.rate);finishRestore();if(!loading)return;if(Math.abs(audio.currentTime-target)>.01)audio.currentTime=target;finishRestore();display();};
  // Some media backends can miss metadata delivery around an interrupted load.
  // Native data/canplay events retry the same guarded restore; a completed restore
  // is never applied again, and a source from an older selection is ignored.
  restoreCurrent=restore;audio.onloadedmetadata=restore;audio.onloadeddata=restore;audio.oncanplay=restore;
- audio.removeAttribute('src');audio.load();audio.preload=autoplay||recovering?'auto':'metadata';audio.src=ch.audioUrl;audio.load();/* Reset the previous native resource synchronously; restore only from the selected resource metadata/data events. */restore();display();markActive();playerView.update();if(autoplay)void play();
+ audio.removeAttribute('src');audio.load();audio.preload=autoplay||recovering?'auto':'metadata';audio.src=retryAudioURL(ch.audioUrl,recovering?Math.max(1,recoveryCount):0,Date.now()+'-'+token);audio.load();/* Reset the previous native resource synchronously; restore only from the selected resource metadata/data events. */restore();display();markActive();playerView.update();if(autoplay)void play();
 }
 function restartChapter(){if(book)selectChapter(index,true,book,true);}
 function advanceChapter(){
@@ -73,20 +75,20 @@ function advanceChapter(){
  selectChapter(index+1,true,book,true);audio.playbackRate=rate;
 }
 function chapterEnded(){
- if(!book||loading||!audio.ended||audioSession.interrupted()||audio.currentSrc!==book.chapters[index].audioUrl)return;
+ if(!book||loading||!audio.ended||audioSession.interrupted()||currentSource()!==book.chapters[index].audioUrl)return;
  pendingUserSeek=null;requestedSeek=null;
  persist();const s=localBook(book.bookId),complete=book.chapters.every(ch=>chapterProgress(s.chapters[ch.chapterId],ch.durationSec).completed);
  if(s.shelfOverride==='reading'&&complete){delete s.shelfOverride;store();refreshShelves();}
  sleepTimer.chapterEnded();if(wantsPlayback&&index+1<book.chapters.length)advanceChapter();
  else{wantsPlayback=false;$('status').textContent=complete?'本書已聽完 · 可從頭重聽':index+1===book.chapters.length?'已到本書最後一章 · 其他章節仍可選擇收聽':'本章已聽完';refreshProgressLabels();}
 }
-function seekTo(position){if(loading||!audio.readyState)return;requestedSeek=Math.min(Math.max(0,position),finite(audio.duration));pendingUserSeek=requestedSeek;userSeekStarted=performance.now();health.reset();if(book&&audio.currentSrc===book.chapters[index].audioUrl){const s=localBook(book.bookId),id=book.chapters[index].chapterId;s.chapters[id]={...s.chapters[id],positionSec:requestedSeek,pendingSeekSec:requestedSeek,rate:audio.playbackRate,completed:false};store();}audio.currentTime=requestedSeek;display();persist();}
+function seekTo(position){if(loading||!audio.readyState)return;requestedSeek=Math.min(Math.max(0,position),finite(audio.duration));pendingUserSeek=requestedSeek;userSeekStarted=performance.now();health.reset();if(book&&currentSource()===book.chapters[index].audioUrl){const s=localBook(book.bookId),id=book.chapters[index].chapterId;s.chapters[id]={...s.chapters[id],positionSec:requestedSeek,pendingSeekSec:requestedSeek,rate:audio.playbackRate,completed:false};store();}audio.currentTime=requestedSeek;display();persist();}
 function settleUserSeek(){
  if(loading||audio.seeking||audio.error)return;
  if(pendingUserSeek!==null){const advance=wantsPlayback&&!audio.paused?Math.max(0,performance.now()-userSeekStarted)/1000*2:0;if(audio.currentTime<pendingUserSeek-.5||audio.currentTime>pendingUserSeek+.5+advance)return;}
  pendingUserSeek=null;requestedSeek=null;
 }
-function resumePosition(){return pendingUserSeek??pendingRestore?.position??requestedSeek??(!loading&&audio.currentSrc===book?.chapters[index]?.audioUrl&&audio.readyState?finite(audio.currentTime):localBook(book.bookId).chapters[book.chapters[index].chapterId]?.positionSec??0);}
+function resumePosition(){return pendingUserSeek??pendingRestore?.position??requestedSeek??(!loading&&currentSource()===book?.chapters[index]?.audioUrl&&audio.readyState?finite(audio.currentTime):localBook(book.bookId).chapters[book.chapters[index].chapterId]?.positionSec??0);}
 function recoverAudio(reason,manual=false){
  if(!book||(!manual&&!wantsPlayback&&pendingUserSeek===null))return;
  if(audioSession.interrupted()){interruptionStatus();return;}
@@ -94,7 +96,7 @@ function recoverAudio(reason,manual=false){
  console.info('audio-recovery '+JSON.stringify({bookId:book.bookId,chapterId:book.chapters[index].chapterId,reason,resumePlayback,attempt:recoveryCount,positionSec:requestedSeek}));
  selectChapter(index,resumePlayback,book,false,true);$('status').textContent='正在重新連線 · 保留原章節與播放位置';
 }
-function mediaError(){const code=audio.error?.code,token=selection;if(!code||!book||audio.currentSrc!==book.chapters[index].audioUrl)return;requestedSeek=resumePosition();loading=true;pendingRestore=null;display();
+function mediaError(){const code=audio.error?.code,token=selection;if(!code||!book||currentSource()!==book.chapters[index].audioUrl)return;requestedSeek=resumePosition();loading=true;pendingRestore=null;display();
  if(audioSession.interrupted()){interruptionStatus();return;}
  if(book&&wantsPlayback&&navigator.onLine!==false&&[2,3].includes(code)&&recoveryCount<2){queueMicrotask(()=>{if(token===selection&&wantsPlayback&&audio.error)recoverAudio('media-error-'+code);});}
  else{$('status').textContent='音訊連線中斷（'+(code||'網路')+'）；原進度已保留，可重新連線';$('retry-load').hidden=false;}
@@ -160,7 +162,7 @@ function read(b,id){closeReader();const a=$('text-'+id);if(!a)return;const saved
 function route(){if(!catalog)return;persist();closeReader();refreshLibrary=null;viewBook=null;const [requestedPath,query='']=location.hash.slice(1).split('?'),p=requestedPath||'library/unread';if(p.startsWith('book/')){detail(decodeURIComponent(p.slice(5)));const id=viewBook&&localBook(viewBook.bookId).readChapter;if(id&&viewBook.chapters.some(c=>c.chapterId===id))read(viewBook,id);}else if(p==='library'||p.startsWith('library/'))library(new URLSearchParams(query),shelves.includes(p.split('/')[1])?p.split('/')[1]:'unread');else if(p==='guide')$('view').innerHTML=heading('DAILY LIBRARY','使用指南','閱讀與收聽，照自己的節奏。')+'<section class="prose guide"><h2>三個書架，三種步調</h2><p>「未讀」、「正在讀」與「已讀完」是分開的頁面。第一次閱讀原文或開始收聽，書籍會進入正在讀；全部章節聽完後移入已讀完。純文字閱讀也能在書籍頁的「我的書架」手動標記已讀完，或調整其他狀態。調整書架不會清除原本的播放位置。單純打開網站或載入音訊不會算成開始閱讀。</p><h2>收藏與進度</h2><p>全部書籍長期保留。可在每個書架按主題或書名、簡介、章名搜尋。播放器支援倍速、拖曳與自動下一章；再次播放會接上原位置，也可以明確選擇從頭播放。進度與書架狀態儲存在目前瀏覽器，沒有帳號或跨裝置同步。清除網站資料會清除進度，可先匯出本機進度。</p><h2>每日新增書籍</h2><p>本機產書與 NotebookLM 成品完成後，發布工具驗證公開權利、全部章節與雜湊，將原音訊上傳 GitHub Releases，再由 Actions 建置網站。等待中的書籍不會假裝已上架。NotebookLM 仍需要已登入的瀏覽器與本機執行。</p><a href="https://github.com/guizhan21/daily-reading-github-test">原始碼、發布工具及驗收紀錄 ↗</a></section>';else home();for(const a of document.querySelectorAll('.sidebar nav a')){const active=a.hash==='#'+(p==='library'?'library/unread':p||'home');if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');}refreshShelves();ambience.refresh();if(!reader)window.scrollTo(0,0);}
 $('play').onclick=()=>{if(!audio.paused){wantsPlayback=false;audio.pause();}else if(audio.error)recoverAudio('manual-play',true);else void play();};$('restart').onclick=restartChapter;$('previous').onclick=()=>selectChapter(index-1,true);$('next').onclick=()=>selectChapter(index+1,true);$('rewind').onclick=()=>{if(audio.readyState){seekTo(audio.currentTime-15);}};$('forward').onclick=()=>{if(audio.readyState){seekTo(audio.currentTime+15);}};
 $('seek').oninput=()=>{if(!loading&&audio.readyState){previewSeek=Number($('seek').value);display();}};$('seek').onchange=()=>{if(!loading&&audio.readyState&&previewSeek!==null){const target=previewSeek;previewSeek=null;seekTo(target);}};for(const b of $('rate').children)b.onclick=()=>{const rate=Number(b.dataset.rate);audio.playbackRate=rate;if(book){const s=localBook(book.bookId),id=book.chapters[index].chapterId;s.chapters[id]={...s.chapters[id],rate};}display();persist();if(document.querySelector('.player').dataset.expanded==='true')$('rate-picker').open=false;};
-audio.addEventListener('timeupdate',()=>{sleepTimer.tick();if(!loading&&!audio.seeking&&!audio.error)settleUserSeek();display();if(Date.now()-lastSave>5000)persist();});audio.addEventListener('pause',()=>{finishRestore();display();persist();});audio.addEventListener('play',display);audio.addEventListener('playing',finishRestore);audio.addEventListener('seeking',()=>{if(!loading&&audio.currentSrc===book?.chapters[index]?.audioUrl){if(pendingUserSeek===null){pendingUserSeek=requestedSeek??finite(audio.currentTime);userSeekStarted=performance.now();health.reset();}$('status').textContent='正在定位播放位置…';}});audio.addEventListener('seeked',()=>{finishRestore();settleUserSeek();persist();});audio.addEventListener('canplay',finishRestore);audio.addEventListener('error',mediaError);audio.addEventListener('ended',chapterEnded);
+audio.addEventListener('timeupdate',()=>{sleepTimer.tick();if(!loading&&!audio.seeking&&!audio.error)settleUserSeek();display();if(Date.now()-lastSave>5000)persist();});audio.addEventListener('pause',()=>{finishRestore();display();persist();});audio.addEventListener('play',display);audio.addEventListener('playing',finishRestore);audio.addEventListener('seeking',()=>{if(!loading&&currentSource()===book?.chapters[index]?.audioUrl){if(pendingUserSeek===null){pendingUserSeek=requestedSeek??finite(audio.currentTime);userSeekStarted=performance.now();health.reset();}$('status').textContent='正在定位播放位置…';}});audio.addEventListener('seeked',()=>{finishRestore();settleUserSeek();persist();});audio.addEventListener('canplay',finishRestore);audio.addEventListener('error',mediaError);audio.addEventListener('ended',chapterEnded);
 bindMediaSession(audio,{play:()=>audio.error?recoverAudio('system-play',true):void play(),pause:()=>{wantsPlayback=false;audio.pause();persist();},previous:()=>selectChapter(index-1,true),next:()=>selectChapter(index+1,true),seek:seekTo,transitioning:()=>wantsPlayback&&(loading||(audio.ended&&index+1<book?.chapters.length)),current:()=>book?{bookId:book.bookId,chapterId:book.chapters[index].chapterId,bookTitle:book.title,chapterTitle:book.chapters[index].title,cover:book.cover}:null});
 window.addEventListener('pagehide',persist);window.addEventListener('hashchange',route);window.addEventListener('scroll',()=>{if(reader&&Date.now()-lastSave>1000)persist();},{passive:true});document.addEventListener('visibilitychange',()=>{if(document.hidden)persist();else{restoreCurrent?.();if(audio.ended)chapterEnded();else health.tick();if(book&&audio.paused&&wantsPlayback&&!loading&&!audio.ended&&!audioSession.interrupted())$('status').textContent='系統暫停了背景播放 · 按播放從原位置繼續';}});$('close-reader').onclick=()=>{const b=reader?.bookId;closeReader();if(b){delete localBook(b).readChapter;store();}};
 for(const [id,step] of [['reader-smaller',-1],['reader-larger',1]])$(id).onclick=()=>{const sizes=['normal','large','largest'],i=sizes.indexOf(appearance.get().size);appearance.set({size:sizes[Math.max(0,Math.min(2,i+step))]});};

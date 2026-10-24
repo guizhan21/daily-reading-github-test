@@ -16,7 +16,7 @@ export async function recoveryChecks(browser,site,book,check,observe){
   assert.equal(await page.locator('audio').evaluate(a=>a.error?.code||null),null);
   if(!events.length)await page.waitForEvent('console',{predicate:m=>m.text().startsWith('audio-recovery '),timeout:22000});
   release();
-  await page.waitForFunction(({url,position})=>{const a=document.querySelector('audio');return a.currentSrc===url&&!a.paused&&!a.seeking&&!a.error&&a.currentTime>position+.2&&a.currentTime<position+12;},{url:ch.audioUrl,position},{timeout:60000,polling:100});
+  await page.waitForFunction(({url,position})=>{const a=document.querySelector('audio');return a.currentSrc.replace(/[?]dr_retry=[12]-[a-z0-9-]+$/,'')===url&&!a.paused&&!a.seeking&&!a.error&&a.currentTime>position+.2&&a.currentTime<position+12;},{url:ch.audioUrl,position},{timeout:60000,polling:100});
   assert.equal(events.length,1);assert.equal(events[0].reason,'stalled');assert.equal(events[0].positionSec,position);assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);assert.ok(Number(await page.locator('audio').getAttribute('data-retry-loads'))>beforeRetry,'Recovery must actually restart the media request');
   check('hanging request without native error reconnects once at the exact saved position and speed');
   await page.getByRole('button',{name:'暫停',exact:true}).click();

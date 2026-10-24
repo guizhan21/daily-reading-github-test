@@ -6,6 +6,8 @@ import {shortURLChecks} from './short-url-checks.mjs';
 import {recoveryChecks} from './recovery-checks.mjs';
 import {interruptionChecks} from './interruption-checks.mjs';
 import {listeningRoomChecks} from './listening-room-checks.mjs';
+// Source checks remove only our bounded dr_retry transport parameter. Real
+// native error/seek/clock checks and the canonical Release host/path stay required.
 const site=process.env.SITE_URL||'https://guizhan21.github.io/daily-reading-github-test/',selected=process.env.BROWSER||'chrome',books=load('data/books.json').books;
 const engines={chrome:[chromium,process.env.CHROME_EXECUTABLE?{executablePath:process.env.CHROME_EXECUTABLE}:{channel:'chrome'}],firefox:[firefox,{}],webkit:[webkit,{}]};
 const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true});const results=[];
@@ -34,7 +36,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
     await page.locator('[data-play="'+ch.chapterId+'"]').click();
     const earlyRate=name==='chrome'&&b.bookId===books[0].bookId&&ch.chapterId===b.chapters[0].chapterId;
     if(earlyRate){await page.getByRole('button',{name:'1.5 倍',exact:true}).click();assert.equal(await page.locator('audio').evaluate(a=>a.readyState),0);releaseMetadata();}
-    await page.waitForFunction(u=>{const a=document.querySelector('audio');return a.currentSrc===u&&a.readyState>=2&&!a.error&&!a.paused&&a.currentTime>.3;},ch.audioUrl,{timeout:60000});
+    await page.waitForFunction(u=>{const a=document.querySelector('audio');return a.currentSrc.replace(/[?]dr_retry=[12]-[a-z0-9-]+$/,'')===u&&a.readyState>=2&&!a.error&&!a.paused&&a.currentTime>.3;},ch.audioUrl,{timeout:60000});
     const actual=await page.locator('audio').evaluate(a=>({duration:a.duration,time:a.currentTime}));assert.ok(Math.abs(actual.duration-ch.durationSec)<1);
     if(earlyRate){assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);check('early rate choice survives metadata loading');await page.unroute('**/releases/download/**');}
     await page.getByRole('button',{name:'暫停',exact:true}).click();r.audio.push({bookId:b.bookId,chapterId:ch.chapterId,actualPlayback:true,durationSec:actual.duration});check('Release playback: '+ch.chapterId);
@@ -49,7 +51,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   await page.reload({waitUntil:'domcontentloaded'});await ready();assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);
   await page.getByRole('button',{name:'播放',exact:true}).click();await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.error&&!a.seeking&&a.currentTime>t+.3&&a.currentTime<t+15;},saved,{timeout:45000});await page.getByRole('button',{name:'暫停',exact:true}).click();saved=await page.locator('audio').evaluate(a=>a.currentTime);check('refresh resumes saved position and speed');
   await page.close();page=await context.newPage();observe(page);await page.goto(site+'#book/'+b.bookId,{waitUntil:'domcontentloaded'});await ready();await page.getByRole('button',{name:'播放',exact:true}).click();await page.waitForFunction(t=>document.querySelector('audio').currentTime>t+.3,saved,{timeout:45000});await page.getByRole('button',{name:'暫停',exact:true}).click();check('close and reopen restores device-local progress');
-  await page.getByRole('button',{name:'下一章',exact:true}).click();await page.waitForFunction(u=>{const a=document.querySelector('audio');return a.currentSrc===u&&a.currentTime>.3&&!a.paused;},b.chapters[1].audioUrl,{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();check('next chapter');
+  await page.getByRole('button',{name:'下一章',exact:true}).click();await page.waitForFunction(u=>{const a=document.querySelector('audio');return a.currentSrc.replace(/[?]dr_retry=[12]-[a-z0-9-]+$/,'')===u&&a.currentTime>.3&&!a.paused;},b.chapters[1].audioUrl,{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();check('next chapter');
   await page.getByLabel('播放進度',{exact:true}).focus();await page.keyboard.press('Home');await page.keyboard.press('ArrowRight');await page.getByRole('button',{name:'播放',exact:true}).click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return a.currentTime>0&&a.currentTime<4&&!a.seeking;},{},{timeout:45000});await page.getByRole('button',{name:'暫停',exact:true}).click();check('intentional backwards seek');
   await page.reload({waitUntil:'domcontentloaded'});await ready();assert.ok((await page.locator('audio').getAttribute('src')).includes(b.chapters[1].chapterId));check('chapter selection persists');
   await page.locator('[data-read="'+ch.chapterId+'"]').click();await page.mouse.wheel(0,800);await page.waitForTimeout(1200);const reading=await page.evaluate(()=>window.scrollY);assert.ok(reading>100);await page.reload({waitUntil:'domcontentloaded'});await page.locator('#reader-content article').waitFor();assert.ok(Math.abs(await page.evaluate(()=>window.scrollY)-reading)<120);check('reading chapter and scroll position survive refresh');
