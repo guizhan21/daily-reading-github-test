@@ -27,7 +27,7 @@ function persist(){
  if(reader){const s=localBook(reader.bookId);s.readChapter=reader.chapterId;s.chapters[reader.chapterId]={...s.chapters[reader.chapterId],readingY:window.scrollY};}
  store();lastSave=Date.now();refreshProgressLabels();
 }
-function display(){const position=previewSeek??audio.currentTime;$('current').textContent=time(position);$('duration').textContent=time(audio.duration);$('rate-label').textContent=audio.playbackRate+'×';$('seek').max=String(finite(audio.duration));$('seek').value=String(finite(position));$('seek').style.setProperty('--played',(audio.duration>0?Math.min(100,finite(position)/audio.duration*100):0)+'%');$('play').textContent=audio.paused?'播放':'暫停';$('play').setAttribute('aria-label',audio.paused?'播放':'暫停');for(const b of $('rate').children)b.setAttribute('aria-pressed',String(Number(b.dataset.rate)===audio.playbackRate));}
+function display(){const position=previewSeek??(loading&&book?resumePosition():audio.currentTime);$('current').textContent=time(position);$('duration').textContent=time(audio.duration);$('rate-label').textContent=audio.playbackRate+'×';$('seek').max=String(finite(audio.duration));$('seek').value=String(finite(position));$('seek').style.setProperty('--played',(audio.duration>0?Math.min(100,finite(position)/audio.duration*100):0)+'%');$('play').textContent=audio.paused?'播放':'暫停';$('play').setAttribute('aria-label',audio.paused?'播放':'暫停');for(const b of $('rate').children)b.setAttribute('aria-pressed',String(Number(b.dataset.rate)===audio.playbackRate));}
 function started(b){const s=localBook(b.bookId);s.started=true;state.lastReadingBook=b.bookId;if(s.shelfOverride==='unread')s.shelfOverride='reading';store();refreshShelves();}
 function interruptionStatus(){persist();$('status').textContent='系統暫時中斷音訊 · 原進度已保留';}
 async function play(){if(!book)return;wantsPlayback=true;playbackSelection=selection;if(pendingRestore)pendingRestore.allowAdvance=true;if(!audioSession.prepare()){interruptionStatus();return;}if(audio.ended&&pendingUserSeek===null){restartChapter();return;}const token=selection;audio.preload='auto';try{await audio.play();if(token===selection){restoreCurrent?.();started(book);playerView.update();$('status').textContent='播放中 · 本機進度自動保存';}}catch(e){if(token===selection&&e.name!=='AbortError'){if(audioSession.interrupted()){interruptionStatus();return;}$('status').textContent=e.name==='NotAllowedError'?'瀏覽器暫停了自動接播；按播放繼續本章。':'無法播放：'+e.message;wantsPlayback=false;$('retry-load').hidden=false;}}}
@@ -61,7 +61,7 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  // Native data/canplay events retry the same guarded restore; a completed restore
  // is never applied again, and a source from an older selection is ignored.
  restoreCurrent=restore;audio.onloadedmetadata=restore;audio.onloadeddata=restore;audio.oncanplay=restore;
- audio.preload=autoplay||recovering?'auto':'metadata';if(audio.getAttribute('src')===ch.audioUrl)audio.load();else audio.src=ch.audioUrl;try{audio.currentTime=position;}catch{/* Native metadata/data events finish restoration. */}restore();display();markActive();playerView.update();if(autoplay)void play();
+ audio.preload=autoplay||recovering?'auto':'metadata';if(audio.getAttribute('src')===ch.audioUrl)audio.load();else audio.src=ch.audioUrl;/* Seek only after native metadata belongs to the selected resource. */restore();display();markActive();playerView.update();if(autoplay)void play();
 }
 function restartChapter(){if(book)selectChapter(index,true,book,true);}
 function advanceChapter(){
@@ -99,10 +99,10 @@ function mediaError(){const code=audio.error?.code,token=selection;if(!code||boo
  if(book&&wantsPlayback&&navigator.onLine!==false&&[2,3].includes(code)&&recoveryCount<2){queueMicrotask(()=>{if(token===selection&&wantsPlayback&&audio.error)recoverAudio('media-error-'+code);});}
  else{$('status').textContent='音訊連線中斷（'+(code||'網路')+'）；原進度已保留，可重新連線';$('retry-load').hidden=false;}
 }
-const health=createPlaybackHealth({read:()=>({token:selection,time:pendingUserSeek!==null?0:audio.currentTime,intent:wantsPlayback||pendingUserSeek!==null,loading:loading||audio.seeking||pendingUserSeek!==null,paused:audio.paused,ended:audio.ended,interrupted:audioSession.interrupted(),offline:navigator.onLine===false,attempt:recoveryCount}),recover:recoverAudio,status:kind=>{
+const health=createPlaybackHealth({read:()=>({token:selection,time:pendingUserSeek!==null?0:audio.currentTime,intent:wantsPlayback||pendingUserSeek!==null,loading:loading||audio.seeking||pendingUserSeek!==null,paused:audio.paused,ended:audio.ended,interrupted:audioSession.interrupted(),error:!!audio.error?.code,offline:navigator.onLine===false,attempt:recoveryCount}),recover:recoverAudio,status:kind=>{
  if(kind==='idle')return;
- $('retry-load').hidden=!['offline','buffering','waiting'].includes(kind);
- const messages={healthy:audio.paused?'已就緒 · 進度只儲存在本機':'播放中 · 本機進度自動保存',interrupted:'系統暫時中斷音訊 · 原進度已保留',offline:'網路已離線 · 保留進度，連線恢復後繼續',buffering:'正在緩衝音訊 · 原進度已保留',waiting:'音源回應緩慢，仍在等待 · 可按重新連線',recovering:'正在重新連線 · 保留原章節與播放位置'};
+ $('retry-load').hidden=!['offline','buffering','waiting','media-error'].includes(kind);
+ const messages={'media-error':'音訊回報連線錯誤 · 原進度已保留，可重新連線',healthy:audio.paused?'已就緒 · 進度只儲存在本機':'播放中 · 本機進度自動保存',interrupted:'系統暫時中斷音訊 · 原進度已保留',offline:'網路已離線 · 保留進度，連線恢復後繼續',buffering:'正在緩衝音訊 · 原進度已保留',waiting:'音源回應緩慢，仍在等待 · 可按重新連線',recovering:'正在重新連線 · 保留原章節與播放位置'};
  $('status').textContent=messages[kind];
 }});
 // Observe native interruptions, but let the OS resume its media element. A return
