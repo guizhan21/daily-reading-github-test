@@ -1,7 +1,30 @@
 import assert from 'node:assert/strict';import test from 'node:test';
-import {isBackSwipe} from '../src/navigation-gesture.js';
+import {isBackSwipe,bindBackSwipe} from '../src/navigation-gesture.js';
 const start={x:300,y:300,time:100};
 test('deliberate left swipe returns one level',()=>assert.equal(isBackSwipe(start,{x:100,y:315,time:350}),true));
 test('right swipe remains native',()=>assert.equal(isBackSwipe(start,{x:400,y:305,time:350}),false));
 test('vertical reading and diagonal scrolling do not navigate',()=>{for(const end of [{x:280,y:100,time:350},{x:100,y:180,time:350}])assert.equal(isBackSwipe(start,end),false);});
 test('taps, jitter and slow drags do not navigate',()=>{for(const end of [{x:290,y:300,time:300},{x:100,y:300,time:101},{x:100,y:300,time:1200}])assert.equal(isBackSwipe(start,end),false);});
+test('fast deliberate movement is accepted without accepting an instantaneous jump',()=>{assert.equal(isBackSwipe(start,{x:120,y:305,time:140}),true);assert.equal(isBackSwipe(start,{x:120,y:305,time:101}),false);});
+
+function binding(run){
+ const names=['innerWidth','scrollY','getSelection','getComputedStyle','performance'],old=names.map(n=>Object.getOwnPropertyDescriptor(globalThis,n));let clock=100,selected='',backs=0;
+ const listeners={},root={addEventListener(type,fn){listeners[type]=fn;},scrollWidth:390,clientWidth:390,scrollLeft:0,scrollTop:0,parentElement:null};
+ const element=(tag='div',extra={})=>({scrollWidth:300,clientWidth:300,scrollTop:0,scrollLeft:0,parentElement:root,overflowX:'visible',closest(selector){return selector.split(',').some(s=>s.trim()===tag)?this:null;},...extra});
+ const touch=(x=300,y=300,id=1)=>({clientX:x,clientY:y,identifier:id});
+ const emit=(type,{target=element(),touches=type==='touchend'?[]:[touch()],changedTouches=type==='touchend'?[touch(100)]:touches,...extra}={})=>{const event={target,touches,changedTouches,cancelable:true,preventDefault(){this.prevented=true;},stopImmediatePropagation(){this.stopped=true;},...extra};listeners[type]?.(event);return event;};
+ for(const [name,value] of Object.entries({innerWidth:390,scrollY:0,getSelection:()=>({toString:()=>selected}),getComputedStyle:e=>e,performance:{now:()=>clock}}))Object.defineProperty(globalThis,name,{value,writable:true,configurable:true});
+ bindBackSwipe(root,()=>backs++);
+ try{run({element,touch,emit,advance:(ms=180)=>{clock+=ms;},select:value=>{selected=value;},backs:()=>backs});}finally{names.forEach((name,i)=>old[i]?Object.defineProperty(globalThis,name,old[i]):delete globalThis[name]);}
+}
+test('buttons, links and summaries accept intentional swipes',()=>binding(({element,emit,advance,backs})=>{for(const tag of ['button','a','summary']){emit('touchstart',{target:element(tag)});advance();assert.equal(emit('touchend').prevented,true);}assert.equal(backs(),3);}));
+test('range/text inputs and editable controls never start a navigation gesture',()=>binding(({element,emit,advance,backs})=>{for(const tag of ['input','textarea','select','[role="slider"]','[contenteditable]','[data-no-swipe]']){emit('touchstart',{target:element(tag)});advance();emit('touchend');}assert.equal(backs(),0);}));
+test('recognized swipe cancels its compatibility click but preserves keyboard activation',()=>binding(({emit,advance,backs})=>{emit('touchstart');advance();emit('touchend');assert.equal(emit('click',{detail:0}).prevented,undefined);const click=emit('click',{detail:1});assert.equal(click.prevented,true);assert.equal(click.stopped,true);assert.equal(backs(),1);}));
+test('next intentional tap and mouse click are not swallowed',()=>binding(({emit,advance})=>{emit('touchstart');advance();emit('touchend');emit('touchstart');emit('touchend',{changedTouches:[{clientX:300,clientY:300,identifier:1}]});assert.equal(emit('click',{detail:1}).prevented,undefined);emit('touchstart');advance();emit('touchend');emit('pointerdown',{pointerType:'mouse'});assert.equal(emit('click',{detail:1}).prevented,undefined);}));
+test('click suppression expires and cannot poison a later activation',()=>binding(({emit,advance})=>{emit('touchstart');advance();emit('touchend');advance(600);assert.equal(emit('click',{detail:1}).prevented,undefined);}));
+test('vertical ownership stays cancelled even if the tail turns left',()=>binding(({emit,touch,advance,backs})=>{emit('touchstart');emit('touchmove',{touches:[touch(295,260)]});advance();emit('touchend');assert.equal(backs(),0);}));
+test('nested player scrolling cancels back and a fresh gesture still works',()=>binding(({element,emit,advance,backs})=>{const panel=element();emit('touchstart',{target:panel});panel.scrollTop=30;advance();emit('touchend');assert.equal(backs(),0);emit('touchstart',{target:panel});advance();emit('touchend');assert.equal(backs(),1);}));
+test('window scroll movement preserves reading ownership',()=>binding(({emit,advance,backs})=>{emit('touchstart');globalThis.scrollY=40;advance();emit('touchend');assert.equal(backs(),0);}));
+test('multi-touch and changed finger identities cannot trigger navigation',()=>binding(({emit,touch,advance,backs})=>{emit('touchstart');emit('touchmove',{touches:[touch(),touch(290,300,2)]});advance();emit('touchend');emit('touchstart');advance();emit('touchend',{changedTouches:[touch(100,300,2)]});assert.equal(backs(),0);}));
+test('native cancellation clears the gesture and the next swipe can return',()=>binding(({emit,advance,backs})=>{emit('touchstart');emit('touchcancel');advance();emit('touchend');assert.equal(backs(),0);emit('touchstart');advance();emit('touchend');assert.equal(backs(),1);}));
+test('selection, horizontal scroll areas, screen edges and desktop remain native',()=>binding(({element,emit,touch,advance,select,backs})=>{select('文字');emit('touchstart');advance();emit('touchend');select('');emit('touchstart',{target:element('div',{scrollWidth:600,overflowX:'auto'})});advance();emit('touchend');for(const x of [10,380]){emit('touchstart',{touches:[touch(x)]});advance();emit('touchend');}globalThis.innerWidth=1024;emit('touchstart');advance();emit('touchend');assert.equal(backs(),0);}));
