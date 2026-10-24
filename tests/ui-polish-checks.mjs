@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';import path from 'node:path';
 export async function uiPolishChecks(browser,site,books,check,observe,{screenshots,browserName}={}){
+ // WebKit screenshot styling injection is blocked by the production CSP; keep
+ // that policy and verify its geometry/interaction without injected screenshot CSS.
  const nativeTouch=browser.browserType().name()==='chromium';
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,colorScheme:'light',...(nativeTouch?{isMobile:true}:{})}),page=await context.newPage();observe(page);
  const b=books[0],ch=b.chapters[0];let cdp;
@@ -23,16 +25,16 @@ export async function uiPolishChecks(browser,site,books,check,observe,{screensho
    const box=await page.locator('#search-form').boundingBox(),input=await page.locator('#search-input').boundingBox();assert.ok(box.x>=0&&box.x+box.width<=width);assert.ok(input.x>=box.x&&input.x+input.width<=box.x+box.width+1);assert.ok(Math.abs(input.y+input.height/2-(box.y+box.height/2))<1);
   }check('single live search field stays aligned at 360 / 390 / 430 / 768px');
   await page.setViewportSize({width:390,height:844});await readyImages();
-  if(screenshots)await page.screenshot({path:path.join(screenshots,browserName+'-clean-shelf.png')});
+  if(screenshots&&browser.browserType().name()!=='webkit')await page.screenshot({caret:'initial',path:path.join(screenshots,browserName+'-clean-shelf.png')});
   await page.locator('#search-input').fill('AI');assert.ok(await page.locator('.book-card').count()>0);await page.locator('#search-input').fill('');
   await page.goto(site+'#book/'+b.bookId);await page.locator('#book-title').waitFor();
   await page.locator('[data-play="'+ch.chapterId+'"]').click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.paused&&!a.error&&a.currentTime>.3;},{},{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();
   await page.locator('audio').evaluate(a=>{window.__polishAudio=a;a.dataset.polishLoads='0';a.addEventListener('loadstart',()=>a.dataset.polishLoads=String(Number(a.dataset.polishLoads)+1));});
   await page.locator('#player-cover').click();
-  const art=await page.locator('.player').evaluate(e=>{const c=getComputedStyle(e,'::before');return {size:c.backgroundSize,position:c.backgroundPosition,height:c.height,mask:c.maskImage};});assert.equal(art.size,'361.412% 598.83%');assert.ok(parseFloat(art.height)<180);assert.ok(art.mask.includes('rgba(0, 0, 0, 0)'),art.mask);assert.equal(await page.locator('#player-cover').getAttribute('src'),b.cover);check('player background samples only the clean sea banner; original book cover is the sole foreground cover',{art});
+  const art=await page.locator('.player').evaluate(e=>{const c=getComputedStyle(e,'::before');return {size:c.backgroundSize,position:c.backgroundPosition,height:c.height,mask:c.maskImage};});const scale=art.size.split(' ').map(parseFloat);assert.ok(Math.abs(scale[0]-361.411765)<.002&&Math.abs(scale[1]-598.830409)<.002,art.size);assert.ok(parseFloat(art.height)<180);assert.ok(art.mask.includes('rgba(0, 0, 0, 0)'),art.mask);assert.equal(await page.locator('#player-cover').getAttribute('src'),b.cover);check('player background samples only the clean sea banner; original book cover is the sole foreground cover',{art});
   for(const [skin,label] of [['coast','海岸聲音皮膚'],['forest','森間書架皮膚'],['pixel','星夜像素皮膚']]){
    if(skin!=='coast'){await page.locator('#collapse-player').click();await page.locator('#dock-settings').click();await page.getByRole('button',{name:label,exact:true}).click();await page.keyboard.press('Escape');await page.locator('#player-cover').click();}
-   await readyImages();await page.waitForTimeout(550);if(screenshots)await page.screenshot({path:path.join(screenshots,browserName+'-clean-player-'+skin+'.png')});assert.equal(await page.locator('#player-cover').getAttribute('src'),b.cover);
+   await readyImages();await page.waitForTimeout(550);if(screenshots&&browser.browserType().name()!=='webkit')await page.screenshot({caret:'initial',path:path.join(screenshots,browserName+'-clean-player-'+skin+'.png')});assert.equal(await page.locator('#player-cover').getAttribute('src'),b.cover);
   }
   await page.locator('#player-queue-toggle').click();await swipe(320,220,90,220,'.player');assert.equal(await page.locator('#player-queue').isHidden(),true);assert.equal(await page.locator('.player').getAttribute('data-expanded'),'true');
   await swipe(320,220,90,220,'.player');assert.equal(await page.locator('.player').getAttribute('data-expanded'),'false');assert.ok(await page.evaluate(()=>window.__polishAudio===document.querySelector('audio')));assert.equal(await page.locator('audio').getAttribute('data-polish-loads'),'0');check('left swipe closes queue then player one level at a time without reloading audio',{touchMethod:nativeTouch?'Chromium native CDP touch':'synthetic DOM TouchEvent binding'});
