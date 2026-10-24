@@ -3,7 +3,7 @@ import {chapterProgress} from '../src/progress.js';
 
 // Real Release AAC, real seeks and page lifecycle. No mocked audio clock.
 export async function resumeChecks(page, book, check) {
- await page.addInitScript(()=>{window.__resumeTrace=[];document.addEventListener('DOMContentLoaded',()=>{const a=document.querySelector('audio');for(const event of ['loadstart','emptied','loadedmetadata','loadeddata','canplay','error','seeking','seeked','play','playing','pause'])a.addEventListener(event,()=>window.__resumeTrace.push({event,at:performance.now(),time:a.currentTime,ready:a.readyState,paused:a.paused,errorCode:a.error?.code,message:a.error?.message}));});});
+ const bindTrace=()=>{window.__resumeTrace=[];const bind=()=>{const a=document.querySelector('audio');if(!a)return;for(const event of ['loadstart','emptied','loadedmetadata','loadeddata','canplay','error','seeking','seeked','play','playing','pause'])a.addEventListener(event,()=>window.__resumeTrace.push({event,at:performance.now(),src:a.currentSrc,time:a.currentTime,ready:a.readyState,paused:a.paused,errorCode:a.error?.code,message:a.error?.message}));};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();};await page.addInitScript(bindTrace);await page.evaluate(bindTrace);
  const [first,second]=book.chapters;
  const media=()=>page.locator('audio');
  const saved=id=>page.evaluate(({bookId,id})=>JSON.parse(localStorage.getItem('daily-reading-github:v1')).books[bookId].chapters[id],{bookId:book.bookId,id});
