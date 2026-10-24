@@ -31,6 +31,10 @@ export async function resumeChecks(page, book, check) {
  check('reopening a book and Continue uses the last unfinished chapter and position');
  position=(await saved(first.chapterId)).positionSec;
  // Reload twice while metadata is pending: pagehide must not replace 37s with zero.
+ // Keep these pass-through routes for this page's remaining lifetime. Removing
+ // Firefox interception while its native Range requests are in flight can abort
+ // the transport after canplay. The page is closed with the test context.
+ // This does not permit native media errors: later actual-play checks reject them.
  let release;const gate=new Promise(resolve=>release=resolve);
  const hold=async route=>{await gate;try{await route.continue();}catch{/* Navigation cancels the old pending request. */}};
  await page.route('**/releases/download/**',hold);
@@ -41,13 +45,13 @@ export async function resumeChecks(page, book, check) {
   await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.getAttribute('src'));
   assert.ok(Math.abs((await saved(first.chapterId)).positionSec-position)<1);
  } finally {release();}
- await page.waitForFunction(t=>{const a=document.querySelector('audio');return a.readyState>=2&&!a.seeking&&Math.abs(a.currentTime-t)<1;},position,{timeout:60000});await page.unroute('**/releases/download/**',hold);
+ await page.waitForFunction(t=>{const a=document.querySelector('audio');return a.readyState>=2&&!a.seeking&&Math.abs(a.currentTime-t)<1;},position,{timeout:60000});
  check('slow loading and repeated reloads preserve the saved position before seek completes');
  let releaseFallback;const fallbackGate=new Promise(resolve=>releaseFallback=resolve);
  const fallbackHold=async route=>{await fallbackGate;try{await route.continue();}catch{/* The previous pending resource may have been canceled by reload. */}};
  await page.route('**/releases/download/**',fallbackHold);
  try{await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('audio')?.getAttribute('src'));await media().evaluate(a=>a.onloadedmetadata=null);}finally{releaseFallback();}
- await page.waitForFunction(t=>{const a=document.querySelector('audio');return a.readyState>=2&&!a.seeking&&Math.abs(a.currentTime-t)<1;},position,{timeout:60000});await page.unroute('**/releases/download/**',fallbackHold);
+ await page.waitForFunction(t=>{const a=document.querySelector('audio');return a.readyState>=2&&!a.seeking&&Math.abs(a.currentTime-t)<1;},position,{timeout:60000});
  assert.ok(Math.abs((await saved(first.chapterId)).positionSec-position)<1);console.log('fallback-native '+JSON.stringify(await media().evaluate(a=>({time:a.currentTime,ready:a.readyState,errorCode:a.error?.code,message:a.error?.message}))));
  check('native loadeddata and canplay restore the same position when metadata callback is not delivered');
  const loadsBeforeRestart=Number(await media().getAttribute('data-test-loads'));await page.getByRole('button',{name:'從頭播放本章',exact:true}).click();await playing(first,0);assert.equal(Number(await media().getAttribute('data-test-loads')),loadsBeforeRestart);assert.ok(await media().evaluate(a=>a.currentTime)<4);await pause();
