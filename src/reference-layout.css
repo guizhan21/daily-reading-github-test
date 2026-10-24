@@ -114,3 +114,6 @@
 
 .skin-swatch.coast{background-image:url("skins/coast-9ff94b00.png");background-size:356.3805% 602.3529%;background-position:92.6697% 24.1218%;}.skin-swatch.forest{background-image:url("skins/forest-48e69640.png");background-size:384% 1264.1975%;background-position:10.2113% 20.5726%;}.skin-swatch.pixel{background-image:url("skins/pixel-fd2d9f7c.png");background-size:365.7143% 706.2069%;background-position:10.6631% 18.6576%;}
 :root[data-theme="dark"] .player[data-expanded="true"]:before{filter:brightness(.3);}:root[data-skin="pixel"] .player[data-expanded="true"]:before{filter:none;}
+
+:root[data-skin="coast"] .reference-masthead .scene-art{background-size:357.2093% 682.6667%;background-position:8.1374% 16.0183%;}
+@media(max-width:560px){:root[data-skin="coast"] .reference-masthead .masthead-brand{color:transparent;}:root[data-skin="coast"] .reference-masthead .search-box{top:82px;bottom:auto;left:14px;width:calc(100% - 28px);background:var(--surface);}.reference-masthead .search-box button{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);padding:0;}.reference-masthead .search-box>span{display:flex;align-items:center;}.reference-masthead .search-box>span svg{width:20px;height:20px;}}
