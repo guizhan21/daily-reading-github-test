@@ -11,6 +11,9 @@ export async function resumeChecks(page, book, check) {
  const seek=async seconds=>{await media().evaluate((a,t)=>a.currentTime=t,seconds);await page.waitForFunction(t=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-t)<1;},seconds,{timeout:45000});};
  const select=async ch=>{await page.locator('[data-play="'+ch.chapterId+'"]').click();await playing(ch);await pause();};
  await page.goto(new URL('#book/'+book.bookId,page.url()).href,{waitUntil:'domcontentloaded'});
+ // Reopening now restores the independent reader, rather than showing chapter
+ // controls beneath it. Use its visible return action before testing playback.
+ await page.locator('#book-title').waitFor({state:'attached'});if(await page.locator('#reading').isVisible())await page.locator('#close-reader').click();
  await page.locator('[data-play="'+first.chapterId+'"]').waitFor();
  await select(first);await seek(37);let position=(await saved(first.chapterId)).positionSec;assert.ok(Math.abs(position-37)<1);
  await media().evaluate(a=>{a.dataset.testLoads='0';a.addEventListener('loadstart',()=>a.dataset.testLoads=String(Number(a.dataset.testLoads)+1));});
