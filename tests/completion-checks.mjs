@@ -15,6 +15,13 @@ export async function completionChecks(browser,site,books,check,observe,{screens
  const nav=async(page,shelf)=>{await page.locator('.sidebar nav a[href="#library/'+shelf+'"]').click();await page.locator('#book-select[data-shelf="'+shelf+'"]').waitFor();};
  const card=page=>page.locator('#book-select [data-book="'+book.bookId+'"]');
  const chapter=async(page,ch)=>{await page.waitForFunction(url=>{const a=document.querySelector('audio');return a.currentSrc.replace(/[?]dr_retry=[12]-[a-z0-9-]+$/,'')===url&&!a.paused&&!a.seeking&&!a.error&&a.currentTime>.1;},ch.audioUrl,{timeout:60000});};
+ const observeEnd=page=>page.locator('audio').evaluate(a=>{window.__completionNativeEnd=false;a.addEventListener('ended',event=>{window.__completionNativeEnd=event.isTrusted;},{once:true});});
+ async function savedEnd(page,ch){
+  // WebKit can expose ended=true to RAF before dispatching the queued native
+  // ended event. Await the real event AND persisted result, not that early flag.
+  await page.waitForFunction(({key,bookId,id})=>window.__completionNativeEnd&&document.querySelector('audio').ended&&JSON.parse(localStorage.getItem(key))?.books[bookId]?.chapters[id]?.completedOnce===true,{key,bookId:book.bookId,id:ch.chapterId},{timeout:60000});
+  assert.equal(canonicalAudioURL(await page.locator('audio').evaluate(a=>a.currentSrc)),ch.audioUrl);
+ }
  async function tail(page){
   const duration=await page.locator('audio').evaluate(a=>a.duration);
   // Select a short tail through the existing range input/change binding, then let native AAC
@@ -60,20 +67,20 @@ export async function completionChecks(browser,site,books,check,observe,{screens
  }finally{await fresh.context.close();}
  const partial=await create(progress({[last.chapterId]:{positionSec:last.durationSec-2}}));
  try{
-  const p=partial.page;await p.goto(site+'#book/'+book.bookId,{waitUntil:'domcontentloaded'});await p.locator('[data-play="'+last.chapterId+'"]').click();await p.waitForFunction(()=>document.querySelector('audio').ended,{},{timeout:60000});assert.equal((await saved(p)).books[book.bookId].chapters[last.chapterId].completedOnce,true);assert.equal(await p.locator('[data-set-shelf="reading"]').getAttribute('aria-pressed'),'true');await nav(p,'completed');assert.equal(await card(p).count(),0);check('ending only the last chapter never marks missing earlier chapters or the whole book Finished');
+  const p=partial.page;await p.goto(site+'#book/'+book.bookId,{waitUntil:'domcontentloaded'});await observeEnd(p);await p.locator('[data-play="'+last.chapterId+'"]').click();await savedEnd(p,last);assert.equal((await saved(p)).books[book.bookId].chapters[last.chapterId].completedOnce,true);assert.equal(await p.locator('[data-set-shelf="reading"]').getAttribute('aria-pressed'),'true');await nav(p,'completed');assert.equal(await card(p).count(),0);check('ending only the last chapter never marks missing earlier chapters or the whole book Finished');
  }finally{await partial.context.close();}
  if(browser.browserType().name()==='chromium'){
   // Fault injection only. The actual AAC element still reaches native ended.
   const stalled=await create(progress(Object.fromEntries(book.chapters.map(c=>[c.chapterId,c===last?{positionSec:0}:{completed:true}]))));let release;const gate=new Promise(r=>release=r);
   await stalled.page.route('**/releases/download/**',async route=>{await gate;try{await route.continue();}catch{}});
   try{
-   const p=stalled.page;await p.goto(site+'#book/'+book.bookId,{waitUntil:'domcontentloaded'});await p.locator('audio[src]').waitFor({state:'attached'});await p.locator('audio').evaluate(a=>{a.onloadedmetadata=null;a.onloadeddata=null;a.oncanplay=null;});release();await p.locator('[data-play="'+last.chapterId+'"]').click();await chapter(p,last);
-   await p.locator('audio').evaluate(a=>{a.currentTime=a.duration-.5;});await p.waitForFunction(()=>document.querySelector('audio').ended,{},{timeout:60000});assert.equal((await saved(p)).books[book.bookId].chapters[last.chapterId].completedOnce,true);assert.equal(await p.locator('[data-set-shelf="completed"]').getAttribute('aria-pressed'),'true');
+   const p=stalled.page;await p.goto(site+'#book/'+book.bookId,{waitUntil:'domcontentloaded'});await p.locator('audio[src]').waitFor({state:'attached'});await observeEnd(p);await p.locator('audio').evaluate(a=>{a.onloadedmetadata=null;a.onloadeddata=null;a.oncanplay=null;});release();await p.locator('[data-play="'+last.chapterId+'"]').click();await chapter(p,last);
+   await p.locator('audio').evaluate(a=>{a.currentTime=a.duration-.5;});await savedEnd(p,last);assert.equal((await saved(p)).books[book.bookId].chapters[last.chapterId].completedOnce,true);assert.equal(await p.locator('[data-set-shelf="completed"]').getAttribute('aria-pressed'),'true');
    check('injected missing restore callbacks cannot discard a real native final-chapter end',{faultInjection:true,iPhonePhysical:false});
   }finally{release();await stalled.context.close();}
   const interrupted=await create(progress(Object.fromEntries(book.chapters.map(c=>[c.chapterId,c===last?{positionSec:last.durationSec-3}:{completed:true}]))),()=>{const s=new EventTarget();s.state='active';s.type='auto';Object.defineProperty(navigator,'audioSession',{configurable:true,value:s});window.__completionSession=s;});
   try{
-   const p=interrupted.page;await p.goto(site+'#book/'+book.bookId,{waitUntil:'domcontentloaded'});await p.locator('[data-play="'+last.chapterId+'"]').click();await chapter(p,last);await p.evaluate(()=>{const s=window.__completionSession;s.state='interrupted';s.dispatchEvent(new Event('statechange'));});await p.waitForFunction(()=>document.querySelector('audio').ended,{},{timeout:60000});
+   const p=interrupted.page;await p.goto(site+'#book/'+book.bookId,{waitUntil:'domcontentloaded'});await observeEnd(p);await p.locator('[data-play="'+last.chapterId+'"]').click();await chapter(p,last);await p.evaluate(()=>{const s=window.__completionSession;s.state='interrupted';s.dispatchEvent(new Event('statechange'));});await savedEnd(p,last);
    assert.equal((await saved(p)).books[book.bookId].chapters[last.chapterId].completedOnce,true);assert.equal(await p.locator('[data-set-shelf="completed"]').getAttribute('aria-pressed'),'true');assert.equal(await p.locator('audio').evaluate(a=>a.paused),true);
    check('injected Audio Session interruption still saves native completion without reclaiming playback',{faultInjection:true,iPhonePhysical:false});
   }finally{await interrupted.context.close();}
