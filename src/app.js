@@ -61,7 +61,7 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  // Native data/canplay events retry the same guarded restore; a completed restore
  // is never applied again, and a source from an older selection is ignored.
  restoreCurrent=restore;audio.onloadedmetadata=restore;audio.onloadeddata=restore;audio.oncanplay=restore;
- audio.preload=autoplay||recovering?'auto':'metadata';audio.src=ch.audioUrl;audio.load();try{audio.currentTime=position;}catch{/* Native metadata/data events finish restoration. */}restore();display();markActive();playerView.update();if(autoplay)void play();
+ audio.preload=autoplay||recovering?'auto':'metadata';if(audio.getAttribute('src')===ch.audioUrl)audio.load();else audio.src=ch.audioUrl;try{audio.currentTime=position;}catch{/* Native metadata/data events finish restoration. */}restore();display();markActive();playerView.update();if(autoplay)void play();
 }
 function restartChapter(){if(book)selectChapter(index,true,book,true);}
 function advanceChapter(){
@@ -94,7 +94,7 @@ function recoverAudio(reason,manual=false){
  console.info('audio-recovery '+JSON.stringify({bookId:book.bookId,chapterId:book.chapters[index].chapterId,reason,resumePlayback,attempt:recoveryCount,positionSec:requestedSeek}));
  selectChapter(index,resumePlayback,book,false,true);$('status').textContent='正在重新連線 · 保留原章節與播放位置';
 }
-function mediaError(){const code=audio.error?.code,token=selection;requestedSeek=resumePosition();loading=true;pendingRestore=null;display();
+function mediaError(){const code=audio.error?.code,token=selection;if(!code||book&&audio.currentSrc&&audio.currentSrc!==book.chapters[index].audioUrl)return;requestedSeek=resumePosition();loading=true;pendingRestore=null;display();
  if(audioSession.interrupted()){interruptionStatus();return;}
  if(book&&wantsPlayback&&navigator.onLine!==false&&[2,3].includes(code)&&recoveryCount<2){queueMicrotask(()=>{if(token===selection&&wantsPlayback&&audio.error)recoverAudio('media-error-'+code);});}
  else{$('status').textContent='音訊連線中斷（'+(code||'網路')+'）；原進度已保留，可重新連線';$('retry-load').hidden=false;}
