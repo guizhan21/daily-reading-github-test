@@ -23,7 +23,7 @@ export function initAppearance() {
   if(save)try{localStorage.setItem(appearanceKey,JSON.stringify(prefs));}catch{status.textContent='這次設定已套用，瀏覽器暫時無法保存。';}
   document.dispatchEvent(new CustomEvent('appearancechange',{detail:{...prefs,theme,motion}}));
  }
- for(const button of document.querySelectorAll('[data-preference]'))button.onclick=()=>{prefs=normalizeAppearance({...prefs,[button.dataset.preference]:button.dataset.value});apply(true);};
+ for(const button of document.querySelectorAll('[data-preference]'))button.onclick=()=>{prefs=normalizeAppearance({...prefs,[button.dataset.preference]:button.dataset.value,...(button.dataset.preference==='skin'?{theme:button.dataset.value==='pixel'?'dark':'light'}:{})});apply(true);};
  document.getElementById('theme-toggle').onclick=()=>{prefs.theme=resolvedTheme(prefs.theme,dark.matches)==='dark'?'light':'dark';apply(true);};
  document.getElementById('motion-toggle').onclick=()=>{prefs.motion=!prefs.motion;apply(true);};
  dark.addEventListener('change',()=>apply());reduced.addEventListener('change',()=>apply());
