@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {createSleepTimer} from '../src/sleep-timer.js';
+test('sleep deadline pauses exactly once even after browser timers were suspended',()=>{let clock=0,pauses=0;const t=createSleepTimer({now:()=>clock,pause:()=>pauses++});t.set(15);clock=899999;assert.equal(t.tick(),false);clock=1000000;assert.equal(t.tick(),true);t.tick();assert.equal(pauses,1);});
+test('end-of-chapter sleep cancels only the next transition, and disabling keeps playback',()=>{let pauses=0;const t=createSleepTimer({pause:()=>pauses++});t.set('chapter');assert.equal(t.chapterEnded(),true);assert.equal(t.chapterEnded(),false);assert.equal(pauses,1);t.set('chapter');t.set(0);assert.equal(t.chapterEnded(),false);});

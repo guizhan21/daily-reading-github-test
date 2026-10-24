@@ -4,6 +4,9 @@ import {execFileSync} from 'node:child_process';
 import {root, load, validate, hash} from './catalog.mjs';
 import {readStagedFile} from './git-staged.mjs';
 validate(load('data/books.json'), load('data/site.json'));
+const art=load('data/skin-art.json'),seenSkins=new Set();
+for(const skin of art.skins){if(!['coast','forest','pixel'].includes(skin.id)||seenSkins.has(skin.id)||!/^skins\/(coast|forest|pixel)-[0-9a-f]{8}\.png$/.test(skin.reference))throw Error('Invalid approved skin asset');seenSkins.add(skin.id);const b=fs.readFileSync(path.join(root,'public',skin.reference));if(hash(b)!==skin.sha256||b.length!==skin.bytes||b.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Changed approved Image asset');}
+if(seenSkins.size!==3)throw Error('All three approved skins required');
 for (const book of load('data/books.json').books) {
   if (!fs.existsSync(path.join(root, 'public', book.cover))) {
     if (!load('data/site.json').coverRecoveryPending) throw Error('Missing cover');

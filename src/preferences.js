@@ -17,6 +17,7 @@ export function initAppearance() {
   document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#14252b':'#e8efdf';
   for(const button of document.querySelectorAll('[data-preference]'))button.setAttribute('aria-pressed',String(prefs[button.dataset.preference]===button.dataset.value));
   const toggle=document.getElementById('theme-toggle');toggle.textContent=theme==='dark'?'☀ 白天':'☾ 夜晚';toggle.setAttribute('aria-label',theme==='dark'?'切換白天模式':'切換夜晚模式');toggle.setAttribute('aria-pressed',String(theme==='dark'));
+  const readerTheme=document.getElementById('reader-theme');readerTheme.textContent=theme==='dark'?'☾':'☀';readerTheme.setAttribute('aria-pressed',String(theme==='dark'));
   const motionButton=document.getElementById('motion-toggle');motionButton.setAttribute('aria-pressed',String(motion));motionButton.textContent=motion?'動態開啟':'動態關閉';motionButton.disabled=reduced.matches;
   status.textContent=reduced.matches?'依系統偏好減少動態；播放不受影響。':'外觀設定只儲存在目前瀏覽器。';
   if(save)try{localStorage.setItem(appearanceKey,JSON.stringify(prefs));}catch{status.textContent='這次設定已套用，瀏覽器暫時無法保存。';}
@@ -27,7 +28,7 @@ export function initAppearance() {
  document.getElementById('motion-toggle').onclick=()=>{prefs.motion=!prefs.motion;apply(true);};
  dark.addEventListener('change',()=>apply());reduced.addEventListener('change',()=>apply());
  window.addEventListener('storage',e=>{if(e.key===appearanceKey){try{prefs=normalizeAppearance(JSON.parse(e.newValue));}catch{prefs=normalizeAppearance();}apply();}});
- document.addEventListener('click',e=>{if(panel.open&&!panel.contains(e.target))panel.open=false;});
- document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.open){panel.open=false;panel.querySelector('summary').focus();}});
+ document.addEventListener('click',e=>{if(panel.open&&!panel.contains(e.target)&&!e.target.closest('#dock-settings'))panel.open=false;});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.open){panel.open=false;(matchMedia('(max-width:560px)').matches?document.getElementById('dock-settings'):panel.querySelector('summary')).focus();}});
  apply();return {get:()=>({...prefs}),set:values=>{prefs=normalizeAppearance({...prefs,...values});apply(true);}};
 }

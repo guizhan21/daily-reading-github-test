@@ -1,0 +1,27 @@
+{
+  "referenceWidth": 1536,
+  "referenceHeight": 1024,
+  "skins": [
+    {
+      "id": "forest",
+      "reference": "skins/forest-48e69640.png",
+      "sha256": "48e69640f7f4f66e5bcb15bb077ae53e57d287db0437584596339d16fc476c8e",
+      "bytes": 2743912,
+      "usage": "CSS viewport of the original approved Image illustration; no replacement of book covers or prose"
+    },
+    {
+      "id": "coast",
+      "reference": "skins/coast-9ff94b00.png",
+      "sha256": "9ff94b00b262d94e98d2aea698249b36f7c1f9c5839da0c34ae55ab12100f19d",
+      "bytes": 2235636,
+      "usage": "CSS viewport of the original approved Image illustration; no replacement of book covers or prose"
+    },
+    {
+      "id": "pixel",
+      "reference": "skins/pixel-fd2d9f7c.png",
+      "sha256": "fd2d9f7c5774f870a44585bf3cdd2dee6425457f240c2d45c2319f54de5ebacb",
+      "bytes": 2462914,
+      "usage": "CSS viewport of the original approved Image illustration; no replacement of book covers or prose"
+    }
+  ]
+}
