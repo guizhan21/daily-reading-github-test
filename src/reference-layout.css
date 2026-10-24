@@ -132,8 +132,6 @@
  .player[data-expanded="true"]{padding-top:6px;gap:8px;}
  .player[data-expanded="true"] .player-art{margin-top:0;}
  .player[data-expanded="true"] .player-top>button{font-size:0;}
- #collapse-player:before{content:'⌄';font:32px/1 system-ui;color:var(--ink);}
- #player-queue-toggle:before{content:'☷';font:27px/1 system-ui;color:var(--ink);}
  .player[data-expanded="true"] #previous:after{content:'上一章';}
  .player[data-expanded="true"] #rewind:after,.player[data-expanded="true"] #forward:after{content:'15 秒';}
  .player[data-expanded="true"] #next:after{content:'下一章';}
@@ -144,9 +142,6 @@
 @media(max-width:560px){
  .reader-toolbar{height:56px;margin-bottom:0;padding:6px 22px;}
  :root[data-skin="coast"][data-theme="light"] .player[data-expanded="true"]{background:linear-gradient(#79c8e0,var(--surface) 62%);}
-
- :root[data-skin="coast"][data-theme="light"] #collapse-player:before,:root[data-skin="coast"][data-theme="light"] #player-queue-toggle:before{color:white;}
-}
 
 /* Only illustration-only source rectangles are sampled. No mock book, phone
    frame, search field or player controls are used as a page background. */

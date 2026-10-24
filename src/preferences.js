@@ -1,3 +1,4 @@
+import {icon} from './icons.js';
 export const appearanceKey = 'daily-reading-github:appearance:v1';
 const choice = (value, values, fallback) => values.includes(value) ? value : fallback;
 export function normalizeAppearance(value = {}) {
@@ -16,7 +17,7 @@ export function initAppearance() {
   root.dataset.theme=theme;root.dataset.skin=prefs.skin;root.dataset.font=prefs.font;root.dataset.readingSize=prefs.size;root.dataset.motion=motion?'on':'off';
   document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#14252b':'#e8efdf';
   for(const button of document.querySelectorAll('[data-preference]'))button.setAttribute('aria-pressed',String(prefs[button.dataset.preference]===button.dataset.value));
-  const toggle=document.getElementById('theme-toggle');toggle.textContent=theme==='dark'?'☀ 白天':'☾ 夜晚';toggle.setAttribute('aria-label',theme==='dark'?'切換白天模式':'切換夜晚模式');toggle.setAttribute('aria-pressed',String(theme==='dark'));
+  const toggle=document.getElementById('theme-toggle');toggle.innerHTML=icon(theme==='dark'?'sun':'moon')+'<span>'+(theme==='dark'?'白天':'夜晚')+'</span>';toggle.setAttribute('aria-label',theme==='dark'?'切換白天模式':'切換夜晚模式');toggle.setAttribute('aria-pressed',String(theme==='dark'));
   for(const mode of ['light','dark'])document.getElementById('reader-'+mode).setAttribute('aria-pressed',String(theme===mode));
   const motionButton=document.getElementById('motion-toggle');motionButton.setAttribute('aria-pressed',String(motion));motionButton.textContent=motion?'動態開啟':'動態關閉';motionButton.disabled=reduced.matches;
   status.textContent=reduced.matches?'依系統偏好減少動態；播放不受影響。':'外觀設定只儲存在目前瀏覽器。';

@@ -2,6 +2,9 @@
 // replaces or reloads the native audio element.
 export function initPlayerView(audio,{current,select,read,favorite}) {
  const $=id=>document.getElementById(id),panel=document.querySelector('.player');let expanded=false,returnFocus;
+ panel.dataset.keyboard='false';
+ document.addEventListener('pointerdown',()=>{panel.dataset.keyboard='false';},{passive:true});
+ document.addEventListener('keydown',event=>{if(['Tab','Enter',' '].includes(event.key))panel.dataset.keyboard='true';});
  function expand(open){
   if(open===expanded)return;
   expanded=open;panel.dataset.expanded=String(open);document.body.dataset.playerOpen=String(open);
@@ -13,9 +16,9 @@ export function initPlayerView(audio,{current,select,read,favorite}) {
  }
  function update(){
   const value=current();if(!value)return;const {book,index}=value,ch=book.chapters[index];
-  $('player-favorite').setAttribute('aria-pressed',String(value.favorite));$('player-favorite').textContent=value.favorite?'♥':'♡';$('player-release-link').href=book.releaseUrl;panel.dataset.playing=String(!audio.paused);panel.dataset.active=String(value.started||!audio.paused);$('player-mini-book').textContent=book.title;$('player-book').textContent=book.title;$('player-chapter').textContent=ch.title;
+  $('player-favorite').setAttribute('aria-pressed',String(value.favorite));$('player-release-link').href=book.releaseUrl;panel.dataset.playing=String(!audio.paused);panel.dataset.active=String(value.started||!audio.paused);$('player-mini-book').textContent=book.title;$('player-book').textContent=book.title;$('player-chapter').textContent=ch.title;
   if($('player-cover').getAttribute('src')!==book.cover){$('player-cover').src=book.cover;$('player-cover').alt=book.title+'的原封面';}
-  const queue=$('player-queue');if(queue.dataset.queueBook!==book.bookId){queue.replaceChildren();for(const [i,c] of book.chapters.entries()){const button=document.createElement('button');button.textContent=String(i+1).padStart(2,'0')+'  '+c.title;button.dataset.chapter=c.chapterId;button.onclick=()=>select(i,book);queue.append(button);}queue.dataset.queueBook=book.bookId;}
+  const queue=$('player-queue');if(queue.dataset.queueBook!==book.bookId){queue.replaceChildren();for(const [i,c] of book.chapters.entries()){const button=document.createElement('button'),number=document.createElement('span'),title=document.createElement('span');number.className='queue-index';number.textContent=String(i+1).padStart(2,'0');title.className='queue-title';title.textContent=c.title;button.append(number,title);button.dataset.chapter=c.chapterId;button.onclick=()=>select(i,book);queue.append(button);}queue.dataset.queueBook=book.bookId;}
   for(const b of queue.children)b.setAttribute('aria-current',String(b.dataset.chapter===ch.chapterId));
  }
  $('player-favorite').onclick=()=>{favorite();update();};$('queue-card').onclick=()=>$('player-queue-toggle').click();$('mini-queue').onclick=()=>{update();expand(true);$('player-queue').hidden=false;$('player-queue-toggle').setAttribute('aria-expanded','true');};panel.querySelector('.player-art').onclick=()=>{update();expand(true);};$('now-title').onclick=()=>{update();expand(true);};

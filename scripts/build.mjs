@@ -1,10 +1,11 @@
 import fs from 'node:fs';
+import {icon} from '../src/icons.js';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {renderMarkdown} from './render.mjs';
 import {root, load, validate, safeRelative, buildTarget} from './catalog.mjs';
 const config = load('data/site.json'), catalog = load('data/books.json');
-const assets=['app.js','progress.js','preferences.js','ambience.js','media-session.js','audio-session.js','media-source.js','playback-health.js','player-view.js','sleep-timer.js','navigation-gesture.js','style.css','storybook.css','listening-room.css','reference-layout.css'];
+const assets=['app.js','progress.js','preferences.js','ambience.js','media-session.js','audio-session.js','media-source.js','playback-health.js','player-view.js','sleep-timer.js','navigation-gesture.js','icons.js','controls.css','style.css','storybook.css','listening-room.css','reference-layout.css'];
 const assetVersion=crypto.createHash('sha256').update(assets.map(file=>fs.readFileSync(path.join(root,'src',file),'utf8').replaceAll('\r\n','\n')).join('\n')).digest('hex').slice(0,16);
 validate(catalog, config);
 const args=process.argv.slice(2);if(args.length>1||args.some(a=>a!=='--root'))throw Error('Unsupported build argument');
@@ -28,6 +29,7 @@ for (const book of catalog.books) if(book.references){
  body+=`<article class="prose" id="text-references-${escape(book.bookId)}" hidden>${renderMarkdown(source)}</article>`;
 }
 let html = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
+html=html.replace(/\{\{ICON:([a-z]+)\}\}/g,(_,name)=>icon(name));
 html = html.replaceAll('{{BASE}}', escape(target.basePath)).replaceAll('{{ASSET_VERSION}}',assetVersion).replace('{{TITLE}}', escape(config.title)).replace('{{CHAPTERS}}', body);
 fs.writeFileSync(path.join(dist,'index.html'), html);
 for (const file of assets) {
