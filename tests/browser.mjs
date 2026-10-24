@@ -5,6 +5,7 @@ import {appearanceChecks} from './appearance-checks.mjs';
 import {shortURLChecks} from './short-url-checks.mjs';
 import {recoveryChecks} from './recovery-checks.mjs';
 import {interruptionChecks} from './interruption-checks.mjs';
+import {listeningRoomChecks} from './listening-room-checks.mjs';
 const site=process.env.SITE_URL||'https://guizhan21.github.io/daily-reading-github-test/',selected=process.env.BROWSER||'chrome',books=load('data/books.json').books;
 const engines={chrome:[chromium,process.env.CHROME_EXECUTABLE?{executablePath:process.env.CHROME_EXECUTABLE}:{channel:'chrome'}],firefox:[firefox,{}],webkit:[webkit,{}]};
 const output=path.join(root,'test-results');fs.mkdirSync(output,{recursive:true});const results=[];
@@ -64,6 +65,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   await shelfChecks(browser,site,books,check,observe);
   await appearanceChecks(browser,site,books,check,observe);
   await shortURLChecks(browser,site,books,check,observe);
+  await listeningRoomChecks(browser,site,books,check,observe,{screenshots:output,browserName:name});
   // Fault-injection recoveries are expected and reported separately from normal
   // playback; do not hide unexpected retries from the ordinary 60-chapter run.
   const normalRecoveries=r.mediaRecoveries.length;

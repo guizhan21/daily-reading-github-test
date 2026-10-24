@@ -27,6 +27,7 @@ export async function recoveryChecks(browser,site,book,check,observe){
   // and a real source reload to 95s without starting playback.
   await page.locator('audio').evaluate(a=>{const native=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'currentTime');Object.defineProperty(a,'currentTime',{configurable:true,get(){return native.get.call(this);},set(){/* Simulate the engine dropping a requested seek. */}});a.addEventListener('loadstart',()=>{delete a.currentTime;},{once:true});});
   await page.locator('#seek').evaluate(input=>{input.value='95';input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));});
+  const pending=await page.evaluate(({bookId,chapterId})=>JSON.parse(localStorage.getItem('daily-reading-github:v1')).books[bookId].chapters[chapterId],{bookId:book.bookId,chapterId:ch.chapterId});assert.equal(pending.positionSec,95);assert.equal(pending.pendingSeekSec,95);check('explicit seek target is saved before the native decoder accepts it; stale clock cannot clear the target');
   await page.waitForEvent('console',{predicate:m=>m.text().startsWith('audio-recovery '),timeout:25000});
   await page.waitForFunction(()=>{const a=document.querySelector('audio');return a.paused&&!a.seeking&&a.readyState>=2&&Math.abs(a.currentTime-95)<.5;},{},{timeout:60000,polling:100});
   assert.equal(events.length,2);assert.equal(events[1].positionSec,95);assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.5);

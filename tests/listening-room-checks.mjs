@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';import path from 'node:path';
+export async function listeningRoomChecks(browser,site,books,check,observe,{screenshots,browserName}={}){
+ const context=await browser.newContext({viewport:{width:390,height:844},colorScheme:'light'}),page=await context.newPage();observe(page);const b=books[0],ch=b.chapters[1];
+ try{
+  await page.goto(site+'#library/unread',{waitUntil:'domcontentloaded'});await page.locator('[data-card-play]').first().waitFor();assert.equal(await page.locator('html').getAttribute('data-skin'),'coast');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  if(screenshots&&browserName!=='webkit')await page.screenshot({path:path.join(screenshots,browserName+'-coast-shelf.png')});
+  await page.locator('[data-card-play="'+b.bookId+'"]').click();await page.getByRole('dialog',{name:'正在收聽',exact:true}).waitFor();
+  await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.paused&&!a.error&&a.currentTime>.3;},{},{timeout:60000});
+  assert.equal(await page.locator('audio').count(),1);assert.equal(await page.locator('#player-cover').getAttribute('src'),b.cover);check('mobile cover play opens an album-style player using the original cover and one native audio element');
+  await page.getByRole('button',{name:'1.25 倍',exact:true}).click();await page.getByRole('button',{name:'章節列表',exact:true}).click();
+  await page.locator('#player-queue [data-chapter="'+ch.chapterId+'"]').click();await page.waitForFunction(url=>{const a=document.querySelector('audio');return a.currentSrc===url&&!a.paused&&!a.error&&a.currentTime>.3;},ch.audioUrl,{timeout:60000});assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.25);check('expanded chapter queue switches actual Release audio and retains selected speed');
+  await page.getByRole('button',{name:'暫停',exact:true}).click();await page.locator('#seek').evaluate(input=>{input.value='32';input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));});await page.waitForFunction(()=>{const a=document.querySelector('audio');return a.paused&&!a.seeking&&a.readyState>=2&&Math.abs(a.currentTime-32)<.5;},{},{timeout:60000});
+  await page.getByRole('button',{name:'章節列表',exact:true}).click();
+  if(screenshots&&browserName!=='webkit')await page.screenshot({path:path.join(screenshots,browserName+'-coast-player.png')});
+  await page.keyboard.press('Escape');assert.equal(await page.locator('.app-shell').evaluate(e=>e.inert),false);check('closing the full player restores navigation without stopping or replacing audio');
+  await page.locator('audio').evaluate(a=>{a.dataset.skinLoads='0';a.addEventListener('loadstart',()=>a.dataset.skinLoads=String(Number(a.dataset.skinLoads)+1));});
+  for(const [skin,label] of [['forest','森間書架皮膚'],['pixel','星夜像素皮膚'],['coast','海岸聲音皮膚']]){
+   await page.locator('#appearance-settings summary').click();await page.getByRole('button',{name:label,exact:true}).click();await page.keyboard.press('Escape');
+   assert.equal(await page.locator('html').getAttribute('data-skin'),skin);assert.equal(await page.locator('audio').getAttribute('data-skin-loads'),'0');assert.ok(Math.abs(await page.locator('audio').evaluate(a=>a.currentTime)-32)<.5);assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.25);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  }check('all three skins switch at 390px without reloading audio or changing position and speed');
+  await page.getByRole('button',{name:'開啟完整播放器',exact:true}).click();await page.getByRole('button',{name:'閱讀本章原文 ↗',exact:true}).click();await page.locator('#reader-content article').waitFor();assert.ok((await page.locator('#reader-content').innerText()).length>1500);assert.equal(await page.locator('body').getAttribute('data-reading-open'),'true');
+  await page.getByRole('button',{name:'放大正文字級',exact:true}).click();assert.equal(await page.locator('#reader-content .prose').evaluate(e=>getComputedStyle(e).fontSize),'21px');assert.ok(Math.abs(await page.locator('audio').evaluate(a=>a.currentTime)-32)<.5);check('player opens the matching full original chapter; reader type controls retain playback position');
+  if(screenshots&&browserName!=='webkit')await page.screenshot({path:path.join(screenshots,browserName+'-coast-reader.png')});
+  await page.locator('#close-reader').click();await page.reload({waitUntil:'domcontentloaded'});await page.locator('#book-title').waitFor();assert.equal(await page.locator('html').getAttribute('data-skin'),'coast');await page.getByRole('button',{name:'播放',exact:true}).click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.paused&&!a.seeking&&!a.error&&a.currentTime>32.2&&a.currentTime<44;},{},{timeout:60000});assert.equal(await page.locator('audio').evaluate(a=>a.playbackRate),1.25);check('new layout refresh restores per-chapter 32s progress, speed and selected skin');
+  await page.getByRole('button',{name:'暫停',exact:true}).click();await page.setViewportSize({width:360,height:800});await page.getByRole('button',{name:'開啟完整播放器',exact:true}).click();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.equal(await page.locator('#collapse-player').evaluate(e=>document.activeElement===e),true);await page.keyboard.press('Shift+Tab');assert.ok(await page.locator('.player').evaluate(e=>e.contains(document.activeElement)));await page.keyboard.press('Escape');assert.equal(await page.locator('.app-shell').evaluate(e=>e.inert),false);check('360px full player fits viewport and keyboard focus stays inside until Escape');
+ }finally{await context.close();}
+}

@@ -2,7 +2,7 @@ export const appearanceKey = 'daily-reading-github:appearance:v1';
 const choice = (value, values, fallback) => values.includes(value) ? value : fallback;
 export function normalizeAppearance(value = {}) {
  if (!value || typeof value !== 'object') value = {};
- return {theme:choice(value.theme,['auto','light','dark'],'auto'),font:choice(value.font,['book','sans'],'sans'),size:choice(value.size,['normal','large','largest'],'normal'),motion:value.motion !== false};
+ return {theme:choice(value.theme,['auto','light','dark'],'auto'),skin:choice(value.skin,['coast','forest','pixel'],'coast'),font:choice(value.font,['book','sans'],'sans'),size:choice(value.size,['normal','large','largest'],'normal'),motion:value.motion !== false};
 }
 export const resolvedTheme = (theme, dark) => theme === 'auto' ? dark ? 'dark' : 'light' : theme;
 export const motionAllowed = (prefs, reduced, hidden = false) => prefs.motion && !reduced && !hidden;
@@ -13,7 +13,7 @@ export function initAppearance() {
  const panel=document.getElementById('appearance-settings'),status=document.getElementById('appearance-status');
  function apply(save=false) {
   const theme=resolvedTheme(prefs.theme,dark.matches),motion=motionAllowed(prefs,reduced.matches);
-  root.dataset.theme=theme;root.dataset.font=prefs.font;root.dataset.readingSize=prefs.size;root.dataset.motion=motion?'on':'off';
+  root.dataset.theme=theme;root.dataset.skin=prefs.skin;root.dataset.font=prefs.font;root.dataset.readingSize=prefs.size;root.dataset.motion=motion?'on':'off';
   document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#14252b':'#e8efdf';
   for(const button of document.querySelectorAll('[data-preference]'))button.setAttribute('aria-pressed',String(prefs[button.dataset.preference]===button.dataset.value));
   const toggle=document.getElementById('theme-toggle');toggle.textContent=theme==='dark'?'☀ 白天':'☾ 夜晚';toggle.setAttribute('aria-label',theme==='dark'?'切換白天模式':'切換夜晚模式');toggle.setAttribute('aria-pressed',String(theme==='dark'));
@@ -29,5 +29,5 @@ export function initAppearance() {
  window.addEventListener('storage',e=>{if(e.key===appearanceKey){try{prefs=normalizeAppearance(JSON.parse(e.newValue));}catch{prefs=normalizeAppearance();}apply();}});
  document.addEventListener('click',e=>{if(panel.open&&!panel.contains(e.target))panel.open=false;});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.open){panel.open=false;panel.querySelector('summary').focus();}});
- apply();return {get:()=>({...prefs})};
+ apply();return {get:()=>({...prefs}),set:values=>{prefs=normalizeAppearance({...prefs,...values});apply(true);}};
 }
