@@ -7,6 +7,7 @@ export function createPlaybackHealth({read,recover,status,now=()=>performance.no
  function tick(){
   const s=read(),t=now();
   if(token!==s.token){reset(s,t);lastStatus='';}
+  if(s.intent&&s.interrupted){reset(s,t);notify('interrupted');return;}
   if(!s.intent||s.ended||(!s.loading&&s.paused)){reset(s,t);notify('idle');return;}
   if(Number.isFinite(s.time)&&Math.abs(s.time-lastTime)>.05){reset(s,t);notify('healthy');return;}
   if(s.offline){lastProgress=t;notify('offline');return;}
