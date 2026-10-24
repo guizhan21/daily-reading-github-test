@@ -24,6 +24,8 @@ export async function resumeChecks(page, book, check) {
  await select(second);await seek(63);assert.ok(Math.abs((await saved(second.chapterId)).positionSec-63)<1);
  await select(first);assert.ok(Math.abs(await media().evaluate(a=>a.currentTime)-position)<3);
  check('chapter A and B keep separate exact positions across switches');
+ for(let cycle=0;cycle<3;cycle++){await select(second);await seek(63);await select(first);await seek(37);}
+ check('three repeated native source-release cycles resume both real chapters without media errors');
  position=(await saved(first.chapterId)).positionSec;
  await page.locator('nav[aria-label="主選單"] a[href="#library/reading"]').click();
  await page.locator('#book-select [data-book="'+book.bookId+'"]').click();
