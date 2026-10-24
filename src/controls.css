@@ -34,7 +34,9 @@
 .reader-type-tools .ui-icon{width:20px;height:20px;}
 .reader-toolbar #close-reader{margin-left:-7px;}
 #theme-toggle,#appearance-settings>summary,#player-read{align-items:center;gap:6px;}
-#theme-toggle{display:inline-flex;}
+/* Mobile uses the bottom settings dock. Never resurrect the desktop shortcut
+   inside the zero-height mobile header and overlap the book's back link. */
+@media(min-width:561px){#theme-toggle{display:inline-flex;}}
 #theme-toggle .ui-icon,#appearance-settings>summary .ui-icon,#player-read .ui-icon,.back-link .ui-icon{width:18px;height:18px;}
 .back-link{display:inline-flex;align-items:center;gap:5px;}
 .tile-play{display:grid;place-items:center;}
