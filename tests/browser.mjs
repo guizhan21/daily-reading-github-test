@@ -5,6 +5,7 @@ import {appearanceChecks} from './appearance-checks.mjs';
 import {shortURLChecks} from './short-url-checks.mjs';
 import {recoveryChecks} from './recovery-checks.mjs';
 import {interruptionChecks} from './interruption-checks.mjs';
+import {uiPolishChecks} from './ui-polish-checks.mjs';
 import {listeningRoomChecks} from './listening-room-checks.mjs';
 // Source checks remove only our bounded dr_retry transport parameter. Real
 // native error/seek/clock checks and the canonical Release host/path stay required.
@@ -68,6 +69,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   await appearanceChecks(browser,site,books,check,observe);
   await shortURLChecks(browser,site,books,check,observe);
   await listeningRoomChecks(browser,site,books,check,observe,{screenshots:output,browserName:name});
+  await uiPolishChecks(browser,site,books,check,observe,{screenshots:output,browserName:name});
   // Fault-injection recoveries are expected and reported separately from normal
   // playback; do not hide unexpected retries from the ordinary 60-chapter run.
   const normalRecoveries=r.mediaRecoveries.length;

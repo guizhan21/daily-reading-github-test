@@ -28,5 +28,12 @@ export function initPlayerView(audio,{current,select,read,favorite}) {
   if(event.key==='Tab'){const buttons=[...panel.querySelectorAll('button,a[href],input')].filter(e=>!e.disabled&&e.getClientRects().length);const first=buttons[0],last=buttons.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}}
  });
  for(const event of ['play','pause','loadedmetadata','ended'])audio.addEventListener(event,update);
- return {expand,update};
+ function back(){
+  if(!expanded)return false;
+  const popover=[...panel.querySelectorAll('details[open]')].find(e=>e.querySelector('.control-popover,#rate'));
+  if(popover){popover.open=false;return true;}
+  if(!$('player-queue').hidden){$('player-queue').hidden=true;$('player-queue-toggle').setAttribute('aria-expanded','false');return true;}
+  expand(false);return true;
+ }
+ return {expand,update,back};
 }
