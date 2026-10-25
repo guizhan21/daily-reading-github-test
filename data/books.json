@@ -1036,6 +1036,154 @@
           "durationSec": 310.404354
         }
       ]
+    },
+    {
+      "bookId": "2026-10-26_ai-consultant",
+      "title": "AI 評測的科學：從漂亮分數到可信決策",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-26",
+      "description": "接續生成式 AI、檢索、Agent、試點、成人教學、治理與 AI Coding，聚焦建立有證據邊界的 AI 評測能力：定義主張、設計題庫、讀懂指標、評價開放回答、公平比較系統，並建立持續驗收機制。\n\n模型與應用評測方法學；非企業試點 ROI、AI Coding 測試教學或資安合規指南",
+      "version": 1,
+      "cover": "covers/2026-10-26_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-26_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-26-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch01",
+          "title": "先定義要證明的能力：評測不是替模型打總分",
+          "markdown": "chapters/2026-10-26_ai-consultant_ch01.md",
+          "textSha256": "6ba701a80dea25af792eb9d12beba6f332c53639b305c6b36424d99514ac5ee3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-ai-consultant-v1/2026-10-26_ai-consultant_ch01-f9ed208a7939.m4a",
+          "sha256": "f9ed208a79398249f04f7e0d76f7b7850b7fb1edbb5716caa4092ca71dce34a3",
+          "bytes": 12628868,
+          "durationSec": 392.370794
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch02",
+          "title": "從真實任務建立題庫：好題目比大題庫更重要",
+          "markdown": "chapters/2026-10-26_ai-consultant_ch02.md",
+          "textSha256": "a7e58f06151211d6497614dee76f69114c67552738d919874541c5c6a5b13c8e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-ai-consultant-v1/2026-10-26_ai-consultant_ch02-55a2e9f45b86.m4a",
+          "sha256": "55a2e9f45b8648973937ee0ea7c1704437816001bff4a14faddccb2a8d23f2d1",
+          "bytes": 12896424,
+          "durationSec": 400.683537
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch03",
+          "title": "指標與不確定性：百分之九十代表什麼",
+          "markdown": "chapters/2026-10-26_ai-consultant_ch03.md",
+          "textSha256": "717240aa98f1763031b364e6068f75d16c525372cc541973acf72422868f43b1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-ai-consultant-v1/2026-10-26_ai-consultant_ch03-1121166092a2.m4a",
+          "sha256": "1121166092a2f4cef7b0b8b704fefbd47f6033434a6e1366c9d14eef44d9fa5f",
+          "bytes": 11885964,
+          "durationSec": 369.290159
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch04",
+          "title": "開放回答與評分者：誰有資格說 AI 答得好",
+          "markdown": "chapters/2026-10-26_ai-consultant_ch04.md",
+          "textSha256": "fc9e066b624e0b0f69e8181d91bc21a263ffc0a2039c4b899ed01bd5cd6220b7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-ai-consultant-v1/2026-10-26_ai-consultant_ch04-e326ef7f98e4.m4a",
+          "sha256": "e326ef7f98e4af05082e2663e1cf2d1f0229caf9b629f641bf9fcb415ba43eb4",
+          "bytes": 11014685,
+          "durationSec": 342.215692
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch05",
+          "title": "公平比較模型與系統：分數變化可能不是模型變強",
+          "markdown": "chapters/2026-10-26_ai-consultant_ch05.md",
+          "textSha256": "f09524ddbdc801b8453ab8a4d21831fee83ae3eeecb0cb27e9b26274acf9478b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-ai-consultant-v1/2026-10-26_ai-consultant_ch05-25245ff62462.m4a",
+          "sha256": "25245ff62462caadeb7d5ba86e48ac76f6b8009104918a2dba92da9d82aec28d",
+          "bytes": 10943716,
+          "durationSec": 340.009796
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch06",
+          "title": "持續評測與品質決策：從一次展示走向可追蹤的信任",
+          "markdown": "chapters/2026-10-26_ai-consultant_ch06.md",
+          "textSha256": "c907fa051cb3f2aee28339fe2c7b5ff8f87f8c816126b30aa4a9da2802211944",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-ai-consultant-v1/2026-10-26_ai-consultant_ch06-7678fa23c209.m4a",
+          "sha256": "7678fa23c209572fbe0d65f5be5581fec2c3faf8eb3a62e1170e212d5d05b998",
+          "bytes": 11508593,
+          "durationSec": 357.564082
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-26_general-knowledge",
+      "title": "看懂一支影片：從影格、壓縮到聲音與串流",
+      "category": "跨領域知識探索",
+      "date": "2026-10-26",
+      "description": "以六個相互銜接的問題理解數位影片：影格與時間如何組成畫面、壓縮如何節省資料、容器與編碼的分工、聲畫同步、網站串流的播放機制，以及如何驗收與保存可再製作的影片。",
+      "version": 1,
+      "cover": "covers/2026-10-26_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-26_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-26-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch01",
+          "title": "影格怎樣變成時間",
+          "markdown": "chapters/2026-10-26_general-knowledge_ch01.md",
+          "textSha256": "2360b6fd7ce81f71a8b0a649657c97839fd1e490348f2103941eb5719bf650bd",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-general-knowledge-v1/2026-10-26_general-knowledge_ch01-37367b806b2f.m4a",
+          "sha256": "37367b806b2f12eb9db8de5ae9433d13a4a929b4ea903dad252d8e1b78911509",
+          "bytes": 11362174,
+          "durationSec": 353.012971
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch02",
+          "title": "壓縮到底省掉什麼",
+          "markdown": "chapters/2026-10-26_general-knowledge_ch02.md",
+          "textSha256": "288d660fd1f8699de7c3953d2e524ac3fdae02e065542a91baac9334ee53d63c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-general-knowledge-v1/2026-10-26_general-knowledge_ch02-fe2205419c3a.m4a",
+          "sha256": "fe2205419c3a91e912bc6e90d374cc9f9272295cb0c0c42c987dbdc939829c43",
+          "bytes": 10617827,
+          "durationSec": 329.885896
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch03",
+          "title": "副檔名為何會誤導",
+          "markdown": "chapters/2026-10-26_general-knowledge_ch03.md",
+          "textSha256": "1b8e3be4ab09c59ee042fa37b5677730d0fb5564b2cb34368dff9719dd62834a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-general-knowledge-v1/2026-10-26_general-knowledge_ch03-11992c701282.m4a",
+          "sha256": "11992c701282f26acf003a962785cba1eb02965745d56fa3eaf8533556a54e25",
+          "bytes": 10934752,
+          "durationSec": 339.731156
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch04",
+          "title": "聲音為什麼對不上畫面",
+          "markdown": "chapters/2026-10-26_general-knowledge_ch04.md",
+          "textSha256": "78e55c6ed69856ab08b88163a00628ed4d6bde3777a51425bdfa0e802099dbaf",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-general-knowledge-v1/2026-10-26_general-knowledge_ch04-e18544ede541.m4a",
+          "sha256": "e18544ede5419dd48e303ebd340bbca56d65f10dbdd47f587b1c0659ac1ed85a",
+          "bytes": 11871770,
+          "durationSec": 368.84898
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch05",
+          "title": "影片為何在別人的裝置卡住",
+          "markdown": "chapters/2026-10-26_general-knowledge_ch05.md",
+          "textSha256": "ed55f07260cc18a2ae5773fe6a2054ba214112ef6f9edfb01137185cff1d0651",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-general-knowledge-v1/2026-10-26_general-knowledge_ch05-136f4985b56b.m4a",
+          "sha256": "136f4985b56b520fa7617a44faf1a850fec8fd26439597098283554015eb5b34",
+          "bytes": 12365794,
+          "durationSec": 384.19737
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch06",
+          "title": "怎樣驗收一支影片",
+          "markdown": "chapters/2026-10-26_general-knowledge_ch06.md",
+          "textSha256": "b2a4577db61f682549df8294c4c2df575d3bdd91330e0ab595fa2605d94ee66b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-26-general-knowledge-v1/2026-10-26_general-knowledge_ch06-bab85270632c.m4a",
+          "sha256": "bab85270632ceb9a9b3c2f7ca78c1d78b695d8c7390c67f45fb3d946f2c5866b",
+          "bytes": 13524915,
+          "durationSec": 420.211519
+        }
+      ]
     }
   ]
 }
