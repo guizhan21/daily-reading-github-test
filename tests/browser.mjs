@@ -5,6 +5,7 @@ import {appearanceChecks} from './appearance-checks.mjs';
 import {shortURLChecks} from './short-url-checks.mjs';
 import {recoveryChecks} from './recovery-checks.mjs';
 import {interruptionChecks} from './interruption-checks.mjs';
+import {sessionRecoveryChecks} from './session-recovery-checks.mjs';
 import {iconControlsChecks} from './icon-controls-checks.mjs';
 import {uiPolishChecks} from './ui-polish-checks.mjs';
 import {searchFocusChecks} from './search-focus-checks.mjs';
@@ -80,6 +81,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   await completionChecks(browser,site,books,check,observe,{screenshots:output,browserName:name});
   await backSwipeChecks(browser,site,books,check,observe);
   await iconControlsChecks(browser,site,books,check,observe,{screenshots:output,browserName:name});
+  r.sessionRecoveryTests=await sessionRecoveryChecks(browser,site,books[0],check,observe);
   // Fault-injection recoveries are expected and reported separately from normal
   // playback; do not hide unexpected retries from the ordinary 60-chapter run.
   const normalRecoveries=r.mediaRecoveries.length;
