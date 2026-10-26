@@ -656,6 +656,88 @@
         }
       ],
       "contentReview": "File integrity and initial topic/chapter review passed; numbers, English pronunciation and noted rhetorical wording remain pending human review."
+    },
+    {
+      "bookId": "2026-10-27_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-10-26T17:41:53.447Z",
+      "decision": "approved",
+      "basis": "User-authorized public original-book library and daily publication pipeline (2026-10-21). This book was retrieved from the two existing ChatGPT original-writing tasks; original explanatory prose and cited links are retained, not third-party book files or source PDFs. Cover is a new built-in Image creation authorized for this project. Each accepted NotebookLM audio uses its one isolated original chapter and was compared via full local ASR with that chapter. Numbers and English terminology remain pending human confirmation; no claim of human full listening or complete factual verification.",
+      "coverSha256": "a7da4de31ee27fa52b764357c272fcc39f8163e892827658c37025511d99b562",
+      "chapters": [
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch01",
+          "textSha256": "465625cb49c70d64f198452c246d1c0ea8e0b0cc416ff2409dbce595999c13b5",
+          "audioSha256": "82a37c33c54ef58df3336c27b78688f799f1eea6a13572dae0b4db19ed527059"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch02",
+          "textSha256": "df6a20924f0617209b987ad87eb33d33af6561a3b9afcd35da81329bf7927b81",
+          "audioSha256": "1a1bb560149722864fd47061e5f1b36d607bb550a0995d76e9a30580bd64394c"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch03",
+          "textSha256": "a5be3b0d8a837e3e003b57398aab2b22332dacdc8f826f5fe44c992a19abcdaa",
+          "audioSha256": "16709d3364d8b90c48479bc9daa6fa63cc166d7d9f9a9c8d4a3c6b9588ebe110"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch04",
+          "textSha256": "09df45449cf326d9357b79d39b81f5a4b98d4c718bcea1dc7347e19085a1d0e5",
+          "audioSha256": "e8530460d8023a45bea8f57669f11feab24eb331408c7cd4a4dd2caac1e5268b"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch05",
+          "textSha256": "b196afea29804752ad548fa4d6897b66824b0582262905dad2be1f2cda5ffc8b",
+          "audioSha256": "63afe9d0b21365618c6efd33dfb3e72513ebf055c5294c7a8af1e952fbc879be"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch06",
+          "textSha256": "f13bb04e992432ccafabbb6ddff75e1fb1dc7911c4820ba27310c90470c93e14",
+          "audioSha256": "d864dfad1fa28782b19a31b3c5a9467bffd6c75758242112bdcad45860c5076f"
+        }
+      ],
+      "contentReview": "File integrity and initial topic/chapter review passed; numbers, English pronunciation and noted rhetorical wording remain pending human review."
+    },
+    {
+      "bookId": "2026-10-27_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-10-26T17:47:13.186Z",
+      "decision": "approved",
+      "basis": "User-authorized public original-book library and daily publication pipeline (2026-10-21). This book was retrieved from the two existing ChatGPT original-writing tasks; original explanatory prose and cited links are retained, not third-party book files or source PDFs. Cover is a new built-in Image creation authorized for this project. Each accepted NotebookLM audio uses its one isolated original chapter and was compared via full local ASR with that chapter. Numbers and English terminology remain pending human confirmation; no claim of human full listening or complete factual verification.",
+      "coverSha256": "460a7b58a5997c9bf70ff1cb7a86cfcbfb2595bd25ce696361dc5d603f06d6bb",
+      "chapters": [
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch01",
+          "textSha256": "433c8952232232e3d4515a197d8f68813625456320f96a871a2ea90b588a9433",
+          "audioSha256": "16af46963804ad79c3ac2f3c63598b53c4e7fb68ef58f82b6b846a36a26dd359"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch02",
+          "textSha256": "8d2f5aeab9a30063f5cfc17d999f8cf4bbf392e0c7d7b06965bafa304ddafd52",
+          "audioSha256": "a218428d7c7afee303a640d19768cfba19bcb7b31c0b3151eb4b80418b471062"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch03",
+          "textSha256": "1bf58b1562c55869c52ab73991943dce0c588be7d6507f1abd4a57cf3707b21c",
+          "audioSha256": "99f1dc88625fd6757f6fc6997379115b90a1d869be3e6d30b91604006cb3e17f"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch04",
+          "textSha256": "d996b042a04e9da114109fb55b68199a0faf223a5c9bd71726844fef990c3b80",
+          "audioSha256": "8550b804c5149c0e1cf32fcf7a79782ab3db80a6cf392abae0d8d1a70e164801"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch05",
+          "textSha256": "c000e30afc50516bb1ea7920c3b4af9036b7d7397a07eff4ec8d46b11ca90502",
+          "audioSha256": "3791c6403bc18c7f21fcf256aa7da630498240cf8060cba2d74cf64aa0c59c62"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch06",
+          "textSha256": "fb438cddf69cd5d8769678b4591fba235395011c9e6a9c3776f83b3a028205b0",
+          "audioSha256": "cfc6cd2463ceebdaff2a0b6fada4285924a5fc33b666ba15ecb994e1304bdf9c"
+        }
+      ],
+      "contentReview": "File integrity and initial topic/chapter review passed; numbers, English pronunciation and noted rhetorical wording remain pending human review."
     }
   ],
   "skipped": []

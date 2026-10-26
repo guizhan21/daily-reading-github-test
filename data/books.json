@@ -1184,6 +1184,154 @@
           "durationSec": 420.211519
         }
       ]
+    },
+    {
+      "bookId": "2026-10-27_general-knowledge",
+      "title": "對話為什麼會失焦：理解落差、傾聽與分歧的心理科學",
+      "category": "跨領域知識探索",
+      "date": "2026-10-27",
+      "description": "以實證社會心理學與語言理解研究為基礎，分六章追究共同基礎、文字語氣、高品質傾聽、提問、不同意見與對話成效；重點區分被理解、被喜歡、說服成功及後續協作。",
+      "version": 1,
+      "cover": "covers/2026-10-27_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-27_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-27-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch01",
+          "title": "為什麼同一句話會被聽成不同意思",
+          "markdown": "chapters/2026-10-27_general-knowledge_ch01.md",
+          "textSha256": "465625cb49c70d64f198452c246d1c0ea8e0b0cc416ff2409dbce595999c13b5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-general-knowledge-v1/2026-10-27_general-knowledge_ch01-82a37c33c54e.m4a",
+          "sha256": "82a37c33c54ef58df3336c27b78688f799f1eea6a13572dae0b4db19ed527059",
+          "bytes": 10679895,
+          "durationSec": 331.813152
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch02",
+          "title": "文字為什麼容易誤讀語氣",
+          "markdown": "chapters/2026-10-27_general-knowledge_ch02.md",
+          "textSha256": "df6a20924f0617209b987ad87eb33d33af6561a3b9afcd35da81329bf7927b81",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-general-knowledge-v1/2026-10-27_general-knowledge_ch02-1a1bb5601497.m4a",
+          "sha256": "1a1bb560149722864fd47061e5f1b36d607bb550a0995d76e9a30580bd64394c",
+          "bytes": 11225350,
+          "durationSec": 348.763719
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch03",
+          "title": "好好傾聽到底做了什麼",
+          "markdown": "chapters/2026-10-27_general-knowledge_ch03.md",
+          "textSha256": "a5be3b0d8a837e3e003b57398aab2b22332dacdc8f826f5fe44c992a19abcdaa",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-general-knowledge-v1/2026-10-27_general-knowledge_ch03-16709d3364d8.m4a",
+          "sha256": "16709d3364d8b90c48479bc9daa6fa63cc166d7d9f9a9c8d4a3c6b9588ebe110",
+          "bytes": 9934003,
+          "durationSec": 308.639637
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch04",
+          "title": "提問怎樣讓理解更深入",
+          "markdown": "chapters/2026-10-27_general-knowledge_ch04.md",
+          "textSha256": "09df45449cf326d9357b79d39b81f5a4b98d4c718bcea1dc7347e19085a1d0e5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-general-knowledge-v1/2026-10-27_general-knowledge_ch04-e8530460d802.m4a",
+          "sha256": "e8530460d8023a45bea8f57669f11feab24eb331408c7cd4a4dd2caac1e5268b",
+          "bytes": 10446703,
+          "durationSec": 324.568526
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch05",
+          "title": "不同意的時候怎樣繼續談",
+          "markdown": "chapters/2026-10-27_general-knowledge_ch05.md",
+          "textSha256": "b196afea29804752ad548fa4d6897b66824b0582262905dad2be1f2cda5ffc8b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-general-knowledge-v1/2026-10-27_general-knowledge_ch05-63afe9d0b213.m4a",
+          "sha256": "63afe9d0b21365618c6efd33dfb3e72513ebf055c5294c7a8af1e952fbc879be",
+          "bytes": 12440498,
+          "durationSec": 386.519365
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch06",
+          "title": "怎樣知道對話真的有效",
+          "markdown": "chapters/2026-10-27_general-knowledge_ch06.md",
+          "textSha256": "f13bb04e992432ccafabbb6ddff75e1fb1dc7911c4820ba27310c90470c93e14",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-general-knowledge-v1/2026-10-27_general-knowledge_ch06-d864dfad1fa2.m4a",
+          "sha256": "d864dfad1fa28782b19a31b3c5a9467bffd6c75758242112bdcad45860c5076f",
+          "bytes": 11847118,
+          "durationSec": 368.082721
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-27_ai-consultant",
+      "title": "AI 為何導不進工作：組織採用與變革落地的科學",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-27",
+      "description": "跨越 AI 展示與真正導入之間的組織障礙，逐步理解採用條件、工作流程、權責信任、訓練轉移、制度維持與成效判斷。",
+      "version": 1,
+      "cover": "covers/2026-10-27_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-27_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-27-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch01",
+          "title": "會使用不等於會採用：AI 導入首先是人的決策",
+          "markdown": "chapters/2026-10-27_ai-consultant_ch01.md",
+          "textSha256": "433c8952232232e3d4515a197d8f68813625456320f96a871a2ea90b588a9433",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-ai-consultant-v1/2026-10-27_ai-consultant_ch01-16af46963804.m4a",
+          "sha256": "16af46963804ad79c3ac2f3c63598b53c4e7fb68ef58f82b6b846a36a26dd359",
+          "bytes": 10034969,
+          "durationSec": 311.774331
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch02",
+          "title": "真正改變的是工作流程：先理解工作，再安放 AI",
+          "markdown": "chapters/2026-10-27_ai-consultant_ch02.md",
+          "textSha256": "8d2f5aeab9a30063f5cfc17d999f8cf4bbf392e0c7d7b06965bafa304ddafd52",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-ai-consultant-v1/2026-10-27_ai-consultant_ch02-a218428d7c7a.m4a",
+          "sha256": "a218428d7c7afee303a640d19768cfba19bcb7b31c0b3151eb4b80418b471062",
+          "bytes": 8578411,
+          "durationSec": 266.518639
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch03",
+          "title": "阻力不等於反科技：角色權責、信任與心理安全",
+          "markdown": "chapters/2026-10-27_ai-consultant_ch03.md",
+          "textSha256": "1bf58b1562c55869c52ab73991943dce0c588be7d6507f1abd4a57cf3707b21c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-ai-consultant-v1/2026-10-27_ai-consultant_ch03-99f1dc88625f.m4a",
+          "sha256": "99f1dc88625fd6757f6fc6997379115b90a1d869be3e6d30b91604006cb3e17f",
+          "bytes": 12356083,
+          "durationSec": 383.89551
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch04",
+          "title": "課上會用不等於工作會用：能力如何轉移到日常現場",
+          "markdown": "chapters/2026-10-27_ai-consultant_ch04.md",
+          "textSha256": "d996b042a04e9da114109fb55b68199a0faf223a5c9bd71726844fef990c3b80",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-ai-consultant-v1/2026-10-27_ai-consultant_ch04-8550b804c514.m4a",
+          "sha256": "8550b804c5149c0e1cf32fcf7a79782ab3db80a6cf392abae0d8d1a70e164801",
+          "bytes": 12881483,
+          "durationSec": 400.219138
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch05",
+          "title": "從試辦到制度：建立調整、支持與治理的組織能力",
+          "markdown": "chapters/2026-10-27_ai-consultant_ch05.md",
+          "textSha256": "c000e30afc50516bb1ea7920c3b4af9036b7d7397a07eff4ec8d46b11ca90502",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-ai-consultant-v1/2026-10-27_ai-consultant_ch05-3791c6403bc1.m4a",
+          "sha256": "3791c6403bc18c7f21fcf256aa7da630498240cf8060cba2d74cf64aa0c59c62",
+          "bytes": 10982562,
+          "durationSec": 341.217234
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch06",
+          "title": "如何知道導入已經生根：採用、維持與改進的證據",
+          "markdown": "chapters/2026-10-27_ai-consultant_ch06.md",
+          "textSha256": "fb438cddf69cd5d8769678b4591fba235395011c9e6a9c3776f83b3a028205b0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-27-ai-consultant-v1/2026-10-27_ai-consultant_ch06-cfc6cd2463ce.m4a",
+          "sha256": "cfc6cd2463ceebdaff2a0b6fada4285924a5fc33b666ba15ecb994e1304bdf9c",
+          "bytes": 12486815,
+          "durationSec": 387.959002
+        }
+      ]
     }
   ]
 }
