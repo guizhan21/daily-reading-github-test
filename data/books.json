@@ -1332,6 +1332,80 @@
           "durationSec": 387.959002
         }
       ]
+    },
+    {
+      "bookId": "2026-10-28_ai-consultant",
+      "title": "AI 顧問的需求診斷學：從客戶要求到可驗證的工作問題",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-28",
+      "description": "一本處理 AI 顧問「技術建置之前」工作的方法論：從委託語句、訪談採證、流程診斷、AI 適配性、成本效益到可負責的方案決策。",
+      "version": 1,
+      "cover": "covers/2026-10-28_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-28_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-28-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch01",
+          "title": "先診斷問題再談工具：顧問究竟接受了什麼委託？",
+          "markdown": "chapters/2026-10-28_ai-consultant_ch01.md",
+          "textSha256": "175405582f4e92132f27205387daa86bb0625e27112629e0de789647d47be879",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-ai-consultant-v1/2026-10-28_ai-consultant_ch01-dac24bdb5068.m4a",
+          "sha256": "dac24bdb50680c052806740ca800fa62695cb0eabd40ef0817678b19cfda84a4",
+          "bytes": 8978940,
+          "durationSec": 278.964535
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch02",
+          "title": "訪談不是蒐集願望：從人的敘述走向工作證據",
+          "markdown": "chapters/2026-10-28_ai-consultant_ch02.md",
+          "textSha256": "63f19b09dd0e7e5c2af59408de96e59ba111c06f4fda25cb2ef3ddf5a7b97d7e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-ai-consultant-v1/2026-10-28_ai-consultant_ch02-d5551dc2628b.m4a",
+          "sha256": "d5551dc2628b802aae04f7d6f2b10d4936d97c7b3e6ac8f1bc1c5ff33ce6de65",
+          "bytes": 12067610,
+          "durationSec": 374.932608
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch03",
+          "title": "看見整條工作流程：瓶頸常不在最顯眼的地方",
+          "markdown": "chapters/2026-10-28_ai-consultant_ch03.md",
+          "textSha256": "4c68a98004e3746fa7d9c16bf9becb3149b68ea7f2fbf1f8d7c45e87ec2c5738",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-ai-consultant-v1/2026-10-28_ai-consultant_ch03-d0d306953b1a.m4a",
+          "sha256": "d0d306953b1abd3778ddfa40e0a955feb17063546255c737c69ab339d3deb989",
+          "bytes": 10320454,
+          "durationSec": 320.644354
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch04",
+          "title": "不是所有問題都適合 AI：從任務特性做技術選擇",
+          "markdown": "chapters/2026-10-28_ai-consultant_ch04.md",
+          "textSha256": "9a995901e3fdbc0d0c27ad926ae8951ec7e6880d033a08797656fea9ecfb19f0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-ai-consultant-v1/2026-10-28_ai-consultant_ch04-52ce3cb36627.m4a",
+          "sha256": "52ce3cb3662723e3cbb802e039fc4caa1107f7aa694ae82fdbd61b4c01e65a33",
+          "bytes": 7899121,
+          "durationSec": 245.411701
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch05",
+          "title": "價值需要基線與反事實：AI 方案的成本效益怎麼估",
+          "markdown": "chapters/2026-10-28_ai-consultant_ch05.md",
+          "textSha256": "ff3f4669a9a16a9e486ae901b8ef837554ec86104fb888e13666f371eff31bd3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-ai-consultant-v1/2026-10-28_ai-consultant_ch05-0728a4171cc7.m4a",
+          "sha256": "0728a4171cc74e655b9066a172c32aa7a244977d14df914c65038f35547caa4b",
+          "bytes": 9032095,
+          "durationSec": 280.613152
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch06",
+          "title": "把診斷交付成決策：從發現到可負責的建議",
+          "markdown": "chapters/2026-10-28_ai-consultant_ch06.md",
+          "textSha256": "f03540c98713e24e4971e8e2bdc4323bdf2261aeed3bb3f74039e3cba36f022b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-ai-consultant-v1/2026-10-28_ai-consultant_ch06-342be14b1188.m4a",
+          "sha256": "342be14b1188dbb7a45929cc50f667ecb6d3ada62b263e975a17f0b32c476c0b",
+          "bytes": 9940726,
+          "durationSec": 308.848617
+        }
+      ]
     }
   ]
 }
