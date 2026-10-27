@@ -1406,6 +1406,80 @@
           "durationSec": 308.848617
         }
       ]
+    },
+    {
+      "bookId": "2026-10-28_general-knowledge",
+      "title": "睡眠不是關機：生理時鐘、睡眠壓力與日常清醒的科學",
+      "category": "跨領域知識探索",
+      "date": "2026-10-28",
+      "description": "以六個連貫的科學問題，從睡眠功能、內在時鐘、夜間階段，到學習、慢性欠眠和失眠的證據辨識，建立不迷信睡眠分數的健康素養。",
+      "version": 1,
+      "cover": "covers/2026-10-28_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-28_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-28-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch01",
+          "title": "睡眠究竟在維持什麼？",
+          "markdown": "chapters/2026-10-28_general-knowledge_ch01.md",
+          "textSha256": "1d1f1fe3075d23905addbd983cccc9b586b793fb2b19b78a72973f9c7ad16e1e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-general-knowledge-v1/2026-10-28_general-knowledge_ch01-9867136d8d90.m4a",
+          "sha256": "9867136d8d90eb744cc8b33e12ba4b99ce60674f7dc84fe4a574cc30d2c5c024",
+          "bytes": 8761551,
+          "durationSec": 272.207528
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch02",
+          "title": "為什麼累了，卻不一定睡得著？",
+          "markdown": "chapters/2026-10-28_general-knowledge_ch02.md",
+          "textSha256": "46220a57f630949efec7cd3b651842411f8f6275313dae6e737941fe005be319",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-general-knowledge-v1/2026-10-28_general-knowledge_ch02-724bd20bbe98.m4a",
+          "sha256": "724bd20bbe98eeb770ee44493a2241789433d4e339bb30405e48334d0ab0986c",
+          "bytes": 11517558,
+          "durationSec": 357.842721
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch03",
+          "title": "一夜之內究竟發生了什麼？",
+          "markdown": "chapters/2026-10-28_general-knowledge_ch03.md",
+          "textSha256": "705b5fa5ed1f0cbf650d9d14aec4ab9898a4e2486212e82f657d98f3c0187d45",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-general-knowledge-v1/2026-10-28_general-knowledge_ch03-1432078cb070.m4a",
+          "sha256": "1432078cb070c262a1cb652f9d060256cf278c6ca4490d5b4d06e1d8dd0a805f",
+          "bytes": 9178515,
+          "durationSec": 285.164263
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch04",
+          "title": "睡一覺，真的會讓學習變得更好嗎？",
+          "markdown": "chapters/2026-10-28_general-knowledge_ch04.md",
+          "textSha256": "90b9daf67f5daaaf7a28ab252a32c8a6bb1f0d83bceab1933d58dfd694603c3c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-general-knowledge-v1/2026-10-28_general-knowledge_ch04-53d502626b83.m4a",
+          "sha256": "53d502626b836f696ffff88dc3c7b108977fb21ee60b6814c92fef3be8f3babd",
+          "bytes": 9169550,
+          "durationSec": 284.885624
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch05",
+          "title": "為什麼持續少睡，比偶爾熬夜更難察覺？",
+          "markdown": "chapters/2026-10-28_general-knowledge_ch05.md",
+          "textSha256": "29dafc5f3de05d8d88c1e2b1e60e97be0f8c95b989dc8b482637089c67e5b8a9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-general-knowledge-v1/2026-10-28_general-knowledge_ch05-bdd3f7e27893.m4a",
+          "sha256": "bdd3f7e2789338c0def53afeb032ecf7ab11aecbc1295195e6c9f4f2ca22710b",
+          "bytes": 10500490,
+          "durationSec": 326.240363
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch06",
+          "title": "睡不好時，怎麼判斷該改習慣還是尋求協助？",
+          "markdown": "chapters/2026-10-28_general-knowledge_ch06.md",
+          "textSha256": "ae59be5ce6aafbf5351801d5ff464342b3c9c8e26fb0f7a1419a66780448300a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-28-general-knowledge-v1/2026-10-28_general-knowledge_ch06-a7720af55822.m4a",
+          "sha256": "a7720af5582202d12f62e5868ec7fe61e9d9fe0361df6c0b76bdaea5b88fb24c",
+          "bytes": 8501466,
+          "durationSec": 264.126984
+        }
+      ]
     }
   ]
 }
