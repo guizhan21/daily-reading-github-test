@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';import path from 'node:path';
+import {settleShelfCovers} from './cover-ready.mjs';
 export async function uiPolishChecks(browser,site,books,check,observe,{screenshots,browserName}={}){
  // WebKit screenshot styling injection is blocked by the production CSP; keep
  // that policy and verify its geometry/interaction without injected screenshot CSS.
@@ -17,7 +18,7 @@ export async function uiPolishChecks(browser,site,books,check,observe,{screensho
    await page.waitForTimeout(180);await page.evaluate(()=>{window.__finishTestSwipe();delete window.__finishTestSwipe;});
   }
  }
- async function readyImages(){await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>{const r=i.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0&&r.width>0;}).map(i=>i.decode()));const image=new Image();image.src=getComputedStyle(document.documentElement).getPropertyValue('--reference-image').trim().slice(4,-1).replace(/^['"]|['"]$/g,'');await image.decode();});}
+ async function readyImages(){await settleShelfCovers(page);await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(i=>{const r=i.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0&&r.width>0;}).map(i=>i.decode()));const image=new Image();image.src=getComputedStyle(document.documentElement).getPropertyValue('--reference-image').trim().slice(4,-1).replace(/^['"]|['"]$/g,'');await image.decode();});}
  try{
   await page.goto(site);await page.locator('#search-input').waitFor();
   for(const width of [360,390,430,768]){
@@ -26,7 +27,7 @@ export async function uiPolishChecks(browser,site,books,check,observe,{screensho
   }check('single live search field stays aligned at 360 / 390 / 430 / 768px');
   await page.setViewportSize({width:390,height:844});await readyImages();
   if(screenshots&&browser.browserType().name()!=='webkit')await page.screenshot({caret:'initial',path:path.join(screenshots,browserName+'-clean-shelf.png')});
-  await page.locator('#search-input').fill('AI');assert.ok(await page.locator('.book-card').count()>0);await page.locator('#search-input').fill('');
+  await page.locator('#search-input').fill('AI');assert.ok(await page.locator('.book-card').count()>0);await readyImages();await page.locator('#search-input').fill('');await readyImages();
   await page.goto(site+'#book/'+b.bookId);await page.locator('#book-title').waitFor();
   await page.locator('[data-play="'+ch.chapterId+'"]').click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.paused&&!a.error&&a.currentTime>.3;},{},{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();
   await page.locator('audio').evaluate(a=>{window.__polishAudio=a;a.dataset.polishLoads='0';a.addEventListener('loadstart',()=>a.dataset.polishLoads=String(Number(a.dataset.polishLoads)+1));});

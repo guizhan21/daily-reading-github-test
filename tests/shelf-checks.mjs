@@ -1,15 +1,17 @@
 import assert from 'node:assert/strict';
+import {settleShelfCovers} from './cover-ready.mjs';
 
 export async function shelfChecks(browser, site, books, check, observe) {
  const context=await browser.newContext({viewport:{width:1280,height:900}}),page=await context.newPage();observe(page);
- const nav=async shelf=>{await page.locator('.sidebar nav a[href="#library/'+shelf+'"]').click();await page.locator('#book-select[data-shelf="'+shelf+'"]').waitFor();};
+ const coverDecodes=[];
+ const nav=async shelf=>{await page.locator('.sidebar nav a[href="#library/'+shelf+'"]').click();await page.locator('#book-select[data-shelf="'+shelf+'"]').waitFor();coverDecodes.push({shelf,images:await settleShelfCovers(page)});};
  const cards=()=>page.locator('#book-select [data-book]');
  const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));
  const b=books[0],ch=b.chapters[0];
  try {
   await page.goto(site+'#home',{waitUntil:'domcontentloaded'});await page.locator('.shelf-portals').waitFor();
   assert.equal(await page.locator('.shelf-portal').count(),3);assert.equal(await page.locator('#view [data-book]').count(),0);check('home offers three separate shelf pages without repeated book grids');
-  await nav('unread');assert.equal(await cards().count(),books.length);await nav('reading');assert.equal(await cards().count(),0);await nav('completed');assert.equal(await cards().count(),0);check('fresh browser and metadata preloading leave all books unread');
+  await nav('unread');assert.equal(await cards().count(),books.length);await nav('reading');assert.equal(await cards().count(),0);await nav('completed');assert.equal(await cards().count(),0);check('fresh browser and metadata preloading leave all books unread',{coverDecodes});
   await nav('unread');await page.locator('[data-book="'+b.bookId+'"]').click();await page.locator('[data-read="'+ch.chapterId+'"]').click();await page.locator('#close-reader').click();
   await nav('unread');assert.equal(await cards().count(),books.length-1);await nav('reading');assert.equal(await cards().count(),1);await page.locator('[data-book="'+b.bookId+'"]').click();check('reading original text moves only that book to Reading');
   await page.locator('[data-play="'+ch.chapterId+'"]').click();await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.error&&!a.paused&&a.currentTime>.2;},{},{timeout:60000});await page.getByRole('button',{name:'暫停',exact:true}).click();await page.locator('#seek').evaluate(input=>{input.value='32';input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));});await page.waitForFunction(()=>{const a=document.querySelector('audio');return !a.seeking&&Math.abs(a.currentTime-32)<.5;},{},{timeout:45000});
