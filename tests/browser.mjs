@@ -13,6 +13,7 @@ import {mobileHeaderChecks} from './mobile-header-checks.mjs';
 import {completionChecks} from './completion-checks.mjs';
 import {backSwipeChecks} from './back-swipe-checks.mjs';
 import {listeningRoomChecks} from './listening-room-checks.mjs';
+import {createBrowserObserver} from './browser-observer.mjs';
 // Source checks remove only our bounded dr_retry transport parameter. Real
 // native error/seek/clock checks and the canonical Release host/path stay required.
 const site=process.env.SITE_URL||'https://guizhan21.github.io/daily-reading-github-test/',selected=process.env.BROWSER||'chrome',books=load('data/books.json').books;
@@ -22,9 +23,10 @@ for(const [name,[engine,options]] of Object.entries(engines)){
  if(selected!=='all'&&name!==selected)continue;
  const r={browser:name,engine:name==='chrome'?(process.env.CHROME_EXECUTABLE?'project-installed Chromium executable':'Google Chrome'):name,site,checkedAt:new Date().toISOString(),checks:[],audio:[],errors:[],downloads:[],mediaResponses:[],mediaRecoveries:[],mediaTransportFailures:[],iPhonePhysical:false,lockScreen:false};let browser,lastPage;
  const check=(name,data={})=>{r.checks.push({name,pass:true,...data});console.log(r.browser+': PASS '+name);};
+ const observer=createBrowserObserver(r,{browser:name,site,books});
  try{
   browser=await engine.launch({headless:true,...options,...(name==='firefox'?{env:{...process.env,MOZ_LOG:'AudioStream:4,cubeb:4,PlatformDecoderModule:4',MOZ_LOG_FILE:path.join(output,'firefox-media.log')}}:{})});r.version=browser.version();const context=await browser.newContext({viewport:{width:1280,height:900}});let page=await context.newPage();
-  const observe=p=>{lastPage=p;p.on('pageerror',e=>r.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')r.errors.push(m.text());if(m.text().startsWith('audio-recovery '))r.mediaRecoveries.push(JSON.parse(m.text().slice(15)));});p.on('requestfailed',request=>{if(/github.com\/.*releases\/download|release-assets.githubusercontent.com/.test(request.url())){const u=new URL(request.url());r.mediaTransportFailures.push({origin:u.origin,path:u.pathname,reason:request.failure()?.errorText});}});p.on('download',d=>r.downloads.push(d.suggestedFilename()));p.on('response',async response=>{try{if(/release-assets\.githubusercontent\.com/.test(response.url())){const h=await response.allHeaders();r.mediaResponses.push({origin:new URL(response.url()).origin,status:response.status(),range:h['content-range'],type:h['content-type'],disposition:h['content-disposition']});}}catch{}});};observe(page);
+  const observe=p=>{lastPage=p;observer.observe(p);};observe(page);
   // Hold only the first real media request so an early user rate change precedes metadata.
   let releaseMetadata;
   if(name==='chrome'){const gate=new Promise(resolve=>releaseMetadata=resolve);await page.route('**/releases/download/**',async route=>{await gate;try{await route.continue();}catch{/* A source replaced by selectChapter may already be aborted. Actual playback is still required. */}});}
@@ -35,7 +37,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   async function ready(){await page.waitForFunction(()=>document.querySelector('audio')?.readyState>=1,{},{timeout:60000});}
   for(const b of books){
    await openBook(b);assert.equal(await page.locator('[data-play]').count(),b.chapters.length);
-   await page.waitForFunction(()=>{const e=document.querySelector('#cover');return e&&(e.tagName==='IMG'?e.complete&&e.naturalWidth>0:e.getBoundingClientRect().width>0);},{},{timeout:60000});check('book detail, chapter order and original cover: '+b.bookId);
+   await page.waitForFunction(()=>{const e=document.querySelector('#cover');return e&&(e.tagName==='IMG'?e.complete&&e.naturalWidth>0:e.getBoundingClientRect().width>0);},{},{timeout:60000});const decodedCover=await page.locator('#cover').evaluate(async e=>{if(e.tagName!=='IMG')return {kind:'original-template'};await e.decode();return {kind:'image',width:e.naturalWidth,height:e.naturalHeight};});check('book detail, chapter order and original cover: '+b.bookId,{decodedCover});
    await page.locator('[data-read="'+b.chapters[0].chapterId+'"]').click();assert.ok((await page.locator('#reader-content').innerText()).length>1500);assert.ok((await page.locator('#markdown-download').getAttribute('href')).endsWith('.md'));check('complete original Markdown and source download: '+b.bookId);
    await page.locator('#close-reader').click();
    const sample=name==='chrome'?b.chapters:b.chapters.slice(0,2);
@@ -68,7 +70,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));check('390px mobile library layout');
   await page.locator('#book-select [data-book]').first().click();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.locator('[data-read]').first().click();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));check('mobile book, reader and persistent player layout');
   if(name!=='webkit')await page.screenshot({path:path.join(output,name+'-mobile.png'),caret:'initial'});
-  assert.equal(r.downloads.length,0);check('audio element never triggers attachment download');assert.equal(r.errors.length,0,r.errors.join('\n'));check('no console, CSP, CORS or page errors');
+  assert.equal(r.downloads.length,0);check('audio element never triggers attachment download');observer.refresh();assert.equal(r.errors.length,0,r.errors.join('\n'));check('no unexpected console, CSP, CORS or page errors');
   const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));assert.ok(Object.keys(progress.books).length>=books.length);fs.writeFileSync(path.join(output,name+'-progress.json'),JSON.stringify(progress,null,2));check('independent multi-book local progress');
   await page.setViewportSize({width:1280,height:900});await resumeChecks(page,books[0],check);
   await shelfChecks(browser,site,books,check,observe);
@@ -85,11 +87,11 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   // Fault-injection recoveries are expected and reported separately from normal
   // playback; do not hide unexpected retries from the ordinary 60-chapter run.
   const normalRecoveries=r.mediaRecoveries.length;
-  if(name==='chrome'){const faults=p=>{p.on('pageerror',e=>r.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')r.errors.push(m.text());});};await recoveryChecks(browser,site,books[0],check,faults);await interruptionChecks(browser,site,books[0],check,faults);r.interruptionTests={checks:3,simulated:true,physicalIPhone:false};r.expectedRecoveryTests=2;}
+  if(name==='chrome'){const faults=p=>{observer.observe(p,{media:false});};await recoveryChecks(browser,site,books[0],check,faults);await interruptionChecks(browser,site,books[0],check,faults);r.interruptionTests={checks:3,simulated:true,physicalIPhone:false};r.expectedRecoveryTests=2;}
   else{r.expectedRecoveryTests=0;r.recoveryFaultInjection='Chrome only; native WebKit media can bypass Playwright request interception. Normal real playback remains tested.';}
   assert.equal(r.mediaRecoveries.length,normalRecoveries);
-  assert.equal(r.errors.length,0,r.errors.join('\n'));assert.equal(r.downloads.length,0);
+  observer.refresh();assert.equal(r.errors.length,0,r.errors.join('\n'));assert.equal(r.downloads.length,0);
   r.pass=true;
- }catch(e){r.pass=false;r.failure=e.message;if(e.mediaDiagnostic)r.lastMedia=e.mediaDiagnostic;try{if(lastPage&&!lastPage.isClosed()){r.lastMedia=await lastPage.locator('audio').evaluate(a=>({src:a.currentSrc,time:a.currentTime,duration:Number.isFinite(a.duration)?a.duration:null,paused:a.paused,seeking:a.seeking,readyState:a.readyState,networkState:a.networkState,error:a.error?.message||null}));r.playerStatus=await lastPage.locator('#status').innerText();await lastPage.screenshot({path:path.join(output,name+'-failure.png'),caret:'initial'});}}catch(d){r.diagnosticError=d.message;}console.log(name+': FAIL '+e.message);}finally{if(browser)await browser.close();results.push(r);fs.writeFileSync(path.join(output,name+'.json'),JSON.stringify(r,null,2));}
+ }catch(e){r.pass=false;r.failure=e.message;if(e.mediaDiagnostic)r.lastMedia=e.mediaDiagnostic;try{if(lastPage&&!lastPage.isClosed()){r.lastMedia=await lastPage.locator('audio').evaluate(a=>({src:a.currentSrc,time:a.currentTime,duration:Number.isFinite(a.duration)?a.duration:null,paused:a.paused,seeking:a.seeking,readyState:a.readyState,networkState:a.networkState,error:a.error?.message||null}));r.playerStatus=await lastPage.locator('#status').innerText();await lastPage.screenshot({path:path.join(output,name+'-failure.png'),caret:'initial'});}}catch(d){r.diagnosticError=d.message;}console.log(name+': FAIL '+e.message);}finally{if(browser)await browser.close();observer.refresh();if(r.pass&&r.errors.length){r.pass=false;r.failure='Unexpected browser errors during teardown: '+r.errors.join('\n');}results.push(r);fs.writeFileSync(path.join(output,name+'.json'),JSON.stringify(r,null,2));}
 }
 fs.writeFileSync(path.join(output,'summary.json'),JSON.stringify(results,null,2));if(results.some(r=>!r.pass))process.exitCode=1;
