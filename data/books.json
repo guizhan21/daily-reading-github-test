@@ -1480,6 +1480,154 @@
           "durationSec": 264.126984
         }
       ]
+    },
+    {
+      "bookId": "2026-10-29_general-knowledge",
+      "title": "資料真的還在嗎：同步、版本、備份與復原的科學",
+      "category": "跨領域知識探索",
+      "date": "2026-10-29",
+      "description": "以六個問題講清資料如何因同步誤刪、版本錯位、共同故障與權限失效而丟失，並說明獨立副本、保存期限、資料庫快照、事故處置及復原演練的原理與實務判斷。",
+      "version": 1,
+      "cover": "covers/2026-10-29_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-29_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-29-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch01",
+          "title": "資料存在不代表安全",
+          "markdown": "chapters/2026-10-29_general-knowledge_ch01.md",
+          "textSha256": "fe67a85164df18c7d66aa01f95c05c733b4aa1c06e3529407e074afe54d48d3c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-general-knowledge-v1/2026-10-29_general-knowledge_ch01-3c6c6a553396.m4a",
+          "sha256": "3c6c6a5533960659f934cca10ff85b77ddcce8b13935856fe2dc7de2bca5ae9f",
+          "bytes": 10315225,
+          "durationSec": 320.481814
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch02",
+          "title": "同步不是歷史保險箱",
+          "markdown": "chapters/2026-10-29_general-knowledge_ch02.md",
+          "textSha256": "84f3560a8c93743092f20d07b9c7bdd551a2b051c0ed733fe0768479b3553783",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-general-knowledge-v1/2026-10-29_general-knowledge_ch02-a569461a9de7.m4a",
+          "sha256": "a569461a9de72bdf8275c325e7af8faa2f7499c86151cbf0011d1afea36a5bbc",
+          "bytes": 9837635,
+          "durationSec": 305.644263
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch03",
+          "title": "備份應該保留什麼",
+          "markdown": "chapters/2026-10-29_general-knowledge_ch03.md",
+          "textSha256": "03299ebb491d5e5f92390733df8d234e499cc768d502219c658d6d22b1d24cf7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-general-knowledge-v1/2026-10-29_general-knowledge_ch03-ca2a2cd5237c.m4a",
+          "sha256": "ca2a2cd5237cc8bf9e660b6704aad709f83085b7380e871c6e970c668f624095",
+          "bytes": 10028246,
+          "durationSec": 311.565351
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch04",
+          "title": "版本與資料庫的不同時間",
+          "markdown": "chapters/2026-10-29_general-knowledge_ch04.md",
+          "textSha256": "cf62cdf010c25708396cbb551e40987a79ed14727a5a96aa10a8e7ac985bc77d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-general-knowledge-v1/2026-10-29_general-knowledge_ch04-fd0345b36237.m4a",
+          "sha256": "fd0345b36237d900d0563499c7cac352a0e9d4f3e274cc1fd38cc07f69fa33b3",
+          "bytes": 12277644,
+          "durationSec": 381.457415
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch05",
+          "title": "事故發生先救什麼",
+          "markdown": "chapters/2026-10-29_general-knowledge_ch05.md",
+          "textSha256": "db2578bd04b02fef176db018042b9627919a89c588e1dbe7bfc3a953d29bafb5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-general-knowledge-v1/2026-10-29_general-knowledge_ch05-ea25881383e6.m4a",
+          "sha256": "ea25881383e6dafb5eb56f6f1d6478852a8f38ee012d2392630b4da81e4fb1c1",
+          "bytes": 12859052,
+          "durationSec": 399.52254
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch06",
+          "title": "復原演練才是驗收",
+          "markdown": "chapters/2026-10-29_general-knowledge_ch06.md",
+          "textSha256": "8fee520d760adea3abb7cd082bcbc8d376d4f62bb470074beed99cd856defe40",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-general-knowledge-v1/2026-10-29_general-knowledge_ch06-bd97107a7e78.m4a",
+          "sha256": "bd97107a7e78d068ad7e63a65e3be565e00ddd7cdb2b7b77d7ae83bd9789b72d",
+          "bytes": 11292699,
+          "durationSec": 350.853515
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-29_ai-consultant",
+      "title": "把 AI 放在對的位置：人機分工、回饋與接手的協作設計",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-29",
+      "description": "面向已有 AI 使用經驗、但不以成為工程師為目標的講師與應用顧問，解釋人機合作何時才會增加價值、怎樣交辦有界線的任務、如何判斷 AI 建議、用有證據的回饋修正結果，以及出錯時如何接手並設計可交接的工作方式。",
+      "version": 1,
+      "cover": "covers/2026-10-29_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-29_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-29-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch01",
+          "title": "為何人加上 AI 不一定更好：協作的真正目標",
+          "markdown": "chapters/2026-10-29_ai-consultant_ch01.md",
+          "textSha256": "6e0d495a64f6bae147406c713f7da67054a2764318d1b71f6e2d46601c8dd37f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-ai-consultant-v1/2026-10-29_ai-consultant_ch01-891bac246354.m4a",
+          "sha256": "891bac246354a4cd6890426a8dd7c49e2f6aae58ea66c43a7531cb2c8388e714",
+          "bytes": 11015432,
+          "durationSec": 342.238912
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch02",
+          "title": "把意圖交辦成可以完成的任務：從一句需求到共同理解",
+          "markdown": "chapters/2026-10-29_ai-consultant_ch02.md",
+          "textSha256": "dae3f7f0063b46f58ab0e593df637175e99c2d13806580e3e8137ac1a9c5144f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-ai-consultant-v1/2026-10-29_ai-consultant_ch02-92a0b2063d38.m4a",
+          "sha256": "92a0b2063d38d4d3cc2bd9391d78a53e8c8351fd5aeae317562cb13651f6d6ad",
+          "bytes": 8182365,
+          "durationSec": 254.212063
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch03",
+          "title": "有 AI 建議時，人怎樣保持判斷：信任不是全收或全拒",
+          "markdown": "chapters/2026-10-29_ai-consultant_ch03.md",
+          "textSha256": "8c377b3c2f361b001af98b4528abd2c77eda2decdef8138750e56c719f2a8954",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-ai-consultant-v1/2026-10-29_ai-consultant_ch03-a932149b7886.m4a",
+          "sha256": "a932149b7886a1d931f2da9f0a2b15d374bbf49a0cc575cf190714b5c9c821c5",
+          "bytes": 9174780,
+          "durationSec": 285.048163
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch04",
+          "title": "回饋循環為什麼有時越改越差：每一輪都要有新依據",
+          "markdown": "chapters/2026-10-29_ai-consultant_ch04.md",
+          "textSha256": "081aad4c87a15982d7e920026498439908714d5dbf70dce252cfee91b5fc808a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-ai-consultant-v1/2026-10-29_ai-consultant_ch04-1c844b479a75.m4a",
+          "sha256": "1c844b479a75a8b5d3b7058d5b45487d7bde50b2a594bdec1bcc999db3dc4b5d",
+          "bytes": 10799422,
+          "durationSec": 335.528345
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch05",
+          "title": "出錯時何時應由人接手：停止、交接與恢復的設計",
+          "markdown": "chapters/2026-10-29_ai-consultant_ch05.md",
+          "textSha256": "79bc021e6d7666cbb53b4bb1a8c71aeda75a482b5be50badffbb596a44972ca3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-ai-consultant-v1/2026-10-29_ai-consultant_ch05-751fdaf028c5.m4a",
+          "sha256": "751fdaf028c5c5e7aa8c556942991b7bc0082710c584dc0bd9b706aaf3efcbe3",
+          "bytes": 11489170,
+          "durationSec": 356.960363
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch06",
+          "title": "應用架構師怎樣安排協作：讓一套方法能被使用與交接",
+          "markdown": "chapters/2026-10-29_ai-consultant_ch06.md",
+          "textSha256": "c653c2b5a124a8bee41a4f2b4714d27d553ba77a41a78326a9a60f0029c33f53",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-29-ai-consultant-v1/2026-10-29_ai-consultant_ch06-b696aefca551.m4a",
+          "sha256": "b696aefca5516b6483cc162286224bc237c77272db552c9377e280d726909f24",
+          "bytes": 11108064,
+          "durationSec": 345.118186
+        }
+      ]
     }
   ]
 }

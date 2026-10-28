@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
-  "ledgerSha256": "fb0f04ac27e85f31b2e230fb8f46960982357a30895a02881ab47d9cdb51e557",
+  "revision": 11,
+  "ledgerSha256": "57552041f612a73b31bda0deb46c7f70e59c9b2970b2899305aa5bc07d0d476f",
   "coverage": {
-    "publishedBooks": 20,
-    "publishedChapters": 120,
+    "publishedBooks": 22,
+    "publishedChapters": 132,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 2,
+    "bodySemanticReviewedBooks": 4,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -1180,6 +1180,144 @@
             "睡不好時如何區分作息、失眠與其他問題，健康習慣、CBT-I、助眠產品及就醫各有什麼界線？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-29_general-knowledge",
+      "workId": "work-bc9996f8f2d85a9cebfdd64f",
+      "version": 1,
+      "title": "資料真的還在嗎：同步、版本、備份與復原的科學",
+      "subtitle": null,
+      "description": "以六個問題講清資料如何因同步誤刪、版本錯位、共同故障與權限失效而丟失，並說明獨立副本、保存期限、資料庫快照、事故處置及復原演練的原理與實務判斷。",
+      "date": "2026-10-29",
+      "series": "跨領域知識探索",
+      "scope": "從日常資料可復原性的角度，解釋同步刪除、不同時間副本、故障隔離、資料庫與附件一致性、RPO/RTO及實際復原演練；不把影片可播放、網站排障或AI工程交付當成同一學習目標。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch01",
+          "title": "資料存在不代表安全",
+          "textSha256": "fe67a85164df18c7d66aa01f95c05c733b4aa1c06e3529407e074afe54d48d3c",
+          "coreQuestions": [
+            "資料明明可以開，為什麼仍不能證明可以從事故中復原？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch02",
+          "title": "同步不是歷史保險箱",
+          "textSha256": "84f3560a8c93743092f20d07b9c7bdd551a2b051c0ed733fe0768479b3553783",
+          "coreQuestions": [
+            "多裝置同步如何擴散誤刪，版本歷史又能保護到什麼程度？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch03",
+          "title": "備份應該保留什麼",
+          "textSha256": "03299ebb491d5e5f92390733df8d234e499cc768d502219c658d6d22b1d24cf7",
+          "coreQuestions": [
+            "副本應該保存在哪裡、保留多久，如何避免共同失效？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch04",
+          "title": "版本與資料庫的不同時間",
+          "textSha256": "cf62cdf010c25708396cbb551e40987a79ed14727a5a96aa10a8e7ac985bc77d",
+          "coreQuestions": [
+            "檔案版本、資料庫快照與網站附件如何形成不同時間線？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch05",
+          "title": "事故發生先救什麼",
+          "textSha256": "db2578bd04b02fef176db018042b9627919a89c588e1dbe7bfc3a953d29bafb5",
+          "coreQuestions": [
+            "事故發生時如何排序止損、恢復時間和可接受資料損失？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-29_general-knowledge_ch06",
+          "title": "復原演練才是驗收",
+          "textSha256": "8fee520d760adea3abb7cd082bcbc8d376d4f62bb470074beed99cd856defe40",
+          "coreQuestions": [
+            "如何以安全的恢復演練證明備份能真正讓工作恢復？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-29_ai-consultant",
+      "workId": "work-803437b5e73aa541c4fa1f5b",
+      "version": 1,
+      "title": "把 AI 放在對的位置：人機分工、回饋與接手的協作設計",
+      "subtitle": null,
+      "description": "面向已有 AI 使用經驗、但不以成為工程師為目標的講師與應用顧問，解釋人機合作何時才會增加價值、怎樣交辦有界線的任務、如何判斷 AI 建議、用有證據的回饋修正結果，以及出錯時如何接手並設計可交接的工作方式。",
+      "date": "2026-10-29",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "非工程背景的AI使用者，在一次工作中辨認人機互補、委派、信任校準、以新證據修訂及錯誤接手；由成人招生和公告的連續假設案例解釋，不教執行器、工具API或組織採用制度。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch01",
+          "title": "為何人加上 AI 不一定更好：協作的真正目標",
+          "textSha256": "6e0d495a64f6bae147406c713f7da67054a2764318d1b71f6e2d46601c8dd37f",
+          "coreQuestions": [
+            "人和 AI 一起工作，為何不一定比兩者各自工作更好？怎樣找到真正互補的分工？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch02",
+          "title": "把意圖交辦成可以完成的任務：從一句需求到共同理解",
+          "textSha256": "dae3f7f0063b46f58ab0e593df637175e99c2d13806580e3e8137ac1a9c5144f",
+          "coreQuestions": [
+            "怎樣把人未說出口的目的、材料權威與禁做事項，變成 AI 可以理解、可由人驗收的工作委派？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch03",
+          "title": "有 AI 建議時，人怎樣保持判斷：信任不是全收或全拒",
+          "textSha256": "8c377b3c2f361b001af98b4528abd2c77eda2decdef8138750e56c719f2a8954",
+          "coreQuestions": [
+            "AI 提出流暢甚至自信的建議時，人如何分辨事實、預測與價值判斷，並建立適度信任？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch04",
+          "title": "回饋循環為什麼有時越改越差：每一輪都要有新依據",
+          "textSha256": "081aad4c87a15982d7e920026498439908714d5dbf70dce252cfee91b5fc808a",
+          "coreQuestions": [
+            "反覆修改 AI 產出時，怎樣讓回饋真正解決已知問題、保留已核准部分並在適當時候停止？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch05",
+          "title": "出錯時何時應由人接手：停止、交接與恢復的設計",
+          "textSha256": "79bc021e6d7666cbb53b4bb1a8c71aeda75a482b5be50badffbb596a44972ca3",
+          "coreQuestions": [
+            "AI 產出錯誤或缺乏資料時，怎樣決定誰該接手、停下或退回，避免聲稱完成卻沒有完成？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-29_ai-consultant_ch06",
+          "title": "應用架構師怎樣安排協作：讓一套方法能被使用與交接",
+          "textSha256": "c653c2b5a124a8bee41a4f2b4714d27d553ba77a41a78326a9a60f0029c33f53",
+          "coreQuestions": [
+            "非工程背景的應用顧問如何安排 AI、人與工具之間的責任和資料交接，形成能教學、能維護的協作方案？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch06.md"
         }
       ]
     }
