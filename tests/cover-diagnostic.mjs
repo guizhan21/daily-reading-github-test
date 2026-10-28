@@ -29,12 +29,13 @@ try{
    if(scenario==='shelf'){
     await page.locator('.shelf-portals').waitFor();await page.locator('.sidebar nav a[href="#library/unread"]').click();await page.locator('#book-select[data-shelf="unread"]').waitFor();row.decoded=await settleShelfCovers(page);
    }else{
-    await page.locator('#search-input').waitFor();
+    await page.locator('#search-input').waitFor();row.initialDecodes=await settleShelfCovers(page);
     for(const width of [360,390,393,430,768]){await page.setViewportSize({width,height:844});await page.locator('#search-input').blur();await page.locator('#search-input').click();}
     await page.setViewportSize({width:390,height:844});await page.locator('#search-input').fill('AI');await page.locator('#search-input').fill('');row.decoded=await settleShelfCovers(page);
    }
   }catch(e){row.failure=e.message;await page.screenshot({path:`test-results/diagnostic-${iteration}.png`}).catch(()=>{});}
-  await Promise.allSettled(pending);await context.tracing.stop({path:`test-results/diagnostic-${iteration}.zip`});await context.close();report.rows.push(row);
+  await Promise.allSettled(pending);const bad=row.failure||row.events.some(e=>['failed','console','native-error'].includes(e.kind));await context.tracing.stop(bad?{path:`test-results/diagnostic-${iteration}.zip`}:{});await context.close();report.rows.push(row);
   fs.writeFileSync('test-results/cover-diagnostic.json',JSON.stringify(report,null,2));console.log(JSON.stringify({iteration,scenario,failure:row.failure,decoded:row.decoded?.length,errors:row.events.filter(e=>['failed','console','native-error'].includes(e.kind))}));
  }
 }finally{await browser.close();}
+if(report.rows.some(r=>r.failure||r.events.some(e=>['failed','console','native-error'].includes(e.kind))))process.exitCode=1;
