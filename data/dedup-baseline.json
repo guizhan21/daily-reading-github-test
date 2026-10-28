@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "bookId": "2026-10-21_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "dbf9773ac5c141e90e228eebda9756f0a65d1f1a5acec982b2106ab8f7c74bf8",
+      "publicFingerprint": "a26f142d538c79414529f4faf0707fab7c3776cbf1ca5aa6c3bd1519a8ba5183"
+    },
+    {
+      "bookId": "2026-10-19_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "322c749ddac5fb9750e6caaef631f5ef8dbe279ef64b7d0399e24ffb52a51835",
+      "publicFingerprint": "631c5b9877d177f3090a1fcac7528ba41dac161dfdae2b366c8b64971886a59a"
+    },
+    {
+      "bookId": "2026-10-19_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "edfd4b1e04c3665596478e0acd25b510ece0fdccc022794d10009ce6fcc733a9",
+      "publicFingerprint": "15ecb84649d1f73fe15bb06ec7eb129bbc9db830de2f35f3508c80e9c9913e64"
+    },
+    {
+      "bookId": "2026-10-22_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "37ca317ef45fe6af95ea8a83d903d865e1d211f0e0417a14edc580ae92026bcf",
+      "publicFingerprint": "83db8e36d4a81f45eb97b5b52ac26e55732a50cdde807f0cbaff79c01bb7f2de"
+    },
+    {
+      "bookId": "2026-10-22_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "e41cc1fb8fe02a23e53ab17527b6d7e1446f565faceab687f8366bd89e0f9cc8",
+      "publicFingerprint": "99cd8469244ecfb1378399b7e28bca997f8afd5a1212f67294932384eddfae49"
+    },
+    {
+      "bookId": "2026-10-22_ai-consultant_adult-teaching",
+      "version": 1,
+      "sourceFingerprint": "8782d32df3e58a823be4d73d4cde9e8460e3a739bed4a34fffc0d993d31a2254",
+      "publicFingerprint": "601bd0623c4d13cf8c59e176bde7055fae1177a561f7058b6e7ba16cf79b7191"
+    },
+    {
+      "bookId": "2026-10-23_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "bc43e874c1a8232092bdddad7b98f30c54fb934f43112e7690c5d60a9e550680",
+      "publicFingerprint": "772ead9005d43e05d2035702718d28aa2668b9e7636d790de4f30cc8145d63f2"
+    },
+    {
+      "bookId": "2026-10-20_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "409b19f419d08946e87498ce4ff794a72db0cc29cd133ec52e8cd2f830eb5ec5",
+      "publicFingerprint": "1dae754080790e94420bbef8b3378a33f02af9718eb198d3f3802fb256d15c13"
+    },
+    {
+      "bookId": "2026-10-20_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "3a5cb2c291d7ca8fc63e740ce84bfd9055eb596d13d12b8c44015043a4b371a3",
+      "publicFingerprint": "13fec0df356268c0ae88ffbab22e69e741d10175ab22177f3eb6cee5bd7a108b"
+    },
+    {
+      "bookId": "2026-10-21_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "69844f3d04f4d4634530e8600888c8b14dac4ce771cedd35a9a44fa91c674296",
+      "publicFingerprint": "8b8de9b8f7db04025081f6bf097094d7f628db4c5adcf1926cc5eedb694cf8dd"
+    },
+    {
+      "bookId": "2026-10-23_ai-consultant_security-governance",
+      "version": 1,
+      "sourceFingerprint": "77c79c94ebf34e14da2ad1ed32c2f016dae7322f427ee934e70bd973c2443267",
+      "publicFingerprint": "99a23e652fa98a17a20f739452151d13db3d3a83c81a4aaddd9a3f69366f002f"
+    },
+    {
+      "bookId": "2026-10-24_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "2c99dfae0e62d699e231243d9f1eb6bd2cd32916439d6573caaf1c2f2ccc1b36",
+      "publicFingerprint": "a5ce1b58f003173249d05d1faccc15d93015ddb43727f5e06304160b6c0f5acf"
+    },
+    {
+      "bookId": "2026-10-25_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "d9aa2447b93912e8e77a6c506f77732da1a5f3c378d833e59c4b29ab8416c11e",
+      "publicFingerprint": "723b9a001b456aeeb790986153f739039a7be30a3e82a3e6b0af5952cb83ed5a"
+    },
+    {
+      "bookId": "2026-10-25_general-knowledge_exercise-science",
+      "version": 1,
+      "sourceFingerprint": "6889032e42aaf4da9b8b5e70e5b1be8dea080ba0139e8341a977854ac35a9cc8",
+      "publicFingerprint": "c371ca9a82fa281447f4ab4c49ec8f3e7e4a964079ef9cbb5f087f261d4ee188"
+    },
+    {
+      "bookId": "2026-10-26_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "a763b9b4a2ba4e8450df031489c1848c0fce2b267d2ad34b2cf3d8143b2beae8",
+      "publicFingerprint": "b536464bc91dea3a499ab7d7fabfcc3e0246c93f170aa3286ab07fa98dae103e"
+    },
+    {
+      "bookId": "2026-10-26_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "c4c7c7241790a90d98f13c2c34f2e88cd183e55e6289dc7d825522d305160acf",
+      "publicFingerprint": "e84a968f1d2c0733ea6b6cbbd6295c815d0e62df5c74f5b92592a2c2d2604426"
+    },
+    {
+      "bookId": "2026-10-27_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "81c661b07b9877a928e392418ee987a7108876755ce45675f53c7f8fe167af8a",
+      "publicFingerprint": "9300805459bdad91627956ec9f671a22d11c14647e663c16a9ac3ad52b9484db"
+    },
+    {
+      "bookId": "2026-10-27_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "84f58a97f2331261e3ba926639232923d3b42cdb9d6e7dd9e6ee1b5b56a2dc64",
+      "publicFingerprint": "4140ac12b48c50cc36805289133cbb12f5b5c622b5fee29a38f855204041faab"
+    },
+    {
+      "bookId": "2026-10-28_ai-consultant",
+      "version": 1,
+      "sourceFingerprint": "45c703b5e5abeb3ff887da1ebad0a67cc893b817f8e6f91661cd48909f638264",
+      "publicFingerprint": "80f38a66d8d3fdd71b9ea392c78ff1f6c9ef3694d266d00b37eb21aef7f301de"
+    },
+    {
+      "bookId": "2026-10-28_general-knowledge",
+      "version": 1,
+      "sourceFingerprint": "a93fb3b92d8ef425d8173bd34968e59b154cf3940d396280c18923abbb00779b",
+      "publicFingerprint": "6ac332b149281703423f8c7f14ba97514aa11d78f253d2c87e93e9f181101b0a"
+    }
+  ]
+}

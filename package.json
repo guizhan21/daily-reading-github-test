@@ -14,7 +14,8 @@
     "export": "node scripts/export.mjs",
     "test:local": "node tests/run-local.mjs",
     "acceptance": "node scripts/acceptance.mjs",
-    "handoff": "node scripts/handoff.mjs"
+    "handoff": "node scripts/handoff.mjs",
+    "dedup": "node scripts/dedup-cli.mjs"
   },
   "dependencies": {
     "react": "19.3.1",

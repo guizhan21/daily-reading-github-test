@@ -1,5 +1,6 @@
 import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';
 import {hash,validate} from './catalog.mjs';
+import {publicationAdmission} from './dedup.mjs';
 export const fingerprint=value=>hash(Buffer.from(JSON.stringify(value)));
 export function sourceCheck(input,dir,config){
  if(input.repository!==config.repository||input.repository==='guizhan21/daily-audio-library'||input.rightsReviewed!==true||typeof input.rightsBasis!=='string'||input.rightsBasis.length<20||!/^audio-[\w.-]+$/.test(input.tag))throw Error('RIGHTS_OR_TARGET: explicit, reviewed public rights required');
@@ -16,6 +17,8 @@ export function mergeBook(catalog,input){
 export function atomic(file,value){const tmp=file+'.tmp';fs.writeFileSync(tmp,JSON.stringify(value,null,2)+'\n');fs.renameSync(tmp,file);}
 export async function publish(input,{root,dir,jobs,config,stopAfterUploads=Infinity,stageOnly=false}){
  sourceCheck(input,dir,config);
+ const admission=publicationAdmission(root,input);
+ const execute=async()=>{
  const rights=JSON.parse(fs.readFileSync(path.join(root,'data/publication-rights.json'))).books.find(b=>b.bookId===input.book.bookId&&b.version===input.book.version&&b.decision==='approved');
  if(!rights)throw Error('RIGHTS: version has no publication review');
  for(const ch of input.book.chapters){const review=rights.chapters.find(c=>c.chapterId===ch.chapterId);if(!review||review.audioSha256!==ch.sha256||review.textSha256!==ch.textSha256||hash(fs.readFileSync(path.join(root,'public',ch.markdown)))!==ch.textSha256)throw Error('RIGHTS: chapter version differs');}
@@ -42,6 +45,7 @@ export async function publish(input,{root,dir,jobs,config,stopAfterUploads=Infin
   }
   release=find();for(const a of input.files){const remote=release.assets.find(r=>r.name===a.file);if(!remote||remote.state!=='uploaded'||remote.size!==a.bytes||remote.digest!=='sha256:'+a.sha256)throw Error('UPLOAD_UNVERIFIED: catalog unchanged');}
   event('upload_verified');if(stageOnly){event('draft_ready_awaiting_cover',{uploads,reused});return {bookId:input.book.bookId,tag:input.tag,uploads,reused,status:job.status,published:false};}
+  publicationAdmission(root,input);
   if(release.draft)release=JSON.parse(gh(['api',`repos/${input.repository}/releases/${release.id}`,'--method','PATCH','-F','draft=false']));
   if(release.draft||release.tag_name!==input.tag)throw Error('PUBLICATION_UNCONFIRMED: catalog unchanged');
   for(const ch of input.book.chapters){const a=release.assets.find(r=>r.name===path.posix.basename(new URL(ch.audioUrl).pathname)),old=job.verified[ch.chapterId];
@@ -50,8 +54,13 @@ export async function publish(input,{root,dir,jobs,config,stopAfterUploads=Infin
    job.verified[ch.chapterId]={assetId:a.id,sha256:ch.sha256,bytes:b.length,updatedAt:a.updated_at,checkedAt:new Date().toISOString(),url:ch.audioUrl};publicChecked++;event('public_verifying',{chapterId:ch.chapterId});
   }
   // Reread under a process lease; reject concurrent catalog edits instead of losing them.
+  publicationAdmission(root,input);
   const merged=mergeBook(JSON.parse(fs.readFileSync(catalogPath)),input);validate(merged.catalog,config);if(merged.added||merged.updated)atomic(catalogPath,merged.catalog);
   event('catalog_ready',{releaseUrl:release.html_url,uploads,reused,...{added:merged.added,updated:merged.updated}});
   return {bookId:input.book.bookId,tag:input.tag,uploads,reused,publicChecked,booksAdded:merged.added,booksUpdated:merged.updated,status:job.status};
  }catch(e){event(e.message.startsWith('INTERRUPTED_TEST')?'interrupted':'blocked',{reason:e.message});throw e;}
+ };
+ const result=admission.store?await admission.store.withPublication(admission.candidate,input.book,execute):await execute();
+ if(admission.store)admission.store.export(root);
+ return result;
 }

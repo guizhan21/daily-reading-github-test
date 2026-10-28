@@ -1,0 +1,1143 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "ledgerSha256": "a8c743b5c015c732c54c6bbbac2a6afb1d8419e9ba1eda4c6d9b06f0429a0bdc",
+  "coverage": {
+    "publishedBooks": 20,
+    "publishedChapters": 120,
+    "metadataComplete": true,
+    "bodySemanticReviewedBooks": 2,
+    "remainingSemanticAnalysis": "unknown"
+  },
+  "rules": [
+    "Compare actual learning questions and closest full texts before writing.",
+    "A new ID/date, different title, cases or hashes do not establish a new work.",
+    "Read-only snapshot: same-day reservations require the local coordinator; read success alone is not synchronization."
+  ],
+  "books": [
+    {
+      "bookId": "2026-10-21_ai-consultant",
+      "workId": "work-ece97f74d88cc5449c570857",
+      "version": 1,
+      "title": "讓 AI 真正把事做完",
+      "description": "接續模型基礎與 RAG，深入工具呼叫、工作流程、Agent 自主性、持久化任務、冪等重試、權限防線和可驗收的持續交付，重點在讓 AI 的執行結果可觀察、可恢復、可控制。\n\n面向知識型 AI 應用與具外部工具能力的任務執行系統，討論通用設計取捨；不聲稱本書已實際部署任何代理、與特定服務的安全效能經過實驗或目前網站已支援全部流程。",
+      "date": "2026-10-21",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch01",
+          "title": "從回答到完成任務：什麼時候需要 Agent",
+          "textSha256": "24302d3444c5137f4c0d2575cf60ce055643f71e24a02b20d3248d8e4b3a2efc",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch02",
+          "title": "工具呼叫與執行邊界：模型提出請求，系統承擔動作",
+          "textSha256": "3f9469005d3722f0c5bb129e41ab355b30e29f655013cd7f00967f0da817e8a3",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch03",
+          "title": "讓流程記住自己做過什麼：狀態、重試與可恢復執行",
+          "textSha256": "3f6f451906e37b368baf4939af37384cdc106097427d35edf49dbf14b73362ff",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch04",
+          "title": "自主決策與核准的位置：讓模型選擇，但不讓風險失控",
+          "textSha256": "3c2d0f3d2b4e7ca23fdb0650b85c054b03e491d12a4fd35fdf6fff10c0c13b7f",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch05",
+          "title": "外部資料不能變成命令：代理系統的安全與權限",
+          "textSha256": "d923af46bdfecf8a2069a387c4fc267b56ba05c47e91c62e65a2145f166f1e72",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-21_ai-consultant_ch06",
+          "title": "從演示走向可靠交付：評測、追蹤與成本效益",
+          "textSha256": "bdaa1a4610eaeaaa87e8825a4507dd729a7e51822a650b9224ba129ef4bcde04",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-19_ai-consultant",
+      "workId": "work-084f901985d1bcd2d1ce0797",
+      "version": 1,
+      "title": "看懂生成式 AI",
+      "description": "先區分模型、產品與工具，再理解詞元、注意力、訓練、上下文、檢索與代理，最後建立能用於講課、需求分析與專案驗收的判斷方式。\n\n以自回歸大型語言模型為主，不把文字生成機制外推為所有圖片、聲音或影片模型的唯一原理。",
+      "date": "2026-10-19",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch01",
+          "title": "模型、產品與工具：先分清你正在使用什麼",
+          "textSha256": "6ec9c44db2686964e99a4e533f4694bc75187288bdd24d299db9c35e9caef314",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch02",
+          "title": "文字如何變成計算：詞元、向量與注意力",
+          "textSha256": "f1457028ae6daafd2b1d43ac127a152be9ccea063927229bda367e535a576c23",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch03",
+          "title": "能力如何形成：預訓練、微調與偏好學習",
+          "textSha256": "7e52db0c0c5a0b8e1391ea557cbdc5b9e4a1508392bfc3fc5da48f1f775e7340",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch04",
+          "title": "回答如何產生：上下文、解碼與推理",
+          "textSha256": "c71d957ff4b6fe5d79990b795ce69681ae192508a87a0f20c182108f65aede2a",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch05",
+          "title": "模型如何連接資料與行動：檢索、工具與代理",
+          "textSha256": "bbb735d2e9cf2c3b3473f28b88f733639406df7b201efe1551af9b85f538f5ec",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-19_ai-consultant_ch06",
+          "title": "從會回答到可交付：評測、風險與顧問判斷",
+          "textSha256": "63732b324a127997c575fb1932776452199f6c24276bc83636a85180eb7d7cdd",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-19_general-knowledge",
+      "workId": "work-0c0bce3fe31d00da7b320341",
+      "version": 1,
+      "title": "科學如何建立可靠知識",
+      "description": "從可受檢驗的解釋出發，學會辨認測量與抽樣偏差、區分相關和因果、讀懂機率與統計，再將多項研究轉成範圍清楚的判斷。\n\n科學方法與證據判讀入門；不提供個人醫療、法律或投資建議，也不將本書稱為完整系統性回顧。",
+      "date": "2026-10-19",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch01",
+          "title": "科學不是答案清單，而是可受檢驗的解釋",
+          "textSha256": "0c4ef1c3c7aa64abeb5881e185a3ed7e297e4cc83a870c08918a4ebe92b9a550",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch02",
+          "title": "先弄清楚量到了什麼：測量、抽樣與偏差",
+          "textSha256": "faa6199590b5caaf3c19964167b20900b951936829a89f627a0f2930607ea324",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch03",
+          "title": "從一起發生到真正造成：因果推論",
+          "textSha256": "95bbcc4c932b569de0ab2f2664a95fc8206017bbf121b1658b40203e4d3b546f",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch04",
+          "title": "機率不是保證：用不確定性理解數據",
+          "textSha256": "f49880436c6e6ac7850505b16eb4cff204ae34b18db47d3b30b4eef031cbc57e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch05",
+          "title": "一篇研究之後：重現、出版偏差與證據整合",
+          "textSha256": "8cb81e530617270e79eada93a65115f2a5eac3158ca99444625b251ef4814f09",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-19_general-knowledge_ch06",
+          "title": "把證據變成判斷：閱讀研究與做決策",
+          "textSha256": "ea4882e85bc37926e5a4a33a4fb245123e7984c03ef6aefb1dc20f4b3d4669bb",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-19_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-22_ai-consultant",
+      "workId": "work-fb2337da6aa2ecbe46627a6f",
+      "version": 1,
+      "title": "從需求到成效：AI 顧問的試點設計與交付判斷",
+      "description": "從一次需求訪談開始，解析如何辨認真問題、還原工作流程、建立可信成效基準、設計有限風險的試點、估算全生命週期成本，並使 AI 系統在交付後仍能被負責任地使用、監測與退出。\n\n供AI講師與顧問理解小型AI專案的需求發現、評測、試點與治理決策；不涉及特定服務的效能排名、價格保證、在地法律結論或實際客戶試點成果。",
+      "date": "2026-10-22",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch01",
+          "title": "先辨認問題，再決定是否需要 AI",
+          "textSha256": "42dbd604fe3e2be29f583de08e1fdedf509a0d4679d339c40cce0644ea43bf39",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch02",
+          "title": "把口頭需求還原成真實流程",
+          "textSha256": "1be1738613733d09a2d5eb144ede7b3016f9810dac3cb27f1ed6b983874f3759",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch03",
+          "title": "從省時宣稱到可信的成效證據",
+          "textSha256": "99b78a2a12e5cfc1dc52bdfb01d0c61fc91bbd2b481ef0a604b99cb814ea09ce",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch04",
+          "title": "小試點先驗證最可能失敗的地方",
+          "textSha256": "2b7f56a04c6bfab7311c53c75c291db4e3a43ae2571ae8b5f801ed81793958bb",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch05",
+          "title": "算清總成本與資料責任",
+          "textSha256": "0888b5cbbb07c84a02881c9596536627a4fc51f2f9782bc032391db7d9bc6b32",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_ch06",
+          "title": "交付之後才開始的責任",
+          "textSha256": "9e86b2b51df40ac0389a01f609bcb1e3459975795ad5c286787dd225179d50b1",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-22_general-knowledge",
+      "workId": "work-9aa812e2e2d723ea647b5c03",
+      "version": 1,
+      "title": "睡眠不是關機",
+      "description": "從睡眠壓力、身體時鐘與睡眠分期的生理機制出發，依序解釋光線與作息、睡眠日誌和穿戴裝置的證據限制、失眠與呼吸障礙的判別、CBT-I及助眠產品的風險，最後討論輪班、疲勞駕駛與清楚就醫溝通的實際判斷。\n\n一般醫學與健康素養教育；不提供個人診斷、處方、停換藥指示或自行睡眠限制療程。",
+      "date": "2026-10-22",
+      "series": "跨領域知識探索",
+      "scope": "睡眠驅動、作息、測量、常見問題、改善證據與日常安全",
+      "semanticReview": "main_text_core_overlap_reviewed",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch01",
+          "title": "睡眠不是關機：兩套驅動與一夜之間的變化",
+          "textSha256": "43a4b2c3a6892b89770593c99defcf40d204c2595de8d4111a0a2df72606f7e8",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch02",
+          "title": "光與時間如何改變睡意：作息不是單純的意志力問題",
+          "textSha256": "fb182979e68c9fe7db9ca7446419d3ad6229279079c73af47f59c842602c79b8",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch03",
+          "title": "睡眠品質如何測量：日誌、手環與睡眠檢查各能回答什麼",
+          "textSha256": "0db74dfce590e2a504ddb7f9e6022f7278a422a2c62136cf4638115b136ed6c4",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch04",
+          "title": "不同的「睡不好」不是同一種病：失眠、呼吸中止與白天嗜睡",
+          "textSha256": "536b65a496fab9d40ad6381a8dfc2184aa956216c055f551ad0b9076cc891229",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch05",
+          "title": "改善睡眠的證據與界線：健康習慣、失眠認知行為治療與助眠產品",
+          "textSha256": "701e3f2b64f162e0155f830462809e4ad95978a7a254721a343db9b9c191fce7",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-22_general-knowledge_ch06",
+          "title": "在現實生活中保護睡眠：輪班、補眠、風險與就醫溝通",
+          "textSha256": "3ceaddc69d5d6ef34b7893af95a252d27d00848a4c6597a27adfb60b1164b7d8",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-22_ai-consultant_adult-teaching",
+      "workId": "work-e3f41a8aaf05b76262d96bb8",
+      "version": 1,
+      "title": "把 AI 教到會：成人學習、課程設計與教學成效的證據方法",
+      "description": "面向已有 AI 講座與成人教學經驗的講師，從可觀察成果倒推課程內容，研究如何診斷差異、減少理解負荷、安排操作與回饋、協助學員遷移到生活任務，並誠實評估成效與數位風險。\n\n成人AI教育、學習設計、評量與數位教學倫理；不包含模型技術原理、RAG/Agent工程或企業試點導入。",
+      "date": "2026-10-22",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch01",
+          "title": "從工具介紹到可驗證的學習成果",
+          "textSha256": "ddc25b80c76001c7e6fa13ffb7a6575fbd016f8178dca60865ce99629743f0d5",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_adult-teaching_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch02",
+          "title": "學員差異與教學前診斷",
+          "textSha256": "b7a3a9d6f72cc113d98b0509e43e8dc9990bbbacc8f447961badc1f52aa1532c",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_adult-teaching_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch03",
+          "title": "把抽象概念講到能理解",
+          "textSha256": "ff691cc6d62dedd1574fe9396176d36a4a13ed02c41acf9fd933292ed33d258e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_adult-teaching_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch04",
+          "title": "從示範走向獨立操作與回饋",
+          "textSha256": "d94230da4d15aba7b40d0003a38f05503b4ad6370537e6e21c282c7a67a00ece",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_adult-teaching_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch05",
+          "title": "讓能力離開教室後仍可使用",
+          "textSha256": "34de037ce4592321d8f0d919d7f23ce59100292080015aa3ed2f72c6c1108276",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_adult-teaching_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-22_ai-consultant_adult-teaching_ch06",
+          "title": "以證據檢查教學品質與倫理",
+          "textSha256": "4329612f99a3c15e5c123553954aa956228ba3f5b420828bc5cce2890f27dc9e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_ai-consultant_adult-teaching_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-23_general-knowledge",
+      "workId": "work-e82df1c31b52b89bc2e191f1",
+      "version": 1,
+      "title": "網頁為什麼打不開",
+      "description": "以開啟與維護網站的完整路徑為主軸，從網址、DNS 解析、IP 與傳輸、TLS 憑證、HTTP 與快取、同源政策和登入，逐步學會把「網站不能用」分解為可觀察、可驗證、可修復的工程問題。\n\n一般網路技術知識與教學用途；無對使用者目前真實網站進行連線檢測，所有故障案例均明標假設。",
+      "date": "2026-10-23",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch01",
+          "title": "網址不是地址：瀏覽器如何找到網站",
+          "textSha256": "5a9217f0dcfd1c10b41cf8bd8605ae460c42f677cddd448081bc6b1f06e1cd7d",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch02",
+          "title": "連上不等於傳到：IP、TCP 與 QUIC 如何運送資料",
+          "textSha256": "4835e78f91746616183f900a5a7fe6592186e9cb04c23d8be708cb0ff7e1d4c0",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch03",
+          "title": "小鎖頭能證明什麼：HTTPS、憑證與信任鏈",
+          "textSha256": "7e7299b6513e2f86df556f8653b17e5968e9b0e6cec663368ca71e2dbbc1a244",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch04",
+          "title": "頁面已回覆，事情卻沒完成：HTTP 與快取的真正語意",
+          "textSha256": "214cb5adf5648bd26eb06532800fa7b110c3b4f6de1b2e6c1c48bedc2e67cbbe",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch05",
+          "title": "同一個人，為什麼在不同網站不能互讀資料：CORS、Cookie 與瀏覽器邊界",
+          "textSha256": "5478ef4a84b6ca5fc49f7dd3932435b41452c3db1ad81acb9e78f3493b2fbbb0",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-23_general-knowledge_ch06",
+          "title": "不要再靠猜：用分層證據找出網站故障",
+          "textSha256": "38b82786e1a7c154db4557f556153fdde6e72562b7ac1c0b5720525290ce5d9f",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-20_ai-consultant",
+      "workId": "work-c6caf86e83a7ccf21df5e713",
+      "version": 1,
+      "title": "讓 AI 找對資料",
+      "description": "接續《看懂生成式 AI》，從問題與證據的關係出發，深入說明文件解析和切分、關鍵字與向量混合檢索、重排、引用、分層評測，以及權限和更新治理。\n\n以文字型知識問答的RAG設計與驗收為主；不聲稱所有AI產品採相同架構，不提供產品效能排名、價格保證或已部署系統的實測結論。",
+      "date": "2026-10-20",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch01",
+          "title": "從模型記憶到可查證的資料：RAG 究竟解決什麼",
+          "textSha256": "28871f980ec63cd47d71518491cc409ae0ac3f83bfb2ad83c53c2e9b0b055675",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch02",
+          "title": "文件如何變成可靠的知識單位：解析、切分與版本",
+          "textSha256": "b19356109033533cf9116b8d3ae0593e8d86fabc3f925fdcdc4d352a50f70bd6",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch03",
+          "title": "關鍵字、向量與重新排序：找得到不等於找得準",
+          "textSha256": "5414d487ee31349d32b6d0b5eae3af44b2a0dcf1e02a5f050db691cde7ca2e3e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch04",
+          "title": "把找到的段落變成有根據的回答：上下文、引用與拒答",
+          "textSha256": "312d5013ad3d4cf9bf3768d2784426ef6be490be7ffe8d3ebff2f5d5372970f4",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch05",
+          "title": "用測試分清檢索與生成的錯誤：指標、案例與驗收",
+          "textSha256": "124ce1bb15726e5f80e8d58720f5511c32efb9dc8412aab7e2961558bf340f78",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-20_ai-consultant_ch06",
+          "title": "從知識庫演示到持續可用的服務：權限、更新與交付",
+          "textSha256": "4aed92b8e2b2d343e8a934151d7a247c99984ba7a85ba0f6011d20b4a47b83e6",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-20_general-knowledge",
+      "workId": "work-4101e015dc1b5ac6827f6a80",
+      "version": 1,
+      "title": "地球為什麼會動",
+      "description": "從地球分層、海底磁條帶與衛星定位出發，解釋板塊如何塑造山海、引發地震及影響岩漿，再追蹤風化、侵蝕與岩石循環，建立能區分觀測、原理和假設的動態地球觀。\n\n地球科學原理入門，聚焦板塊構造、地震、火山與地表物質循環；不提供即時災害預測、個人安全判斷或工程鑑定。",
+      "date": "2026-10-20",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch01",
+          "title": "看不見的地球內部：固體岩石為什麼也能流動",
+          "textSha256": "438ca2ab6baace1f33d91a36fa671aa1e549a1d1a715c2233b12b74c70086417",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch02",
+          "title": "大陸移動的證據：從海底磁條帶到衛星定位",
+          "textSha256": "522ef1dcdd6050613cdaf89bfa84441e3b6e0eaff95da20a81c747cdd5f568d7",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch03",
+          "title": "板塊邊界與山海形成：分開、靠近和錯身而過",
+          "textSha256": "f776573b3cc90a39b4bbde8c9a42890cf18733bd7897d46ec071a6041a917c05",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch04",
+          "title": "地震如何發生：緩慢累積，迅速釋放",
+          "textSha256": "aa4b8710b409c5f42efc6184f0330387ae96c2cd3c7a0be5432b8afaa2962291",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch05",
+          "title": "火山與岩漿的真正來源：不是地心的一鍋熔漿",
+          "textSha256": "9a13d4e7c0da1234ec28647bd2bfbd8e0ad4fbfb4c8abf75afce32a3821a6083",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-20_general-knowledge_ch06",
+          "title": "岩石循環與地表的深時間：山會升高，也會被重新拆解",
+          "textSha256": "fa2732604ffd5b50cd4b9f8d19b92854f0820563198b1bc2b7f6279d6c1db1b5",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-20_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-21_general-knowledge",
+      "workId": "work-127689c9a5a8e5f2837f0431",
+      "version": 1,
+      "title": "學得會，也記得住",
+      "description": "以可理解的認知科學研究解釋資訊如何經注意力、工作記憶和長期記憶轉成可用知識，剖析提取、間隔與交錯練習的作用及限制，進一步討論成人如何判斷真正學會而非只感到熟悉。\n\n心理與認知科學教育；不提供個人認知障礙診斷、醫療指示、無證據保證效果或固定訓練處方。",
+      "date": "2026-10-21",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch01",
+          "title": "注意力不是意志力開關：資訊為什麼進不了記憶",
+          "textSha256": "c83f55520e16f783c67db1b3eb6ab9961f0ba248b8524a443cc376208553dc35",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch02",
+          "title": "工作記憶與認知負荷：為什麼一口氣講完反而聽不懂",
+          "textSha256": "a2e51f0691d8e06dbb929920991156b037fdcea49325b91ce593853736c37c25",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch03",
+          "title": "記憶不是錄影檔：經驗如何留下來，也如何變形",
+          "textSha256": "7bd19f0dde3ef8928724ef6c06e1d659a7faae869ef5496e21865124eec1c5d6",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch04",
+          "title": "為什麼回想與間隔能幫助記住：學習時舒服不等於記得久",
+          "textSha256": "e6640f396275ab1dd9c95cae1d6ac421a93e54ae5352c27ca66c77a66dac0989",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch05",
+          "title": "從熟悉題目走向新問題：真正學會是能辨認差異與遷移",
+          "textSha256": "028f1e8618c2600c8073512f86d86140e7b9dcc80492d092d2ea37df5c87ec62",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-21_general-knowledge_ch06",
+          "title": "如何判斷自己真的學會了：信心、學習風格與成人自學",
+          "textSha256": "947b237eed7147197611523398fd8ecf9b8e088f2d70c16635969c00fd2b05da",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-21_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-23_ai-consultant_security-governance",
+      "workId": "work-f858f31ebcc3ba61a413850a",
+      "version": 1,
+      "title": "把 AI 用得安全：資料、權限與風險治理的工程判斷",
+      "description": "幫 AI 講師與顧問把生成式 AI 的資料、權限、提示注入、供應鏈、營運韌性與治理驗收變成可解釋、可檢查的工程與交付決策。\n\nAI系統資安、資料治理、權限、提示注入、供應鏈與安全驗收；不重述AI模型基礎、RAG檢索工程、Agent任務設計、AI ROI試點或成人教學設計。",
+      "date": "2026-10-23",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch01",
+          "title": "從用途畫出風險地圖",
+          "textSha256": "028202f1d431611268022dc0e2a1f0ca33d902979796eb6261787a9ad45c34b6",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_ai-consultant_security-governance_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch02",
+          "title": "資料進出與供應商責任",
+          "textSha256": "4256745d0bdeb4627393dc10eaf5a09aa6522bf08979ed00c0406cb8c2f7b26a",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_ai-consultant_security-governance_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch03",
+          "title": "提示注入與不可信內容邊界",
+          "textSha256": "49b3ce396d1466201ac6f5132203eb7c744f27e9c252e0563fd2fdb90bfdc72d",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_ai-consultant_security-governance_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch04",
+          "title": "授權與工具的最後防線",
+          "textSha256": "d586182589977ff753abffe1e967976a557f8a9cc2578e6e174e3697c2f96b0a",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_ai-consultant_security-governance_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch05",
+          "title": "供應鏈版本與營運韌性",
+          "textSha256": "8a7d60dcb25ebace5371d6b0daf804bfb046fc67cf1a0bfb06f964549fd28186",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_ai-consultant_security-governance_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-23_ai-consultant_security-governance_ch06",
+          "title": "把治理做成可驗收的交付",
+          "textSha256": "6ea7cc5af5eca5dde65e2a9eda06d5d257f71a29ecbcc62a46ba2788996d16bd",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-23_ai-consultant_security-governance_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-24_general-knowledge",
+      "workId": "work-83690402b01090939d17337b",
+      "version": 1,
+      "title": "判斷力如何失準：認知偏誤、風險與可修正的決策",
+      "description": "從直覺、機率、框架、預測、沉沒成本走到可修正的決策程序，幫助讀者辨識訊息與風險，在生活、課程與技術工作中建立更可靠的判斷。",
+      "date": "2026-10-24",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch01",
+          "title": "直覺是工具，不是裁判",
+          "textSha256": "a62773ab598253ee66309e397e3a7cd2ac725034ff90ec46abbaeafafac2bca6",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-24_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch02",
+          "title": "機率要先看母數：從故事回到比例",
+          "textSha256": "f49f13c3409824e853a4344672ba557f2cb421102c4ecffb6f9a39e027fe4ead",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-24_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch03",
+          "title": "同一件事，換個說法為何改變選擇",
+          "textSha256": "2c161a89dd109f514e6803c4ced8642b0f420c40a2bb0a92a5f3b528a2f47cf0",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-24_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch04",
+          "title": "為什麼總覺得自己估得準：自信、預測與工期",
+          "textSha256": "dd216c117ea61ffbdecf2dc8bc2066f1ba9d64e27b894a0c5b6525ed037ca9ea",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-24_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch05",
+          "title": "決定之後，為什麼更難回頭",
+          "textSha256": "219145d86da22dec5f148d9449015d708c6173ef2c76278e525d1955ad61de38",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-24_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-24_general-knowledge_ch06",
+          "title": "讓判斷可以被修正：從心理知識到決策制度",
+          "textSha256": "8d87c6b1b46394306d492b8a26627a7d57b39a9124d5b2df70e462a0590bed02",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-24_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-25_ai-consultant",
+      "workId": "work-97521b1dbdc2762b3badc56d",
+      "version": 1,
+      "title": "AI Coding 的工程底座：從需求到可靠上線",
+      "description": "以 AI Coding 真實交付為主線，從可驗證的需求、前後端與權限邊界，走到資料模型與遷移、AI 協作的程式碼審查、自動化測試、部署觀測與交接。\n\nAI Coding 專案工程管理與實際交付，非模型原理、RAG 或 Agent 工作流程重述",
+      "date": "2026-10-25",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-25_ai-consultant_ch01",
+          "title": "把需求寫成可驗證的契約：讓 AI 寫程式之前先決定什麼算完成",
+          "textSha256": "fd6b952721f1b0640cb3889865aeee70931a7e1b8fb777b47c9475f3bf7a4696",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-25_ai-consultant_ch02",
+          "title": "讀懂前端、後端與系統邊界：一張畫面為何不等於一個系統",
+          "textSha256": "4d63198e9536e6398d44c3c9017b56ff18ac4f6ce28f3460263d83ba05aca000",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-25_ai-consultant_ch03",
+          "title": "資料模型與遷移：最昂貴的錯誤往往不在畫面上",
+          "textSha256": "2c6df67ee92cade699d598d3ef7020d456044cd392fba4b691fcaaad059fd203",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-25_ai-consultant_ch04",
+          "title": "讓 AI 協作而非接管專案：程式碼產生、審查與變更邊界",
+          "textSha256": "473b4538771c17f16ac7402b9e8eb1cf4d9ec60da63f32a2411aebe1fa4da262",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-25_ai-consultant_ch05",
+          "title": "測試建立可重複的信心：從單一函式到真實使用流程",
+          "textSha256": "4e37d1fe0023c2f5b13d73633e01e45018fd8b16f23a23d707ddb1da50d280d2",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-25_ai-consultant_ch06",
+          "title": "部署、可觀察性與交接：網站上線後誰負責它繼續正常",
+          "textSha256": "faa1db0409df63b7d4f052bf76fe07279095e222f81544afa34cba4d602a1d5d",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-25_general-knowledge_exercise-science",
+      "workId": "work-04cc67e6d611d9b2579def90",
+      "version": 1,
+      "title": "運動如何改變身體：能量、心肺、肌力與恢復的實證科學",
+      "description": "解釋肌肉如何供能、耐力如何適應、阻力訓練與活動量指引、能量消耗與體重的差別，以及恢復、警訊與穿戴裝置資料的正確解讀。",
+      "date": "2026-10-25",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-25_general-knowledge_exercise-science_ch01",
+          "title": "為什麼身體一動就需要能量",
+          "textSha256": "12ea6e6514da1d3e87787f257c874ba9893624722e3344eca731b04cd2ad6535",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_general-knowledge_exercise-science_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-25_general-knowledge_exercise-science_ch02",
+          "title": "心肺耐力是怎樣練出來的",
+          "textSha256": "17e6ffe896a0a93befe1985b8be7dd3e2c8a2c5134e277c924c7dd675875189c",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_general-knowledge_exercise-science_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-25_general-knowledge_exercise-science_ch03",
+          "title": "肌力與肌肉量為何不是同一件事",
+          "textSha256": "55bb99e311715cf2f60f7aeb88bd40e55d3406fe41cb340085f27787c6777394",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_general-knowledge_exercise-science_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-25_general-knowledge_exercise-science_ch04",
+          "title": "如何看懂運動強度與每週活動量",
+          "textSha256": "8350b444395bbc431cd289dd5a43a7126835443e9ad16918f1807eb1dc546ed6",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_general-knowledge_exercise-science_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-25_general-knowledge_exercise-science_ch05",
+          "title": "運動消耗體重與健康怎樣連動",
+          "textSha256": "6b52d03ac8004241f69db8bd8ef9c38419ef38265c7f8ef5c48b2af1ad02ab40",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_general-knowledge_exercise-science_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-25_general-knowledge_exercise-science_ch06",
+          "title": "恢復警訊與數據如何支持運動判斷",
+          "textSha256": "c90b8c0ec060f45cdbdc7490bd4bbd342d282537d09eed95e28374d889a25c11",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-25_general-knowledge_exercise-science_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-26_ai-consultant",
+      "workId": "work-db213999b46ca998fab9de1e",
+      "version": 1,
+      "title": "AI 評測的科學：從漂亮分數到可信決策",
+      "description": "接續生成式 AI、檢索、Agent、試點、成人教學、治理與 AI Coding，聚焦建立有證據邊界的 AI 評測能力：定義主張、設計題庫、讀懂指標、評價開放回答、公平比較系統，並建立持續驗收機制。\n\n模型與應用評測方法學；非企業試點 ROI、AI Coding 測試教學或資安合規指南",
+      "date": "2026-10-26",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch01",
+          "title": "先定義要證明的能力：評測不是替模型打總分",
+          "textSha256": "6ba701a80dea25af792eb9d12beba6f332c53639b305c6b36424d99514ac5ee3",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch02",
+          "title": "從真實任務建立題庫：好題目比大題庫更重要",
+          "textSha256": "a7e58f06151211d6497614dee76f69114c67552738d919874541c5c6a5b13c8e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch03",
+          "title": "指標與不確定性：百分之九十代表什麼",
+          "textSha256": "717240aa98f1763031b364e6068f75d16c525372cc541973acf72422868f43b1",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch04",
+          "title": "開放回答與評分者：誰有資格說 AI 答得好",
+          "textSha256": "fc9e066b624e0b0f69e8181d91bc21a263ffc0a2039c4b899ed01bd5cd6220b7",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch05",
+          "title": "公平比較模型與系統：分數變化可能不是模型變強",
+          "textSha256": "f09524ddbdc801b8453ab8a4d21831fee83ae3eeecb0cb27e9b26274acf9478b",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-26_ai-consultant_ch06",
+          "title": "持續評測與品質決策：從一次展示走向可追蹤的信任",
+          "textSha256": "c907fa051cb3f2aee28339fe2c7b5ff8f87f8c816126b30aa4a9da2802211944",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-26_general-knowledge",
+      "workId": "work-51f71dd57a26a672f2dd10fd",
+      "version": 1,
+      "title": "看懂一支影片：從影格、壓縮到聲音與串流",
+      "description": "以六個相互銜接的問題理解數位影片：影格與時間如何組成畫面、壓縮如何節省資料、容器與編碼的分工、聲畫同步、網站串流的播放機制，以及如何驗收與保存可再製作的影片。",
+      "date": "2026-10-26",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch01",
+          "title": "影格怎樣變成時間",
+          "textSha256": "2360b6fd7ce81f71a8b0a649657c97839fd1e490348f2103941eb5719bf650bd",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch02",
+          "title": "壓縮到底省掉什麼",
+          "textSha256": "288d660fd1f8699de7c3953d2e524ac3fdae02e065542a91baac9334ee53d63c",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch03",
+          "title": "副檔名為何會誤導",
+          "textSha256": "1b8e3be4ab09c59ee042fa37b5677730d0fb5564b2cb34368dff9719dd62834a",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch04",
+          "title": "聲音為什麼對不上畫面",
+          "textSha256": "78e55c6ed69856ab08b88163a00628ed4d6bde3777a51425bdfa0e802099dbaf",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch05",
+          "title": "影片為何在別人的裝置卡住",
+          "textSha256": "ed55f07260cc18a2ae5773fe6a2054ba214112ef6f9edfb01137185cff1d0651",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-26_general-knowledge_ch06",
+          "title": "怎樣驗收一支影片",
+          "textSha256": "b2a4577db61f682549df8294c4c2df575d3bdd91330e0ab595fa2605d94ee66b",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-26_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-27_general-knowledge",
+      "workId": "work-da0638fc1949d3fa06fa35b3",
+      "version": 1,
+      "title": "對話為什麼會失焦：理解落差、傾聽與分歧的心理科學",
+      "description": "以實證社會心理學與語言理解研究為基礎，分六章追究共同基礎、文字語氣、高品質傾聽、提問、不同意見與對話成效；重點區分被理解、被喜歡、說服成功及後續協作。",
+      "date": "2026-10-27",
+      "series": "跨領域知識探索",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch01",
+          "title": "為什麼同一句話會被聽成不同意思",
+          "textSha256": "465625cb49c70d64f198452c246d1c0ea8e0b0cc416ff2409dbce595999c13b5",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch02",
+          "title": "文字為什麼容易誤讀語氣",
+          "textSha256": "df6a20924f0617209b987ad87eb33d33af6561a3b9afcd35da81329bf7927b81",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch03",
+          "title": "好好傾聽到底做了什麼",
+          "textSha256": "a5be3b0d8a837e3e003b57398aab2b22332dacdc8f826f5fe44c992a19abcdaa",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch04",
+          "title": "提問怎樣讓理解更深入",
+          "textSha256": "09df45449cf326d9357b79d39b81f5a4b98d4c718bcea1dc7347e19085a1d0e5",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch05",
+          "title": "不同意的時候怎樣繼續談",
+          "textSha256": "b196afea29804752ad548fa4d6897b66824b0582262905dad2be1f2cda5ffc8b",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-27_general-knowledge_ch06",
+          "title": "怎樣知道對話真的有效",
+          "textSha256": "f13bb04e992432ccafabbb6ddff75e1fb1dc7911c4820ba27310c90470c93e14",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-27_ai-consultant",
+      "workId": "work-6d33aea52550bc2c428f2e23",
+      "version": 1,
+      "title": "AI 為何導不進工作：組織採用與變革落地的科學",
+      "description": "跨越 AI 展示與真正導入之間的組織障礙，逐步理解採用條件、工作流程、權責信任、訓練轉移、制度維持與成效判斷。",
+      "date": "2026-10-27",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch01",
+          "title": "會使用不等於會採用：AI 導入首先是人的決策",
+          "textSha256": "433c8952232232e3d4515a197d8f68813625456320f96a871a2ea90b588a9433",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch02",
+          "title": "真正改變的是工作流程：先理解工作，再安放 AI",
+          "textSha256": "8d2f5aeab9a30063f5cfc17d999f8cf4bbf392e0c7d7b06965bafa304ddafd52",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch03",
+          "title": "阻力不等於反科技：角色權責、信任與心理安全",
+          "textSha256": "1bf58b1562c55869c52ab73991943dce0c588be7d6507f1abd4a57cf3707b21c",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch04",
+          "title": "課上會用不等於工作會用：能力如何轉移到日常現場",
+          "textSha256": "d996b042a04e9da114109fb55b68199a0faf223a5c9bd71726844fef990c3b80",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch05",
+          "title": "從試辦到制度：建立調整、支持與治理的組織能力",
+          "textSha256": "c000e30afc50516bb1ea7920c3b4af9036b7d7397a07eff4ec8d46b11ca90502",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-27_ai-consultant_ch06",
+          "title": "如何知道導入已經生根：採用、維持與改進的證據",
+          "textSha256": "fb438cddf69cd5d8769678b4591fba235395011c9e6a9c3776f83b3a028205b0",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-27_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-28_ai-consultant",
+      "workId": "work-550984a89fc9f531e2e4cd74",
+      "version": 1,
+      "title": "AI 顧問的需求診斷學：從客戶要求到可驗證的工作問題",
+      "description": "一本處理 AI 顧問「技術建置之前」工作的方法論：從委託語句、訪談採證、流程診斷、AI 適配性、成本效益到可負責的方案決策。",
+      "date": "2026-10-28",
+      "series": "AI 講師與顧問專業養成",
+      "scope": null,
+      "semanticReview": "unknown",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch01",
+          "title": "先診斷問題再談工具：顧問究竟接受了什麼委託？",
+          "textSha256": "175405582f4e92132f27205387daa86bb0625e27112629e0de789647d47be879",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch02",
+          "title": "訪談不是蒐集願望：從人的敘述走向工作證據",
+          "textSha256": "63f19b09dd0e7e5c2af59408de96e59ba111c06f4fda25cb2ef3ddf5a7b97d7e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch03",
+          "title": "看見整條工作流程：瓶頸常不在最顯眼的地方",
+          "textSha256": "4c68a98004e3746fa7d9c16bf9becb3149b68ea7f2fbf1f8d7c45e87ec2c5738",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch04",
+          "title": "不是所有問題都適合 AI：從任務特性做技術選擇",
+          "textSha256": "9a995901e3fdbc0d0c27ad926ae8951ec7e6880d033a08797656fea9ecfb19f0",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch05",
+          "title": "價值需要基線與反事實：AI 方案的成本效益怎麼估",
+          "textSha256": "ff3f4669a9a16a9e486ae901b8ef837554ec86104fb888e13666f371eff31bd3",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-28_ai-consultant_ch06",
+          "title": "把診斷交付成決策：從發現到可負責的建議",
+          "textSha256": "f03540c98713e24e4971e8e2bdc4323bdf2261aeed3bb3f74039e3cba36f022b",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-28_general-knowledge",
+      "workId": "work-9aa812e2e2d723ea647b5c03",
+      "version": 1,
+      "title": "睡眠不是關機：生理時鐘、睡眠壓力與日常清醒的科學",
+      "description": "以六個連貫的科學問題，從睡眠功能、內在時鐘、夜間階段，到學習、慢性欠眠和失眠的證據辨識，建立不迷信睡眠分數的健康素養。",
+      "date": "2026-10-28",
+      "series": "跨領域知識探索",
+      "scope": "睡眠機制與清醒功能；學習/記憶為擴充重點，其餘與10/22核心範圍重疊",
+      "semanticReview": "main_text_core_overlap_reviewed",
+      "relationship": {
+        "kind": "core_overlap",
+        "bookId": "2026-10-22_general-knowledge",
+        "workId": "work-9aa812e2e2d723ea647b5c03"
+      },
+      "chapters": [
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch01",
+          "title": "睡眠究竟在維持什麼？",
+          "textSha256": "1d1f1fe3075d23905addbd983cccc9b586b793fb2b19b78a72973f9c7ad16e1e",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch02",
+          "title": "為什麼累了，卻不一定睡得著？",
+          "textSha256": "46220a57f630949efec7cd3b651842411f8f6275313dae6e737941fe005be319",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch03",
+          "title": "一夜之內究竟發生了什麼？",
+          "textSha256": "705b5fa5ed1f0cbf650d9d14aec4ab9898a4e2486212e82f657d98f3c0187d45",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch04",
+          "title": "睡一覺，真的會讓學習變得更好嗎？",
+          "textSha256": "90b9daf67f5daaaf7a28ab252a32c8a6bb1f0d83bceab1933d58dfd694603c3c",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch05",
+          "title": "為什麼持續少睡，比偶爾熬夜更難察覺？",
+          "textSha256": "29dafc5f3de05d8d88c1e2b1e60e97be0f8c95b989dc8b482637089c67e5b8a9",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-28_general-knowledge_ch06",
+          "title": "睡不好時，怎麼判斷該改習慣還是尋求協助？",
+          "textSha256": "ae59be5ce6aafbf5351801d5ff464342b3c9c8e26fb0f7a1419a66780448300a",
+          "coreQuestions": null,
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch06.md"
+        }
+      ]
+    }
+  ]
+}

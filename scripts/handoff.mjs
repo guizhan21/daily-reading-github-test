@@ -2,6 +2,7 @@
 // No database, cloud storage SDK, browser credentials or remote generation API.
 import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';
 import {root,load,hash} from './catalog.mjs';import {atomic,fingerprint} from './publisher.mjs';import {inside,localEnvironment} from './local-paths.mjs';
+import {sourceAdmission} from './dedup.mjs';
 const args=process.argv.slice(2),flags=new Map();for(let n=0;n<args.length;n++){if(args[n]==='--publish'){flags.set('publish',true);continue;}if(!args[n].startsWith('--')||!args[n+1])throw Error('Use --name value');flags.set(args[n].slice(2),args[++n]);}
 const workspace=fs.realpathSync(path.resolve(flags.get('workspace')||root));inside(workspace,root);Object.assign(process.env,localEnvironment(workspace));
 const id=flags.get('book');if(!/^[\w-]{1,100}$/.test(id||''))throw Error('Stable --book ID required');
@@ -11,6 +12,7 @@ const jobFile=path.join(jobRoot,'handoff.json'),job=fs.existsSync(jobFile)?JSON.
 const status=(state,extra={})=>{Object.assign(job,extra,{status:state,at:new Date().toISOString()});job.events.push({at:job.at,status:state,...extra});atomic(jobFile,job);};
 if(!source){status('waiting_book');console.log(JSON.stringify({bookId:id,status:'waiting_book'}));process.exit(0);}
 const chapters=c.chapters.filter(ch=>ch.book_id===id).sort((a,b)=>a.position-b.position),audioRoot=inside(workspace,flags.get('audio-dir')||'storage/audio');
+try{sourceAdmission(workspace,source,chapters);}catch(e){status('dedup_review',{reason:e.message});throw e;}
 const pending=chapters.filter(ch=>!c.audio_assets.some(a=>a.chapter_id===ch.id&&a.content_hash===ch.content_hash));if(!chapters.length||pending.length){status('waiting_audio',{pending:pending.map(ch=>ch.id)});console.log(JSON.stringify({bookId:id,status:job.status,pending:job.pending}));process.exit(0);}
 const approvalFile=inside(workspace,flags.get('approval')||path.join(root,'data/publication-rights.json')),approvalData=JSON.parse(fs.readFileSync(approvalFile));
 const approval=(approvalData.books||[approvalData]).find(r=>r.bookId===id&&r.version===source.version&&r.decision==='approved');if(!approval){status('waiting_public_rights');throw Error('Explicit, hash-bound public rights review required');}
@@ -36,7 +38,7 @@ fs.mkdirSync(path.join(root,'public/references'),{recursive:true});fs.mkdirSync(
 for(const {ch} of result)fs.writeFileSync(path.join(root,'public/chapters',ch.id+'.md'),ch.markdown);
 const book={bookId:id,title:source.title,category:source.category,date:source.date,description:source.description,version:source.version,cover,coverKind:ext==='.svg'?'original-template':'original-image',references:refs,releaseUrl:'https://github.com/'+load('data/site.json').repository+'/releases/tag/'+tag,chapters:result.map(({ch,a,name})=>({chapterId:ch.id,title:ch.title,markdown:'chapters/'+ch.id+'.md',textSha256:hash(ch.markdown),audioUrl:'https://github.com/'+load('data/site.json').repository+'/releases/download/'+tag+'/'+name,sha256:a.hash,bytes:a.bytes,durationSec:existing?.chapters.find(c=>c.chapterId===ch.id&&c.sha256===a.hash)?.durationSec??a.duration}))};
 const publicRights=load('data/publication-rights.json'),previous=publicRights.books.find(r=>r.bookId===id&&r.version===source.version);if(previous&&fingerprint(previous)!==fingerprint(approval))throw Error('Public rights record differs');if(!previous){publicRights.books.push(approval);atomic(path.join(root,'data/publication-rights.json'),publicRights);}
-const manifest={schemaVersion:1,repository:load('data/site.json').repository,tag,rightsReviewed:true,rightsBasis:approval.basis,book,files:result.map(({ch,a,name})=>({chapterId:ch.id,file:name,sha256:a.hash,bytes:a.bytes})),...(existing?{expectedCatalogBookHash:fingerprint(existing),allowPublishedAppend:true}:{})};
+const manifest={schemaVersion:1,repository:load('data/site.json').repository,tag,rightsReviewed:true,rightsBasis:approval.basis,book,dedupWorkspace:workspace,files:result.map(({ch,a,name})=>({chapterId:ch.id,file:name,sha256:a.hash,bytes:a.bytes})),...(existing?{expectedCatalogBookHash:fingerprint(existing),allowPublishedAppend:true}:{})};
 atomic(path.join(staging,'publish.json'),manifest);status('ready_to_publish',{version:source.version,chapters:chapters.length,manifestSha256:fingerprint(manifest)});
 if(flags.get('publish')){try{const output=execFileSync(process.execPath,['scripts/publish-audio.mjs',path.join(staging,'publish.json')],{cwd:root,env:{...process.env,AUDIO_STAGING_ROOT:staging},encoding:'utf8',windowsHide:true});const report=JSON.parse(output.trim());status('catalog_ready',{publication:report});console.log(JSON.stringify(report));}catch(e){status('publication_blocked',{reason:e.message.slice(0,400)});throw e;}}
 else console.log(JSON.stringify({bookId:id,status:'ready_to_publish',chapters:chapters.length}));
