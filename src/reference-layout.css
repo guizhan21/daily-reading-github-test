@@ -104,6 +104,7 @@
 }
 
 .controls button svg { display:block;margin:auto; }
+.player[data-expanded='true'] .player-art img { object-fit:contain;object-position:center;background:transparent; }
 @media(max-width:560px) { .mobile-dock svg{display:block;width:23px;height:23px;margin-bottom:3px;} .shelf-tabs a span{display:none;} .player[data-expanded="true"]{isolation:isolate;background:var(--surface);} .player[data-expanded="true"]:before{content:"";position:absolute;inset:0 0 auto;top:calc(60px + min(68vw,292px)*.6);height:calc(100vw * var(--art-ratio));z-index:-1;background-image:var(--reference-image);background-size:var(--art-size);background-position:var(--art-position);mask-image:linear-gradient(transparent,#000 18%,#000 65%,transparent);opacity:1;pointer-events:none;} }
 
 #seek{appearance:none;-webkit-appearance:none;border:0;border-radius:0;background:linear-gradient(to right,var(--accent) var(--played,0%),#d4d4ce var(--played,0%)) center/100% 4px no-repeat;}
