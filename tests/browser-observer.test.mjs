@@ -9,6 +9,8 @@ test('another page cannot explain this error',()=>{const x=make();x.context.fail
 test('an old aborted request cannot mask a new error',()=>{const x=make();x.context.failures[0].at=500;assert.equal(classified(x),null);});
 test('only catalogued cover URLs qualify',()=>{const x=make();x.context.knownCovers.clear();assert.equal(classified(x),null);});
 test('network truncation is fatal even near navigation',()=>{const x=make();x.context.failures[0].reason='NS_ERROR_NET_PARTIAL_TRANSFER';assert.equal(classified(x),null);});
+
+test('generic NS_ERROR_ABORT remains fatal even with nearby navigation',()=>{const x=make();x.context.failures[0].reason='NS_ERROR_ABORT';assert.equal(classified(x),null);});
 test('requests started after navigation cannot be attributed to it',()=>{const x=make();x.context.failures[0].startedAt=990;assert.equal(classified(x),null);});
 test('another navigation page cannot explain the cancellation',()=>{const x=make();x.context.navigations[0].pageId=2;assert.equal(classified(x),null);});
 test('Chrome errors are not suppressed',()=>{const x=make();x.context.browser='chrome';assert.equal(classified(x),null);});

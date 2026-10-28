@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import path from 'node:path';
+import {settleShelfCovers} from './cover-ready.mjs';
 
 // These are native desktop-engine focus/layout tests, not an iPhone keyboard
 // test. A >=16px input prevents the small-font trigger for iOS focus zoom;
@@ -20,6 +21,7 @@ export async function searchFocusChecks(browser,site,books,check,observe,{screen
  }
  try{
   await page.goto(site+'#library/unread');await page.locator('#search-input').waitFor();
+  const coverDecodes=await settleShelfCovers(page);
   const viewport=await page.locator('meta[name="viewport"]').getAttribute('content');
   assert.ok(!/user-scalable\s*=\s*(no|0)|maximum-scale\s*=/.test(viewport),viewport);
   const sizes=[];
@@ -30,7 +32,7 @@ export async function searchFocusChecks(browser,site,books,check,observe,{screen
    assert.equal(g.appearance,'none');assert.equal(g.focused,true);assert.equal(g.innerOutline,'none');assert.equal(g.innerBorder,0);assert.equal(g.innerShadow,'none');
    assert.equal(g.outerOutline,'solid');assert.ok(g.outerOutlineWidth>=2);assert.equal(g.scale,before.scale);assert.equal(g.form.width,before.form.width);sizes.push({viewport:width,...g});
   }
-  check('focused search uses >=16px text and one outer focus frame at five viewport widths',{sizes,iPhonePhysical:false});
+  check('focused search uses >=16px text and one outer focus frame at five viewport widths',{sizes,coverDecodes,iPhonePhysical:false});
   check('normal pinch zoom remains enabled in the viewport metadata');
   await page.setViewportSize({width:390,height:844});
   await page.locator('#search-input').fill(books.at(-1).title);assert.equal(await page.locator('#book-select [data-book]').count(),1);
