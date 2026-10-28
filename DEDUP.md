@@ -8,7 +8,7 @@
 
 1. 使用原下載器驗證 ZIP，再執行原 `intake.mjs --workspace <workspace> --job <job>`。首次新候選回傳 `dedup_review` 及 fingerprint，不建立音訊章節任務，也不佔用成功的每日書籍位置。完全相同正文即使改 ID、日期或提示詞，仍辨識為 duplicate。
 2. 執行 `node scripts/dedup-cli.mjs compare --workspace <workspace> --fingerprint <fingerprint>`。先看全庫目錄，再真正閱讀最接近的正文；retrievalScore 只用於檢索，不能當成語意相似度或自動放行。
-3. 在工作區保存審查 JSON，使用 `review --workspace <workspace> --proof <relative-json>`。格式見 `tests/dedup.test.mjs` 的 proof helper。必填當前 expectedRevision、candidateFingerprint、reviewer、decision、scope、reason、每章 chapterQuestions、全庫 metadataReviewedBookIds，以及最接近作品的 comparisons。每個比較必須有實際章節 ID／SHA／正文 quote、sharedQuestions、newCapabilities 和理由；不允許捏造引用。這是由執行代理/人工作出的內容判斷，不是程式已具備完整語意理解。
+3. 在工作區保存審查 JSON，使用 `review --workspace <workspace> --proof <relative-json>`。格式見 `tests/dedup.test.mjs` 的 proof helper。必填當前 expectedRevision、candidateFingerprint、reviewer、decision、scope、reason、每章 chapterQuestions、全庫 metadataReviewedBookIds，以及最接近作品的 comparisons。每個比較必須有實際章節 ID／SHA／正文 quote、sharedQuestions、newCapabilities、理由與逐章 chapterComparisons；evidenceScope 明列 selected_passages 或 full_chapters，後者必須涵蓋對照書每一章。不允許捏造引用或把片段閱讀冒稱全文。這是由執行代理/人工作出的內容判斷，不是程式已具備完整語意理解。
 4. 同一 job 再跑 intake，只有批准且仍有效的正文版本才建立原文／提示詞／逐章任務。批次準備、建立筆記本、記錄設定/提交、record、attach、handoff、直接 publisher 均檢查同一准入。手動繞過 CLI 去點網站不在程式可強制控制範圍；每日代理必須先檢查准入再操作 NotebookLM。
 5. 其他作品獲准後，較舊批准可能失效。重新讀總帳、比較新增作品，再提交審查；保留已完成章節，不重新生成。範圍相同但所需能力不同可通過；疑似重複保持待審，不能因領域名稱相同永久封鎖。
 6. revision/supplement 必須指定存在的 relatedWorkId 且以 ad-hoc 接收，不冒充每日全新書。既有相同 ID 的版本衝突仍需獨立遷移，不覆寫原正文或音訊。

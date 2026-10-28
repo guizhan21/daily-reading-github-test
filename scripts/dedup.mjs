@@ -12,6 +12,7 @@ const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const seal=value=>({...value,integrity:digest(value)});
 const unseal=value=>{const {integrity,...body}=value;if(integrity!==digest(body))throw Error('DEDUP_CORRUPT: ledger integrity differs');return body;};
 export function durable(file,value){
+ let existing=path.resolve(file);while(!fs.existsSync(existing)){const parent=path.dirname(existing);if(parent===existing)throw Error('DEDUP_PATH');existing=parent;}if(fs.realpathSync(existing)!==existing)throw Error('DEDUP_PATH: linked output is prohibited');
  fs.mkdirSync(path.dirname(file),{recursive:true});const temp=file+'.'+crypto.randomUUID()+'.tmp';
  const fd=fs.openSync(temp,'wx');try{fs.writeFileSync(fd,JSON.stringify(value,null,2)+'\n');fs.fsyncSync(fd);}finally{fs.closeSync(fd);}
  fs.renameSync(temp,file);
@@ -94,7 +95,9 @@ export class DedupStore{
   for(const comparison of comparisons){
    const entry=current.entries.find(e=>e.bookId===comparison.bookId&&e.version===comparison.version);
    if(!entry||!Array.isArray(comparison.sharedQuestions)||!Array.isArray(comparison.newCapabilities)||typeof comparison.reason!=='string'||comparison.reason.length<30||!comparison.evidence?.length)throw Error('DEDUP_EVIDENCE: substantive comparison required');
+   if(!['selected_passages','full_chapters'].includes(comparison.evidenceScope)||!Array.isArray(comparison.chapterComparisons)||comparison.chapterComparisons.length!==candidate.chapters.length||candidate.chapters.some(ch=>!comparison.chapterComparisons.some(row=>row.candidateChapterId===ch.chapterId&&Array.isArray(row.sharedQuestions)&&Array.isArray(row.referenceChapterIds)&&row.referenceChapterIds.every(id=>entry.chapters.some(c=>c.chapterId===id))&&typeof row.distinctContribution==='string'&&row.distinctContribution.length>=20)))throw Error('DEDUP_EVIDENCE: compare every candidate chapter and state actual reading scope');
    for(const evidence of comparison.evidence){const chapter=entry.chapters.find(c=>c.chapterId===evidence.chapterId),text=this.text(entry,evidence.chapterId);if(chapter?.rawSha256!==evidence.sha256||typeof evidence.quote!=='string'||evidence.quote.trim().length<30||!text.includes(evidence.quote))throw Error('DEDUP_EVIDENCE: quote/hash must match actual text');}
+   if(comparison.evidenceScope==='full_chapters'&&entry.chapters.some(ch=>!comparison.evidence.some(e=>e.chapterId===ch.chapterId)))throw Error('DEDUP_EVIDENCE: full-chapter claim requires evidence from every reference chapter');
    if(proof.decision==='new_work'&&!comparison.newCapabilities.some(x=>typeof x==='string'&&x.length>=15))throw Error('DEDUP_REVIEW: explain distinct capability, not just changed wording');
   }
   if(!Array.isArray(proof.chapterQuestions)||proof.chapterQuestions.length!==candidate.chapters.length||candidate.chapters.some(c=>!proof.chapterQuestions.some(q=>q.chapterId===c.chapterId&&Array.isArray(q.questions)&&q.questions.some(x=>typeof x==='string'&&x.length>=10)))||typeof proof.scope!=='string'||proof.scope.length<30)throw Error('DEDUP_REVIEW: chapter learning questions and scope required');
