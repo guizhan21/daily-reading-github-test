@@ -4,6 +4,8 @@
 
 總帳是產書工作區的 `storage/github-publishing/dedup/ledger.json`。合併早期 6 本及日更 14 本 JSON 來源，seed 只補證據。18 本尚未完成正文語意分析，範圍與核心問題保留 unknown。SHA 不同不證明內容新穎。
 
+副標題、書系與逐章核心問題分開保存；沒有來源就為 null，不從標題硬拆。兩本已逐章對照的睡眠書共有12章問題索引，綁定原正文 SHA 與審查紀錄；其餘108章仍未知。補充索引不改原書或來源指紋。
+
 ## 正常接書
 
 1. 使用原下載器驗證 ZIP，再執行原 `intake.mjs --workspace <workspace> --job <job>`。首次新候選回傳 `dedup_review` 及 fingerprint，不建立音訊章節任務，也不佔用成功的每日書籍位置。完全相同正文即使改 ID、日期或提示詞，仍辨識為 duplicate。

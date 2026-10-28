@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
-  "ledgerSha256": "a8c743b5c015c732c54c6bbbac2a6afb1d8419e9ba1eda4c6d9b06f0429a0bdc",
+  "revision": 2,
+  "ledgerSha256": "fb0f04ac27e85f31b2e230fb8f46960982357a30895a02881ab47d9cdb51e557",
   "coverage": {
     "publishedBooks": 20,
     "publishedChapters": 120,
@@ -20,6 +20,7 @@
       "workId": "work-ece97f74d88cc5449c570857",
       "version": 1,
       "title": "讓 AI 真正把事做完",
+      "subtitle": "工具呼叫、工作流程與可控 Agent 的工程方法",
       "description": "接續模型基礎與 RAG，深入工具呼叫、工作流程、Agent 自主性、持久化任務、冪等重試、權限防線和可驗收的持續交付，重點在讓 AI 的執行結果可觀察、可恢復、可控制。\n\n面向知識型 AI 應用與具外部工具能力的任務執行系統，討論通用設計取捨；不聲稱本書已實際部署任何代理、與特定服務的安全效能經過實驗或目前網站已支援全部流程。",
       "date": "2026-10-21",
       "series": "AI 講師與顧問專業養成",
@@ -76,6 +77,7 @@
       "workId": "work-084f901985d1bcd2d1ce0797",
       "version": 1,
       "title": "看懂生成式 AI",
+      "subtitle": "以大型語言模型為起點：從模型原理到可靠應用",
       "description": "先區分模型、產品與工具，再理解詞元、注意力、訓練、上下文、檢索與代理，最後建立能用於講課、需求分析與專案驗收的判斷方式。\n\n以自回歸大型語言模型為主，不把文字生成機制外推為所有圖片、聲音或影片模型的唯一原理。",
       "date": "2026-10-19",
       "series": "AI 講師與顧問專業養成",
@@ -132,6 +134,7 @@
       "workId": "work-0c0bce3fe31d00da7b320341",
       "version": 1,
       "title": "科學如何建立可靠知識",
+      "subtitle": "證據、因果與不確定性",
       "description": "從可受檢驗的解釋出發，學會辨認測量與抽樣偏差、區分相關和因果、讀懂機率與統計，再將多項研究轉成範圍清楚的判斷。\n\n科學方法與證據判讀入門；不提供個人醫療、法律或投資建議，也不將本書稱為完整系統性回顧。",
       "date": "2026-10-19",
       "series": "跨領域知識探索",
@@ -188,6 +191,7 @@
       "workId": "work-fb2337da6aa2ecbe46627a6f",
       "version": 1,
       "title": "從需求到成效：AI 顧問的試點設計與交付判斷",
+      "subtitle": "流程診斷、成效測量、成本風險與持續治理",
       "description": "從一次需求訪談開始，解析如何辨認真問題、還原工作流程、建立可信成效基準、設計有限風險的試點、估算全生命週期成本，並使 AI 系統在交付後仍能被負責任地使用、監測與退出。\n\n供AI講師與顧問理解小型AI專案的需求發現、評測、試點與治理決策；不涉及特定服務的效能排名、價格保證、在地法律結論或實際客戶試點成果。",
       "date": "2026-10-22",
       "series": "AI 講師與顧問專業養成",
@@ -244,6 +248,7 @@
       "workId": "work-9aa812e2e2d723ea647b5c03",
       "version": 1,
       "title": "睡眠不是關機",
+      "subtitle": "生理時鐘、失眠、測量與睡眠健康的科學判斷",
       "description": "從睡眠壓力、身體時鐘與睡眠分期的生理機制出發，依序解釋光線與作息、睡眠日誌和穿戴裝置的證據限制、失眠與呼吸障礙的判別、CBT-I及助眠產品的風險，最後討論輪班、疲勞駕駛與清楚就醫溝通的實際判斷。\n\n一般醫學與健康素養教育；不提供個人診斷、處方、停換藥指示或自行睡眠限制療程。",
       "date": "2026-10-22",
       "series": "跨領域知識探索",
@@ -255,42 +260,54 @@
           "chapterId": "2026-10-22_general-knowledge_ch01",
           "title": "睡眠不是關機：兩套驅動與一夜之間的變化",
           "textSha256": "43a4b2c3a6892b89770593c99defcf40d204c2595de8d4111a0a2df72606f7e8",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "為什麼疲倦不一定睡得著，睡眠壓力、生理時鐘與睡眠分期如何共同影響一夜變化？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch01.md"
         },
         {
           "chapterId": "2026-10-22_general-knowledge_ch02",
           "title": "光與時間如何改變睡意：作息不是單純的意志力問題",
           "textSha256": "fb182979e68c9fe7db9ca7446419d3ad6229279079c73af47f59c842602c79b8",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "光線、咖啡因、生活作息與個體差異如何改變睡意，為什麼不能只歸因於意志力？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch02.md"
         },
         {
           "chapterId": "2026-10-22_general-knowledge_ch03",
           "title": "睡眠品質如何測量：日誌、手環與睡眠檢查各能回答什麼",
           "textSha256": "0db74dfce590e2a504ddb7f9e6022f7278a422a2c62136cf4638115b136ed6c4",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "睡眠日誌、手環與臨床睡眠檢查分別能測量什麼，各自有哪些推論限制？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch03.md"
         },
         {
           "chapterId": "2026-10-22_general-knowledge_ch04",
           "title": "不同的「睡不好」不是同一種病：失眠、呼吸中止與白天嗜睡",
           "textSha256": "536b65a496fab9d40ad6381a8dfc2184aa956216c055f551ad0b9076cc891229",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "如何區分睡眠機會不足、失眠、呼吸中止與白天嗜睡，哪些資訊有助於就醫溝通？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch04.md"
         },
         {
           "chapterId": "2026-10-22_general-knowledge_ch05",
           "title": "改善睡眠的證據與界線：健康習慣、失眠認知行為治療與助眠產品",
           "textSha256": "701e3f2b64f162e0155f830462809e4ad95978a7a254721a343db9b9c191fce7",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "健康習慣、失眠認知行為治療與助眠產品的證據、適用條件及風險如何判讀？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch05.md"
         },
         {
           "chapterId": "2026-10-22_general-knowledge_ch06",
           "title": "在現實生活中保護睡眠：輪班、補眠、風險與就醫溝通",
           "textSha256": "3ceaddc69d5d6ef34b7893af95a252d27d00848a4c6597a27adfb60b1164b7d8",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "輪班、補眠、午睡與疲勞安全如何在現實限制下處理，什麼情況需要尋求專業協助？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-22_general-knowledge_ch06.md"
         }
       ]
@@ -300,6 +317,7 @@
       "workId": "work-e3f41a8aaf05b76262d96bb8",
       "version": 1,
       "title": "把 AI 教到會：成人學習、課程設計與教學成效的證據方法",
+      "subtitle": "從學員診斷、清楚解說到獨立操作、遷移與倫理評估",
       "description": "面向已有 AI 講座與成人教學經驗的講師，從可觀察成果倒推課程內容，研究如何診斷差異、減少理解負荷、安排操作與回饋、協助學員遷移到生活任務，並誠實評估成效與數位風險。\n\n成人AI教育、學習設計、評量與數位教學倫理；不包含模型技術原理、RAG/Agent工程或企業試點導入。",
       "date": "2026-10-22",
       "series": "AI 講師與顧問專業養成",
@@ -356,6 +374,7 @@
       "workId": "work-e82df1c31b52b89bc2e191f1",
       "version": 1,
       "title": "網頁為什麼打不開",
+      "subtitle": "從 DNS、連線與 HTTPS 到瀏覽器、安全與部署排障",
       "description": "以開啟與維護網站的完整路徑為主軸，從網址、DNS 解析、IP 與傳輸、TLS 憑證、HTTP 與快取、同源政策和登入，逐步學會把「網站不能用」分解為可觀察、可驗證、可修復的工程問題。\n\n一般網路技術知識與教學用途；無對使用者目前真實網站進行連線檢測，所有故障案例均明標假設。",
       "date": "2026-10-23",
       "series": "跨領域知識探索",
@@ -412,6 +431,7 @@
       "workId": "work-c6caf86e83a7ccf21df5e713",
       "version": 1,
       "title": "讓 AI 找對資料",
+      "subtitle": "檢索增強生成、知識庫與可靠回答的設計",
       "description": "接續《看懂生成式 AI》，從問題與證據的關係出發，深入說明文件解析和切分、關鍵字與向量混合檢索、重排、引用、分層評測，以及權限和更新治理。\n\n以文字型知識問答的RAG設計與驗收為主；不聲稱所有AI產品採相同架構，不提供產品效能排名、價格保證或已部署系統的實測結論。",
       "date": "2026-10-20",
       "series": "AI 講師與顧問專業養成",
@@ -468,6 +488,7 @@
       "workId": "work-4101e015dc1b5ac6827f6a80",
       "version": 1,
       "title": "地球為什麼會動",
+      "subtitle": "從板塊到山脈、地震與火山",
       "description": "從地球分層、海底磁條帶與衛星定位出發，解釋板塊如何塑造山海、引發地震及影響岩漿，再追蹤風化、侵蝕與岩石循環，建立能區分觀測、原理和假設的動態地球觀。\n\n地球科學原理入門，聚焦板塊構造、地震、火山與地表物質循環；不提供即時災害預測、個人安全判斷或工程鑑定。",
       "date": "2026-10-20",
       "series": "跨領域知識探索",
@@ -524,6 +545,7 @@
       "workId": "work-127689c9a5a8e5f2837f0431",
       "version": 1,
       "title": "學得會，也記得住",
+      "subtitle": "注意力、記憶與學習判斷的認知科學",
       "description": "以可理解的認知科學研究解釋資訊如何經注意力、工作記憶和長期記憶轉成可用知識，剖析提取、間隔與交錯練習的作用及限制，進一步討論成人如何判斷真正學會而非只感到熟悉。\n\n心理與認知科學教育；不提供個人認知障礙診斷、醫療指示、無證據保證效果或固定訓練處方。",
       "date": "2026-10-21",
       "series": "跨領域知識探索",
@@ -580,6 +602,7 @@
       "workId": "work-f858f31ebcc3ba61a413850a",
       "version": 1,
       "title": "把 AI 用得安全：資料、權限與風險治理的工程判斷",
+      "subtitle": "從提示注入、資料生命週期到可驗收的安全交付",
       "description": "幫 AI 講師與顧問把生成式 AI 的資料、權限、提示注入、供應鏈、營運韌性與治理驗收變成可解釋、可檢查的工程與交付決策。\n\nAI系統資安、資料治理、權限、提示注入、供應鏈與安全驗收；不重述AI模型基礎、RAG檢索工程、Agent任務設計、AI ROI試點或成人教學設計。",
       "date": "2026-10-23",
       "series": "AI 講師與顧問專業養成",
@@ -636,6 +659,7 @@
       "workId": "work-83690402b01090939d17337b",
       "version": 1,
       "title": "判斷力如何失準：認知偏誤、風險與可修正的決策",
+      "subtitle": null,
       "description": "從直覺、機率、框架、預測、沉沒成本走到可修正的決策程序，幫助讀者辨識訊息與風險，在生活、課程與技術工作中建立更可靠的判斷。",
       "date": "2026-10-24",
       "series": "跨領域知識探索",
@@ -692,6 +716,7 @@
       "workId": "work-97521b1dbdc2762b3badc56d",
       "version": 1,
       "title": "AI Coding 的工程底座：從需求到可靠上線",
+      "subtitle": "系統架構、資料演進、測試與交付",
       "description": "以 AI Coding 真實交付為主線，從可驗證的需求、前後端與權限邊界，走到資料模型與遷移、AI 協作的程式碼審查、自動化測試、部署觀測與交接。\n\nAI Coding 專案工程管理與實際交付，非模型原理、RAG 或 Agent 工作流程重述",
       "date": "2026-10-25",
       "series": "AI 講師與顧問專業養成",
@@ -748,6 +773,7 @@
       "workId": "work-04cc67e6d611d9b2579def90",
       "version": 1,
       "title": "運動如何改變身體：能量、心肺、肌力與恢復的實證科學",
+      "subtitle": null,
       "description": "解釋肌肉如何供能、耐力如何適應、阻力訓練與活動量指引、能量消耗與體重的差別，以及恢復、警訊與穿戴裝置資料的正確解讀。",
       "date": "2026-10-25",
       "series": "跨領域知識探索",
@@ -804,6 +830,7 @@
       "workId": "work-db213999b46ca998fab9de1e",
       "version": 1,
       "title": "AI 評測的科學：從漂亮分數到可信決策",
+      "subtitle": "題庫、指標、模型裁判、實驗公平性與持續品質",
       "description": "接續生成式 AI、檢索、Agent、試點、成人教學、治理與 AI Coding，聚焦建立有證據邊界的 AI 評測能力：定義主張、設計題庫、讀懂指標、評價開放回答、公平比較系統，並建立持續驗收機制。\n\n模型與應用評測方法學；非企業試點 ROI、AI Coding 測試教學或資安合規指南",
       "date": "2026-10-26",
       "series": "AI 講師與顧問專業養成",
@@ -860,6 +887,7 @@
       "workId": "work-51f71dd57a26a672f2dd10fd",
       "version": 1,
       "title": "看懂一支影片：從影格、壓縮到聲音與串流",
+      "subtitle": "媒體檔案、播放工程與可靠交付的原理",
       "description": "以六個相互銜接的問題理解數位影片：影格與時間如何組成畫面、壓縮如何節省資料、容器與編碼的分工、聲畫同步、網站串流的播放機制，以及如何驗收與保存可再製作的影片。",
       "date": "2026-10-26",
       "series": "跨領域知識探索",
@@ -916,6 +944,7 @@
       "workId": "work-da0638fc1949d3fa06fa35b3",
       "version": 1,
       "title": "對話為什麼會失焦：理解落差、傾聽與分歧的心理科學",
+      "subtitle": null,
       "description": "以實證社會心理學與語言理解研究為基礎，分六章追究共同基礎、文字語氣、高品質傾聽、提問、不同意見與對話成效；重點區分被理解、被喜歡、說服成功及後續協作。",
       "date": "2026-10-27",
       "series": "跨領域知識探索",
@@ -972,6 +1001,7 @@
       "workId": "work-6d33aea52550bc2c428f2e23",
       "version": 1,
       "title": "AI 為何導不進工作：組織採用與變革落地的科學",
+      "subtitle": "工作者接受、流程相容、權責信任、能力轉移與長期維持",
       "description": "跨越 AI 展示與真正導入之間的組織障礙，逐步理解採用條件、工作流程、權責信任、訓練轉移、制度維持與成效判斷。",
       "date": "2026-10-27",
       "series": "AI 講師與顧問專業養成",
@@ -1028,6 +1058,7 @@
       "workId": "work-550984a89fc9f531e2e4cd74",
       "version": 1,
       "title": "AI 顧問的需求診斷學：從客戶要求到可驗證的工作問題",
+      "subtitle": "訪談、流程、技術適配、效益估算與決策交付",
       "description": "一本處理 AI 顧問「技術建置之前」工作的方法論：從委託語句、訪談採證、流程診斷、AI 適配性、成本效益到可負責的方案決策。",
       "date": "2026-10-28",
       "series": "AI 講師與顧問專業養成",
@@ -1084,6 +1115,7 @@
       "workId": "work-9aa812e2e2d723ea647b5c03",
       "version": 1,
       "title": "睡眠不是關機：生理時鐘、睡眠壓力與日常清醒的科學",
+      "subtitle": null,
       "description": "以六個連貫的科學問題，從睡眠功能、內在時鐘、夜間階段，到學習、慢性欠眠和失眠的證據辨識，建立不迷信睡眠分數的健康素養。",
       "date": "2026-10-28",
       "series": "跨領域知識探索",
@@ -1099,42 +1131,54 @@
           "chapterId": "2026-10-28_general-knowledge_ch01",
           "title": "睡眠究竟在維持什麼？",
           "textSha256": "1d1f1fe3075d23905addbd983cccc9b586b793fb2b19b78a72973f9c7ad16e1e",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "睡眠維持哪些身心功能，時長、品質、白天功能與睡眠機會有什麼差別？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch01.md"
         },
         {
           "chapterId": "2026-10-28_general-knowledge_ch02",
           "title": "為什麼累了，卻不一定睡得著？",
           "textSha256": "46220a57f630949efec7cd3b651842411f8f6275313dae6e737941fe005be319",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "睡眠壓力與生理時鐘為什麼可能不同步，光線、咖啡因與作息如何影響入睡？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch02.md"
         },
         {
           "chapterId": "2026-10-28_general-knowledge_ch03",
           "title": "一夜之內究竟發生了什麼？",
           "textSha256": "705b5fa5ed1f0cbf650d9d14aec4ab9898a4e2486212e82f657d98f3c0187d45",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "睡眠分期與一夜中的變化如何理解，腦波檢查與穿戴裝置的測量界線在哪裡？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch03.md"
         },
         {
           "chapterId": "2026-10-28_general-knowledge_ch04",
           "title": "睡一覺，真的會讓學習變得更好嗎？",
           "textSha256": "90b9daf67f5daaaf7a28ab252a32c8a6bb1f0d83bceab1933d58dfd694603c3c",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "睡眠如何影響記憶編碼、鞏固、提取及學習，相關研究的效應與限制如何判讀？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch04.md"
         },
         {
           "chapterId": "2026-10-28_general-knowledge_ch05",
           "title": "為什麼持續少睡，比偶爾熬夜更難察覺？",
           "textSha256": "29dafc5f3de05d8d88c1e2b1e60e97be0f8c95b989dc8b482637089c67e5b8a9",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "持續睡不足時，主觀清醒與客觀表現為什麼可能不一致，實驗、統計與補眠能說明什麼？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch05.md"
         },
         {
           "chapterId": "2026-10-28_general-knowledge_ch06",
           "title": "睡不好時，怎麼判斷該改習慣還是尋求協助？",
           "textSha256": "ae59be5ce6aafbf5351801d5ff464342b3c9c8e26fb0f7a1419a66780448300a",
-          "coreQuestions": null,
+          "coreQuestions": [
+            "睡不好時如何區分作息、失眠與其他問題，健康習慣、CBT-I、助眠產品及就醫各有什麼界線？"
+          ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-28_general-knowledge_ch06.md"
         }
       ]
