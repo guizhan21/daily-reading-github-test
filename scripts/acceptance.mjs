@@ -1,8 +1,12 @@
-import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {root,load,buildTarget} from './catalog.mjs';
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {root,load,buildTarget,hash} from './catalog.mjs';
+import {cardCoverPath} from '../src/cover-assets.js';
 const catalog=load('data/books.json'),rights=load('data/publication-rights.json').books.filter(b=>b.decision==='approved');
 assert.equal(catalog.books.length,rights.length,'Incomplete migration: reviewed books still await recovery');
 for(const review of rights){const b=catalog.books.find(b=>b.bookId===review.bookId&&b.version===review.version);assert.ok(b,'Missing reviewed book '+review.bookId);assert.equal(b.chapters.length,review.chapters.length);for(const c of review.chapters){const ch=b.chapters.find(ch=>ch.chapterId===c.chapterId);assert.ok(ch&&ch.sha256===c.audioSha256&&ch.textSha256===c.textSha256);}}
 const target=buildTarget(load('data/site.json'),process.argv.includes('--root')?'root':'project');
+const thumbs=JSON.parse(fs.readFileSync(path.join(root,target.directory,'cover-thumbnails.json'))).entries;
+assert.equal(thumbs.length,catalog.books.filter(b=>b.coverKind!=='original-template').length);
+for(const b of catalog.books.filter(b=>b.coverKind!=='original-template')){const t=thumbs.find(t=>t.bookId===b.bookId&&t.version===b.version);assert.equal(t.path,cardCoverPath(b));assert.equal(t.sourceSha256,rights.find(r=>r.bookId===b.bookId&&r.version===b.version).coverSha256);const data=fs.readFileSync(path.join(root,target.directory,t.path));assert.equal(hash(data),t.sha256);assert.equal(data.length,t.bytes);assert.equal(data.toString('ascii',0,4),'RIFF');assert.equal(data.toString('ascii',8,12),'WEBP');assert.ok(t.width>0&&t.width<=480&&t.height>0&&t.height<=720&&t.bytes<t.sourceBytes);}
 let bytes=0,files=0;function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);assert.ok(!e.isSymbolicLink());if(e.isDirectory())walk(p);else{assert.ok(!/\.(m4a|aac|mp3|mp4|wav|db|sqlite\w*|zip)$/i.test(e.name));bytes+=fs.statSync(p).size;files++;}}}walk(path.join(root,target.directory));
 assert.ok(fs.readFileSync(path.join(root,target.directory,'index.html'),'utf8').includes('<base href="'+target.basePath+'">'));
 const pkg=load('package.json');for(const name of Object.keys({...pkg.dependencies,...pkg.devDependencies}))assert.ok(!/vercel|sqlite|postgres|firebase|cloudflare|supabase/i.test(name));

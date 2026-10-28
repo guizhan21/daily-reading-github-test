@@ -1,6 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {chromium,firefox,webkit} from 'playwright';import {root,load} from '../scripts/catalog.mjs';
 import {resumeChecks} from './resume-checks.mjs';
 import {shelfChecks} from './shelf-checks.mjs';
+import {cardCoverChecks} from './card-cover-checks.mjs';
 import {appearanceChecks} from './appearance-checks.mjs';
 import {shortURLChecks} from './short-url-checks.mjs';
 import {recoveryChecks} from './recovery-checks.mjs';
@@ -74,6 +75,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('daily-reading-github:v1')));assert.ok(Object.keys(progress.books).length>=books.length);fs.writeFileSync(path.join(output,name+'-progress.json'),JSON.stringify(progress,null,2));check('independent multi-book local progress');
   await page.setViewportSize({width:1280,height:900});await resumeChecks(page,books[0],check);
   await shelfChecks(browser,site,books,check,observe);
+  await cardCoverChecks(browser,site,books,check,observe);
   await appearanceChecks(browser,site,books,check,observe);
   await shortURLChecks(browser,site,books,check,observe);
   await listeningRoomChecks(browser,site,books,check,observe,{screenshots:output,browserName:name});

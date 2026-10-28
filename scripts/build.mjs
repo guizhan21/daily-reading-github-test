@@ -3,9 +3,10 @@ import {icon} from '../src/icons.js';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {renderMarkdown} from './render.mjs';
+import {buildCardCovers} from './card-covers.mjs';
 import {root, load, validate, safeRelative, buildTarget} from './catalog.mjs';
 const config = load('data/site.json'), catalog = load('data/books.json');
-const assets=['app.js','progress.js','preferences.js','ambience.js','media-session.js','audio-session.js','playback-diagnostics.js','media-source.js','playback-health.js','player-view.js','sleep-timer.js','navigation-gesture.js','icons.js','controls.css','style.css','storybook.css','listening-room.css','reference-layout.css'];
+const assets=['app.js','cover-assets.js','progress.js','preferences.js','ambience.js','media-session.js','audio-session.js','playback-diagnostics.js','media-source.js','playback-health.js','player-view.js','sleep-timer.js','navigation-gesture.js','icons.js','controls.css','style.css','storybook.css','listening-room.css','reference-layout.css'];
 const assetVersion=crypto.createHash('sha256').update(assets.map(file=>fs.readFileSync(path.join(root,'src',file),'utf8').replaceAll('\r\n','\n')).join('\n')).digest('hex').slice(0,16);
 validate(catalog, config);
 const args=process.argv.slice(2);if(args.length>1||args.some(a=>a!=='--root'))throw Error('Unsupported build argument');
@@ -38,6 +39,7 @@ for (const file of assets) {
 }
 fs.mkdirSync(path.join(dist,'data'),{recursive:true});
 fs.copyFileSync(path.join(root,'data/books.json'),path.join(dist,'data/books.json'));
+await buildCardCovers(catalog.books,path.join(root,'public'),dist);
 fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 let bytes=0;function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else bytes+=fs.statSync(p).size;}}walk(dist);
 console.log(JSON.stringify({books:catalog.books.length,chapters:catalog.books.flatMap(b=>b.chapters).length,pagesBytes:bytes,audioBytesInPages:0,basePath:target.basePath,assetVersion}));

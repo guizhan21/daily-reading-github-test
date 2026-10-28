@@ -1,3 +1,4 @@
+import {cardCoverPath} from '../src/cover-assets.js';
 // Firefox also emits a decoder-looking console message when navigation aborts
 // a valid in-flight image. Keep the native evidence; never ignore by text alone.
 export function navigationImageCancellation(error,{browser,knownCovers,failures,navigations}){
@@ -13,7 +14,7 @@ export function navigationImageCancellation(error,{browser,knownCovers,failures,
 }
 
 export function createBrowserObserver(report,{browser,site,books}){
- const knownCovers=new Set(books.map(b=>new URL(b.cover,site).href)),failures=[],navigations=[],errors=[],observed=new WeakSet();let pageCounter=0;
+ const knownCovers=new Set(books.flatMap(b=>[b.cover,cardCoverPath(b)]).map(cover=>new URL(cover,site).href)),failures=[],navigations=[],errors=[],observed=new WeakSet();let pageCounter=0;
  report.imageEvents=[];report.navigationImageCancellations=[];
  function observe(page,{media=true}={}){
   if(observed.has(page))return;observed.add(page);const pageId=++pageCounter,starts=new WeakMap();
