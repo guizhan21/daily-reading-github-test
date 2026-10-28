@@ -1,0 +1,29 @@
+name: Isolated native image diagnostics
+on:
+  push:
+    branches: ['diagnostics/cover-*']
+permissions:
+  contents: read
+jobs:
+  native-images:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: |
+          npx playwright install firefox
+          if ! node --input-type=module -e "import {firefox} from 'playwright'; const b=await firefox.launch(); await b.close();"; then
+            npx playwright install-deps firefox
+          fi
+      - run: node tests/cover-diagnostic.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-image-diagnostic
+          path: test-results
+          retention-days: 14
