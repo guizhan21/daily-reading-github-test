@@ -1628,6 +1628,154 @@
           "durationSec": 345.118186
         }
       ]
+    },
+    {
+      "bookId": "2026-10-30_general-knowledge",
+      "title": "疼痛為何會持續：從神經警報到醫療判斷的科學",
+      "category": "跨領域知識探索",
+      "date": "2026-10-30",
+      "description": "從疼痛與傷害的差別出發，理解神經訊號和痛感調節、慢性疼痛的不同來源、評估與影像檢查的意義，以及運動、心理介入和藥物證據的適用範圍；建立與醫療人員討論疼痛資訊的能力，不提供個人診斷或處方。",
+      "version": 1,
+      "cover": "covers/2026-10-30_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-30_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-30-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch01",
+          "title": "疼痛究竟是在報告什麼",
+          "markdown": "chapters/2026-10-30_general-knowledge_ch01.md",
+          "textSha256": "18e8283f60c833b90a6381b0d16592253e7dad860864ee4620b7a41ef32d6ed5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-general-knowledge-v1/2026-10-30_general-knowledge_ch01-ee9d7f306e5a.m4a",
+          "sha256": "ee9d7f306e5ac6a38c115aec99f16729faab6eadd0617f230722c9eb1d198b88",
+          "bytes": 10719488,
+          "durationSec": 333.04381
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch02",
+          "title": "神經系統如何改變痛感",
+          "markdown": "chapters/2026-10-30_general-knowledge_ch02.md",
+          "textSha256": "fcebeb1b1e443e490ba29a0ab895f1807ec12cf8c0e32188fd95239055c714db",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-general-knowledge-v1/2026-10-30_general-knowledge_ch02-405676f98ee5.m4a",
+          "sha256": "405676f98ee54f1605edda829a6d319f88f1511211a3200c096a0595b4d91d25",
+          "bytes": 9636566,
+          "durationSec": 299.398095
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch03",
+          "title": "慢性疼痛為何不是一種病",
+          "markdown": "chapters/2026-10-30_general-knowledge_ch03.md",
+          "textSha256": "bd20f13a9b2e8a421b1cf780518cdb7fc4c9cf698a111fa3cdef90992fc78e5e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-general-knowledge-v1/2026-10-30_general-knowledge_ch03-5d528097548e.m4a",
+          "sha256": "5d528097548ecd7710c3ab895eb33ea84e4713acc3573c778898ae3d15d365f7",
+          "bytes": 10063357,
+          "durationSec": 312.656689
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch04",
+          "title": "疼痛該怎麼被評估",
+          "markdown": "chapters/2026-10-30_general-knowledge_ch04.md",
+          "textSha256": "9df6fcba359eb20ac58719aea09f790ad37523cc3ce5ece08e4c420ebe72aac4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-general-knowledge-v1/2026-10-30_general-knowledge_ch04-482435df6749.m4a",
+          "sha256": "482435df6749a93617f41d0248e11ea91d68a4c83f75d8a35d644accb002d8f4",
+          "bytes": 10942222,
+          "durationSec": 339.963356
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch05",
+          "title": "治療證據為何不能一體適用",
+          "markdown": "chapters/2026-10-30_general-knowledge_ch05.md",
+          "textSha256": "272e8454b111f82c36bbd77143164231be49f1837722f6f4790351810d80d211",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-general-knowledge-v1/2026-10-30_general-knowledge_ch05-7bc10f793c52.m4a",
+          "sha256": "7bc10f793c5204c96b4982f2c94c1da84c101c2a2e30b09f0d75bef8985b8553",
+          "bytes": 13414237,
+          "durationSec": 416.774966
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch06",
+          "title": "如何面對反覆疼痛與醫療資訊",
+          "markdown": "chapters/2026-10-30_general-knowledge_ch06.md",
+          "textSha256": "b92d8e8c27d67115a64011996d05f314a40f0c8a13597ec07bb2d308dc1b1c19",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-general-knowledge-v1/2026-10-30_general-knowledge_ch06-6e44f5994d7c.m4a",
+          "sha256": "6e44f5994d7c311022160b0ecf8d15a24c8cb631d8dc88ca07a91df4d4a8ea64",
+          "bytes": 9559621,
+          "durationSec": 297.00644
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-30_ai-consultant",
+      "title": "讓 AI 接得上工作：上下文、記憶與專案脈絡的管理學",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-30",
+      "description": "本書以非工程背景的AI應用者為對象，解釋聊天、上下文、記憶和專案檔案的區別，如何整理工作材料、避免文件引用錯誤、保存跨日工作快照、管理版本與失效資訊，並辨認個資、記憶與NotebookLM音訊的使用界線。",
+      "version": 1,
+      "cover": "covers/2026-10-30_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-30_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-30-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch01",
+          "title": "聊天存在，不代表模型知道：釐清上下文、記憶與資料",
+          "markdown": "chapters/2026-10-30_ai-consultant_ch01.md",
+          "textSha256": "5d30ed8649d7cf01c24574d3b74bde878a77197f3970fde3d487938116e587b2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-ai-consultant-v1/2026-10-30_ai-consultant_ch01-0da5945c025a.m4a",
+          "sha256": "0da5945c025a00029b59c561c70b7c5c1f82fe2c8aa0f1eb334acc53c250c723",
+          "bytes": 8666562,
+          "durationSec": 269.258594
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch02",
+          "title": "資訊怎樣變成可用背景：把工作材料整理成脈絡",
+          "markdown": "chapters/2026-10-30_ai-consultant_ch02.md",
+          "textSha256": "642b6cc34b6673965f9dd43e16a7c84ea5dc3b61ed47baf3b14150f2ca4eedd0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-ai-consultant-v1/2026-10-30_ai-consultant_ch02-a62730b722bf.m4a",
+          "sha256": "a62730b722bf0b0158930c47b929f22840491068a0cc2d5b16fed3a14a21cbda",
+          "bytes": 10140302,
+          "durationSec": 315.048345
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch03",
+          "title": "檔案有了，不代表能引用：讓資料進入正確的工作",
+          "markdown": "chapters/2026-10-30_ai-consultant_ch03.md",
+          "textSha256": "ea049ea14e9bd30842ab1211cb131765fb526cb40d8ad2646d3d244c9c86db5f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-ai-consultant-v1/2026-10-30_ai-consultant_ch03-dc06d86a2bfd.m4a",
+          "sha256": "dc06d86a2bfdcd78be31007b88d4e2a0d4a457c7967f9976ffdedeb3d43e95fb",
+          "bytes": 11835912,
+          "durationSec": 367.734422
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch04",
+          "title": "長任務怎樣不失真：留下能接續的工作快照",
+          "markdown": "chapters/2026-10-30_ai-consultant_ch04.md",
+          "textSha256": "fd292fa378e5b9b90fcf8962d51dba75bff774aff2a02d79c123f7ce830ecec3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-ai-consultant-v1/2026-10-30_ai-consultant_ch04-f4a13693a876.m4a",
+          "sha256": "f4a13693a876b8d7855c549e896278ff20bdf3e4d448d432314fb140d7a143cc",
+          "bytes": 11504858,
+          "durationSec": 357.447982
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch05",
+          "title": "版本與決策才是長期記錄：不要讓舊資訊反覆復活",
+          "markdown": "chapters/2026-10-30_ai-consultant_ch05.md",
+          "textSha256": "49d4709b0880685b6ab963682208694e6b7ae8cb719483288d7d682371a4b775",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-ai-consultant-v1/2026-10-30_ai-consultant_ch05-6a6ee9cac47a.m4a",
+          "sha256": "6a6ee9cac47aa735335eee95728d1e73e2937ba07d6c292c0c1428af303f0304",
+          "bytes": 9372114,
+          "durationSec": 291.178231
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch06",
+          "title": "何時該更新與遺忘：讓長期 AI 工作保持可信",
+          "markdown": "chapters/2026-10-30_ai-consultant_ch06.md",
+          "textSha256": "1e609c790fb151acdd8b44e53ac965ee5329c04cece31097521bac486d342c6b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-30-ai-consultant-v1/2026-10-30_ai-consultant_ch06-19231f05cbee.m4a",
+          "sha256": "19231f05cbee695df6340f1006d3d317a6f6e960b952e12b11f21f39eaffe0a0",
+          "bytes": 10100708,
+          "durationSec": 313.817687
+        }
+      ]
     }
   ]
 }

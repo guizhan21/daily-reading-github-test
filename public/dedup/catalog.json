@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 11,
-  "ledgerSha256": "57552041f612a73b31bda0deb46c7f70e59c9b2970b2899305aa5bc07d0d476f",
+  "revision": 20,
+  "ledgerSha256": "e5dc430cabbafe44eefb59aa0a682d39e66a263bcaac914d161cdd689ad57877",
   "coverage": {
-    "publishedBooks": 22,
-    "publishedChapters": 132,
+    "publishedBooks": 24,
+    "publishedChapters": 144,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 4,
+    "bodySemanticReviewedBooks": 6,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -1318,6 +1318,144 @@
             "非工程背景的應用顧問如何安排 AI、人與工具之間的責任和資料交接，形成能教學、能維護的協作方案？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-29_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-30_general-knowledge",
+      "workId": "work-ead72a68a74d38ee07c9ae6b",
+      "version": 1,
+      "title": "疼痛為何會持續：從神經警報到醫療判斷的科學",
+      "subtitle": null,
+      "description": "從疼痛與傷害的差別出發，理解神經訊號和痛感調節、慢性疼痛的不同來源、評估與影像檢查的意義，以及運動、心理介入和藥物證據的適用範圍；建立與醫療人員討論疼痛資訊的能力，不提供個人診斷或處方。",
+      "date": "2026-10-30",
+      "series": "跨領域知識探索",
+      "scope": "疼痛經驗與傷害訊號的區別、神經敏感化、慢性疼痛分類、功能及影像評估、治療證據適用範圍與共同決策；不是睡眠改善或一般認知訓練。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch01",
+          "title": "疼痛究竟是在報告什麼",
+          "textSha256": "18e8283f60c833b90a6381b0d16592253e7dad860864ee4620b7a41ef32d6ed5",
+          "coreQuestions": [
+            "疼痛經驗為何不等於可見組織損傷？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch02",
+          "title": "神經系統如何改變痛感",
+          "textSha256": "fcebeb1b1e443e490ba29a0ab895f1807ec12cf8c0e32188fd95239055c714db",
+          "coreQuestions": [
+            "周邊與中樞敏感化、注意與情緒如何影響疼痛而不否定患者？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch03",
+          "title": "慢性疼痛為何不是一種病",
+          "textSha256": "bd20f13a9b2e8a421b1cf780518cdb7fc4c9cf698a111fa3cdef90992fc78e5e",
+          "coreQuestions": [
+            "慢性原發及繼發疼痛、機制分類能回答什麼而不能決定什麼？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch04",
+          "title": "疼痛該怎麼被評估",
+          "textSha256": "9df6fcba359eb20ac58719aea09f790ad37523cc3ce5ece08e4c420ebe72aac4",
+          "coreQuestions": [
+            "疼痛分數、影像和功能各提供哪些不同資訊？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch05",
+          "title": "治療證據為何不能一體適用",
+          "textSha256": "272e8454b111f82c36bbd77143164231be49f1837722f6f4790351810d80d211",
+          "coreQuestions": [
+            "運動、心理介入和藥物證據為何依診斷與結果而異？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-30_general-knowledge_ch06",
+          "title": "如何面對反覆疼痛與醫療資訊",
+          "textSha256": "b92d8e8c27d67115a64011996d05f314a40f0c8a13597ec07bb2d308dc1b1c19",
+          "coreQuestions": [
+            "如何描述反覆症狀、理解陰性檢查與共同決定追蹤？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-30_ai-consultant",
+      "workId": "work-876dcd8b3d6f1e3166005f9e",
+      "version": 1,
+      "title": "讓 AI 接得上工作：上下文、記憶與專案脈絡的管理學",
+      "subtitle": null,
+      "description": "本書以非工程背景的AI應用者為對象，解釋聊天、上下文、記憶和專案檔案的區別，如何整理工作材料、避免文件引用錯誤、保存跨日工作快照、管理版本與失效資訊，並辨認個資、記憶與NotebookLM音訊的使用界線。",
+      "date": "2026-10-30",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "非工程使用者管理AI工作資訊的生命週期：上下文可用性、背景包、文件權威、跨日決議快照、版本替代關係與記憶更正；不重教RAG索引或工程Agent狀態機。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch01",
+          "title": "聊天存在，不代表模型知道：釐清上下文、記憶與資料",
+          "textSha256": "5d30ed8649d7cf01c24574d3b74bde878a77197f3970fde3d487938116e587b2",
+          "coreQuestions": [
+            "可見聊天、當次上下文、產品記憶與正式紀錄如何分開？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch02",
+          "title": "資訊怎樣變成可用背景：把工作材料整理成脈絡",
+          "textSha256": "642b6cc34b6673965f9dd43e16a7c84ea5dc3b61ed47baf3b14150f2ca4eedd0",
+          "coreQuestions": [
+            "如何分類背景、當次資料、範例及例外以避免過期事實混入？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch03",
+          "title": "檔案有了，不代表能引用：讓資料進入正確的工作",
+          "textSha256": "ea049ea14e9bd30842ab1211cb131765fb526cb40d8ad2646d3d244c9c86db5f",
+          "coreQuestions": [
+            "檔案取得、找到、理解與引用如何逐步核對來源權威？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch04",
+          "title": "長任務怎樣不失真：留下能接續的工作快照",
+          "textSha256": "fd292fa378e5b9b90fcf8962d51dba75bff774aff2a02d79c123f7ce830ecec3",
+          "coreQuestions": [
+            "跨日工作如何保留已確認決議、原文索引與未完成狀態？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch05",
+          "title": "版本與決策才是長期記錄：不要讓舊資訊反覆復活",
+          "textSha256": "49d4709b0880685b6ab963682208694e6b7ae8cb719483288d7d682371a4b775",
+          "coreQuestions": [
+            "如何記錄現行、取消與取代關係，避免舊承諾復活？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-30_ai-consultant_ch06",
+          "title": "何時該更新與遺忘：讓長期 AI 工作保持可信",
+          "textSha256": "1e609c790fb151acdd8b44e53ac965ee5329c04cece31097521bac486d342c6b",
+          "coreQuestions": [
+            "何時更新、停止引用或更正記憶，如何核對語音條件是否被保留？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch06.md"
         }
       ]
     }
