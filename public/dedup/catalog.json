@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 20,
-  "ledgerSha256": "e5dc430cabbafe44eefb59aa0a682d39e66a263bcaac914d161cdd689ad57877",
+  "revision": 25,
+  "ledgerSha256": "93655b4443608f8f198e1a5a548adbdf7eb5ef5e3c19881bba14e3e7c746ed54",
   "coverage": {
-    "publishedBooks": 24,
-    "publishedChapters": 144,
+    "publishedBooks": 25,
+    "publishedChapters": 150,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 6,
+    "bodySemanticReviewedBooks": 7,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -1456,6 +1456,75 @@
             "何時更新、停止引用或更正記憶，如何核對語音條件是否被保留？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-30_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-10-31_ai-consultant",
+      "workId": "work-774b2176ee14a08d882b5e51",
+      "version": 1,
+      "title": "不是每次更新都要跟：AI 工具變動的觀察、試用與換軌決策",
+      "subtitle": null,
+      "description": "以成人講師每週追蹤 AI 更新與小團隊使用為主案例，辨認公告與實際開放的差別，判斷更新是否改善工作，設計可檢查試用、分階段導入、可信教學與退場遷移。主軸是應用決策與交接，不是底層模型或軟體實作。",
+      "date": "2026-10-31",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "外部AI產品更新的一次完整決策生命週期：公告與可取得性、工作價值、有限試用、過渡導入、教學維護及退役換軌。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch01",
+          "title": "公告不等於可用：先辨認到底改變了什麼",
+          "textSha256": "fec65788005d582f4b05bfe13f8c0eb881ffb6f30af52d413e4c16c9905d9955",
+          "coreQuestions": [
+            "如何分辨供應商公告與自己的帳號實際可取得能力？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch02",
+          "title": "功能變強，不等於工作變好：把新能力放回真實任務",
+          "textSha256": "d0b06bc01d5752487abd09948373575b91804f6eb42c21d200ff627fe91fe5c4",
+          "coreQuestions": [
+            "哪種新能力真正改變原工作價值而非只提高展示效果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch03",
+          "title": "試用不是表演：讓版本比較留下可檢查的證據",
+          "textSha256": "99661df5553e424770d1b83232c22fc77a6ea7c25de643093f28293a2b1a427c",
+          "coreQuestions": [
+            "如何用限定材料比較新舊版本並留下可追溯結論？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch04",
+          "title": "不要一次換掉全部：讓新功能進入工作而不破壞舊流程",
+          "textSha256": "2e414b8f0fe5b63c4a2ff54fa5d937a65580f5f6d6ada6030c0472d65219a225",
+          "coreQuestions": [
+            "如何在一次更新中分段轉換、保留停止與替代能力？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch05",
+          "title": "把更新教到能用：不要讓學員只記得新按鈕",
+          "textSha256": "fcbc27db255286dcd8758f6f3bc6ee7939c4ce16c68d9ee6fa088eb2db50b531",
+          "coreQuestions": [
+            "功能不斷變更時如何維護可跟做且能轉用的課程？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch06",
+          "title": "工具會退場，工作不能停：從遷移到退出的選擇",
+          "textSha256": "0d5dd3e83fbd7e5b6def1856481afaa4e6347665559974d8d4cff248f900a108",
+          "coreQuestions": [
+            "如何區分棄用與停用並安全換軌退出原工具？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch06.md"
         }
       ]
     }

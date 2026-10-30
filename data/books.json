@@ -1776,6 +1776,80 @@
           "durationSec": 313.817687
         }
       ]
+    },
+    {
+      "bookId": "2026-10-31_ai-consultant",
+      "title": "不是每次更新都要跟：AI 工具變動的觀察、試用與換軌決策",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-10-31",
+      "description": "以成人講師每週追蹤 AI 更新與小團隊使用為主案例，辨認公告與實際開放的差別，判斷更新是否改善工作，設計可檢查試用、分階段導入、可信教學與退場遷移。主軸是應用決策與交接，不是底層模型或軟體實作。",
+      "version": 1,
+      "cover": "covers/2026-10-31_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-10-31_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-10-31-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch01",
+          "title": "公告不等於可用：先辨認到底改變了什麼",
+          "markdown": "chapters/2026-10-31_ai-consultant_ch01.md",
+          "textSha256": "fec65788005d582f4b05bfe13f8c0eb881ffb6f30af52d413e4c16c9905d9955",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-31-ai-consultant-v1/2026-10-31_ai-consultant_ch01-a26f8d9e294f.m4a",
+          "sha256": "a26f8d9e294f78c3e651f43ee16749d83d207d1938338a996e130b8c2b669988",
+          "bytes": 10444462,
+          "durationSec": 324.498866
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch02",
+          "title": "功能變強，不等於工作變好：把新能力放回真實任務",
+          "markdown": "chapters/2026-10-31_ai-consultant_ch02.md",
+          "textSha256": "d0b06bc01d5752487abd09948373575b91804f6eb42c21d200ff627fe91fe5c4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-31-ai-consultant-v1/2026-10-31_ai-consultant_ch02-dac148450e22.m4a",
+          "sha256": "dac148450e22cdc2d099e679a6ba91c8188b1da5a9b26ce581417d30ace99992",
+          "bytes": 8686848,
+          "durationSec": 269.885533
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch03",
+          "title": "試用不是表演：讓版本比較留下可檢查的證據",
+          "markdown": "chapters/2026-10-31_ai-consultant_ch03.md",
+          "textSha256": "99661df5553e424770d1b83232c22fc77a6ea7c25de643093f28293a2b1a427c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-31-ai-consultant-v1/2026-10-31_ai-consultant_ch03-6586f8ab3002.m4a",
+          "sha256": "6586f8ab3002d37ba53cf5620473e99884e3a96e6a1535bb4c269a9740d5bc0b",
+          "bytes": 8362517,
+          "durationSec": 259.808073
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch04",
+          "title": "不要一次換掉全部：讓新功能進入工作而不破壞舊流程",
+          "markdown": "chapters/2026-10-31_ai-consultant_ch04.md",
+          "textSha256": "2e414b8f0fe5b63c4a2ff54fa5d937a65580f5f6d6ada6030c0472d65219a225",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-31-ai-consultant-v1/2026-10-31_ai-consultant_ch04-24a397fd20e3.m4a",
+          "sha256": "24a397fd20e3e46e13c8d5aef5d323eadbfa633589c66ff1e683609cd785a5f5",
+          "bytes": 10072321,
+          "durationSec": 312.935329
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch05",
+          "title": "把更新教到能用：不要讓學員只記得新按鈕",
+          "markdown": "chapters/2026-10-31_ai-consultant_ch05.md",
+          "textSha256": "fcbc27db255286dcd8758f6f3bc6ee7939c4ce16c68d9ee6fa088eb2db50b531",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-31-ai-consultant-v1/2026-10-31_ai-consultant_ch05-cacd87a80e4b.m4a",
+          "sha256": "cacd87a80e4bf8ca4b08d55297b352f8f414718c6530d9a57b52de7e8a1d7515",
+          "bytes": 8851943,
+          "durationSec": 275.017143
+        },
+        {
+          "chapterId": "2026-10-31_ai-consultant_ch06",
+          "title": "工具會退場，工作不能停：從遷移到退出的選擇",
+          "markdown": "chapters/2026-10-31_ai-consultant_ch06.md",
+          "textSha256": "0d5dd3e83fbd7e5b6def1856481afaa4e6347665559974d8d4cff248f900a108",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-10-31-ai-consultant-v1/2026-10-31_ai-consultant_ch06-ed095adc9858.m4a",
+          "sha256": "ed095adc985859266c787a5922cdf827afe48377ca8a483bde93278765ce2179",
+          "bytes": 11145416,
+          "durationSec": 346.279184
+        }
+      ]
     }
   ]
 }
