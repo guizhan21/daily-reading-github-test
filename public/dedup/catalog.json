@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 25,
-  "ledgerSha256": "93655b4443608f8f198e1a5a548adbdf7eb5ef5e3c19881bba14e3e7c746ed54",
+  "revision": 35,
+  "ledgerSha256": "4b3b8a8f4b5decfec82d580b8ba3c93c91fa6a83aef2a32c636a2e878eb6695a",
   "coverage": {
-    "publishedBooks": 25,
-    "publishedChapters": 150,
+    "publishedBooks": 27,
+    "publishedChapters": 162,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 7,
+    "bodySemanticReviewedBooks": 9,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -1525,6 +1525,144 @@
             "如何區分棄用與停用並安全換軌退出原工具？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-10-31_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-01_ai-consultant",
+      "workId": "work-ccfe94731b5f00ca4e91f10c",
+      "version": 1,
+      "title": "把 AI 圖像做成可交付作品：從視覺需求到一致性、驗收與授權",
+      "subtitle": null,
+      "description": "從一個明標虛構的社區課程視覺案例出發，解釋如何定義圖像任務、區分構圖與風格參考、建立角色一致性、限制局部編修、驗收文字與功能，以及留下素材來源和可編輯交付。",
+      "date": "2026-11-01",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "AI靜態圖像的創作需求、參考、一致性、局部修改、成品驗收與來源權利交付。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch01",
+          "title": "先定義作品要完成什麼：從「幫我畫一張」到可檢查的視覺任務",
+          "textSha256": "fbae68288b7d94d75bff07b0dca8ff3d3f9a9831862947b4189369b136b718ad",
+          "coreQuestions": [
+            "為何要在生圖前先分出事實、目的、使用情境與視覺表現？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch02",
+          "title": "構圖與風格不是一回事：如何使用參考圖而不失去控制",
+          "textSha256": "fd99c01718d618f043d11f2cfa5f746bb9290ecbb8fa880c71a693e79b409939",
+          "coreQuestions": [
+            "如何區分構圖、風格、主體與合法參考來源？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch03",
+          "title": "角色一致性不是同一種濾鏡：讓多張作品保留同一個世界",
+          "textSha256": "a62a7d7f22c64bb4ea64101fcd97fb9d9517644cceaf79bae4c6a97a3a680ba5",
+          "coreQuestions": [
+            "如何讓跨圖角色、視覺語言與正式資訊保持一致？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch04",
+          "title": "修改一處卻弄壞全圖：局部編修、回饋與停止的判斷",
+          "textSha256": "eb0fe475e76d06acf27f684c3b6731eb624a3d16cb6c9abe3fb9c08dd781ed9d",
+          "coreQuestions": [
+            "怎樣限制修改範圍、追蹤差異並決定何時停止？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch05",
+          "title": "好看不等於能用：文字、功能、可讀性與真實性驗收",
+          "textSha256": "1929a129d64e3fe438d5ddcd71e0b257009eef89989c0583f62ae5db019cbb80",
+          "coreQuestions": [
+            "如何分別驗收文字真實、功能可用及觀看者是否能理解？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch06",
+          "title": "交付不只是下載圖片：來源、授權、透明度與下次還能修改",
+          "textSha256": "54ca72fd9e1d8cf6ed2d252af5ecfbdae7040a083c560963788a9992238042df",
+          "coreQuestions": [
+            "如何交付可修改、可溯源、有授權紀錄且不誤導受眾的作品？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-01_general-knowledge",
+      "workId": "work-0bd9ccb27511986d89af0222",
+      "version": 1,
+      "title": "看不見的食安風險：從微生物、溫度到餐桌判斷的生活科學",
+      "subtitle": null,
+      "description": "以微生物風險鏈為主軸，從「看起來正常不代表安全」、冷鏈與時間、生熟交叉污染、中心溫度與不耐熱／耐熱毒素、採買及生食選擇，最後到疑似食品中毒的健康處置與公共衛生判斷。重點是日常可實踐的因果理解與風險降低，而不是讓讀者自我檢測食物或診斷疾病。",
+      "date": "2026-11-01",
+      "series": "跨領域知識探索",
+      "scope": "食品病原危害鏈與從採買、保存、製備到疑似事件處理的公共衛生判斷。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch01",
+          "title": "看起來正常，為何不等於安全：食物中毒與腐敗是兩回事",
+          "textSha256": "da16d539183c33d68c398e44f28c87e565e78272713724cc77af014c3519be7b",
+          "coreQuestions": [
+            "食物安全與可感知腐敗有何差異，污染、增殖與毒素如何形成不同防線？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch02",
+          "title": "冷藏不是時間暫停：溫度、增殖與熟食保存的科學",
+          "textSha256": "9d0006d68e1692d508d5a82b2a1d6144263dc6199f1ebf81463789b47cf8c857",
+          "coreQuestions": [
+            "冷藏與冷凍各控制什麼，如何根據時間溫度歷史判斷熟食保存與停電處置？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch03",
+          "title": "一道菜如何遭到交叉污染：手、砧板、清潔與生熟分流",
+          "textSha256": "e19a9a19c4ed4f984ccf5340895b95cc48326653d7e1a1143ad1ba64dd3501bf",
+          "coreQuestions": [
+            "危害怎樣透過人、工具與食材轉移，生熟分流和正確清潔為何比看起來乾淨重要？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch04",
+          "title": "煮熟並不是萬靈丹：中心溫度、再加熱與毒素的界線",
+          "textSha256": "f273b451dce5f4349999c5210c1327169d22352de7dc6054949653d896f72be3",
+          "coreQuestions": [
+            "食品充分加熱可以降低哪些危害，為何不能替長時間常溫放置或再次污染補救？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch05",
+          "title": "從採買到餐桌的風險：冷鏈、日期標示與生食選擇",
+          "textSha256": "81b39efe14194c88cba054fa6248a3d1d01333ebb1e6a87e13aede9792be90f3",
+          "coreQuestions": [
+            "從採買、標示與原料來源到供餐，如何辨認食物品質、冷鏈與生食的不同風險？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch06",
+          "title": "遇到疑似食安事件怎麼判斷：症狀、證據與公共衛生決策",
+          "textSha256": "5285e12f35f81d4b33713049ff71037ca374565e27c73cd247e078a82befd289",
+          "coreQuestions": [
+            "疑似食物中毒時，何時就醫、哪些記錄有助追查，如何避免未查證的歸因與再度暴露？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch06.md"
         }
       ]
     }

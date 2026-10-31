@@ -1850,6 +1850,154 @@
           "durationSec": 346.279184
         }
       ]
+    },
+    {
+      "bookId": "2026-11-01_ai-consultant",
+      "title": "把 AI 圖像做成可交付作品：從視覺需求到一致性、驗收與授權",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-01",
+      "description": "從一個明標虛構的社區課程視覺案例出發，解釋如何定義圖像任務、區分構圖與風格參考、建立角色一致性、限制局部編修、驗收文字與功能，以及留下素材來源和可編輯交付。",
+      "version": 1,
+      "cover": "covers/2026-11-01_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-01_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-01-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch01",
+          "title": "先定義作品要完成什麼：從「幫我畫一張」到可檢查的視覺任務",
+          "markdown": "chapters/2026-11-01_ai-consultant_ch01.md",
+          "textSha256": "fbae68288b7d94d75bff07b0dca8ff3d3f9a9831862947b4189369b136b718ad",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-ai-consultant-v1/2026-11-01_ai-consultant_ch01-aa39c08e6b0e.m4a",
+          "sha256": "aa39c08e6b0e596ff66ead2c130c67457694de36aef988129dbb9867fbcbeb4c",
+          "bytes": 9849588,
+          "durationSec": 306.015782
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch02",
+          "title": "構圖與風格不是一回事：如何使用參考圖而不失去控制",
+          "markdown": "chapters/2026-11-01_ai-consultant_ch02.md",
+          "textSha256": "fd99c01718d618f043d11f2cfa5f746bb9290ecbb8fa880c71a693e79b409939",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-ai-consultant-v1/2026-11-01_ai-consultant_ch02-116c96ea87db.m4a",
+          "sha256": "116c96ea87dbd24a3f0b1db573ef970bedbebb01974298d29245969c762c4d6b",
+          "bytes": 10037210,
+          "durationSec": 311.843991
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch03",
+          "title": "角色一致性不是同一種濾鏡：讓多張作品保留同一個世界",
+          "markdown": "chapters/2026-11-01_ai-consultant_ch03.md",
+          "textSha256": "a62a7d7f22c64bb4ea64101fcd97fb9d9517644cceaf79bae4c6a97a3a680ba5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-ai-consultant-v1/2026-11-01_ai-consultant_ch03-635715e71b49.m4a",
+          "sha256": "635715e71b49c58e20349170f1700d1627b54cfa046c84677cea4b7ed4f52e1f",
+          "bytes": 9543186,
+          "durationSec": 296.495601
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch04",
+          "title": "修改一處卻弄壞全圖：局部編修、回饋與停止的判斷",
+          "markdown": "chapters/2026-11-01_ai-consultant_ch04.md",
+          "textSha256": "eb0fe475e76d06acf27f684c3b6731eb624a3d16cb6c9abe3fb9c08dd781ed9d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-ai-consultant-v1/2026-11-01_ai-consultant_ch04-1a87e93f1ab1.m4a",
+          "sha256": "1a87e93f1ab105e0c1178fe07a4630994f00b6c3af1219f54db5741d97c735a5",
+          "bytes": 9356426,
+          "durationSec": 290.690612
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch05",
+          "title": "好看不等於能用：文字、功能、可讀性與真實性驗收",
+          "markdown": "chapters/2026-11-01_ai-consultant_ch05.md",
+          "textSha256": "1929a129d64e3fe438d5ddcd71e0b257009eef89989c0583f62ae5db019cbb80",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-ai-consultant-v1/2026-11-01_ai-consultant_ch05-4e6e2c9b4e6a.m4a",
+          "sha256": "4e6e2c9b4e6ad3de804ab2cc71275e2731a8805e61cd71192a8fbd436f55f9c7",
+          "bytes": 10318213,
+          "durationSec": 320.574694
+        },
+        {
+          "chapterId": "2026-11-01_ai-consultant_ch06",
+          "title": "交付不只是下載圖片：來源、授權、透明度與下次還能修改",
+          "markdown": "chapters/2026-11-01_ai-consultant_ch06.md",
+          "textSha256": "54ca72fd9e1d8cf6ed2d252af5ecfbdae7040a083c560963788a9992238042df",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-ai-consultant-v1/2026-11-01_ai-consultant_ch06-1e0e4a57ec4e.m4a",
+          "sha256": "1e0e4a57ec4ef316ed7f018987b181273cbecb0a8a213eaf505d1049ebd1cef1",
+          "bytes": 13133235,
+          "durationSec": 408.044263
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-01_general-knowledge",
+      "title": "看不見的食安風險：從微生物、溫度到餐桌判斷的生活科學",
+      "category": "跨領域知識探索",
+      "date": "2026-11-01",
+      "description": "以微生物風險鏈為主軸，從「看起來正常不代表安全」、冷鏈與時間、生熟交叉污染、中心溫度與不耐熱／耐熱毒素、採買及生食選擇，最後到疑似食品中毒的健康處置與公共衛生判斷。重點是日常可實踐的因果理解與風險降低，而不是讓讀者自我檢測食物或診斷疾病。",
+      "version": 1,
+      "cover": "covers/2026-11-01_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-01_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-01-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch01",
+          "title": "看起來正常，為何不等於安全：食物中毒與腐敗是兩回事",
+          "markdown": "chapters/2026-11-01_general-knowledge_ch01.md",
+          "textSha256": "da16d539183c33d68c398e44f28c87e565e78272713724cc77af014c3519be7b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-general-knowledge-v1/2026-11-01_general-knowledge_ch01-ff3c6fe416d3.m4a",
+          "sha256": "ff3c6fe416d37ed4edc79fa5f58782811f1cc4f426af753edfb84b022e71b816",
+          "bytes": 11208915,
+          "durationSec": 348.25288
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch02",
+          "title": "冷藏不是時間暫停：溫度、增殖與熟食保存的科學",
+          "markdown": "chapters/2026-11-01_general-knowledge_ch02.md",
+          "textSha256": "9d0006d68e1692d508d5a82b2a1d6144263dc6199f1ebf81463789b47cf8c857",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-general-knowledge-v1/2026-11-01_general-knowledge_ch02-1bfc664ae593.m4a",
+          "sha256": "1bfc664ae593ed9b268467bc68f28a2bba568db7c56fc5aa4ab1abfdcfdb100c",
+          "bytes": 10975839,
+          "durationSec": 341.008254
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch03",
+          "title": "一道菜如何遭到交叉污染：手、砧板、清潔與生熟分流",
+          "markdown": "chapters/2026-11-01_general-knowledge_ch03.md",
+          "textSha256": "e19a9a19c4ed4f984ccf5340895b95cc48326653d7e1a1143ad1ba64dd3501bf",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-general-knowledge-v1/2026-11-01_general-knowledge_ch03-82a19c33e88b.m4a",
+          "sha256": "82a19c33e88b3a40b235219f09cca02a673d0313420fe7dcda07c59be9abe286",
+          "bytes": 9390790,
+          "durationSec": 291.75873
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch04",
+          "title": "煮熟並不是萬靈丹：中心溫度、再加熱與毒素的界線",
+          "markdown": "chapters/2026-11-01_general-knowledge_ch04.md",
+          "textSha256": "f273b451dce5f4349999c5210c1327169d22352de7dc6054949653d896f72be3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-general-knowledge-v1/2026-11-01_general-knowledge_ch04-8b0bd395ad03.m4a",
+          "sha256": "8b0bd395ad032969e3a6640557c78602c7611fa2191d172c42e6ddc3a80cb0ed",
+          "bytes": 9632083,
+          "durationSec": 299.258776
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch05",
+          "title": "從採買到餐桌的風險：冷鏈、日期標示與生食選擇",
+          "markdown": "chapters/2026-11-01_general-knowledge_ch05.md",
+          "textSha256": "81b39efe14194c88cba054fa6248a3d1d01333ebb1e6a87e13aede9792be90f3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-general-knowledge-v1/2026-11-01_general-knowledge_ch05-d4289a5fc621.m4a",
+          "sha256": "d4289a5fc6215e819b1fbf88b3f459b3e7e34c9d554af43450de4c0cc71ee6cc",
+          "bytes": 8896765,
+          "durationSec": 276.41034
+        },
+        {
+          "chapterId": "2026-11-01_general-knowledge_ch06",
+          "title": "遇到疑似食安事件怎麼判斷：症狀、證據與公共衛生決策",
+          "markdown": "chapters/2026-11-01_general-knowledge_ch06.md",
+          "textSha256": "5285e12f35f81d4b33713049ff71037ca374565e27c73cd247e078a82befd289",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-01-general-knowledge-v1/2026-11-01_general-knowledge_ch06-540983ea0aa3.m4a",
+          "sha256": "540983ea0aa377c4cb737da33081084219aeb7f971ce9b834bcaa78fb251b328",
+          "bytes": 9762184,
+          "durationSec": 303.299048
+        }
+      ]
     }
   ]
 }
