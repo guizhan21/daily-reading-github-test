@@ -1,0 +1,11 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';
+import {stopOwnedTestServer} from './owned-server-cleanup.mjs';
+async function fixture(forceClose){
+ const code=`import http from 'node:http';const server=http.createServer((req,res)=>{res.writeHead(200,{'Content-Type':'text/html'});if(req.method==='HEAD')res.end();else{res.write(Buffer.alloc(65536,120));const timer=setInterval(()=>res.write(Buffer.alloc(65536,120)),20);res.on('close',()=>clearInterval(timer));}});server.listen(0,'127.0.0.1',()=>process.send({port:server.address().port}));process.on('message',()=>{server.close(()=>process.disconnect());${forceClose?'server.closeAllConnections();':''}});`;
+ const child=spawn(process.execPath,['--input-type=module','-e',code],{stdio:['ignore','ignore','pipe','ipc'],windowsHide:true});
+ const {port}=await new Promise((resolve,reject)=>{child.once('message',resolve);child.once('error',reject);});
+ return {child,url:'http://127.0.0.1:'+port,stop:()=>stopOwnedTestServer(child,{graceMs:500,requestClose:c=>c.send('shutdown')})};
+}
+test('HEAD readiness does not pin a large homepage response during shutdown',{timeout:5000},async()=>{const f=await fixture(false);try{const response=await fetch(f.url,{method:'HEAD'});assert.equal(response.status,200);assert.equal(response.body,null);const r=await f.stop();assert.equal(r.forced,false);assert.equal(r.code,0);}finally{if(f.child.exitCode===null&&f.child.signalCode===null)await f.stop();}});
+test('an active unread GET reproduces a server-close stall and bounded owned cleanup records it',{timeout:5000},async()=>{const f=await fixture(false);let response;try{response=await fetch(f.url);assert.equal(response.status,200);const r=await f.stop();assert.equal(r.forced,true);}finally{await response?.body?.cancel().catch(()=>{});if(f.child.exitCode===null&&f.child.signalCode===null)await f.stop();}});
+test('closing active test connections permits graceful shutdown even with an unread body',{timeout:5000},async()=>{const f=await fixture(true);let response;try{response=await fetch(f.url);assert.equal(response.status,200);const r=await f.stop();assert.equal(r.forced,false);assert.equal(r.code,0);}finally{await response?.body?.cancel().catch(()=>{});if(f.child.exitCode===null&&f.child.signalCode===null)await f.stop();}});
