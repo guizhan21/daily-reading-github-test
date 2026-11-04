@@ -125,7 +125,10 @@ export class DedupStore{
  }
  async withPublication(candidate,publicBook,operation){
   const release=lease(this.workspace,'github-dedup');try{
-   this.assert(candidate);const result=await operation(),current=this.load();
+   const accepted=this.assert(candidate),fingerprint=digest(publicBook);
+   if(accepted.publication&&accepted.publication.fingerprint!==fingerprint)throw Error('DEDUP_CONFLICT: published edition cannot be replaced');
+   const result=await operation(),current=this.load();
+   if(current.entries.find(e=>key(e)===key(candidate))?.publication?.fingerprint===fingerprint)return result;
    this.#commit(current,ledger=>{ledger.entries.find(e=>key(e)===key(candidate)).publication={fingerprint:digest(publicBook),at:new Date().toISOString()};ledger.events.push({type:'published',bookId:candidate.bookId,version:candidate.version});});return result;
   }finally{release();}
  }

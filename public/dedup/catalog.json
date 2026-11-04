@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 79,
-  "ledgerSha256": "37ede3fdc76448587b6e768f9b221c660765998d17188809a4697b3750744d6c",
+  "revision": 80,
+  "ledgerSha256": "83df2c93f775c97682052e2cd9069e6c5744b1fbc7704a993569a9e43220515a",
   "coverage": {
     "publishedBooks": 34,
     "publishedChapters": 204,
