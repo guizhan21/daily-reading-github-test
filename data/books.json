@@ -1998,6 +1998,80 @@
           "durationSec": 303.299048
         }
       ]
+    },
+    {
+      "bookId": "2026-11-02_general-knowledge",
+      "title": "你登入的真的是你嗎：從密碼、通行密鑰到帳號接管的數位身分科學",
+      "category": "跨領域知識探索",
+      "date": "2026-11-02",
+      "description": "從一封陌生登入通知開始，釐清數位身分、密碼重用、一次性驗證碼的釣魚弱點、通行密鑰的網域綁定、登入後工作階段、換機恢復與帳號遭接管的證據判斷；以具體假設情境講解防護的因果、取捨及限制。",
+      "version": 1,
+      "cover": "covers/2026-11-02_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-02_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-02-general-knowledge-ch01-preview",
+      "chapters": [
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch01",
+          "title": "登入到底證明了什麼：帳號、真人與權限不是同一回事",
+          "markdown": "chapters/2026-11-02_general-knowledge_ch01.md",
+          "textSha256": "42c2170ff11266426dc1a7d6f11dac8adde092336c06a90f26d48d238d1d8a5a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-02-general-knowledge-ch01-preview/2026-11-02_general-knowledge_ch01-b68e1d411fe9-9418d4ab-cd81a438.m4a",
+          "sha256": "cd81a438e4915a03de69a4e212591b5d07df0ff56e832b82cdd98a2e8d6d19e8",
+          "bytes": 9998364,
+          "durationSec": 310.636553
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch02",
+          "title": "密碼為何一個失守，全盤遭殃：重用、撞庫與管理器的科學",
+          "markdown": "chapters/2026-11-02_general-knowledge_ch02.md",
+          "textSha256": "e0aa06c80f9df9674b5afd345c963d52f5a6394b4237550709cec81d455a9320",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-02-general-knowledge-ch01-preview/2026-11-02_general-knowledge_ch02-c93c44f2aae4.m4a",
+          "sha256": "c93c44f2aae43e7d1d22fbec95d53764bf1128622fd0abb063b87b647db804b1",
+          "bytes": 8796662,
+          "durationSec": 273.298866
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch03",
+          "title": "驗證碼為何仍會被騙走：從一次性密碼到通行密鑰",
+          "markdown": "chapters/2026-11-02_general-knowledge_ch03.md",
+          "textSha256": "aa15c0a0076beff381b6856e0f947132354fcbe1974f3db21ce41f1f65446afc",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-02-general-knowledge-ch01-preview/2026-11-02_general-knowledge_ch03-b2f1285b436b.m4a",
+          "sha256": "b2f1285b436b67c7e750545c20c6752ca40220640abd072bb00f50c9ffcfe6af",
+          "bytes": 8393145,
+          "durationSec": 260.760091
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch04",
+          "title": "登入之後誰還在開門：Cookie、工作階段與看不見的通行證",
+          "markdown": "chapters/2026-11-02_general-knowledge_ch04.md",
+          "textSha256": "0a047528571d4ec5838fee0ad3bc7361a51b5caa4882716755697e2394fe4b6b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-02-general-knowledge-ch01-preview/2026-11-02_general-knowledge_ch04-aa21019897a0.m4a",
+          "sha256": "aa21019897a016c10595a36bc9aeb7b299c429749aceb95f1752c51d08622c35",
+          "bytes": 9037325,
+          "durationSec": 280.775692
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch05",
+          "title": "換手機之前先想怎麼回來：備援驗證與帳號恢復的兩難",
+          "markdown": "chapters/2026-11-02_general-knowledge_ch05.md",
+          "textSha256": "1d36f7eba23e940c73574aa21957726db385f1615aaf9391137b4ec00f97b694",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-02-general-knowledge-ch01-preview/2026-11-02_general-knowledge_ch05-a9f680a5e0de.m4a",
+          "sha256": "a9f680a5e0de41d7f52d5b69f49d65ff8a7a0945cc90ecc372192b45f4a3d93d",
+          "bytes": 8743622,
+          "durationSec": 271.650249
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch06",
+          "title": "收到陌生登入通知，先救什麼：帳號接管的判斷與復原",
+          "markdown": "chapters/2026-11-02_general-knowledge_ch06.md",
+          "textSha256": "65ed1d9366e6d90ea9bf757ee6a7da65bf0b65ec4f6cfb4bd381eb8442d233b3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-02-general-knowledge-ch01-preview/2026-11-02_general-knowledge_ch06-b47b1cd7776d.m4a",
+          "sha256": "b47b1cd7776d8dc67683c6cd9ab36e604f46954dc8b137418d236a40f90d5b0b",
+          "bytes": 9427395,
+          "durationSec": 292.896508
+        }
+      ]
     }
   ]
 }

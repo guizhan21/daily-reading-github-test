@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 35,
-  "ledgerSha256": "4b3b8a8f4b5decfec82d580b8ba3c93c91fa6a83aef2a32c636a2e878eb6695a",
+  "revision": 61,
+  "ledgerSha256": "41cdda45e85dfa2f8d04011bc4e9687f722f7af40448e6de722a847a4e2c967c",
   "coverage": {
-    "publishedBooks": 27,
-    "publishedChapters": 162,
+    "publishedBooks": 28,
+    "publishedChapters": 168,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 9,
+    "bodySemanticReviewedBooks": 10,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -1663,6 +1663,75 @@
             "疑似食物中毒時，何時就醫、哪些記錄有助追查，如何避免未查證的歸因與再度暴露？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-01_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-02_general-knowledge",
+      "workId": "work-4302c4cf7ce7870875ea9a6d",
+      "version": 1,
+      "title": "你登入的真的是你嗎：從密碼、通行密鑰到帳號接管的數位身分科學",
+      "subtitle": null,
+      "description": "從一封陌生登入通知開始，釐清數位身分、密碼重用、一次性驗證碼的釣魚弱點、通行密鑰的網域綁定、登入後工作階段、換機恢復與帳號遭接管的證據判斷；以具體假設情境講解防護的因果、取捨及限制。",
+      "date": "2026-11-02",
+      "series": "跨領域知識探索",
+      "scope": "已讀完整當前書目與全部候選章題；候選每章開頭及結尾敘述片段、對照每章開頭片段和章題。另讀成人教學／記憶／協作／安全治理的標記片段，舊協作書ch04另完整閱讀。本作品審查範圍為selected_passages，未讀全庫全文、不宣稱完整查重或事實核對。 本次更新另查閱新入帳客服書六章章題及案例、核心論點片段。 補核習慣書六章章題及案例或主要論點片段。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch01",
+          "title": "登入到底證明了什麼：帳號、真人與權限不是同一回事",
+          "textSha256": "42c2170ff11266426dc1a7d6f11dac8adde092336c06a90f26d48d238d1d8a5a",
+          "coreQuestions": [
+            "帳號、本人身分核實、登入驗證與存取權限各自能證明什麼？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch02",
+          "title": "密碼為何一個失守，全盤遭殃：重用、撞庫與管理器的科學",
+          "textSha256": "e0aa06c80f9df9674b5afd345c963d52f5a6394b4237550709cec81d455a9320",
+          "coreQuestions": [
+            "密碼重用如何把一處洩漏擴大到其他帳號，管理器能解決哪些限制？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch03",
+          "title": "驗證碼為何仍會被騙走：從一次性密碼到通行密鑰",
+          "textSha256": "aa15c0a0076beff381b6856e0f947132354fcbe1974f3db21ce41f1f65446afc",
+          "coreQuestions": [
+            "真實驗證碼為何仍可能被釣魚中繼，通行密鑰保護哪個環節？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch04",
+          "title": "登入之後誰還在開門：Cookie、工作階段與看不見的通行證",
+          "textSha256": "0a047528571d4ec5838fee0ad3bc7361a51b5caa4882716755697e2394fe4b6b",
+          "coreQuestions": [
+            "登入後的Cookie與工作階段為何需要過期、登出與撤銷？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch05",
+          "title": "換手機之前先想怎麼回來：備援驗證與帳號恢復的兩難",
+          "textSha256": "1d36f7eba23e940c73574aa21957726db385f1615aaf9391137b4ec00f97b694",
+          "coreQuestions": [
+            "裝置遺失或換機時，怎樣避免備援驗證和信箱互相依賴而無法恢復？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch06",
+          "title": "收到陌生登入通知，先救什麼：帳號接管的判斷與復原",
+          "textSha256": "65ed1d9366e6d90ea9bf757ee6a7da65bf0b65ec4f6cfb4bd381eb8442d233b3",
+          "coreQuestions": [
+            "收到陌生登入通知時，怎樣先驗真、保住控制權並處理擴散風險？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_general-knowledge_ch06.md"
         }
       ]
     }

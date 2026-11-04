@@ -1107,6 +1107,47 @@
         }
       ],
       "contentReview": "File integrity and initial topic/chapter review passed; numbers, English pronunciation and noted rhetorical wording remain pending human review."
+    },
+    {
+      "bookId": "2026-11-02_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-11-04T01:20:05.680Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library and explicitly approved backlog. The verified original ChatGPT ZIP contains authored explanatory prose, clearly hypothetical examples, and links to published sources, not copies of third-party books. The original cover is a project-authorized built-in Image creation. Chapter 1 is the exact accepted preview; chapters 2–6 use their independently checked original text as the sole source, and the output files were verified for identity and full decode.",
+      "coverSha256": "3c6ecdc4288ae12ff5bcd10389be879b1571b4972a9fa7128fa4048c353319e9",
+      "chapters": [
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch01",
+          "textSha256": "42c2170ff11266426dc1a7d6f11dac8adde092336c06a90f26d48d238d1d8a5a",
+          "audioSha256": "cd81a438e4915a03de69a4e212591b5d07df0ff56e832b82cdd98a2e8d6d19e8"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch02",
+          "textSha256": "e0aa06c80f9df9674b5afd345c963d52f5a6394b4237550709cec81d455a9320",
+          "audioSha256": "c93c44f2aae43e7d1d22fbec95d53764bf1128622fd0abb063b87b647db804b1"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch03",
+          "textSha256": "aa15c0a0076beff381b6856e0f947132354fcbe1974f3db21ce41f1f65446afc",
+          "audioSha256": "b2f1285b436b67c7e750545c20c6752ca40220640abd072bb00f50c9ffcfe6af"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch04",
+          "textSha256": "0a047528571d4ec5838fee0ad3bc7361a51b5caa4882716755697e2394fe4b6b",
+          "audioSha256": "aa21019897a016c10595a36bc9aeb7b299c429749aceb95f1752c51d08622c35"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch05",
+          "textSha256": "1d36f7eba23e940c73574aa21957726db385f1615aaf9391137b4ec00f97b694",
+          "audioSha256": "a9f680a5e0de41d7f52d5b69f49d65ff8a7a0945cc90ecc372192b45f4a3d93d"
+        },
+        {
+          "chapterId": "2026-11-02_general-knowledge_ch06",
+          "textSha256": "65ed1d9366e6d90ea9bf757ee6a7da65bf0b65ec4f6cfb4bd381eb8442d233b3",
+          "audioSha256": "b47b1cd7776d8dc67683c6cd9ab36e604f46954dc8b137418d236a40f90d5b0b"
+        }
+      ],
+      "contentReview": "Chapter 1 is the exact user-approved preview. Chapters 2–6: pre-generation source cross-check, then original file identity and integrity; no post-generation content review."
     }
   ],
   "skipped": []
