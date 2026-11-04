@@ -1230,6 +1230,170 @@
         }
       ],
       "contentReview": "Pre-generation independent web source cross-check, then technical original-file acceptance. No ASR, listening or post-generation semantic review is claimed."
+    },
+    {
+      "bookId": "2026-11-02_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-11-04T06:21:38.387Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library and backlog publication. Reviewed original ChatGPT-authored explanatory prose, explicitly hypothetical cases and source links, not a reproduction of a third-party book. No private customer/bank records or credentials are present. Cover is an authorized built-in Image creation. All six chapter sources were read and cross-checked before NotebookLM submission; exact artifact/source/prompt identity, original file SHA and full decode were verified afterwards.",
+      "coverSha256": "78be7a43d847a2e7fb6b04ec33a10e0b3f548c3f949d91f3cf0c45bdf5854400",
+      "chapters": [
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch01",
+          "textSha256": "4fc4de29c34ad59c76896a606154c7e46be3b345646f6304ed05c8c75d5cfa62",
+          "audioSha256": "953642da6cdf2d7cfa59311fdf10b2e454b5dc376dd8faf93e454c0337018fad"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch02",
+          "textSha256": "2dd8d16edcc443aa11c10a64a084d6b60b1a6d9ff24efbcd98a333d681ee9912",
+          "audioSha256": "0cbf15ca168a970040f840b355eda71e8dec784f913668a11f87f27e7cec907c"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch03",
+          "textSha256": "a6a5fae44622dcd398f682e8f3339911209a5d2e16e686453e3d8d1db1621cc9",
+          "audioSha256": "5a7d5d5a016ef59620b8daad1bcbae992869bd157cc6b813f991b1fa3358c84a"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch04",
+          "textSha256": "35fc33f23710c80674cba7c8848a029256cf66ba4a2ba53b0f0e83be8895de14",
+          "audioSha256": "6580de196896175f0608083513a61ca0ead58dbc5d2acf13d5d8359d02a9d2d0"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch05",
+          "textSha256": "d56d0f073b5961f91a33413f423a019e65aa1e36464c029b8772d2528f498baf",
+          "audioSha256": "5c31b4622115731f185772ed78abf4283136dbedefc45fce7d21ab072faf3967"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch06",
+          "textSha256": "467b47969152a4e4cdec02b32b7d7501c1190ca17e6703828a17fd1257c1db7f",
+          "audioSha256": "5cf5cdf024e30eec59c8b579b2e16447e15306ff0aea75f94a27ab9dc5652512"
+        }
+      ],
+      "contentReview": "Pre-generation independent web source cross-check, then technical original-file acceptance. No ASR, listening or post-generation semantic review is claimed."
+    },
+    {
+      "bookId": "2026-11-03_general-knowledge",
+      "version": 1,
+      "reviewedAt": "2026-11-04T06:43:06.390Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library and backlog publication. Reviewed original ChatGPT-authored explanatory prose, explicitly hypothetical cases and source links, not a reproduction of a third-party book. No private customer/bank records or credentials are present. Cover is an authorized built-in Image creation. All six chapter sources were read and cross-checked before NotebookLM submission; exact artifact/source/prompt identity, original file SHA and full decode were verified afterwards.",
+      "coverSha256": "807c63d4e7ca6e16a5d1971c2cbffa10041dcc2c852969fe78fcdbf3bb993c55",
+      "chapters": [
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch01",
+          "textSha256": "88189f7262dc0233f44c80508de5b274e6c2fd020a6a70469645c6ff3c4184b1",
+          "audioSha256": "625f2fbf5f346de6de9f8b7ff9cf11c3bd67d12251677124d15642882ff1795e"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch02",
+          "textSha256": "da0b0b084082bb8b63421d98ee7ef9dcb529bc250adf1ede609771d7e99c7cf0",
+          "audioSha256": "b2e5f0cd9cbb4f9dbaa38eb89c33d4fbf86d2bad649f6b6a2d0bc72da13d0568"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch03",
+          "textSha256": "5f88fde9f007643a2cb9450152d8783c4702f40fd7f61a4a6f8d11d6fd584dc1",
+          "audioSha256": "dd97d8ee2ba6e5af9c7a308ce49fdf5db5036790c50025c9178ffe42132ab66f"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch04",
+          "textSha256": "5c677af12b3a0c09c6cd52a18e0ac80c7d72b6ea9c7406829b7b0ba4c50985a3",
+          "audioSha256": "19968d98c2b568af3dee60a3a0519a96f2b3238f285a5a3e1ec22b74585ec008"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch05",
+          "textSha256": "10bd95b11f61b36e858a694b37e70b1e3ac5935bf4496ecc9a1d57962dfd0777",
+          "audioSha256": "5a53b20e8682719e5781db7a5b204d36f165bbbed118323f16e08231b889a63e"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch06",
+          "textSha256": "b81580274d468a22ef46a6151ef4ae3f5d982706d90a154ad556d170251573d7",
+          "audioSha256": "b77c59e72b8c9c4956614c6c9609f639d6b5c96b8649f9d3c3db215c49667254"
+        }
+      ],
+      "contentReview": "Pre-generation independent web source cross-check, then technical original-file acceptance. No ASR, listening or post-generation semantic review is claimed."
+    },
+    {
+      "bookId": "2026-11-04_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-11-04T07:24:19.158Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library and backlog publication. Reviewed original ChatGPT-authored explanatory prose, explicitly hypothetical cases and source links, not a reproduction of a third-party book. No private customer/bank records or credentials are present. Cover is an authorized built-in Image creation. All six chapter sources were read and cross-checked before NotebookLM submission; exact artifact/source/prompt identity, original file SHA and full decode were verified afterwards.",
+      "coverSha256": "ea3fe85cef495cf1a162764cf0674e5725a885cc63cd94052da627defe172489",
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch01",
+          "textSha256": "f15b2c3021671630906698fd78112a6b0eb6504d6be9145b624b4f737759f0c0",
+          "audioSha256": "d09663b8fafbdfe4dcb74b274c9f49a1da5503d41d4ed266385b298ac0f48a34"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch02",
+          "textSha256": "69caa519a7a89adfec5ca2d6f6b41f5a4ec464c9ab4b46316ad9f8f2b1401116",
+          "audioSha256": "105a074db14a5fc371ef38e359405017a639383cf0257c1f6369fd390b00c91e"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch03",
+          "textSha256": "aeb3a63046f6bdd05afb778adb58282bc3a0df16c1082650dadb158380aac2cc",
+          "audioSha256": "781d8b13c9c87c219870af56b045a6203c0e3d975dd09be66185bc7759bb2d16"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch04",
+          "textSha256": "c44c2d6e628f79828c2b613493a673627f587c0de3794ada74c212f3631684e8",
+          "audioSha256": "1b381edea9f389b0c517ec54d018ce2286cc71813eb02510919d2c89a1bc5260"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch05",
+          "textSha256": "1e671a2ecf3b3e062490e4d3d2db555e8040abb0e96310f3fc1a3f603566c46f",
+          "audioSha256": "843c548344104d56c3653f8992b06b2bd1cf2119eec807f33c0a8469414d1fd1"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch06",
+          "textSha256": "5ad2cd00757fdfcd47393deeee9dc43e3c70d638344fac1b88e5c6ffffcd4fd6",
+          "audioSha256": "01abfe02206f59f7fcd0c6b4f9bbcd8fec77355cc82712358050ae6ad8326fbb"
+        }
+      ],
+      "contentReview": "Pre-generation independent web source cross-check, then technical original-file acceptance. No ASR, listening or post-generation semantic review is claimed."
+    },
+    {
+      "bookId": "2026-11-04_general-knowledge_procrastination",
+      "version": 1,
+      "reviewedAt": "2026-11-04T07:27:55.209Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library and backlog publication. Reviewed original ChatGPT-authored explanatory prose, explicitly hypothetical cases and source links, not a reproduction of a third-party book. No private customer/bank records or credentials are present. Cover is an authorized built-in Image creation. All six chapter sources were read and cross-checked before NotebookLM submission; exact artifact/source/prompt identity, original file SHA and full decode were verified afterwards.",
+      "coverSha256": "5f636148963e12d36b334d9fbe71eb146fa8db3649fb80bad7032dd198020a9b",
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch01",
+          "textSha256": "cfcf795459b74a52c3420d55c239ddb5f124c5ef2d26f96cbc80f0f529644314",
+          "audioSha256": "3e9161279723b1cc75f51510d21f0ad22ce107799771a4ed3f3122953cd3dca9"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch02",
+          "textSha256": "03e3c60b8d9423a3bf3db7a616ae5f2b16a88cf01ed5a538f75438a17bf88bc4",
+          "audioSha256": "7e63aed78a903eb980dd1ea16c7c8fa3424d82644883f2d7192e527b079dbea2"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch03",
+          "textSha256": "d8658a9bfd80da6b7805d55fd0e54a2a912a9a3aab3492e7aa5595daf79eb909",
+          "audioSha256": "2e79db975d47379c0626a69e4810e0dafe335248828361c0893a5e5030dae05d"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch04",
+          "textSha256": "b220d42aca3234dd38b28ae563cb9619f420582a2803a97c82021ce1f0e79f24",
+          "audioSha256": "d22662c2ba42e191405920bf37a63c3225aca852648134fc0ae44d5f559bf2f9"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch05",
+          "textSha256": "08287a72f01d19813ebd84fcc49aa80e64386190346e173acec7b58a2bf5e977",
+          "audioSha256": "6288b336624230c48c468d44a72a7cd5a708a97a249b22aefad7b8eb3778ed48"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch06",
+          "textSha256": "afea00872b409d12198b770898488c08e84676365941cb27cd39f985dfa93b91",
+          "audioSha256": "0ae885feb23be86f9bcbe968aeb1eb7ec1b18fc33052128db3d06c20b761d6c1"
+        }
+      ],
+      "contentReview": "Pre-generation independent web source cross-check, then technical original-file acceptance. No ASR, listening or post-generation semantic review is claimed."
     }
   ],
   "skipped": []

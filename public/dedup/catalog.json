@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 64,
-  "ledgerSha256": "77f7be20f46eed6edf235146bacf67717a31596e6e879f4a9e10036dd8bc5be6",
+  "revision": 79,
+  "ledgerSha256": "37ede3fdc76448587b6e768f9b221c660765998d17188809a4697b3750744d6c",
   "coverage": {
-    "publishedBooks": 30,
-    "publishedChapters": 180,
+    "publishedBooks": 34,
+    "publishedChapters": 204,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 12,
+    "bodySemanticReviewedBooks": 16,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -1870,6 +1870,282 @@
             "活動現場如何把來源、款項、席次與核准連接成可追溯、可更正和有備援的工作鏈？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-02_ai-consultant",
+      "workId": "work-bca24a43de58b8fc56b08657",
+      "version": 1,
+      "title": "讓知識說得動人：從 AI 原稿到真正聽得懂的播客",
+      "subtitle": null,
+      "description": "沿著虛構「海岸學苑」知識播客的製作與誤讀，拆解為什麼正確卻空泛的原稿讓人想睡、案例如何從問題走到結果、耳朵聽知識時的限制、查證與戲劇性的邊界、NotebookLM 的逐章引導，以及如何用實際試聽定位要回修原文還是提示詞。",
+      "date": "2026-11-02",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "已讀完整當前書目與全部候選章題；候選每章開頭及結尾敘述片段、對照每章開頭片段和章題。另讀成人教學／記憶／協作／安全治理的標記片段，舊協作書ch04另完整閱讀。本作品審查範圍為selected_passages，未讀全庫全文、不宣稱完整查重或事實核對。 本次更新另查閱新入帳客服書六章章題及案例、核心論點片段。 補核習慣書六章章題及案例或主要論點片段。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch01",
+          "title": "原稿為什麼讓人想睡：先找到聽眾真正想解決的問題",
+          "textSha256": "4fc4de29c34ad59c76896a606154c7e46be3b345646f6304ed05c8c75d5cfa62",
+          "coreQuestions": [
+            "如何把原稿的廣泛主題轉成聽眾願意追下去的具體問題？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch02",
+          "title": "案例要走到結果：讓一個情境真正解釋觀念",
+          "textSha256": "2dd8d16edcc443aa11c10a64a084d6b60b1a6d9ff24efbcd98a333d681ee9912",
+          "coreQuestions": [
+            "案例需要哪些行動、錯誤、證據及結果，才能解釋概念而不是充當裝飾？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch03",
+          "title": "耳朵不能翻頁：把複雜知識改寫成聽得懂的順序",
+          "textSha256": "a6a5fae44622dcd398f682e8f3339911209a5d2e16e686453e3d8d1db1621cc9",
+          "coreQuestions": [
+            "連續聆聽不易回看時，怎樣安排概念出場、白話縮寫與回程路標？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch04",
+          "title": "講得精彩也不能亂講：故事、研究與不確定性的邊界",
+          "textSha256": "35fc33f23710c80674cba7c8848a029256cf66ba4a2ba53b0f0e83be8895de14",
+          "coreQuestions": [
+            "如何保留故事性，同時分清虛構案例、研究證據及尚未確認的敘述？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch05",
+          "title": "提示詞不是魔法導演：如何把一章書交給 AI 主持人",
+          "textSha256": "d56d0f073b5961f91a33413f423a019e65aa1e36464c029b8772d2528f498baf",
+          "coreQuestions": [
+            "如何把單章主線和不可省略的因果寫成可核對的NotebookLM自訂指令？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-02_ai-consultant_ch06",
+          "title": "真正聽一遍才算完成：從試播問題回修原書",
+          "textSha256": "467b47969152a4e4cdec02b32b7d7501c1190ca17e6703828a17fd1257c1db7f",
+          "coreQuestions": [
+            "試播時如何分辨來源、生成遺漏與聲音媒介問題，決定回修哪個環節？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-02_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-03_general-knowledge",
+      "workId": "work-dbbf6f5303e9f49d1c9b9737",
+      "version": 1,
+      "title": "報告上的紅字，不等於生病：讀懂檢驗、篩檢與醫療不確定性",
+      "subtitle": null,
+      "description": "從一張手機健檢報告上的紅字出發，釐清檢驗目的、參考區間與採樣條件、陽性與陰性及檢測性能、篩檢利益與傷害、結果衝突的解讀，以及如何把資料帶進負責任的醫療對話。六章採用標示清楚的虛構案例，並對照 NIH、WHO 與 CDC 的公開原始資料。",
+      "date": "2026-11-03",
+      "series": "跨領域知識探索",
+      "scope": "已讀完整當前書目與全部候選章題；候選每章開頭及結尾敘述片段、對照每章開頭片段和章題。另讀成人教學／記憶／協作／安全治理的標記片段，舊協作書ch04另完整閱讀。本作品審查範圍為selected_passages，未讀全庫全文、不宣稱完整查重或事實核對。 本次更新另查閱新入帳客服書六章章題及案例、核心論點片段。 補核習慣書六章章題及案例或主要論點片段。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch01",
+          "title": "紅字究竟代表什麼：報告不是疾病判決書",
+          "textSha256": "88189f7262dc0233f44c80508de5b274e6c2fd020a6a70469645c6ff3c4184b1",
+          "coreQuestions": [
+            "紅色檢驗值是什麼觀察，為何必須連同檢查目的、症狀與病史解讀？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch02",
+          "title": "正常範圍不是界線：數值、採樣和參考區間的陷阱",
+          "textSha256": "da0b0b084082bb8b63421d98ee7ef9dcb529bc250adf1ede609771d7e99c7cf0",
+          "coreQuestions": [
+            "參考區間、採樣條件和實驗室差異如何改變數值的可比性？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch03",
+          "title": "陽性有多確定：檢測能力與受檢族群的雙重作用",
+          "textSha256": "5f88fde9f007643a2cb9450152d8783c4702f40fd7f61a4a6f8d11d6fd584dc1",
+          "coreQuestions": [
+            "靈敏度、特異度與陽性後機率各用什麼分母，受檢族群如何影響結果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch04",
+          "title": "提早發現未必更好：篩檢的利益、傷害與時間錯覺",
+          "textSha256": "5c677af12b3a0c09c6cd52a18e0ac80c7d72b6ea9c7406829b7b0ba4c50985a3",
+          "coreQuestions": [
+            "篩檢為何可能帶來時間錯覺、過度診斷與後續傷害，不能只看多抓到幾人？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch05",
+          "title": "兩份結果互相衝突：重測、確認與臨床推理",
+          "textSha256": "10bd95b11f61b36e858a694b37e70b1e3ac5935bf4496ecc9a1d57962dfd0777",
+          "coreQuestions": [
+            "衝突結果如何區分測量對象、時點與確認目的，何時新增檢驗才有資訊價值？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-03_general-knowledge_ch06",
+          "title": "把疑問帶進診間：如何把檢查變成有用的醫療對話",
+          "textSha256": "b81580274d468a22ef46a6151ef4ae3f5d982706d90a154ad556d170251573d7",
+          "coreQuestions": [
+            "怎樣保存完整檢驗背景並把疑問及實際追蹤安排帶入醫療對話？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-03_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-04_ai-consultant",
+      "workId": "work-ac9cc0b464284b231716abd4",
+      "version": 1,
+      "title": "用 AI 回覆客戶訊息與處理客訴",
+      "subtitle": null,
+      "description": "以虛構的木作材料小店為主線，帶讀者完整理解怎樣讓 AI 協助處理客戶詢問與投訴，從訊息判讀、核對正式資料、撰寫回覆，到投訴調查、跨平台案件交接及服務試用驗收；重點是人類承諾、證據、分工和停止權，而非軟體工程實作。",
+      "date": "2026-11-04",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "查閱現行31本書的書名及候選六章章題與案例段落，另閱讀三部檢索對照各章的章題和主要論點片段。逐章比較範圍為 selected_passages。 補核習慣書六章章題及案例或主要論點片段。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch01",
+          "title": "先看懂客戶想解決什麼問題",
+          "textSha256": "f15b2c3021671630906698fd78112a6b0eb6504d6be9145b624b4f737759f0c0",
+          "coreQuestions": [
+            "如何區分客戶的字面問題、未解決的服務需求與目前缺少的證據？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch02",
+          "title": "價格、交期與退換貨要查證後再回答",
+          "textSha256": "69caa519a7a89adfec5ca2d6f6b41f5a4ec464c9ab4b46316ad9f8f2b1401116",
+          "coreQuestions": [
+            "如何分辨有效政策、過期宣傳和即時訂單資訊，避免錯報價格、交期與退換條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch03",
+          "title": "回覆要清楚、有禮貌，也不能亂承諾",
+          "textSha256": "aeb3a63046f6bdd05afb778adb58282bc3a0df16c1082650dadb158380aac2cc",
+          "coreQuestions": [
+            "如何寫清楚已確認事項、待查事項、下一步和責任人，又不做無依據的承諾？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch04",
+          "title": "客訴要調查、處理，不能只靠安撫",
+          "textSha256": "c44c2d6e628f79828c2b613493a673627f587c0de3794ada74c212f3631684e8",
+          "coreQuestions": [
+            "如何把不滿訊息轉成能追蹤調查、補救及結案的客訴？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch05",
+          "title": "不同管道的客戶訊息如何接續處理",
+          "textSha256": "1e671a2ecf3b3e062490e4d3d2db555e8040abb0e96310f3fc1a3f603566c46f",
+          "coreQuestions": [
+            "如何把社群、LINE 與信件接成同一案件，同時避免誤合併及無關資料暴露？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-04_ai-consultant_ch06",
+          "title": "怎樣知道 AI 客服真的幫上忙",
+          "textSha256": "5ad2cd00757fdfcd47393deeee9dc43e3c70d638344fac1b88e5c6ffffcd4fd6",
+          "coreQuestions": [
+            "如何檢查客服真正解決了問題，而不只提高回覆速度？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-04_general-knowledge_procrastination",
+      "workId": "work-605ae76c03eef2c555aecbb9",
+      "version": 1,
+      "title": "為什麼事情總拖到最後：拖延的心理原因與改善方法",
+      "subtitle": null,
+      "description": "以明標虛構的提案工作為主案例，分清拖延與休息、必要等待及承諾變更，深入理解短期情緒修復、任務厭惡、決策遲疑與期限前的動力改變，再以研究證據判斷改善方法、支持需求與求助界線。",
+      "date": "2026-11-04",
+      "series": "跨領域知識探索",
+      "scope": "不利延後的定義、短期情緒修復、任務厭惡與猶豫構念、期限動機與重現、拖延介入證據及復發／求助。候選六章全文；舊庫以全目錄及指定正文片段為主，不聲稱全庫全文查重。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch01",
+          "title": "拖延、休息和必要等待，差別在哪裡",
+          "textSha256": "cfcf795459b74a52c3420d55c239ddb5f124c5ef2d26f96cbc80f0f529644314",
+          "coreQuestions": [
+            "如何區分明知不利仍延後的拖延、合理休息與等待必要條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch02",
+          "title": "為什麼逃開工作，會讓人暫時舒服",
+          "textSha256": "03e3c60b8d9423a3bf3db7a616ae5f2b16a88cf01ed5a538f75438a17bf88bc4",
+          "coreQuestions": [
+            "短期情緒修復如何解釋逃避工作，且九週情緒介入研究能支持到哪裡？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch03",
+          "title": "任務太難、太無聊或怕做不好，怎麼分辨",
+          "textSha256": "d8658a9bfd80da6b7805d55fd0e54a2a912a9a3aab3492e7aa5595daf79eb909",
+          "coreQuestions": [
+            "如何分辨任務厭惡、技能缺口、完美主義不同構面與猶豫不決？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch04",
+          "title": "為什麼快到截止日才有動力",
+          "textSha256": "b220d42aca3234dd38b28ae563cb9619f420582a2803a97c82021ce1f0e79f24",
+          "coreQuestions": [
+            "截止日接近為何可能改變動機，且2026年期限重現研究限制了哪些保證？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch05",
+          "title": "改善拖延的方法，哪些有研究支持",
+          "textSha256": "08287a72f01d19813ebd84fcc49aa80e64386190346e173acec7b58a2bf5e977",
+          "coreQuestions": [
+            "整套拖延介入、簡訊支持與簡短反思的研究究竟測到了行動還是意圖？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_procrastination_ch06",
+          "title": "拖延反覆出現時，怎麼調整並尋求幫助",
+          "textSha256": "afea00872b409d12198b770898488c08e84676365941cb27cd39f985dfa93b91",
+          "coreQuestions": [
+            "反覆延誤時如何區分自我同情、責任、環境負荷與尋求專業支持？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch06.md"
         }
       ]
     }
