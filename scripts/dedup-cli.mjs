@@ -28,6 +28,7 @@ if(command==='init'){
 }else if(command==='stage'){
  const input=flags.has('candidate')?read(flags.get('candidate')):source(flags.get('book'));
  console.log(JSON.stringify(store.stage(input.book,input.chapters,{kind:flags.get('kind')||'daily'})));
+}else if(command==='review-working'){const result=store.reviewWorkingVersion(read(flags.get('proof')));console.log(JSON.stringify({revision:result.ledger.revision,workingSource:result.result}));
 }else if(command==='review'){const result=store.review(read(flags.get('proof')));console.log(JSON.stringify({revision:result.ledger.revision,candidate:result.result}));
 }else if(command==='reserve'){const result=store.reserve(read(flags.get('proof')));console.log(JSON.stringify({revision:result.ledger.revision,reservation:result.result}));
 }else if(command==='status'){const ledger=store.load();console.log(JSON.stringify({revision:ledger.revision,completeCoverage:ledger.completeCoverage,editions:ledger.entries.length,candidates:ledger.candidates.map(c=>({bookId:c.bookId,status:c.status,fingerprint:c.fingerprint})),proposals:ledger.proposals,semanticReviewedBooks:ledger.entries.filter(e=>e.semanticReview&&e.semanticReview!=='unknown').length}));

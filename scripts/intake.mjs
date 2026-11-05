@@ -2,12 +2,18 @@
 // node --import tsx <site>/scripts/intake.mjs --workspace <project> --job <download-id>
 // The existing ZIP/downloader modules are reused; no original application's store is loaded.
 import fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';import {execFileSync} from 'node:child_process';
+import {requireFactReview, requireFactSubmission, requirePreverifiedArtifact,requireCurrentPlan,requireConfiguredPlan} from './audio-facts.mjs';
+import {resolveChapterSource,assertProviderActionAllowed} from './chapter-source-versions.mjs';
 import {root,hash} from './catalog.mjs';import {atomic} from './publisher.mjs';import {inside,localEnvironment,lease} from './local-paths.mjs';
+import {mapCollidingIdentity} from './identity-mapping.mjs';
 import {readReviewedSource} from './reviewed-intake.mjs';
-import {syncIncomingReceipts} from './intake-state.mjs';
+import {syncIncomingReceipts,intakeDates} from './intake-state.mjs';
 import {DedupStore,candidateOf} from './dedup.mjs';
-const args=process.argv.slice(2),flags=new Map();for(let i=0;i<args.length;i++){if(args[i]==='--ad-hoc'){flags.set('ad-hoc',true);continue;}if(!args[i].startsWith('--')||!args[i+1])throw Error('Use --name value');flags.set(args[i].slice(2),args[++i]);}
+const args=process.argv.slice(2),flags=new Map();for(let i=0;i<args.length;i++){if(['--ad-hoc','--validate-proof-only'].includes(args[i])){flags.set(args[i].slice(2),true);continue;}if(!args[i].startsWith('--')||!args[i+1])throw Error('Use --name value');flags.set(args[i].slice(2),args[++i]);}
 const workspace=fs.realpathSync(path.resolve(flags.get('workspace')||root));inside(workspace,root);Object.assign(process.env,localEnvironment(workspace));
+// A preserved producer checkout can lag behind the explicitly selected publishing worktree.
+let publishingRoot=root;
+if(fs.existsSync(inside(workspace,'storage/github-publishing/site-worktree.json'))){const selector=inside(workspace,'scripts/github-site-workspace.mjs');if(!fs.existsSync(selector))throw Error('Publishing worktree selector missing');const {siteWorkspaces}=await import(pathToFileURL(selector).href);publishingRoot=inside(workspace,siteWorkspaces(workspace,{includeDefault:false})[0]);}
 process.chdir(workspace);
 const release=lease(workspace,'github-intake');process.once('exit',release);
 try{
@@ -15,8 +21,13 @@ const dir=inside(workspace,flags.get('state-dir')||'storage/github-publishing');
 const catalog=fs.existsSync(catalogPath)?JSON.parse(fs.readFileSync(catalogPath)):{schema:1,tables:{books:[],chapters:[],audio_assets:[],cover_assets:[],book_versions:[]}};
 const ledger=catalog.pipeline||(fs.existsSync(ledgerPath)?JSON.parse(fs.readFileSync(ledgerPath)):{schema:1,slots:[],receipts:[]}),date=flags.get('date')||new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const dedup=new DedupStore(workspace);
+if(flags.has('preflight')){
+ const ch=catalog.tables.chapters.find(c=>c.id===flags.get('preflight'));if(!ch)throw Error('Unknown chapter');dedup.assert(candidateOf(catalog.tables.books.find(b=>b.id===ch.book_id),catalog.tables.chapters.filter(c=>c.book_id===ch.book_id).sort((a,b)=>a.position-b.position)));
+ const s=JSON.parse(fs.readFileSync(inside(workspace,path.join(stateRoot,ch.id,ch.content_hash.slice(0,16),'state.json'))));const context=resolveChapterSource(workspace,ch,s),{plan}=requireCurrentPlan(workspace,ch,s);assertProviderActionAllowed(workspace,ch.id);
+ console.log(JSON.stringify({chapterId:ch.id,validated:true,sourcePath:context.state.sourcePath,sourceVersionBinding:context.binding,settingsVerified:plan,providerActionsPerformed:0}));process.exit(0);
+}
 function save(){
- const published=JSON.parse(fs.readFileSync(path.join(root,'data/books.json'))).books;
+ const published=JSON.parse(fs.readFileSync(path.join(publishingRoot,'data/books.json'))).books;
  for(const r of ledger.receipts){
   const chapters=catalog.tables.chapters.filter(c=>c.book_id===r.bookId).sort((a,b)=>a.position-b.position);
   const complete=chapters.length>0&&chapters.every(c=>catalog.tables.audio_assets.some(a=>a.chapter_id===c.id&&a.content_hash===c.content_hash));
@@ -35,14 +46,16 @@ if(flags.has('job')){
  const {DownloadManager}=await import(pathToFileURL(inside(workspace,'src/lib/downloads/manager.ts')).href),{prepareBook}=await import(pathToFileURL(inside(workspace,'src/lib/downloads/book-handoff.ts')).href),{parseArchive}=await import(pathToFileURL(inside(workspace,'src/lib/zip.ts')).href);
  const manager=new DownloadManager(flags.get('download-dir')||'storage/downloads'),job=manager.load(flags.get('job'));await manager.revalidate(job);
  if(job.state!=='complete'||!job.result)throw Error('ZIP still waiting or transferring; no failed-book status assumed');
- const file=inside(workspace,job.result.path),raw=fs.readFileSync(file);if(hash(raw)!==job.result.sha256)throw Error('Download bytes changed');const prepared=flags.has('reviewed-source')?await readReviewedSource(workspace,job,raw,flags.get('reviewed-source'),prepareBook,parseArchive):await prepareBook(file,job.result.sha256),parsed=await parseArchive(prepared.buffer),m=parsed.manifest;
- const receivedDate=flags.get('received-date')||m.date;if(!/^\d{4}-\d{2}-\d{2}$/.test(receivedDate)||prepared.review&&prepared.review.receivedDate!==receivedDate)throw Error('Reviewed receipt date differs');
- const slot=flags.get('ad-hoc')?null:ledger.slots.find(s=>s.date===receivedDate&&s.category===m.category);if(!flags.get('ad-hoc')&&!slot)throw Error('No matching daily slot; use the reviewed receipt date or --ad-hoc');if(slot?.bookId&&slot.bookId!==m.id)throw Error('Daily slot occupied; an ad-hoc book must not consume it');
+ const file=inside(workspace,job.result.path),raw=fs.readFileSync(file);if(hash(raw)!==job.result.sha256)throw Error('Download bytes changed');const prepared=flags.has('reviewed-source')?await readReviewedSource(workspace,job,raw,flags.get('reviewed-source'),prepareBook,parseArchive):await prepareBook(file,job.result.sha256),original=await parseArchive(prepared.buffer);
+ const mappingFile=flags.get('identity-map');
+ const parsed=mappingFile?mapCollidingIdentity(workspace,mappingFile,job,raw,original,catalog):original,m=parsed.manifest;
+ const {receivedDate,slotDate}=intakeDates({publicationDate:m.date,receivedDate:flags.get('received-date')||m.date,slotDate:flags.get('slot-date')||flags.get('received-date')||m.date});if(prepared.review&&prepared.review.receivedDate!==receivedDate)throw Error('Reviewed receipt date differs');
+ const slot=flags.get('ad-hoc')?null:ledger.slots.find(s=>s.date===slotDate&&s.category===m.category);if(!flags.get('ad-hoc')&&!slot)throw Error('No matching daily slot; use --slot-date for an existing delayed daily slot or --ad-hoc');if(slot?.bookId&&slot.bookId!==m.id)throw Error('Daily slot occupied; an ad-hoc book must not consume it');
  const old=ledger.receipts.find(r=>r.bookId===m.id&&r.version===m.version);if(old&&old.zipSha256!==hash(raw)){dedup.conflict({bookId:m.id,version:m.version,previousZipSha256:old.zipSha256,candidateZipSha256:hash(raw),reason:'same_version_different_zip'});throw Error('Same book version has a different ZIP; conflict persisted for explicit review');}
  if(!old&&catalog.tables.books.some(b=>b.id===m.id&&b.version!==m.version)){dedup.conflict({bookId:m.id,version:m.version,candidateZipSha256:hash(raw),reason:'existing_id_new_version'});throw Error('Existing book ID has another version; reviewed version migration required before changing source data');}
  const admission=dedup.stage(m,parsed.chapters,{kind:flags.get('ad-hoc')?'ad_hoc':'daily',zipSha256:hash(raw)});
  if(!['approved','existing'].includes(admission.status)){
-  ledger.dedupReviews||=[];const row={downloadJobId:job.id,bookId:m.id,version:m.version,fingerprint:admission.candidate.fingerprint,status:admission.status,matches:admission.matches||[],receivedDate};
+  ledger.dedupReviews||=[];const row={downloadJobId:job.id,bookId:m.id,version:m.version,fingerprint:admission.candidate.fingerprint,status:admission.status,matches:admission.matches||[],receivedDate,slotDate,sourcePublicationDate:m.date};
   ledger.dedupReviews=ledger.dedupReviews.filter(r=>r.downloadJobId!==job.id);ledger.dedupReviews.push(row);
   if(slot)Object.assign(slot,{status:'dedup_review',candidateBookId:m.id});
   const incoming=ledger.incoming?.find(r=>r.downloadJobId===job.id);if(incoming)Object.assign(incoming,{import:'dedup_review',generation:'dedup_review',publication:'dedup_review',dedup:row});
@@ -51,8 +64,9 @@ if(flags.has('job')){
  if(!old){const bookDir=inside(workspace,path.join(dir,'sources',m.id,'v'+m.version));fs.mkdirSync(bookDir,{recursive:true});fs.writeFileSync(path.join(bookDir,'original.zip'),raw);fs.writeFileSync(path.join(bookDir,'book.json'),JSON.stringify(m,null,2));
   catalog.tables.books.push({id:m.id,title:m.title,category:m.category,date:m.date,received_date:receivedDate,description:m.description,version:m.version,language:m.language,metadata:JSON.stringify(m),references_md:parsed.references});
   for(const ch of parsed.chapters){const contentHash=hash(ch.markdown+'\0'+ch.prompt),stateDir=inside(workspace,path.join(stateRoot,ch.id,contentHash.slice(0,16)));fs.mkdirSync(stateDir,{recursive:true});fs.writeFileSync(path.join(stateDir,'source.md'),ch.markdown);fs.writeFileSync(path.join(stateDir,'prompt.txt'),ch.prompt);const s={bookId:m.id,bookTitle:m.title,chapterId:ch.id,chapterTitle:ch.title,order:ch.order,bookVersion:m.version,contentHash,sourceSha256:hash(ch.markdown),promptSha256:hash(ch.prompt),sourcePath:path.relative(workspace,path.join(stateDir,'source.md')),promptPath:path.relative(workspace,path.join(stateDir,'prompt.txt')),status:'pending',sourceIsolation:'independent-notebook-required',language:'zh-TW',format:'Deep Dive',events:[]};atomic(path.join(stateDir,'state.json'),s);catalog.tables.chapters.push({book_id:m.id,id:ch.id,title:ch.title,position:ch.order,markdown:ch.markdown,prompt:ch.prompt,content_hash:contentHash,status:'pending'});}
-  ledger.receipts.push({bookId:m.id,version:m.version,zipSha256:hash(raw),downloadJobId:job.id,kind:flags.get('ad-hoc')?'ad_hoc':'daily',receivedDate,receivedAt:new Date().toISOString(),receipt:'verified',generation:'awaiting_audio',download:'awaiting_generation',publication:'awaiting_audio',...(prepared.review?{sourceReview:prepared.report.reviewFile,normalizedSha256:prepared.review.normalizedSha256}:{})});
+  ledger.receipts.push({bookId:m.id,version:m.version,zipSha256:hash(raw),downloadJobId:job.id,kind:flags.get('ad-hoc')?'ad_hoc':'daily',receivedDate,slotDate,receivedAt:new Date().toISOString(),receipt:'verified',...(mappingFile?{identityMapping:mappingFile,originalBookId:original.manifest.id}:{}),generation:'awaiting_audio',download:'awaiting_generation',publication:'awaiting_audio',...(prepared.review?{sourceReview:prepared.report.reviewFile,normalizedSha256:prepared.review.normalizedSha256}:{})});
  }
+ for(const ch of catalog.tables.chapters.filter(c=>c.book_id===m.id)){const state=JSON.parse(fs.readFileSync(inside(workspace,path.join(stateRoot,ch.id,ch.content_hash.slice(0,16),'state.json'))));resolveChapterSource(workspace,ch,state);}
  if(slot)Object.assign(slot,{bookId:m.id,status:'awaiting_audio'});
  const incoming=ledger.incoming?.find(r=>r.downloadJobId===job.id);if(incoming)Object.assign(incoming,{import:'complete',generation:'awaiting_audio',publication:'awaiting_audio',problems:[],modelRequirement:'removed_by_user',sourceReview:prepared.report.reviewFile||incoming.sourceReview});
  save();console.log(JSON.stringify({bookId:m.id,version:m.version,duplicate:!!old,status:ledger.receipts.find(r=>r.bookId===m.id&&r.version===m.version).publication,chapters:parsed.chapters.length}));
@@ -61,16 +75,38 @@ if(flags.has('job')){
  dedup.assert(candidateOf(catalog.tables.books.find(b=>b.id===ch.book_id),catalog.tables.chapters.filter(c=>c.book_id===ch.book_id).sort((a,b)=>a.position-b.position)));
  if(s.status==='playable'){console.log(JSON.stringify({chapterId:ch.id,status:s.status,duplicate:true}));process.exit(0);}
  if(!['source_ready','generating','awaiting_download','downloading','verifying','quota_wait','authorization_required','failed'].includes(proof.status)||proof.contentHash!==ch.content_hash)throw Error('Invalid checkpoint or version');
+ const context=resolveChapterSource(workspace,ch,s);
+ if(proof.status==='source_ready')requireConfiguredPlan(workspace,ch,s,proof);
+ if(proof.status==='generating')requireFactSubmission(workspace,ch,s,proof);
+ if((proof.notebookId&&!s.notebookId||proof.sourceId&&!s.sourceId)&&!['source_ready','generating'].includes(proof.status))requireCurrentPlan(workspace,ch,s,{providerAction:true});
+ if(proof.settingsVerified?.sourceVersionBinding&&JSON.stringify(proof.settingsVerified.sourceVersionBinding)!==JSON.stringify(context.binding))throw Error('Checkpoint source version differs');
+ if(flags.get('validate-proof-only')){console.log(JSON.stringify({chapterId:ch.id,validated:true,sourceVersionBinding:context.binding,status:proof.status,writes:0}));process.exit(0);}
  for(const name of ['notebookId','sourceId'])if(s[name]&&proof[name]&&s[name]!==proof[name])throw Error('Existing source identity differs');
  for(const name of ['status','notebookId','notebookUrl','sourceId','sourceCount','sourceSelectionVerified','artifactId','artifactTitle','artifactSourcesVerified','artifactPromptVerified','generationCompleted','generationSubmissionCount','settingsVerified','quotaResetDisplayed','reason'])if(Object.hasOwn(proof,name))s[name]=proof[name];
+ if(proof.notebookId||proof.sourceId)s.sourceVersionBinding=context.binding;
  s.events.push({at:new Date().toISOString(),...proof});atomic(target,s);save();console.log(JSON.stringify({chapterId:ch.id,status:s.status}));
 }else if(flags.has('attach')){
  const ch=catalog.tables.chapters.find(c=>c.id===flags.get('attach'));if(!ch)throw Error('Unknown chapter');const stateFile=inside(workspace,path.join(stateRoot,ch.id,ch.content_hash.slice(0,16),'state.json')),s=JSON.parse(fs.readFileSync(stateFile));
  dedup.assert(candidateOf(catalog.tables.books.find(b=>b.id===ch.book_id),catalog.tables.chapters.filter(c=>c.book_id===ch.book_id).sort((a,b)=>a.position-b.position)));
+ const context=resolveChapterSource(workspace,ch,s);if(s.status!=='playable')assertProviderActionAllowed(workspace,ch.id);
  const proof=JSON.parse(fs.readFileSync(inside(workspace,flags.get('proof')||''))),file=inside(workspace,flags.get('file')||'');const bytes=fs.readFileSync(file),digest=hash(bytes);
- if(proof.audioSha256!==digest||proof.contentHash!==ch.content_hash||!proof.notebookId||!proof.sourceId||!proof.artifactId||proof.sourceCount!==1||!proof.sourceSelectionVerified||!proof.artifactSourcesVerified||!proof.artifactPromptVerified||proof.contentReviewDecision!=='accepted_with_terminology_review_pending')throw Error('Actual provider identity, isolated-source/prompt proof and content review are required');
+ if(context.manifest)requirePreverifiedArtifact(workspace,ch,s,proof);
+ const acceptedByUser=proof.contentReviewDecision==='accepted_by_user'&&proof.userAcceptance?.artifactId===proof.artifactId&&proof.userAcceptance.audioSha256===digest&&proof.userAcceptance.chapterId===ch.id&&typeof proof.userAcceptance.instruction==='string'&&proof.userAcceptance.instruction.length>=12&&s.artifactId===proof.artifactId;
+ const preverified=proof.contentReviewDecision==='accepted_source_web_verified';
+ if(proof.audioSha256!==digest||proof.contentHash!==ch.content_hash||!proof.notebookId||!proof.sourceId||!proof.artifactId||proof.sourceCount!==1||!proof.sourceSelectionVerified||!proof.artifactSourcesVerified||!proof.artifactPromptVerified||(!acceptedByUser&&!preverified&&proof.contentReviewDecision!=='accepted_with_terminology_review_pending'))throw Error('Actual provider identity, isolated-source/prompt proof and acceptance evidence are required');
+ const existing=catalog.tables.audio_assets.find(a=>a.chapter_id===ch.id&&a.content_hash===ch.content_hash);
+ if(existing&&existing.hash!==digest)throw Error('Accepted audio is never overwritten');
+ let sourceReceipt;
+ if(preverified){
+  const webReviewSha256=requirePreverifiedArtifact(workspace,ch,s,proof);
+  const attempt=inside(workspace,path.join(path.dirname(stateFile),'attempts',s.artifactId));
+  const v=JSON.parse(fs.readFileSync(inside(workspace,path.join(attempt,'audio-validation.json'))));
+  if(v.chapterId!==ch.id||v.contentHash!==ch.content_hash||v.artifactId!==s.artifactId||v.sha256!==digest||v.fullDecode!==true||v.browserDownloadBinding?.status!=='selected')throw Error('Bound download and technical validation required');
+  sourceReceipt={path:path.join(attempt,'content-review.json'),data:{accepted:true,decision:proof.contentReviewDecision,audioSha256:digest,webReviewSha256,sourceVersionBinding:context.binding,method:'Chapter facts cross-checked before generation; generated audio was not transcribed or reviewed for content.',limitations:['查證範圍是章節正文；生成後只驗證檔案與章節身分。']}};
+ }else if(!acceptedByUser&&(s.status!=='playable'||s.audioSha256!==digest||existing?.hash!==digest))requireFactReview(workspace,ch,s,proof,digest);
  const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,codec_type','-of','json',file],{encoding:'utf8',windowsHide:true}));if(!probe.streams.some(s=>s.codec_type==='audio'&&s.codec_name==='aac')||!(Number(probe.format.duration)>1)||bytes.toString('ascii',4,8)!=='ftyp')throw Error('Not a valid original M4A/AAC');execFileSync('ffmpeg',['-nostdin','-v','error','-protocol_whitelist','file,pipe','-i',file,'-map','0:a:0','-f','null','-'],{windowsHide:true,stdio:['ignore','pipe','pipe']});
- const existing=catalog.tables.audio_assets.find(a=>a.chapter_id===ch.id&&a.content_hash===ch.content_hash);if(existing&&existing.hash!==digest)throw Error('Accepted audio is never overwritten');const audioId=existing?.id||hash(ch.id+'\0'+ch.content_hash+'\0'+digest).slice(0,32),dest=inside(workspace,path.join(dir,'audio',audioId+'.m4a'));fs.mkdirSync(path.dirname(dest),{recursive:true});if(!fs.existsSync(dest))fs.copyFileSync(file,dest);else if(hash(fs.readFileSync(dest))!==digest)throw Error('Audio staging conflict');
- if(!existing)catalog.tables.audio_assets.push({id:audioId,book_id:ch.book_id,chapter_id:ch.id,content_hash:ch.content_hash,path:path.relative(workspace,dest),mime:'audio/mp4',duration:Number(probe.format.duration),bytes:bytes.length,hash:digest,source:'NotebookLM:'+proof.artifactId,created_at:new Date().toISOString()});for(const name of ['notebookId','sourceId','artifactId','sourceCount','sourceSelectionVerified','artifactSourcesVerified','artifactPromptVerified','contentReviewDecision'])s[name]=proof[name];Object.assign(s,{status:'playable',reason:null,reviewRequired:false,audioId,audioSha256:digest,audioPath:path.relative(workspace,dest),audioBytes:bytes.length,duration:Number(probe.format.duration)});s.events.push({at:new Date().toISOString(),status:'playable',audioSha256:digest,fullDecode:true,contentReview:proof.contentReviewDecision});atomic(stateFile,s);save();console.log(JSON.stringify({chapterId:ch.id,sha256:digest,bytes:bytes.length,status:'playable',duplicate:!!existing}));
+ const audioId=existing?.id||hash(ch.id+'\0'+ch.content_hash+'\0'+digest).slice(0,32),dest=inside(workspace,path.join(dir,'audio',audioId+'.m4a'));fs.mkdirSync(path.dirname(dest),{recursive:true});if(!fs.existsSync(dest))fs.copyFileSync(file,dest);else if(hash(fs.readFileSync(dest))!==digest)throw Error('Audio staging conflict');
+ if(sourceReceipt)atomic(sourceReceipt.path,sourceReceipt.data);
+ if(!existing)catalog.tables.audio_assets.push({id:audioId,book_id:ch.book_id,chapter_id:ch.id,content_hash:ch.content_hash,path:path.relative(workspace,dest),mime:'audio/mp4',duration:Number(probe.format.duration),bytes:bytes.length,hash:digest,sourceVersionBinding:context.binding,source:'NotebookLM:'+proof.artifactId,created_at:new Date().toISOString()});for(const name of ['notebookId','sourceId','artifactId','sourceCount','sourceSelectionVerified','artifactSourcesVerified','artifactPromptVerified','contentReviewDecision'])s[name]=proof[name];Object.assign(s,{status:'playable',reason:null,reviewRequired:false,audioId,audioSha256:digest,audioPath:path.relative(workspace,dest),audioBytes:bytes.length,duration:Number(probe.format.duration)});s.events.push({at:new Date().toISOString(),status:'playable',audioSha256:digest,fullDecode:true,contentReview:proof.contentReviewDecision,...(acceptedByUser?{userAcceptance:proof.userAcceptance}:{})});atomic(stateFile,s);save();console.log(JSON.stringify({chapterId:ch.id,sha256:digest,bytes:bytes.length,status:'playable',duplicate:!!existing}));
 }else{save();console.log(JSON.stringify({date,slots:ledger.slots.filter(s=>s.date===date),receipts:ledger.receipts.map(r=>({bookId:r.bookId,version:r.version,receipt:r.receipt,publication:r.publication}))}));}
 }finally{release();process.removeListener('exit',release);}

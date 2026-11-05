@@ -115,6 +115,26 @@ export class DedupStore{
    ledger.events.push({type:'review',fingerprint:row.fingerprint,decision:row.decision,workId});return row;
   });
  }
+ reviewWorkingVersion(proof){
+  const current=this.load();if(proof.schema!==1||proof.expectedRevision!==current.revision||proof.decision!=='same_work_source_correction'||typeof proof.reviewer!=='string'||proof.reviewer.length<3||typeof proof.reason!=='string'||proof.reason.length<40)throw Error('DEDUP_WORKING_REVIEW_REQUIRED');
+  const manifestFile=inside(this.workspace,proof.manifestPath),bytes=fs.readFileSync(manifestFile),m=JSON.parse(bytes);
+  if(digest(bytes.toString('utf8'))!==proof.manifestSha256||m.kind!=='chapter_source_correction'||m.chapterId!==proof.chapterId||m.bookId!==proof.bookId)throw Error('DEDUP_WORKING_MANIFEST_CHANGED');
+  const original=current.entries.find(e=>e.bookId===m.bookId),chapter=original?.chapters.find(c=>c.chapterId===m.chapterId);if(!original||!chapter||original.fingerprint!==proof.originalFingerprint||original.reviewSha256!==proof.priorAdmissionReviewSha256||chapter.rawSha256!==m.originalSourceSha256||chapter.promptSha256!==m.originalPromptSha256)throw Error('DEDUP_WORKING_ORIGINAL_CHANGED');this.assert(original);
+  const originalText=this.text(original,m.chapterId),workingText=fs.readFileSync(inside(this.workspace,m.sourcePath),'utf8');
+  if(digest(workingText)!==m.sourceSha256||!Array.isArray(m.edits)||!m.edits.length)throw Error('DEDUP_WORKING_SOURCE_CHANGED');let revised=originalText;
+  for(const edit of m.edits){if(!edit.before||typeof edit.after!=='string'||!edit.reason||revised.split(edit.before).length!==2)throw Error('DEDUP_WORKING_DIFF_CHANGED');revised=revised.replace(edit.before,edit.after);}if(revised!==workingText)throw Error('DEDUP_WORKING_UNDECLARED_DIFF');
+  if(!Array.isArray(proof.metadataReviewedBookIds)||current.entries.some(e=>!proof.metadataReviewedBookIds.includes(e.bookId))||!Array.isArray(proof.editsReviewed)||proof.editsReviewed.length!==m.edits.length||proof.editsReviewed.some((r,i)=>r.before!==m.edits[i].before||r.after!==m.edits[i].after||typeof r.meaningImpact!=='string'||r.meaningImpact.length<20))throw Error('DEDUP_WORKING_COVERAGE_REQUIRED');
+  if(proof.readScope!=='full_changed_chapter_and_prior_review'||typeof proof.originalQuote!=='string'||proof.originalQuote.length<30||!originalText.includes(proof.originalQuote)||typeof proof.workingQuote!=='string'||proof.workingQuote.length<30||!workingText.includes(proof.workingQuote)||proof.originalQuestionsRetained!==true)throw Error('DEDUP_WORKING_TEXT_EVIDENCE_REQUIRED');
+  if(current.entries.filter(e=>e.bookId!==m.bookId).some(e=>e.chapters.some(c=>c.normalizedSha256===digest(normalize(workingText)))))throw Error('DEDUP_WORKING_DUPLICATE');
+  const reviewPath=inside(this.workspace,path.join(this.dir,'working-reviews',digest(proof)+'.json'));if(!fs.existsSync(reviewPath))durable(reviewPath,proof);
+  const previous=current.workingReviews?.find(r=>r.manifestSha256===proof.manifestSha256);
+  if(previous?.coverageHash===coverage(current,original)&&previous.originalFingerprint===original.fingerprint){this.assertWorkingVersion(proof.manifestSha256,m.bookId,m.chapterId);return {ledger:current,result:previous,duplicate:true};}
+  return this.update(proof.expectedRevision,next=>{next.workingReviews||=[];const row={bookId:m.bookId,chapterId:m.chapterId,manifestSha256:proof.manifestSha256,sourceSha256:m.sourceSha256,originalFingerprint:original.fingerprint,reviewPath:path.relative(this.workspace,reviewPath),reviewSha256:digest(proof),coverageHash:coverage(next,original),reviewedAt:new Date().toISOString(),reviewedAtRevision:proof.expectedRevision+1,decision:proof.decision,...(previous?{previousReviewSha256:previous.reviewSha256}:{})};next.workingReviews=next.workingReviews.filter(r=>r.manifestSha256!==proof.manifestSha256);next.workingReviews.push(row);next.events.push({type:'working_source_review',chapterId:m.chapterId,manifestSha256:proof.manifestSha256});return row;});
+ }
+ assertWorkingVersion(manifestSha256,bookId,chapterId){
+  const ledger=this.load(),entry=ledger.entries.find(e=>e.bookId===bookId),row=ledger.workingReviews?.find(r=>r.manifestSha256===manifestSha256&&r.bookId===bookId&&r.chapterId===chapterId);
+  if(!entry||!row||row.originalFingerprint!==entry.fingerprint||row.coverageHash!==coverage(ledger,entry)||digest(read(inside(this.workspace,row.reviewPath)))!==row.reviewSha256)throw Error('DEDUP_WORKING_REVIEW: missing, changed or stale working source admission');this.assert(entry);return row;
+ }
  assert(candidate){
   const ledger=this.load();if(!ledger.completeCoverage)throw Error('DEDUP_INCOMPLETE');
   const entry=ledger.entries.find(e=>key(e)===key(candidate)&&e.fingerprint===candidate.fingerprint);
@@ -135,19 +155,20 @@ export class DedupStore{
  conflict(record){const ledger=this.load();return this.update(ledger.revision,next=>{next.conflicts||=[];const identity=digest(record);if(!next.conflicts.some(c=>c.identity===identity))next.conflicts.push({...record,identity,at:new Date().toISOString()});next.events.push({type:'version_conflict',bookId:record.bookId});});}
  export(site){inside(this.workspace,site);const projection=publicProjection(this.load(),read(path.join(site,'data/books.json')).books);durable(path.join(site,'public/dedup/catalog.json'),projection);return projection;}
  reserve(proof){
-  const ledger=this.load();if(!/^\d{4}-\d{2}-\d{2}$/.test(proof.date||'')||!validId(proof.proposalId)||!Array.isArray(proof.questions)||proof.questions.length<6||proof.questions.some(q=>typeof q!=='string'||q.length<10))throw Error('DEDUP_PROPOSAL: 6+ substantive questions required');
-  return this.update(proof.expectedRevision,next=>{const old=next.proposals.find(p=>p.proposalId===proof.proposalId);if(old){const {acceptedAt,...previous}=old,{expectedRevision,...incoming}=proof;if(digest(previous)!==digest(incoming))throw Error('DEDUP_PROPOSAL_CONFLICT');return old;}
+  this.load();if(!/^\d{4}-\d{2}-\d{2}$/.test(proof.date||'')||!validId(proof.proposalId)||!Array.isArray(proof.questions)||proof.questions.length<6||proof.questions.some(q=>typeof q!=='string'||q.length<10))throw Error('DEDUP_PROPOSAL: 6+ substantive questions required');
+  return this.update(proof.expectedRevision,next=>{const old=next.proposals.find(p=>p.proposalId===proof.proposalId);if(old){const {acceptedAt:_acceptedAt,...previous}=old,{expectedRevision:_expectedRevision,...incoming}=proof;if(digest(previous)!==digest(incoming))throw Error('DEDUP_PROPOSAL_CONFLICT');return old;}
    const questionHash=digest(proof.questions.map(normalize).sort());if(next.proposals.some(p=>p.date===proof.date&&digest(p.questions.map(normalize).sort())===questionHash))throw Error('DEDUP_PROPOSAL_DUPLICATE');
-   const {expectedRevision,...data}=proof,row={...data,acceptedAt:new Date().toISOString()};next.proposals.push(row);next.events.push({type:'topic_reserved',proposalId:row.proposalId});return row;
+   const {expectedRevision:_expectedRevision,...data}=proof,row={...data,acceptedAt:new Date().toISOString()};next.proposals.push(row);next.events.push({type:'topic_reserved',proposalId:row.proposalId});return row;
   });
  }
 }
 
 export function sourceAdmission(workspace,book,chapters){return new DedupStore(workspace).assert(candidateOf(book,chapters));}
-export function publicationAdmission(site,input){
+export function publicationAdmission(site,input,verifiedSources=null){
  const baseline=read(path.join(site,'data/dedup-baseline.json')),historical=baseline.books.find(b=>b.bookId===input.book.bookId&&b.version===input.book.version&&b.publicFingerprint===digest(input.book));if(historical)return {historical:true};
  const workspace=fs.realpathSync(input.dedupWorkspace||site);inside(workspace,site);const store=new DedupStore(workspace),row=store.load().entries.find(e=>e.bookId===input.book.bookId&&e.version===input.book.version);
- if(!row||row.historical||row.chapters.length!==input.book.chapters.length||row.chapters.some(c=>!input.book.chapters.some(p=>p.chapterId===c.chapterId&&p.textSha256===c.rawSha256))||row.title!==input.book.title)throw Error('DEDUP_REVIEW: publication source differs from its approved baseline');
+ if(input.sourceVersions&&(!(verifiedSources instanceof Map)||verifiedSources.size!==input.book.chapters.length))throw Error('DEDUP_WORKING_PUBLICATION: independently validated source versions required');
+ if(!row||row.historical||row.chapters.length!==input.book.chapters.length||row.chapters.some(c=>!input.book.chapters.some(p=>p.chapterId===c.chapterId&&p.textSha256===(verifiedSources?.get(c.chapterId)?.textSha256||c.rawSha256)))||row.title!==input.book.title)throw Error('DEDUP_REVIEW: publication source differs from its approved baseline');
  if(row.publication&&row.publication.fingerprint!==digest(input.book))throw Error('DEDUP_CONFLICT: published edition cannot be replaced');
  store.assert(row);return {store,candidate:row};
 }
