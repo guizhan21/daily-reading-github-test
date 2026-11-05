@@ -1394,6 +1394,88 @@
         }
       ],
       "contentReview": "Pre-generation independent web source cross-check, then technical original-file acceptance. No ASR, listening or post-generation semantic review is claimed."
+    },
+    {
+      "bookId": "2026-11-04_general-knowledge_voice-recording",
+      "version": 1,
+      "reviewedAt": "2026-11-05T10:13:54.336Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library. Original ChatGPT-authored explanatory prose and explicitly hypothetical cases, not a third-party book reproduction. No real vendor/customer private records, credentials or personal transaction data. Sources are attributed; foreign procurement guidance remains within its stated jurisdiction and is not asserted as Taiwan law. The two independent covers were created with the authorized built-in Image tool. Full chapter sources and material claims were reviewed before NotebookLM submission.",
+      "coverSha256": "8eaab569e14c7263b5ec1a916b32d18d01e02cd419f476e41fcd4044103e5e7c",
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch01",
+          "textSha256": "fe32f2ac26cf1da46a62901b472541b196ff5a17b3267d839c14c643ab4c0a18",
+          "audioSha256": "e13eb07b45d07baf6b0d34c9b578cb0de70a0ce741a4f6a004437e7c9985bc77"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch02",
+          "textSha256": "d05a47387eb0d5514bfb0bd6229d575c18d3c36f1946ae8fb46ce93fddf172eb",
+          "audioSha256": "b6bd094e5a8445b78c7881e1791e6389f70003093d6ad31a57bc9516d7d7f4ac"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch03",
+          "textSha256": "d1e393cc951aef4145c07c0e1955f72306133388be14e5897fddf21dea2a3d5f",
+          "audioSha256": "da6365b7b0b8f6d37d429fdcd88b628fc36cffac10e36e5001f9cbd4af918ad4"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch04",
+          "textSha256": "2ff2557fdb3c3dcd91d7d455ad932fc2d029a79612c1fd4668d4bdb56d38db10",
+          "audioSha256": "9e16161bc07a404f5e0ba0239d116d000f91809b726c05f4c406a55faa7dfa89"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch05",
+          "textSha256": "b2c86cb6d1d57b6b791899a409880836370d4202b9976ed4fe3fb40889b80c6a",
+          "audioSha256": "14231cbe1dc1d715d1ec768bf136da84fdc1c9d0c3099f3b605f8952a2de338e"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch06",
+          "textSha256": "8c050f4130f136ea1d8bba548c885379e1c998cf20e7982c15c809e5cdfe493b",
+          "audioSha256": "df6218e7e08136ffb1a6f3a5774f83f9ef78f7d2d3841a6228b30153ca0074cc"
+        }
+      ],
+      "contentReview": "Pre-generation independent primary-source web cross-check; afterwards original chapter/artifact/source/prompt identity, file SHA, format, duration and full decode. No ASR, listening or post-generation semantic review is claimed."
+    },
+    {
+      "bookId": "2026-11-05_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-11-05T10:26:24.922Z",
+      "decision": "approved",
+      "basis": "User-authorized public daily library. Original ChatGPT-authored explanatory prose and explicitly hypothetical cases, not a third-party book reproduction. No real vendor/customer private records, credentials or personal transaction data. Sources are attributed; foreign procurement guidance remains within its stated jurisdiction and is not asserted as Taiwan law. The two independent covers were created with the authorized built-in Image tool. Full chapter sources and material claims were reviewed before NotebookLM submission.",
+      "coverSha256": "0d96337be83f90244ebd320bafd769a6f0497fb6b05bcf93cc7373902bc1616c",
+      "chapters": [
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch01",
+          "textSha256": "b40757175ee89a4b1710d612fcfe4247911b319f219697dd5926158a0d520139",
+          "audioSha256": "2126069183bf30207d96a3974eed978e781577aeef4eea8300be6a251ceb4fef"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch02",
+          "textSha256": "8540c1012c7ddb442de9677d460bbce31b4d9b85c0b601904e6cd4851f5a25a1",
+          "audioSha256": "b87ce3630d0575ff9ed8a550e0767e2feae9b005699f82d1f523b56e95c33f81"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch03",
+          "textSha256": "98e2220a6e1a2fa194bfd8b0e5fe8d81863421d1f972d094577b1bf83d4a6735",
+          "audioSha256": "6727fc7e344be934bf55adb2f1fe017a5ba14966c98bad51f1852b88953426d0"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch04",
+          "textSha256": "045eb57354643634858f17d2fbe4c5a4111ae76b6629e6820d219690823ecdbb",
+          "audioSha256": "e07704ac833b91fcddbed298b65d489543438ad97c51e413b527dd1343d428a2"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch05",
+          "textSha256": "92a8bb8b439a8fc54f3752e59844f7ef6f554074111517b3dae09a757a6d2ae2",
+          "audioSha256": "5722c0201ef6fa7d4f4557c914e7de0f986bad8ba9d79cc9acf0cca1bdb1f7d8"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch06",
+          "textSha256": "b988e54b458309e0edecfd2ecae794714f56366bc11d315c6c489e4de30b5c42",
+          "audioSha256": "8b1647e2bcf4bd196b350bb93ee9732dbff2971f4cf4d34b2e06d7f57810308c"
+        }
+      ],
+      "contentReview": "Pre-generation independent primary-source web cross-check; afterwards original chapter/artifact/source/prompt identity, file SHA, format, duration and full decode. No ASR, listening or post-generation semantic review is claimed."
     }
   ],
   "skipped": []

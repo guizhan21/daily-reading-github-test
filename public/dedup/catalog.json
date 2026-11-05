@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 80,
-  "ledgerSha256": "83df2c93f775c97682052e2cd9069e6c5744b1fbc7704a993569a9e43220515a",
+  "revision": 87,
+  "ledgerSha256": "ee53d2d7dae0aa259565c0ca767d23ec1c91fa0767934e8ef4cdc65969bef0f8",
   "coverage": {
-    "publishedBooks": 34,
-    "publishedChapters": 204,
+    "publishedBooks": 36,
+    "publishedChapters": 216,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 16,
+    "bodySemanticReviewedBooks": 18,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2146,6 +2146,144 @@
             "反覆延誤時如何區分自我同情、責任、環境負荷與尋求專業支持？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_procrastination_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-04_general-knowledge_voice-recording",
+      "workId": "work-80c2479b3be373ee5e20d328",
+      "version": 1,
+      "title": "手機錄音為什麼聽不清楚：距離、回音、降噪與音量",
+      "subtitle": null,
+      "description": "從手機錄音與知識旁白的具體困擾出發，解釋麥克風距離、室內回音、風聲與振動、降噪失真、動態音量與發布驗收，幫助非工程背景讀者掌握聲音品質的因果與選擇，而非只記軟體按鈕。",
+      "date": "2026-11-04",
+      "series": "跨領域知識探索",
+      "scope": "新稿六章全文；歷史全庫34本／204章書目及章名；六本舊作選讀片段。十八本歷史未知語義欄位仍保持unknown，不編造全庫相似率。 補讀AI採購新書六章全文及原提示，對目前36個准入版本重新比較。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch01",
+          "title": "為什麼手機離得遠就錄不清楚",
+          "textSha256": "fe32f2ac26cf1da46a62901b472541b196ff5a17b3267d839c14c643ab4c0a18",
+          "coreQuestions": [
+            "如何依錄音距離、角度及麥克風特性改善原始人聲，並保留自由場六分貝的適用條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_voice-recording_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch02",
+          "title": "空房間為什麼容易有回音",
+          "textSha256": "d05a47387eb0d5514bfb0bd6229d575c18d3c36f1946ae8fb46ce93fddf172eb",
+          "coreQuestions": [
+            "如何區分室內混響、隔音和背景噪音，選擇位置與吸音而不把泡棉當作通用隔音？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_voice-recording_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch03",
+          "title": "冷氣、風聲和碰撞聲怎麼處理",
+          "textSha256": "d1e393cc951aef4145c07c0e1955f72306133388be14e5897fddf21dea2a3d5f",
+          "coreQuestions": [
+            "如何辨認穩定噪音、風噪與結構傳振，先處理來源而非對所有聲音套用同一效果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_voice-recording_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch04",
+          "title": "降噪後的人聲為什麼變得不自然",
+          "textSha256": "2ff2557fdb3c3dcd91d7d455ad932fc2d029a79612c1fd4668d4bdb56d38db10",
+          "coreQuestions": [
+            "如何辨認降噪失真與噪音閘切字，理解推估分離的限制並保留原錄音？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_voice-recording_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch05",
+          "title": "聲音忽大忽小該怎麼處理",
+          "textSha256": "b2c86cb6d1d57b6b791899a409880836370d4202b9976ed4fe3fb40889b80c6a",
+          "coreQuestions": [
+            "如何區分峰值、響度、動態壓縮與限幅，避免把峰值正規化當作一致響度或削波修復？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_voice-recording_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch06",
+          "title": "錄音從試錄到發布怎麼驗收",
+          "textSha256": "8c050f4130f136ea1d8bba548c885379e1c998cf20e7982c15c809e5cdfe493b",
+          "coreQuestions": [
+            "如何從試錄、重要字詞到輸出格式和實際播放場景驗收手機錄音，保留原意及版本？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-04_general-knowledge_voice-recording_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-05_ai-consultant",
+      "workId": "work-9aabfea83a4067527f7d6d83",
+      "version": 1,
+      "title": "用 AI 比較報價與挑選供應商",
+      "subtitle": null,
+      "description": "以虛構的成人講座音響採購為連續案例，教讀者運用 AI 比較不同供應商的報價、補足缺漏、核查服務承諾、評估使用期間成本，並由人員做出可追溯的選擇及驗收。",
+      "date": "2026-11-05",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "新稿六章全文；35本已准入作品的書目及章名；六本舊作選讀片段和當日錄音書六章全文，不宣稱全部舊書全文或自動相似率。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch01",
+          "title": "先說清楚要買什麼，才有辦法比較",
+          "textSha256": "b40757175ee89a4b1710d612fcfe4247911b319f219697dd5926158a0d520139",
+          "coreQuestions": [
+            "採購需求、產品規格及驗收條件如何在共同詢價基準上區分，並確認使用者與批准者？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch02",
+          "title": "三份報價寫法不同，怎麼整理才公平",
+          "textSha256": "8540c1012c7ddb442de9677d460bbce31b4d9b85c0b601904e6cd4851f5a25a1",
+          "coreQuestions": [
+            "如何將多格式報價拆成可追溯欄位，保持未知、稅費和有效期而不由AI補猜？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch03",
+          "title": "別只看標價：把運費、耗材與維修一起算",
+          "textSha256": "98e2220a6e1a2fa194bfd8b0e5fe8d81863421d1f972d094577b1bf83d4a6735",
+          "coreQuestions": [
+            "如何分開基本價、使用期成本、不同故障情境與無法可靠貨幣化的影響？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch04",
+          "title": "供應商說得很好，哪些證據才算數",
+          "textSha256": "045eb57354643634858f17d2fbe4c5a4111ae76b6629e6820d219690823ecdbb",
+          "coreQuestions": [
+            "如何區分供應商宣傳、書面承諾和實際能力證據，核對與本次需求相符的服務範圍？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch05",
+          "title": "價格和服務各有優缺點，怎麼做最後選擇",
+          "textSha256": "92a8bb8b439a8fc54f3752e59844f7ef6f554074111517b3dae09a757a6d2ae2",
+          "coreQuestions": [
+            "如何先過必要條件，再由人決定成本服務的取捨並測試前提變動，而不盲信AI總分？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch06",
+          "title": "簽約前後怎麼驗收，出問題如何追查",
+          "textSha256": "b988e54b458309e0edecfd2ecae794714f56366bc11d315c6c489e4de30b5c42",
+          "coreQuestions": [
+            "如何將正式採購確認、到貨數量型號及情境測試串為可追責的驗收與後續紀錄？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch06.md"
         }
       ]
     }

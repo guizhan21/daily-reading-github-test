@@ -1,6 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';
 import {hash,validate} from './catalog.mjs';
 import {publicationAdmission} from './dedup.mjs';
+import {verifyPublicAudio} from './public-audio-verification.mjs';
 export const fingerprint=value=>hash(Buffer.from(JSON.stringify(value)));
 export function sourceCheck(input,dir,config){
  if(input.repository!==config.repository||input.repository==='guizhan21/daily-audio-library'||input.rightsReviewed!==true||typeof input.rightsBasis!=='string'||input.rightsBasis.length<20||!/^audio-[\w.-]+$/.test(input.tag))throw Error('RIGHTS_OR_TARGET: explicit, reviewed public rights required');
@@ -50,8 +51,8 @@ export async function publish(input,{root,dir,jobs,config,stopAfterUploads=Infin
   if(release.draft||release.tag_name!==input.tag)throw Error('PUBLICATION_UNCONFIRMED: catalog unchanged');
   for(const ch of input.book.chapters){const a=release.assets.find(r=>r.name===path.posix.basename(new URL(ch.audioUrl).pathname)),old=job.verified[ch.chapterId];
    if(old?.assetId===a.id&&old.sha256===ch.sha256&&old.updatedAt===a.updated_at)continue;
-   const response=await fetch(ch.audioUrl,{signal:AbortSignal.timeout(90000)});if(!response.ok)throw Error('PUBLIC_UNAVAILABLE: '+response.status);const b=Buffer.from(await response.arrayBuffer());if(b.length!==ch.bytes||hash(b)!==ch.sha256)throw Error('PUBLIC_HASH_MISMATCH: catalog unchanged');
-   job.verified[ch.chapterId]={assetId:a.id,sha256:ch.sha256,bytes:b.length,updatedAt:a.updated_at,checkedAt:new Date().toISOString(),url:ch.audioUrl};publicChecked++;event('public_verifying',{chapterId:ch.chapterId});
+   const verified=await verifyPublicAudio(ch,{onProgress:receivedBytes=>event('public_downloading',{chapterId:ch.chapterId,receivedBytes,expectedBytes:ch.bytes})});
+   job.verified[ch.chapterId]={assetId:a.id,sha256:verified.sha256,bytes:verified.bytes,updatedAt:a.updated_at,checkedAt:new Date().toISOString(),url:ch.audioUrl};publicChecked++;event('public_verifying',{chapterId:ch.chapterId});
   }
   // Reread under a process lease; reject concurrent catalog edits instead of losing them.
   publicationAdmission(root,input);

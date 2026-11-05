@@ -2516,6 +2516,154 @@
           "durationSec": 280.938231
         }
       ]
+    },
+    {
+      "bookId": "2026-11-04_general-knowledge_voice-recording",
+      "title": "手機錄音為什麼聽不清楚：距離、回音、降噪與音量",
+      "category": "跨領域知識探索",
+      "date": "2026-11-04",
+      "description": "從手機錄音與知識旁白的具體困擾出發，解釋麥克風距離、室內回音、風聲與振動、降噪失真、動態音量與發布驗收，幫助非工程背景讀者掌握聲音品質的因果與選擇，而非只記軟體按鈕。",
+      "version": 1,
+      "cover": "covers/2026-11-04_general-knowledge_voice-recording.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-04_general-knowledge_voice-recording.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-04-general-knowledge_voice-recording-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch01",
+          "title": "為什麼手機離得遠就錄不清楚",
+          "markdown": "chapters/2026-11-04_general-knowledge_voice-recording_ch01.md",
+          "textSha256": "fe32f2ac26cf1da46a62901b472541b196ff5a17b3267d839c14c643ab4c0a18",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-04-general-knowledge_voice-recording-v1/2026-11-04_general-knowledge_voice-recording_ch01-e13eb07b45d0.m4a",
+          "sha256": "e13eb07b45d07baf6b0d34c9b578cb0de70a0ce741a4f6a004437e7c9985bc77",
+          "bytes": 12762588,
+          "durationSec": 396.527166
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch02",
+          "title": "空房間為什麼容易有回音",
+          "markdown": "chapters/2026-11-04_general-knowledge_voice-recording_ch02.md",
+          "textSha256": "d05a47387eb0d5514bfb0bd6229d575c18d3c36f1946ae8fb46ce93fddf172eb",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-04-general-knowledge_voice-recording-v1/2026-11-04_general-knowledge_voice-recording_ch02-b6bd094e5a84.m4a",
+          "sha256": "b6bd094e5a8445b78c7881e1791e6389f70003093d6ad31a57bc9516d7d7f4ac",
+          "bytes": 9149380,
+          "durationSec": 284.258685
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch03",
+          "title": "冷氣、風聲和碰撞聲怎麼處理",
+          "markdown": "chapters/2026-11-04_general-knowledge_voice-recording_ch03.md",
+          "textSha256": "d1e393cc951aef4145c07c0e1955f72306133388be14e5897fddf21dea2a3d5f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-04-general-knowledge_voice-recording-v1/2026-11-04_general-knowledge_voice-recording_ch03-da6365b7b0b8.m4a",
+          "sha256": "da6365b7b0b8f6d37d429fdcd88b628fc36cffac10e36e5001f9cbd4af918ad4",
+          "bytes": 10232934,
+          "durationSec": 317.927619
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch04",
+          "title": "降噪後的人聲為什麼變得不自然",
+          "markdown": "chapters/2026-11-04_general-knowledge_voice-recording_ch04.md",
+          "textSha256": "2ff2557fdb3c3dcd91d7d455ad932fc2d029a79612c1fd4668d4bdb56d38db10",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-04-general-knowledge_voice-recording-v1/2026-11-04_general-knowledge_voice-recording_ch04-9e16161bc07a.m4a",
+          "sha256": "9e16161bc07a404f5e0ba0239d116d000f91809b726c05f4c406a55faa7dfa89",
+          "bytes": 8727935,
+          "durationSec": 271.16263
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch05",
+          "title": "聲音忽大忽小該怎麼處理",
+          "markdown": "chapters/2026-11-04_general-knowledge_voice-recording_ch05.md",
+          "textSha256": "b2c86cb6d1d57b6b791899a409880836370d4202b9976ed4fe3fb40889b80c6a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-04-general-knowledge_voice-recording-v1/2026-11-04_general-knowledge_voice-recording_ch05-14231cbe1dc1.m4a",
+          "sha256": "14231cbe1dc1d715d1ec768bf136da84fdc1c9d0c3099f3b605f8952a2de338e",
+          "bytes": 11942855,
+          "durationSec": 371.054875
+        },
+        {
+          "chapterId": "2026-11-04_general-knowledge_voice-recording_ch06",
+          "title": "錄音從試錄到發布怎麼驗收",
+          "markdown": "chapters/2026-11-04_general-knowledge_voice-recording_ch06.md",
+          "textSha256": "8c050f4130f136ea1d8bba548c885379e1c998cf20e7982c15c809e5cdfe493b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-04-general-knowledge_voice-recording-v1/2026-11-04_general-knowledge_voice-recording_ch06-df6218e7e081.m4a",
+          "sha256": "df6218e7e08136ffb1a6f3a5774f83f9ef78f7d2d3841a6228b30153ca0074cc",
+          "bytes": 11681275,
+          "durationSec": 362.927891
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-05_ai-consultant",
+      "title": "用 AI 比較報價與挑選供應商",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-05",
+      "description": "以虛構的成人講座音響採購為連續案例，教讀者運用 AI 比較不同供應商的報價、補足缺漏、核查服務承諾、評估使用期間成本，並由人員做出可追溯的選擇及驗收。",
+      "version": 1,
+      "cover": "covers/2026-11-05_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-05_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-05-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch01",
+          "title": "先說清楚要買什麼，才有辦法比較",
+          "markdown": "chapters/2026-11-05_ai-consultant_ch01.md",
+          "textSha256": "b40757175ee89a4b1710d612fcfe4247911b319f219697dd5926158a0d520139",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-05-ai-consultant-v1/2026-11-05_ai-consultant_ch01-2126069183bf.m4a",
+          "sha256": "2126069183bf30207d96a3974eed978e781577aeef4eea8300be6a251ceb4fef",
+          "bytes": 8854184,
+          "durationSec": 275.086803
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch02",
+          "title": "三份報價寫法不同，怎麼整理才公平",
+          "markdown": "chapters/2026-11-05_ai-consultant_ch02.md",
+          "textSha256": "8540c1012c7ddb442de9677d460bbce31b4d9b85c0b601904e6cd4851f5a25a1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-05-ai-consultant-v1/2026-11-05_ai-consultant_ch02-b87ce3630d05.m4a",
+          "sha256": "b87ce3630d0575ff9ed8a550e0767e2feae9b005699f82d1f523b56e95c33f81",
+          "bytes": 9422165,
+          "durationSec": 292.733968
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch03",
+          "title": "別只看標價：把運費、耗材與維修一起算",
+          "markdown": "chapters/2026-11-05_ai-consultant_ch03.md",
+          "textSha256": "98e2220a6e1a2fa194bfd8b0e5fe8d81863421d1f972d094577b1bf83d4a6735",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-05-ai-consultant-v1/2026-11-05_ai-consultant_ch03-6727fc7e344b.m4a",
+          "sha256": "6727fc7e344be934bf55adb2f1fe017a5ba14966c98bad51f1852b88953426d0",
+          "bytes": 10790457,
+          "durationSec": 335.249705
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch04",
+          "title": "供應商說得很好，哪些證據才算數",
+          "markdown": "chapters/2026-11-05_ai-consultant_ch04.md",
+          "textSha256": "045eb57354643634858f17d2fbe4c5a4111ae76b6629e6820d219690823ecdbb",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-05-ai-consultant-v1/2026-11-05_ai-consultant_ch04-e07704ac833b.m4a",
+          "sha256": "e07704ac833b91fcddbed298b65d489543438ad97c51e413b527dd1343d428a2",
+          "bytes": 8259310,
+          "durationSec": 256.603719
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch05",
+          "title": "價格和服務各有優缺點，怎麼做最後選擇",
+          "markdown": "chapters/2026-11-05_ai-consultant_ch05.md",
+          "textSha256": "92a8bb8b439a8fc54f3752e59844f7ef6f554074111517b3dae09a757a6d2ae2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-05-ai-consultant-v1/2026-11-05_ai-consultant_ch05-5722c0201ef6.m4a",
+          "sha256": "5722c0201ef6fa7d4f4557c914e7de0f986bad8ba9d79cc9acf0cca1bdb1f7d8",
+          "bytes": 8574676,
+          "durationSec": 266.40254
+        },
+        {
+          "chapterId": "2026-11-05_ai-consultant_ch06",
+          "title": "簽約前後怎麼驗收，出問題如何追查",
+          "markdown": "chapters/2026-11-05_ai-consultant_ch06.md",
+          "textSha256": "b988e54b458309e0edecfd2ecae794714f56366bc11d315c6c489e4de30b5c42",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-05-ai-consultant-v1/2026-11-05_ai-consultant_ch06-8b1647e2bcf4.m4a",
+          "sha256": "8b1647e2bcf4bd196b350bb93ee9732dbff2971f4cf4d34b2e06d7f57810308c",
+          "bytes": 9935497,
+          "durationSec": 308.686077
+        }
+      ]
     }
   ]
 }
