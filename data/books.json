@@ -2886,6 +2886,80 @@
           "durationSec": 282.401088
         }
       ]
+    },
+    {
+      "bookId": "2026-11-07_general-knowledge_hunger-satiety-food-choice",
+      "title": "吃飽後為什麼還想吃：飢餓、飽足感與食物選擇的科學",
+      "category": "跨領域知識探索",
+      "date": "2026-11-07",
+      "description": "以吃飽後仍想吃為切入點，解釋飢餓、食慾與胃腸飽足訊號，並透過飲料、食品加工、份量與營養標示的實驗證據，建立兼顧日常實用與研究限制的飲食判斷能力。",
+      "version": 1,
+      "cover": "covers/2026-11-07_general-knowledge_hunger-satiety-food-choice.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-07_general-knowledge_hunger-satiety-food-choice.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch01",
+          "title": "肚子不餓，為什麼還想吃東西？",
+          "markdown": "chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch01.md",
+          "textSha256": "106eb42d0851873f49d2a2f45f177d26766b9fe1151f138353db7a961e73f6f3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch01-4a15e9b11b54.m4a",
+          "sha256": "4a15e9b11b54c694f956f393675df7e0655bd3c3c652f1530c4075eef5a98636",
+          "bytes": 10457909,
+          "durationSec": 324.916825
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch02",
+          "title": "一餐怎樣讓人感覺吃飽？",
+          "markdown": "chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch02.md",
+          "textSha256": "fdcd65a8fc3eda70fe5c4dd66bdee999d63bf69eeb9eb78e2cba362cec61d844",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch02-5cf54ef26b1e.m4a",
+          "sha256": "5cf54ef26b1e70549ef51d4c85c2c3f0bac2440db7af5a2033e9eac555aeebf3",
+          "bytes": 9716615,
+          "durationSec": 301.88263
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch03",
+          "title": "喝進去的熱量，為什麼容易被忽略？",
+          "markdown": "chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch03.md",
+          "textSha256": "04e0d8e04d4493db122515c04c714562dc4a0dd56ed4af6be300b9103218b965",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch03-be3bbe96cb26.m4a",
+          "sha256": "be3bbe96cb261ed251463926154053ae56f9720d43fac34f288cd26a5efbb0b3",
+          "bytes": 9030601,
+          "durationSec": 280.566712
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch04",
+          "title": "加工食品為何可能讓人不知不覺吃更多？",
+          "markdown": "chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch04.md",
+          "textSha256": "830e68c6260954014ab9ed5d6e6c0865e72db7165ef9a2a8be43f703cc187f82",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch04-75eee385a2c7.m4a",
+          "sha256": "75eee385a2c7ca7b880f4068ae13bd1b20cc117cc741cf3c084ec19c04d4fcf0",
+          "bytes": 10641049,
+          "durationSec": 330.605714
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch05",
+          "title": "餐點份量變大，為什麼常會跟著多吃？",
+          "markdown": "chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch05.md",
+          "textSha256": "5c8d7c84b169901b26a2d0c2753b188d608c1da9eeffaba8d00f929223e6a141",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch05-abfa4af96864.m4a",
+          "sha256": "abfa4af9686482d60373e161107b5399938c43637ea4b253c101f657d71ad4a2",
+          "bytes": 9029107,
+          "durationSec": 280.520272
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06",
+          "title": "買食品時，如何看懂營養標示並作出選擇？",
+          "markdown": "chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06.md",
+          "textSha256": "8ba8f9f24f4667975a6188a1959640d66c53e25f1fe51b14affa8c32239e4686",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-general-knowledge_hunger-satiety-food-choice-v1/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06-cb61e6567f66.m4a",
+          "sha256": "cb61e6567f6647b304f483c98be6708f1926f7d3f915f3bdbc2f96eb1e202762",
+          "bytes": 9433371,
+          "durationSec": 293.082268
+        }
+      ]
     }
   ]
 }

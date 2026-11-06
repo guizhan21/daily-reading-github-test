@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 114,
-  "ledgerSha256": "2737e02f390a8e2c91718a78a1ec0dbbbf57a078e800455526110de8de64e4ca",
+  "revision": 115,
+  "ledgerSha256": "71fe38f9cc7bcbe31ece2e2ed51b8879088a310ee0fdb0b56c1be96b36ade358",
   "coverage": {
-    "publishedBooks": 39,
-    "publishedChapters": 234,
+    "publishedBooks": 40,
+    "publishedChapters": 240,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 21,
+    "bodySemanticReviewedBooks": 22,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2491,6 +2491,75 @@
             "如何把有限的宣傳分析變成可核對、有責任人及停止條件的下一輪發布？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-07_general-knowledge_hunger-satiety-food-choice",
+      "workId": "work-9f3017eb43db9ee75eafca92",
+      "version": 1,
+      "title": "吃飽後為什麼還想吃：飢餓、飽足感與食物選擇的科學",
+      "subtitle": null,
+      "description": "以吃飽後仍想吃為切入點，解釋飢餓、食慾與胃腸飽足訊號，並透過飲料、食品加工、份量與營養標示的實驗證據，建立兼顧日常實用與研究限制的飲食判斷能力。",
+      "date": "2026-11-07",
+      "series": "跨領域知識探索",
+      "scope": "日常飢餓／食慾與飽足、多重消化神經訊號、食物形式／加工／份量研究及營養標示的知識教育；不作個人處方。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch01",
+          "title": "肚子不餓，為什麼還想吃東西？",
+          "textSha256": "106eb42d0851873f49d2a2f45f177d26766b9fe1151f138353db7a961e73f6f3",
+          "coreQuestions": [
+            "吃飽仍想吃時，如何區分生理飢餓、食慾與食物線索？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch02",
+          "title": "一餐怎樣讓人感覺吃飽？",
+          "textSha256": "fdcd65a8fc3eda70fe5c4dd66bdee999d63bf69eeb9eb78e2cba362cec61d844",
+          "coreQuestions": [
+            "當餐停止與餐後維持飽足，怎樣受到食物組成及多重生理訊號影響？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch03",
+          "title": "喝進去的熱量，為什麼容易被忽略？",
+          "textSha256": "04e0d8e04d4493db122515c04c714562dc4a0dd56ed4af6be300b9103218b965",
+          "coreQuestions": [
+            "液態能量的飽足與後續能量補償，為何不能用單一規律概括？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch04",
+          "title": "加工食品為何可能讓人不知不覺吃更多？",
+          "textSha256": "830e68c6260954014ab9ed5d6e6c0865e72db7165ef9a2a8be43f703cc187f82",
+          "coreQuestions": [
+            "加工型態飲食試驗究竟操控及證明什麼，怎樣避免推成所有食品的個人效果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch05",
+          "title": "餐點份量變大，為什麼常會跟著多吃？",
+          "textSha256": "5c8d7c84b169901b26a2d0c2753b188d608c1da9eeffaba8d00f929223e6a141",
+          "coreQuestions": [
+            "食物供應份量、盤子和包裝各改變什麼，短期攝取為何不等於長期減重？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06",
+          "title": "買食品時，如何看懂營養標示並作出選擇？",
+          "textSha256": "8ba8f9f24f4667975a6188a1959640d66c53e25f1fe51b14affa8c32239e4686",
+          "coreQuestions": [
+            "如何區分每份、每百公克及整包營養數值，並辨認糖與宣稱的界線？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06.md"
         }
       ]
     }

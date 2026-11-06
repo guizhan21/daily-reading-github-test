@@ -1599,6 +1599,47 @@
         }
       ],
       "contentReview": "Source-before-generation web verification; original audio full-decode/format/SHA and artifact/source/prompt identity verified. Generated speech has not been reviewed sentence by sentence."
+    },
+    {
+      "bookId": "2026-11-07_general-knowledge_hunger-satiety-food-choice",
+      "version": 1,
+      "reviewedAt": "2026-11-06T17:53:48.501Z",
+      "decision": "approved",
+      "basis": "Explicit user authorization on 2026-11-07 to publish these two existing original ChatGPT books, isolated-source NotebookLM audio and new built-in Image covers to the established public daily-reading GitHub Pages/Release library. Reviewed explanatory prose with citation links is published; no third-party book/PDF, credentials or private personal material. Work-version source claims were cross-checked before generation. Audio is accepted by chapter/artifact identity and technical integrity, without post-generation ASR/listening/semantic review.",
+      "coverSha256": "5af95074464c4dbd94e20a55ffc7b8b891e6af00d9717f978bd4e04fd79a5fc2",
+      "chapters": [
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch01",
+          "textSha256": "106eb42d0851873f49d2a2f45f177d26766b9fe1151f138353db7a961e73f6f3",
+          "audioSha256": "4a15e9b11b54c694f956f393675df7e0655bd3c3c652f1530c4075eef5a98636"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch02",
+          "textSha256": "fdcd65a8fc3eda70fe5c4dd66bdee999d63bf69eeb9eb78e2cba362cec61d844",
+          "audioSha256": "5cf54ef26b1e70549ef51d4c85c2c3f0bac2440db7af5a2033e9eac555aeebf3"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch03",
+          "textSha256": "04e0d8e04d4493db122515c04c714562dc4a0dd56ed4af6be300b9103218b965",
+          "audioSha256": "be3bbe96cb261ed251463926154053ae56f9720d43fac34f288cd26a5efbb0b3"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch04",
+          "textSha256": "830e68c6260954014ab9ed5d6e6c0865e72db7165ef9a2a8be43f703cc187f82",
+          "audioSha256": "75eee385a2c7ca7b880f4068ae13bd1b20cc117cc741cf3c084ec19c04d4fcf0"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch05",
+          "textSha256": "5c8d7c84b169901b26a2d0c2753b188d608c1da9eeffaba8d00f929223e6a141",
+          "audioSha256": "abfa4af9686482d60373e161107b5399938c43637ea4b253c101f657d71ad4a2"
+        },
+        {
+          "chapterId": "2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06",
+          "textSha256": "8ba8f9f24f4667975a6188a1959640d66c53e25f1fe51b14affa8c32239e4686",
+          "audioSha256": "cb61e6567f6647b304f483c98be6708f1926f7d3f915f3bdbc2f96eb1e202762"
+        }
+      ],
+      "contentReview": "Source-before-generation web verification; original audio full-decode/format/SHA and artifact/source/prompt identity verified. Generated speech has not been reviewed sentence by sentence."
     }
   ],
   "skipped": []
