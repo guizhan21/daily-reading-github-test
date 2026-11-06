@@ -2812,6 +2812,80 @@
           "durationSec": 258.763175
         }
       ]
+    },
+    {
+      "bookId": "2026-11-07_ai-consultant",
+      "title": "用 AI 看懂社群貼文成效：從觀看數到實際報名",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-07",
+      "description": "以虛構的社區 AI 生活講座宣傳為一條連續案例，教讀者區分社群觀看與真正報名、整理可比資料、辨認有限歸因、避免把差異誤當因果、從留言找到可修正資訊，並用 AI 協助形成可負責的下一輪宣傳決策。",
+      "version": 1,
+      "cover": "covers/2026-11-07_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-07_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-07-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch01",
+          "title": "貼文觀看很多，為什麼報名很少",
+          "markdown": "chapters/2026-11-07_ai-consultant_ch01.md",
+          "textSha256": "e14c082a6e53552680b423b9d96db58077403e82b39b6747d5e7990978c59fb5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-ai-consultant-v1/2026-11-07_ai-consultant_ch01-9099e7386a06.m4a",
+          "sha256": "9099e7386a0696ce87694126459d612b6925ee65a01c1883256bb82340bbab3d",
+          "bytes": 8493996,
+          "durationSec": 263.894785
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch02",
+          "title": "觀看數、互動數和報名數各代表什麼",
+          "markdown": "chapters/2026-11-07_ai-consultant_ch02.md",
+          "textSha256": "023d9be49e2f2ff34595341f542a0fe4ca92200197f65e5d2caa69fa12ec4ccf",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-ai-consultant-v1/2026-11-07_ai-consultant_ch02-8e7c9101e5b2.m4a",
+          "sha256": "8e7c9101e5b2511e08e621764640740d8327edba781df54a53d546ea44c6a581",
+          "bytes": 9698686,
+          "durationSec": 301.325351
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch03",
+          "title": "怎麼知道報名來自哪一篇貼文",
+          "markdown": "chapters/2026-11-07_ai-consultant_ch03.md",
+          "textSha256": "ad557fe2561f60e08eb254d631f6c4686e8582aecf887413caefe5bfbc6998b8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-ai-consultant-v1/2026-11-07_ai-consultant_ch03-c77987527c88.m4a",
+          "sha256": "c77987527c888a7fb79fe2a2a7b0dffc1907fc4fbb57e0b9d8d564d6a7600f4b",
+          "bytes": 9424407,
+          "durationSec": 292.803628
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch04",
+          "title": "怎樣判斷哪種貼文真的有效",
+          "markdown": "chapters/2026-11-07_ai-consultant_ch04.md",
+          "textSha256": "f3fb97d458cf69cd1dc1ab0276b77f6771980b3d4e83266be7c98c493a880bda",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-ai-consultant-v1/2026-11-07_ai-consultant_ch04-e3d6a0b7d58d.m4a",
+          "sha256": "e3d6a0b7d58d20026402dc8fb7354ac3b975c8e1866e94645d64d3b974a85e60",
+          "bytes": 8434233,
+          "durationSec": 262.037188
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch05",
+          "title": "怎樣從留言和私訊找出真正的疑問",
+          "markdown": "chapters/2026-11-07_ai-consultant_ch05.md",
+          "textSha256": "268da3c44426daac314097808273d46936c122aec6c42acc4f4e146c2db49c9a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-ai-consultant-v1/2026-11-07_ai-consultant_ch05-feecc0587996.m4a",
+          "sha256": "feecc0587996ad1111a3e996fa1c41626b87af180f823e13109ebffdde9037cb",
+          "bytes": 9474458,
+          "durationSec": 294.359365
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch06",
+          "title": "如何把分析結果變成下一輪宣傳",
+          "markdown": "chapters/2026-11-07_ai-consultant_ch06.md",
+          "textSha256": "318b39a2a9495ae0ede289c4c084615d79916662b8833fa8ed9f37eb1c602f62",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-07-ai-consultant-v1/2026-11-07_ai-consultant_ch06-2fcb8b8063a1.m4a",
+          "sha256": "2fcb8b8063a12d861e65aaa15b8cae9cb665cd8297ca0d862e0100eb3c65f1cb",
+          "bytes": 9089617,
+          "durationSec": 282.401088
+        }
+      ]
     }
   ]
 }

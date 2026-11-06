@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 104,
-  "ledgerSha256": "66b418e5fb5abe5e8cc8d08bcec3fd24237abbe38f54b4290ecd6779f028576f",
+  "revision": 114,
+  "ledgerSha256": "2737e02f390a8e2c91718a78a1ec0dbbbf57a078e800455526110de8de64e4ca",
   "coverage": {
-    "publishedBooks": 38,
-    "publishedChapters": 228,
+    "publishedBooks": 39,
+    "publishedChapters": 234,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 20,
+    "bodySemanticReviewedBooks": 21,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2422,6 +2422,75 @@
             "如何依使用需求、安全異常及原廠指引判斷維修、保存與回收？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-07_ai-consultant",
+      "workId": "work-f348b84f88931dc43ac52135",
+      "version": 1,
+      "title": "用 AI 看懂社群貼文成效：從觀看數到實際報名",
+      "subtitle": null,
+      "description": "以虛構的社區 AI 生活講座宣傳為一條連續案例，教讀者區分社群觀看與真正報名、整理可比資料、辨認有限歸因、避免把差異誤當因果、從留言找到可修正資訊，並用 AI 協助形成可負責的下一輪宣傳決策。",
+      "date": "2026-11-07",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "社群宣傳的觀看／互動／報名資料字典、有限來源歸因、內容試驗、回饋抽樣及下一輪發布判斷。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch01",
+          "title": "貼文觀看很多，為什麼報名很少",
+          "textSha256": "e14c082a6e53552680b423b9d96db58077403e82b39b6747d5e7990978c59fb5",
+          "coreQuestions": [
+            "社群觀看量怎樣與有效報名目標分開判斷？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch02",
+          "title": "觀看數、互動數和報名數各代表什麼",
+          "textSha256": "023d9be49e2f2ff34595341f542a0fe4ca92200197f65e5d2caa69fa12ec4ccf",
+          "coreQuestions": [
+            "平台觀看事件、獨立人數及不同分母的比率怎樣保持可比？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch03",
+          "title": "怎麼知道報名來自哪一篇貼文",
+          "textSha256": "ad557fe2561f60e08eb254d631f6c4686e8582aecf887413caefe5bfbc6998b8",
+          "coreQuestions": [
+            "連結標記、自述來源與正式報名如何建立有限且不過度追蹤的歸因？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch04",
+          "title": "怎樣判斷哪種貼文真的有效",
+          "textSha256": "f3fb97d458cf69cd1dc1ab0276b77f6771980b3d4e83266be7c98c493a880bda",
+          "coreQuestions": [
+            "貼文版本不同時，哪些比較能支持宣傳內容的因果效果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch05",
+          "title": "怎樣從留言和私訊找出真正的疑問",
+          "textSha256": "268da3c44426daac314097808273d46936c122aec6c42acc4f4e146c2db49c9a",
+          "coreQuestions": [
+            "留言及私訊怎樣揭露公告缺口，且不冒充整體受眾意見？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-07_ai-consultant_ch06",
+          "title": "如何把分析結果變成下一輪宣傳",
+          "textSha256": "318b39a2a9495ae0ede289c4c084615d79916662b8833fa8ed9f37eb1c602f62",
+          "coreQuestions": [
+            "如何把有限的宣傳分析變成可核對、有責任人及停止條件的下一輪發布？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_ai-consultant_ch06.md"
         }
       ]
     }
