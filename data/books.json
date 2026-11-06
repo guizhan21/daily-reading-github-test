@@ -2664,6 +2664,154 @@
           "durationSec": 308.686077
         }
       ]
+    },
+    {
+      "bookId": "2026-11-06_ai-consultant",
+      "title": "用 AI 整理會議紀錄與追蹤待辦",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-06",
+      "description": "以一場完全假設的長者防詐活動籌備會為主案例，說明如何使用 AI 從錄音與逐字稿辨別提案和決議、核對證據、分派待辦、審核分享範圍與追蹤完成狀態，而不讓流暢摘要代替實際授權和結果。",
+      "version": 1,
+      "cover": "covers/2026-11-06_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-06_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-06-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch01",
+          "title": "錄音轉成文字後，為何還不能直接當會議紀錄",
+          "markdown": "chapters/2026-11-06_ai-consultant_ch01.md",
+          "textSha256": "f01cf70fabf291d7a51b77d08611d3d44f12bce68011c26ab962998cf4a81997",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-ai-consultant-v1/2026-11-06_ai-consultant_ch01-a11c5897ddff.m4a",
+          "sha256": "a11c5897ddff42bf7fdfba376f9c2dc2ca59f2a0259bea38f2c1b2a30f1c3625",
+          "bytes": 9828670,
+          "durationSec": 305.365624
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch02",
+          "title": "討論過的提案，怎樣分清是否真的通過",
+          "markdown": "chapters/2026-11-06_ai-consultant_ch02.md",
+          "textSha256": "e431448edec8ac69bbea59c6d567c0e32084ab595549effc1e5b5a276e3bed4d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-ai-consultant-v1/2026-11-06_ai-consultant_ch02-38f1115429b3.m4a",
+          "sha256": "38f1115429b397ef548b132f6ea08d2d8158742f3b778d8844fa727b67f1bfd2",
+          "bytes": 11368150,
+          "durationSec": 353.19873
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch03",
+          "title": "會議待辦要寫清負責人、期限與交付結果",
+          "markdown": "chapters/2026-11-06_ai-consultant_ch03.md",
+          "textSha256": "168ae93638dd73f085f5633158654c8034c978f2a6d38b4a0b40d804cde5c859",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-ai-consultant-v1/2026-11-06_ai-consultant_ch03-c6d292aad00e.m4a",
+          "sha256": "c6d292aad00e73998b6300e66e3db1bbc81deda0bd0d6b8fbbe67180b566d242",
+          "bytes": 8438715,
+          "durationSec": 262.176508
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch04",
+          "title": "會議裡的數字、承諾和矛盾資訊如何查證",
+          "markdown": "chapters/2026-11-06_ai-consultant_ch04.md",
+          "textSha256": "9946c6a66e1e72f00c44c628685e7cb7afc0294272fda0ee5c006c08f1753f5d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-ai-consultant-v1/2026-11-06_ai-consultant_ch04-76c9862bc65b.m4a",
+          "sha256": "76c9862bc65b8161338bdc3dcc4a44ac652cf595db1726185c850f7f8b043952",
+          "bytes": 10765805,
+          "durationSec": 334.483447
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch05",
+          "title": "會議紀錄寄出前，誰確認、可以分享哪些內容",
+          "markdown": "chapters/2026-11-06_ai-consultant_ch05.md",
+          "textSha256": "c984521d97abbeabb92a82ddffa57b1e019a080bebc984d61ca6aa0334df80a0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-ai-consultant-v1/2026-11-06_ai-consultant_ch05-aedf42569f7d.m4a",
+          "sha256": "aedf42569f7de1b66a3bc11636a4aa241172010fe405a459ccf0cb951982a6af",
+          "bytes": 8861655,
+          "durationSec": 275.319002
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch06",
+          "title": "下次開會前，如何確認待辦真的完成",
+          "markdown": "chapters/2026-11-06_ai-consultant_ch06.md",
+          "textSha256": "786ff55dc2defd46b81ee15f45cad51c3118f5a8ece8f9e493bf575334c6ae13",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-ai-consultant-v1/2026-11-06_ai-consultant_ch06-7a620be6986b.m4a",
+          "sha256": "7a620be6986beef4f6cd10b9bfb26db7a7c3b59227a7c416a46e9ae38297b1ac",
+          "bytes": 10217246,
+          "durationSec": 317.44
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-06_general-knowledge_battery-science",
+      "title": "手機電池為什麼越用越不耐用：電量、充電、發熱與保養",
+      "category": "跨領域知識探索",
+      "date": "2026-11-06",
+      "description": "用六個日常情境解釋手機鋰離子電池的電量估算、化學老化、溫度保護、充電設備、耗電排查與安全回收；幫助讀者判斷「一天不夠用」究竟是負載、設定、電池健康還是安全異常。",
+      "version": 1,
+      "cover": "covers/2026-11-06_general-knowledge_battery-science.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-06_general-knowledge_battery-science.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-06-general-knowledge_battery-science-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch01",
+          "title": "電量顯示 100%，為什麼不代表能用一整天",
+          "markdown": "chapters/2026-11-06_general-knowledge_battery-science_ch01.md",
+          "textSha256": "334e6721d6b10931bedeee3ea2c1577bd02a50bd4a2d456f9ee08b8cca4d4b02",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-general-knowledge_battery-science-v1/2026-11-06_general-knowledge_battery-science_ch01-957abd8dc16f.m4a",
+          "sha256": "957abd8dc16fa1dba3357357f85503eded3a1e84fcbb8f0070c9a4d52880a98e",
+          "bytes": 9549162,
+          "durationSec": 296.681361
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch02",
+          "title": "電池為什麼越充越不耐用",
+          "markdown": "chapters/2026-11-06_general-knowledge_battery-science_ch02.md",
+          "textSha256": "948de0dacf144114bb5c3222d72ee17e6c4fc15b56b9c603578056dc3badf3fb",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-general-knowledge_battery-science-v1/2026-11-06_general-knowledge_battery-science_ch02-e04e186e0580.m4a",
+          "sha256": "e04e186e05803c875815daf963ca1bcf5ad1dc6fcc9a75e682b430c102151cc4",
+          "bytes": 8815338,
+          "durationSec": 273.879365
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch03",
+          "title": "手機發熱和充電溫度會造成什麼影響",
+          "markdown": "chapters/2026-11-06_general-knowledge_battery-science_ch03.md",
+          "textSha256": "771b89b9aa590fd35e20b54cc6be6e3e674b609900f0566e7c3062e73c9eae70",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-general-knowledge_battery-science-v1/2026-11-06_general-knowledge_battery-science_ch03-58368ea38caf.m4a",
+          "sha256": "58368ea38cafc28ab93dffbc52fa076842d595ea32d8e3a4b1745cbc8d1340a3",
+          "bytes": 10795686,
+          "durationSec": 335.412245
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch04",
+          "title": "快充頭、充電線和行動電源怎麼選",
+          "markdown": "chapters/2026-11-06_general-knowledge_battery-science_ch04.md",
+          "textSha256": "e8ced411cc30d8251f7307328fc9fff387663c7faefe2f02c8bc264423cb1e29",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-general-knowledge_battery-science-v1/2026-11-06_general-knowledge_battery-science_ch04-ba1f49534f80.m4a",
+          "sha256": "ba1f49534f80acb27b23219c52b6ba2f1f3d6dd06a26b0bb38f112538cd58302",
+          "bytes": 9112028,
+          "durationSec": 283.097687
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch05",
+          "title": "手機耗電快，先查電池還是程式",
+          "markdown": "chapters/2026-11-06_general-knowledge_battery-science_ch05.md",
+          "textSha256": "c94555e67d058990e9264a0d7d9f8e8b893ffe2716fe68c3335c44d849bfd16d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-general-knowledge_battery-science-v1/2026-11-06_general-knowledge_battery-science_ch05-8fa941fc935f.m4a",
+          "sha256": "8fa941fc935f5f8bbf882e128323687af95d9589cf95def8fdd0a82c8cef38cc",
+          "bytes": 9502099,
+          "durationSec": 295.218503
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch06",
+          "title": "什麼時候該換電池，以及如何安全回收",
+          "markdown": "chapters/2026-11-06_general-knowledge_battery-science_ch06.md",
+          "textSha256": "52e324995664dfbd726f79430d39fe97ae8caa8bfc8ce3282e9b76d73c1b5ef9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-06-general-knowledge_battery-science-v1/2026-11-06_general-knowledge_battery-science_ch06-cd95602d4882.m4a",
+          "sha256": "cd95602d48821d43d163db729aeef3b8e537a7536038b105247734723cabdf40",
+          "bytes": 8328784,
+          "durationSec": 258.763175
+        }
+      ]
     }
   ]
 }

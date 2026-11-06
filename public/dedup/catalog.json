@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 87,
-  "ledgerSha256": "ee53d2d7dae0aa259565c0ca767d23ec1c91fa0767934e8ef4cdc65969bef0f8",
+  "revision": 104,
+  "ledgerSha256": "66b418e5fb5abe5e8cc8d08bcec3fd24237abbe38f54b4290ecd6779f028576f",
   "coverage": {
-    "publishedBooks": 36,
-    "publishedChapters": 216,
+    "publishedBooks": 38,
+    "publishedChapters": 228,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 18,
+    "bodySemanticReviewedBooks": 20,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2284,6 +2284,144 @@
             "如何將正式採購確認、到貨數量型號及情境測試串為可追責的驗收與後續紀錄？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-05_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-06_ai-consultant",
+      "workId": "work-0fc51b327a983f1b7cdabc81",
+      "version": 1,
+      "title": "用 AI 整理會議紀錄與追蹤待辦",
+      "subtitle": null,
+      "description": "以一場完全假設的長者防詐活動籌備會為主案例，說明如何使用 AI 從錄音與逐字稿辨別提案和決議、核對證據、分派待辦、審核分享範圍與追蹤完成狀態，而不讓流暢摘要代替實際授權和結果。",
+      "date": "2026-11-06",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "新會議與同日電池共12章全文；36本既有書目／全部章題檢索；六本舊書9個指定章全文，加聲音書ch06全文及7本14個原選段。只讀選定相關章，非全庫全文或每本六章全文。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch01",
+          "title": "錄音轉成文字後，為何還不能直接當會議紀錄",
+          "textSha256": "f01cf70fabf291d7a51b77d08611d3d44f12bce68011c26ab962998cf4a81997",
+          "coreQuestions": [
+            "如何將多人錄音中的誤辨、說話者及時點與可核准會議紀錄分開？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch02",
+          "title": "討論過的提案，怎樣分清是否真的通過",
+          "textSha256": "e431448edec8ac69bbea59c6d567c0e32084ab595549effc1e5b5a276e3bed4d",
+          "coreQuestions": [
+            "如何從提案、疑慮及有條件接受的連續發言辨認真正的決議？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch03",
+          "title": "會議待辦要寫清負責人、期限與交付結果",
+          "textSha256": "168ae93638dd73f085f5633158654c8034c978f2a6d38b4a0b40d804cde5c859",
+          "coreQuestions": [
+            "如何確認誰實際承接會議待辦、承諾的範圍與可交付結果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch04",
+          "title": "會議裡的數字、承諾和矛盾資訊如何查證",
+          "textSha256": "9946c6a66e1e72f00c44c628685e7cb7afc0294272fda0ee5c006c08f1753f5d",
+          "coreQuestions": [
+            "如何處理會中口述、會後文件和不同數字的時點及權責衝突？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch05",
+          "title": "會議紀錄寄出前，誰確認、可以分享哪些內容",
+          "textSha256": "c984521d97abbeabb92a82ddffa57b1e019a080bebc984d61ca6aa0334df80a0",
+          "coreQuestions": [
+            "正式會議紀錄與分眾摘要如何核准分享及更正，避免形成錯誤承諾？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-06_ai-consultant_ch06",
+          "title": "下次開會前，如何確認待辦真的完成",
+          "textSha256": "786ff55dc2defd46b81ee15f45cad51c3118f5a8ece8f9e493bf575334c6ae13",
+          "coreQuestions": [
+            "如何用會後外部證據追蹤待辦，區分未指派、等待、執行與真正完成？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-06_general-knowledge_battery-science",
+      "workId": "work-45a0752093d8cb26ea986e23",
+      "version": 1,
+      "title": "手機電池為什麼越用越不耐用：電量、充電、發熱與保養",
+      "subtitle": null,
+      "description": "用六個日常情境解釋手機鋰離子電池的電量估算、化學老化、溫度保護、充電設備、耗電排查與安全回收；幫助讀者判斷「一天不夠用」究竟是負載、設定、電池健康還是安全異常。",
+      "date": "2026-11-06",
+      "series": "跨領域知識探索",
+      "scope": "當日兩稿12章全文；36本既有metadata／章題；食安ch02、睡眠ch02、習慣ch02、聲音ch06、影片ch05全文。非全庫全文，不將18本歷史unknown改為已排重。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch01",
+          "title": "電量顯示 100%，為什麼不代表能用一整天",
+          "textSha256": "334e6721d6b10931bedeee3ea2c1577bd02a50bd4a2d456f9ee08b8cca4d4b02",
+          "coreQuestions": [
+            "如何區分手機當下充電百分比、最大容量與負載功率對續航的影響？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch02",
+          "title": "電池為什麼越充越不耐用",
+          "textSha256": "948de0dacf144114bb5c3222d72ee17e6c4fc15b56b9c603578056dc3badf3fb",
+          "coreQuestions": [
+            "充電循環與時間老化怎樣影響鋰離子電池，為何插線次數不是循環？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch03",
+          "title": "手機發熱和充電溫度會造成什麼影響",
+          "textSha256": "771b89b9aa590fd35e20b54cc6be6e3e674b609900f0566e7c3062e73c9eae70",
+          "coreQuestions": [
+            "如何分辨正常發熱、暫時充電保護、長期容量損傷及安全異常？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch04",
+          "title": "快充頭、充電線和行動電源怎麼選",
+          "textSha256": "e8ced411cc30d8251f7307328fc9fff387663c7faefe2f02c8bc264423cb1e29",
+          "coreQuestions": [
+            "充電協議、線材、瓦特與瓦時如何共同限制實際可用充電能力？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch05",
+          "title": "手機耗電快，先查電池還是程式",
+          "textSha256": "c94555e67d058990e9264a0d7d9f8e8b893ffe2716fe68c3335c44d849bfd16d",
+          "coreQuestions": [
+            "如何依可觀察耗電紀錄分辨背景負載、訊號、更新與電池老化？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-06_general-knowledge_battery-science_ch06",
+          "title": "什麼時候該換電池，以及如何安全回收",
+          "textSha256": "52e324995664dfbd726f79430d39fe97ae8caa8bfc8ce3282e9b76d73c1b5ef9",
+          "coreQuestions": [
+            "如何依使用需求、安全異常及原廠指引判斷維修、保存與回收？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-06_general-knowledge_battery-science_ch06.md"
         }
       ]
     }
