@@ -7,7 +7,7 @@ export function renderMarkdown(source){
   // The source bytes and visible citation stay intact; only the link target is corrected.
   return renderToStaticMarkup(React.createElement(Markdown,{
     remarkPlugins:[remarkGfm],
-    urlTransform:value=>['；查閱日期：','；查閱：'].reduce((url,suffix)=>url.split(encodeURI(suffix))[0].split(suffix)[0],defaultUrlTransform(value)),
+    urlTransform:value=>defaultUrlTransform(value).split(encodeURI('；查閱'))[0].split('；查閱')[0],
     skipHtml:true,
     components:{a:props=>React.createElement('a',{...props,target:'_blank',rel:'noopener noreferrer'}),img:()=>React.createElement('em',null,'〔外部圖片不載入〕')},
   },source));
