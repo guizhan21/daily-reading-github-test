@@ -1640,6 +1640,88 @@
         }
       ],
       "contentReview": "Source-before-generation web verification; original audio full-decode/format/SHA and artifact/source/prompt identity verified. Generated speech has not been reviewed sentence by sentence."
+    },
+    {
+      "bookId": "2026-11-08_ai-consultant",
+      "version": 1,
+      "reviewedAt": "2026-11-07T17:16:17.721Z",
+      "decision": "approved",
+      "basis": "Explicit user authorization on 2026-11-08 to publish these two existing original ChatGPT books, isolated-source NotebookLM audio and new built-in Image covers to the established public daily-reading GitHub Pages/Release library. Reviewed explanatory prose with citation links is published; no third-party book/PDF, credentials or private personal material. Work-version source claims were cross-checked before generation. Audio is accepted by chapter/artifact identity and technical integrity, without post-generation ASR/listening/semantic review.",
+      "coverSha256": "ed194684573bee92862d369dacbd1bb7b5616a9846a486daaa81926d16052a25",
+      "chapters": [
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch01",
+          "textSha256": "dce9df52bd4927af8e388ebc049a49e927dd9bfaacd7dee005b1a96a45c255b8",
+          "audioSha256": "15b8fa6ef47380f33d5f79fd1d505bad25c8ef48230e41641100e5f223589020"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch02",
+          "textSha256": "3d4d667b6e934e5cc6506c5ea9aad7a7a864c730afa7a15570918662ea7e2e5f",
+          "audioSha256": "c83f8bef1db1d2a2f031707114e9976c8195494a331a3d773e70d46eb69af6e0"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch03",
+          "textSha256": "c4d011a4ea94dbc84b7a3faa89602d0734c6acdfabed7e0bd3dfcf5b61475579",
+          "audioSha256": "28a5cd84159eff20d473a7e45bc7dde61cdaee08ea80ffdf25e3a16c59e2497d"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch04",
+          "textSha256": "3a5a092566563d93a247b3aac627d3c3f9ce64355f4b76a8c3345c926ae56fda",
+          "audioSha256": "c4acd0fb1f8eaa290411a4ac5e0e49565a595f061632a98b07900314262f8883"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch05",
+          "textSha256": "f44f60d5691d37eb18af3ebffcda2ad8e5cb394fd294b21dfd3dc3e0efd14bd4",
+          "audioSha256": "2408c2bd9054b11ffb71fa0a863fe2de9ad688eeaf9f1007cdf6f642d6f1933e"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch06",
+          "textSha256": "54fa734dfc69956f0bc9f27e5e2368b210bddac00d4ee73654f32b6466e61d26",
+          "audioSha256": "98d3c67004cab5cac1f2ef57e8b3d6f2639c5a5fbf9bb3afe2b62685de024223"
+        }
+      ],
+      "contentReview": "Source-before-generation web verification; original audio full-decode/format/SHA and artifact/source/prompt identity verified. Generated speech has not been reviewed sentence by sentence."
+    },
+    {
+      "bookId": "2026-11-08_general-knowledge_location-services",
+      "version": 1,
+      "reviewedAt": "2026-11-07T17:26:54.203Z",
+      "decision": "approved",
+      "basis": "Explicit user authorization on 2026-11-08 to publish these two existing original ChatGPT books, isolated-source NotebookLM audio and new built-in Image covers to the established public daily-reading GitHub Pages/Release library. Reviewed explanatory prose with citation links is published; no third-party book/PDF, credentials or private personal material. Work-version source claims were cross-checked before generation. Audio is accepted by chapter/artifact identity and technical integrity, without post-generation ASR/listening/semantic review.",
+      "coverSha256": "c45f2fd22f1723bf28f4abb8cdd9465490e85b5cd7e0b09fe15f1e31b805e34c",
+      "chapters": [
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch01",
+          "textSha256": "0ee3357138ca778a92cfa4a0f25d15c893068e1d3532e82f27ece2e3ebcdfe94",
+          "audioSha256": "006fa9568a1b61d5c5ee433867373544282efbe48f2c4bb7efbc8b0f75740900"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch02",
+          "textSha256": "1d0e3cd9cbb06cf04227e75d0a6ad5e1f8a7d0ea8079263822a6403634e35940",
+          "audioSha256": "bfd937b0d8ee006f1f45ded285afcd5f3b0569a660ed6fed2caeb658f151cf8e"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch03",
+          "textSha256": "2c2400cc4a09ebfb17cff11a8720a4b44cc6a20983cf7853a7d5e6b0cc256715",
+          "audioSha256": "b85389d1a7fe98f295bb9ce38a991a45c8e3f5d41425388dd9f861b57a6f071f"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch04",
+          "textSha256": "ddf263be8e64f7a9481b05a0827b0ed4136befae082394c3a43b46d5bb00646b",
+          "audioSha256": "26bb8d5ea5735004f2de265ff07f7b1a407e15a191ddf1cda15ddd7c31c372ce"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch05",
+          "textSha256": "7d54ca4ed8f75afd28ce5cc2eb3ad035216971c887da40f063d27c3ba6f5e0f1",
+          "audioSha256": "d713fc34b5dc4d4814add7ea5170c7cee0f7a1235df4563fe39643724673b8c8"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch06",
+          "textSha256": "bd728379c1b0d9b2629dd2ccbe74c933b21748e036138f55245acbf4c75f37a3",
+          "audioSha256": "bb39f54c257955f872d6d1214af337fe1f11013c8a2e048d17685affb6e3d0ab"
+        }
+      ],
+      "contentReview": "Source-before-generation web verification; original audio full-decode/format/SHA and artifact/source/prompt identity verified. Generated speech has not been reviewed sentence by sentence."
     }
   ],
   "skipped": []

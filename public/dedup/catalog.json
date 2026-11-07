@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 115,
-  "ledgerSha256": "71fe38f9cc7bcbe31ece2e2ed51b8879088a310ee0fdb0b56c1be96b36ade358",
+  "revision": 122,
+  "ledgerSha256": "a8a3e6e312f66f093af2e72e27288a89f181f5a7a2a61d22b44b40a97ec5bea2",
   "coverage": {
-    "publishedBooks": 40,
-    "publishedChapters": 240,
+    "publishedBooks": 42,
+    "publishedChapters": 252,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 22,
+    "bodySemanticReviewedBooks": 24,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2560,6 +2560,144 @@
             "如何區分每份、每百公克及整包營養數值，並辨認糖與宣稱的界線？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-07_general-knowledge_hunger-satiety-food-choice_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-08_ai-consultant",
+      "workId": "work-df3f4c12718c1d28f21b3d6a",
+      "version": 1,
+      "title": "用 AI 製作多語言活動資訊：翻譯、查核與現場應對",
+      "subtitle": null,
+      "description": "以虛構社區活動為連續案例，學習用 AI 建立多語言公告的核准底稿、翻譯與在地化、語意審查、讀者測試及現場人工接手。",
+      "date": "2026-11-08",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "低風險社區活動的多語資訊：核准底稿、可翻譯性、翻譯條件對等、地區格式及最終載體核對、目標語言讀者測試和現場語言/授權接手；不作醫療/法律合格翻譯保證。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch01",
+          "title": "先決定要讓哪些人看懂活動資訊",
+          "textSha256": "dce9df52bd4927af8e388ebc049a49e927dd9bfaacd7dee005b1a96a45c255b8",
+          "coreQuestions": [
+            "同一活動的不同語言公告如何讓不同讀者獲得相同可行資訊？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch02",
+          "title": "把中文原稿整理成不會誤導的翻譯底稿",
+          "textSha256": "3d4d667b6e934e5cc6506c5ea9aad7a7a864c730afa7a15570918662ea7e2e5f",
+          "coreQuestions": [
+            "哪些中文歧義與專名必須在翻譯之前由權責人確認？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch03",
+          "title": "讓 AI 翻譯後仍保留相同的報名規則",
+          "textSha256": "c4d011a4ea94dbc84b7a3faa89602d0734c6acdfabed7e0bd3dfcf5b61475579",
+          "coreQuestions": [
+            "怎樣檢查流暢外語是否改掉原文的報名條件與限制？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch04",
+          "title": "日期、地址與現場服務承諾要怎麼核對",
+          "textSha256": "3a5a092566563d93a247b3aac627d3c3f9ce64355f4b76a8c3345c926ae56fda",
+          "coreQuestions": [
+            "日期時間地址和服務承諾如何跨語言及載體保持一致？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch05",
+          "title": "發布前用真實讀者問題測試譯文",
+          "textSha256": "f44f60d5691d37eb18af3ebffcda2ad8e5cb394fd294b21dfd3dc3e0efd14bd4",
+          "coreQuestions": [
+            "如何用目標語言讀者的行動理解檢查譯文而不冒稱整體成功率？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch06",
+          "title": "活動當天遇到翻譯問題，如何讓人接手",
+          "textSha256": "54fa734dfc69956f0bc9f27e5e2368b210bddac00d4ee73654f32b6466e61d26",
+          "coreQuestions": [
+            "現場外語問題何時只是翻譯，何時需要人作新的核准決策？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-08_general-knowledge_location-services",
+      "workId": "work-dc9173a8caef91b27e5683df",
+      "version": 1,
+      "title": "手機定位怎麼知道你在哪：GPS、Wi-Fi、基地台與位置權限",
+      "subtitle": null,
+      "description": "從一張不準確的地圖藍點出發，理解衛星與網路定位如何運作、為何室內與高樓旁常偏移、網站和 App 如何取得位置，並分辨位置分享、相片地點資料與導航排查的責任邊界。",
+      "date": "2026-11-08",
+      "series": "跨領域知識探索",
+      "scope": "消費手機位置估計、資料新鮮度、地圖資訊、位置權限及分享隱私；不作監控法律結論或救援操作承諾。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch01",
+          "title": "手機怎麼靠衛星找到位置",
+          "textSha256": "0ee3357138ca778a92cfa4a0f25d15c893068e1d3532e82f27ece2e3ebcdfe94",
+          "coreQuestions": [
+            "衛星如何利用廣播時間和幾何求得位置，為何四顆與時鐘偏差有關？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch02",
+          "title": "室內為什麼也能定位",
+          "textSha256": "1d0e3cd9cbb06cf04227e75d0a6ad5e1f8a7d0ea8079263822a6403634e35940",
+          "coreQuestions": [
+            "室內如何綜合Wi-Fi、基地台與藍牙線索，為何不保證樓層精度？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch03",
+          "title": "地圖上的藍點為什麼會偏",
+          "textSha256": "2c2400cc4a09ebfb17cff11a8720a4b44cc6a20983cf7853a7d5e6b0cc256715",
+          "coreQuestions": [
+            "怎樣分辨精度、舊位置、反射及地圖資料錯誤？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch04",
+          "title": "網站與App怎麼取得位置",
+          "textSha256": "ddf263be8e64f7a9481b05a0827b0ed4136befae082394c3a43b46d5bb00646b",
+          "coreQuestions": [
+            "網站與App如何依目的取得不同精度及前背景位置？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch05",
+          "title": "分享照片和位置的隱私",
+          "textSha256": "7d54ca4ed8f75afd28ce5cc2eb3ad035216971c887da40f063d27c3ba6f5e0f1",
+          "coreQuestions": [
+            "照片中繼資料、固定地點與持續分享各帶來何種風險？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch06",
+          "title": "手機定位不準怎麼排查",
+          "textSha256": "bd728379c1b0d9b2629dd2ccbe74c933b21748e036138f55245acbf4c75f37a3",
+          "coreQuestions": [
+            "定位故障如何依來源、新鮮度、地圖及權限逐項排查？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch06.md"
         }
       ]
     }

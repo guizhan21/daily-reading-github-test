@@ -2960,6 +2960,154 @@
           "durationSec": 293.082268
         }
       ]
+    },
+    {
+      "bookId": "2026-11-08_ai-consultant",
+      "title": "用 AI 製作多語言活動資訊：翻譯、查核與現場應對",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-08",
+      "description": "以虛構社區活動為連續案例，學習用 AI 建立多語言公告的核准底稿、翻譯與在地化、語意審查、讀者測試及現場人工接手。",
+      "version": 1,
+      "cover": "covers/2026-11-08_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-08_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-08-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch01",
+          "title": "先決定要讓哪些人看懂活動資訊",
+          "markdown": "chapters/2026-11-08_ai-consultant_ch01.md",
+          "textSha256": "dce9df52bd4927af8e388ebc049a49e927dd9bfaacd7dee005b1a96a45c255b8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-ai-consultant-v1/2026-11-08_ai-consultant_ch01-15b8fa6ef473.m4a",
+          "sha256": "15b8fa6ef47380f33d5f79fd1d505bad25c8ef48230e41641100e5f223589020",
+          "bytes": 9550656,
+          "durationSec": 296.7278
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch02",
+          "title": "把中文原稿整理成不會誤導的翻譯底稿",
+          "markdown": "chapters/2026-11-08_ai-consultant_ch02.md",
+          "textSha256": "3d4d667b6e934e5cc6506c5ea9aad7a7a864c730afa7a15570918662ea7e2e5f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-ai-consultant-v1/2026-11-08_ai-consultant_ch02-c83f8bef1db1.m4a",
+          "sha256": "c83f8bef1db1d2a2f031707114e9976c8195494a331a3d773e70d46eb69af6e0",
+          "bytes": 8788445,
+          "durationSec": 273.043447
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch03",
+          "title": "讓 AI 翻譯後仍保留相同的報名規則",
+          "markdown": "chapters/2026-11-08_ai-consultant_ch03.md",
+          "textSha256": "c4d011a4ea94dbc84b7a3faa89602d0734c6acdfabed7e0bd3dfcf5b61475579",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-ai-consultant-v1/2026-11-08_ai-consultant_ch03-28a5cd84159e.m4a",
+          "sha256": "28a5cd84159eff20d473a7e45bc7dde61cdaee08ea80ffdf25e3a16c59e2497d",
+          "bytes": 9688227,
+          "durationSec": 301.000272
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch04",
+          "title": "日期、地址與現場服務承諾要怎麼核對",
+          "markdown": "chapters/2026-11-08_ai-consultant_ch04.md",
+          "textSha256": "3a5a092566563d93a247b3aac627d3c3f9ce64355f4b76a8c3345c926ae56fda",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-ai-consultant-v1/2026-11-08_ai-consultant_ch04-c4acd0fb1f8e.m4a",
+          "sha256": "c4acd0fb1f8eaa290411a4ac5e0e49565a595f061632a98b07900314262f8883",
+          "bytes": 10124614,
+          "durationSec": 314.560726
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch05",
+          "title": "發布前用真實讀者問題測試譯文",
+          "markdown": "chapters/2026-11-08_ai-consultant_ch05.md",
+          "textSha256": "f44f60d5691d37eb18af3ebffcda2ad8e5cb394fd294b21dfd3dc3e0efd14bd4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-ai-consultant-v1/2026-11-08_ai-consultant_ch05-2408c2bd9054.m4a",
+          "sha256": "2408c2bd9054b11ffb71fa0a863fe2de9ad688eeaf9f1007cdf6f642d6f1933e",
+          "bytes": 10363035,
+          "durationSec": 321.967891
+        },
+        {
+          "chapterId": "2026-11-08_ai-consultant_ch06",
+          "title": "活動當天遇到翻譯問題，如何讓人接手",
+          "markdown": "chapters/2026-11-08_ai-consultant_ch06.md",
+          "textSha256": "54fa734dfc69956f0bc9f27e5e2368b210bddac00d4ee73654f32b6466e61d26",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-ai-consultant-v1/2026-11-08_ai-consultant_ch06-98d3c67004ca.m4a",
+          "sha256": "98d3c67004cab5cac1f2ef57e8b3d6f2639c5a5fbf9bb3afe2b62685de024223",
+          "bytes": 8931129,
+          "durationSec": 277.478458
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-08_general-knowledge_location-services",
+      "title": "手機定位怎麼知道你在哪：GPS、Wi-Fi、基地台與位置權限",
+      "category": "跨領域知識探索",
+      "date": "2026-11-08",
+      "description": "從一張不準確的地圖藍點出發，理解衛星與網路定位如何運作、為何室內與高樓旁常偏移、網站和 App 如何取得位置，並分辨位置分享、相片地點資料與導航排查的責任邊界。",
+      "version": 1,
+      "cover": "covers/2026-11-08_general-knowledge_location-services.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-08_general-knowledge_location-services.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-08-general-knowledge_location-services-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch01",
+          "title": "手機怎麼靠衛星找到位置",
+          "markdown": "chapters/2026-11-08_general-knowledge_location-services_ch01.md",
+          "textSha256": "0ee3357138ca778a92cfa4a0f25d15c893068e1d3532e82f27ece2e3ebcdfe94",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-general-knowledge_location-services-v1/2026-11-08_general-knowledge_location-services_ch01-006fa9568a1b.m4a",
+          "sha256": "006fa9568a1b61d5c5ee433867373544282efbe48f2c4bb7efbc8b0f75740900",
+          "bytes": 9800283,
+          "durationSec": 304.483265
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch02",
+          "title": "室內為什麼也能定位",
+          "markdown": "chapters/2026-11-08_general-knowledge_location-services_ch02.md",
+          "textSha256": "1d0e3cd9cbb06cf04227e75d0a6ad5e1f8a7d0ea8079263822a6403634e35940",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-general-knowledge_location-services-v1/2026-11-08_general-knowledge_location-services_ch02-bfd937b0d8ee.m4a",
+          "sha256": "bfd937b0d8ee006f1f45ded285afcd5f3b0569a660ed6fed2caeb658f151cf8e",
+          "bytes": 9632083,
+          "durationSec": 299.258776
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch03",
+          "title": "地圖上的藍點為什麼會偏",
+          "markdown": "chapters/2026-11-08_general-knowledge_location-services_ch03.md",
+          "textSha256": "2c2400cc4a09ebfb17cff11a8720a4b44cc6a20983cf7853a7d5e6b0cc256715",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-general-knowledge_location-services-v1/2026-11-08_general-knowledge_location-services_ch03-b85389d1a7fe.m4a",
+          "sha256": "b85389d1a7fe98f295bb9ce38a991a45c8e3f5d41425388dd9f861b57a6f071f",
+          "bytes": 9253219,
+          "durationSec": 287.486259
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch04",
+          "title": "網站與App怎麼取得位置",
+          "markdown": "chapters/2026-11-08_general-knowledge_location-services_ch04.md",
+          "textSha256": "ddf263be8e64f7a9481b05a0827b0ed4136befae082394c3a43b46d5bb00646b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-general-knowledge_location-services-v1/2026-11-08_general-knowledge_location-services_ch04-26bb8d5ea573.m4a",
+          "sha256": "26bb8d5ea5735004f2de265ff07f7b1a407e15a191ddf1cda15ddd7c31c372ce",
+          "bytes": 8201788,
+          "durationSec": 254.815782
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch05",
+          "title": "分享照片和位置的隱私",
+          "markdown": "chapters/2026-11-08_general-knowledge_location-services_ch05.md",
+          "textSha256": "7d54ca4ed8f75afd28ce5cc2eb3ad035216971c887da40f063d27c3ba6f5e0f1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-general-knowledge_location-services-v1/2026-11-08_general-knowledge_location-services_ch05-d713fc34b5dc.m4a",
+          "sha256": "d713fc34b5dc4d4814add7ea5170c7cee0f7a1235df4563fe39643724673b8c8",
+          "bytes": 9792813,
+          "durationSec": 304.251066
+        },
+        {
+          "chapterId": "2026-11-08_general-knowledge_location-services_ch06",
+          "title": "手機定位不準怎麼排查",
+          "markdown": "chapters/2026-11-08_general-knowledge_location-services_ch06.md",
+          "textSha256": "bd728379c1b0d9b2629dd2ccbe74c933b21748e036138f55245acbf4c75f37a3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-08-general-knowledge_location-services-v1/2026-11-08_general-knowledge_location-services_ch06-bb39f54c2579.m4a",
+          "sha256": "bb39f54c257955f872d6d1214af337fe1f11013c8a2e048d17685affb6e3d0ab",
+          "bytes": 11303905,
+          "durationSec": 351.201814
+        }
+      ]
     }
   ]
 }
