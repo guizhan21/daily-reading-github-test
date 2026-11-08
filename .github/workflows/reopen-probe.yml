@@ -1,0 +1,32 @@
+name: Diagnose native WebKit close and reopen
+on:
+  push:
+    branches: [diagnostics/webkit-reopen-20261109]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: webkit-reopen-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  native-reopen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Real public AAC, 88 warm samples and five native close/reopen cycles
+        run: |
+          docker run --rm --init -v "$PWD:/work" -w /work \
+            mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea \
+            node tests/reopen-probe.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: webkit-reopen-diagnostic
+          path: test-results
+          retention-days: 7
