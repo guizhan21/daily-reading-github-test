@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 122,
-  "ledgerSha256": "a8a3e6e312f66f093af2e72e27288a89f181f5a7a2a61d22b44b40a97ec5bea2",
+  "revision": 129,
+  "ledgerSha256": "a4255be4e86cb723ec131a1708253eb26828371311648dac695c63aa0abf7bd9",
   "coverage": {
-    "publishedBooks": 42,
-    "publishedChapters": 252,
+    "publishedBooks": 44,
+    "publishedChapters": 265,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 24,
+    "bodySemanticReviewedBooks": 26,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2698,6 +2698,153 @@
             "定位故障如何依來源、新鮮度、地圖及權限逐項排查？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-08_general-knowledge_location-services_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-09_ai-consultant",
+      "workId": "work-a7a177f4e7924332871d2be4",
+      "version": 1,
+      "title": "用 AI 設計問卷與分析回饋",
+      "subtitle": null,
+      "description": "以虛構的六週成人 AI 課程為連續案例，從選擇調查問題、修正誘導措辭、設計選項、實際預試、判斷樣本與漏答，到使用 AI 整理開放回答並把有限證據轉成可檢查的課程改進。",
+      "date": "2026-11-09",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "問卷測量全流程：研究問題、措辭、選項順序、真填答者預試、抽樣/分母、可追溯編碼與有限證據下修訂。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch01",
+          "title": "先決定問卷要幫你回答什麼",
+          "textSha256": "d617a1c0f3b80bc224eb2431d297fb8e879d8824d23138ed0beb0d2ff03f8432",
+          "coreQuestions": [
+            "問卷的決策用途如何轉成可回答的研究問題與測量構念？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch02",
+          "title": "題目怎麼寫才不會把答案帶歪",
+          "textSha256": "6e38eb8244dda8c99a92786758b40d01da89279f3f5074fe6fe16ec9a4eda622",
+          "coreQuestions": [
+            "如何辨認雙重、誘導、預設經驗和回憶期間不明的題目？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch03",
+          "title": "選項和順序怎麼改變填答結果",
+          "textSha256": "e5630ee0b183c55d463e1ff0fad0362c2cd4a3e9ede4779888251e2a6fe2c256",
+          "coreQuestions": [
+            "選項分類、缺失/不適用、順序及手機呈現如何改變可比性？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch04",
+          "title": "發送前如何測試問卷真的看得懂",
+          "textSha256": "d79e32a70850773c5f8a8ce7c0e5dbebd2289aee8a6d6211ee5ca944c714ff63",
+          "coreQuestions": [
+            "如何用真實目標填答者的理解與操作測試發現設計者看不到的問題？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch05",
+          "title": "收到幾份問卷才能代表誰的意見",
+          "textSha256": "70b0a882081cdd07bffd7dfd9a91e46e2e59d759a897c2fbb8f071445c4fc801",
+          "coreQuestions": [
+            "母體、抽樣框、自願回覆與分母能支持何種代表性，哪些誤差範圍不能宣稱？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch06",
+          "title": "讓 AI 整理開放式回答但不亂歸類",
+          "textSha256": "55025504b8905198760e0bae646b50d598defe29b2a7252e9a521d41beea88d6",
+          "coreQuestions": [
+            "如何用可追溯單位/原話/規則整理開放回答，同時保留既有分類與隱私原則？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-09_ai-consultant_ch07",
+          "title": "如何把回饋變成可檢查的課程調整",
+          "textSha256": "4deb3ae784d100bb309df93b395034ce3e418f73766b9b35e1e54694deac9757",
+          "coreQuestions": [
+            "如何從有限回覆作可逆課程修訂而不把自評、時間變化或建議當成因果和批准？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_ai-consultant_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-09_general-knowledge",
+      "workId": "work-fc4064458312450a5a1d45e8",
+      "version": 1,
+      "title": "壓力如何影響身體與判斷：緊張、長期負荷與恢復",
+      "subtitle": null,
+      "description": "說明壓力反應的生理基礎、對注意與決策的影響、長期健康負荷，以及個人恢復和工作環境改善的證據與邊界。",
+      "date": "2026-11-09",
+      "series": "跨領域知識探索",
+      "scope": "急性壓力的自主神經/HPA動員、個體評估、前額葉控制、慢性負荷、職業心理社會風險及恢復/求助的健康素養。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-09_general-knowledge_ch01",
+          "title": "壓力來時，身體為什麼會加速",
+          "textSha256": "09632bb0f8d5ec502fb21eed1bb6b3480fdb0e95b9e89869f4b253b4c6fce85c",
+          "coreQuestions": [
+            "突發要求如何動員自主神經與HPA，哪些身體訊號不能當診斷？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-09_general-knowledge_ch02",
+          "title": "同一件事，為什麼有人壓力大、有人沒事",
+          "textSha256": "fef8138bc9f17a6181094ae10622f082c6653c5b2f09d1444151dac157e0b445",
+          "coreQuestions": [
+            "同一要求的評估、能力資源、控制/預測條件如何造成壓力差異？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-09_general-knowledge_ch03",
+          "title": "緊張時為什麼更容易漏事、做錯決定",
+          "textSha256": "83ed272baed17d61f9d0206e712f562f04606dae1e1dd53509a993bb57957a92",
+          "coreQuestions": [
+            "不可控制急性壓力可能怎樣改變工作記憶和注意控制，研究外推有何限制？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-09_general-knowledge_ch04",
+          "title": "長期壓力如何牽動睡眠、食慾與健康",
+          "textSha256": "83d9a433694921141d3783dcfff23b5d11ea960c131745586b7d35557db1e68a",
+          "coreQuestions": [
+            "慢性負荷及恢復不足如何和睡眠、食慾及健康共同變化，為何不能單因歸因？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-09_general-knowledge_ch05",
+          "title": "工作環境怎樣製造壓力，又怎樣減少壓力",
+          "textSha256": "5aec7824c4f3038c4c3725a775d80a01d009394f47c5cf90fab0ba452d638720",
+          "coreQuestions": [
+            "工作心理社會風險如何與個人調節區分，WHO的介入建議能支持到哪裡？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-09_general-knowledge_ch06",
+          "title": "壓力大時怎麼恢復，什麼情況該求助",
+          "textSha256": "38797b0d9a5b930cb7ae210cbb066d3cef2860726e85be88e1e67fbaf470f841",
+          "coreQuestions": [
+            "恢復技巧、現實資源及求助如何配合，為何不能保證療效或用自助取代評估？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch06.md"
         }
       ]
     }
