@@ -1,6 +1,6 @@
 import {icon} from './icons.js';
 import {cardCoverPath} from './cover-assets.js';
-import {canonicalAudioURL,retryAudioURL} from './media-source.js';
+import {canonicalAudioURL,retryAudioURL,retryableMediaError} from './media-source.js';
 import {chapterProgress,continueIndex,validRate,bookStatus,shelves,chapterWasFinished,allChaptersFinished,updateChapterProgress,reconcileBookProgress,setBookShelf} from './progress.js';
 import {initAppearance} from './preferences.js';
 import {initAmbience} from './ambience.js';
@@ -113,7 +113,7 @@ function recoverAudio(reason,manual=false,userInitiated=false){
 }
 function mediaError(){const code=audio.error?.code,token=selection;if(!code||!book||currentSource()!==book.chapters[index].audioUrl)return;requestedSeek=resumePosition();loading=true;pendingRestore=null;display();
  if(audioSession.interrupted()){interruptionStatus();return;}
- if(book&&wantsPlayback&&navigator.onLine!==false&&[2,3].includes(code)&&recoveryCount<2){queueMicrotask(()=>{if(token===selection&&wantsPlayback&&audio.error)recoverAudio('media-error-'+code);});}
+ if(book&&wantsPlayback&&navigator.onLine!==false&&retryableMediaError(audio.error)&&recoveryCount<2){queueMicrotask(()=>{if(token===selection&&wantsPlayback&&audio.error)recoverAudio('media-error-'+code);});}
  else{$('status').textContent='音訊連線中斷（'+(code||'網路')+'）；原進度已保留，可重新連線';$('retry-load').hidden=false;}
 }
 const health=createPlaybackHealth({read:()=>({token:selection,time:pendingUserSeek!==null?0:audio.currentTime,intent:wantsPlayback||pendingUserSeek!==null,loading:loading||audio.seeking||pendingUserSeek!==null,paused:audio.paused,ended:audio.ended,interrupted:audioSession.interrupted(),error:!!audio.error?.code,offline:navigator.onLine===false,attempt:recoveryCount}),recover:recoverAudio,status:kind=>{

@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {canonicalAudioURL,retryAudioURL} from '../src/media-source.js';
+import test from 'node:test';import assert from 'node:assert/strict';import {canonicalAudioURL,retryAudioURL,retryableMediaError} from '../src/media-source.js';
 const original='https://github.com/owner/books/releases/download/book-v1/ch01.m4a';
 test('normal loads retain the exact permanent Release URL',()=>assert.equal(retryAudioURL(original,0,''),original));
 test('bounded retries use unique fresh requests for the identical Release asset',()=>{const a=retryAudioURL(original,1,'123-1'),b=retryAudioURL(original,2,'123-2');assert.notEqual(a,b);assert.equal(new URL(a).origin,new URL(original).origin);assert.equal(new URL(a).pathname,new URL(original).pathname);assert.equal(canonicalAudioURL(a),original);assert.equal(canonicalAudioURL(b),original);});
@@ -7,3 +7,6 @@ test('unrecognized retry values cannot masquerade as a canonical source',()=>ass
 test('retry normalization never equates another book, host, or chapter',()=>{for(const other of [original.replace('ch01','ch02'),original.replace('book-v1','other-v1'),original.replace('github.com','example.com')])assert.notEqual(canonicalAudioURL(retryAudioURL(other,1,'123')),original);});
 test('invalid or empty native sources remain unmatched',()=>{for(const source of ['',undefined,'not a url','http://example.com/ch.m4a'])assert.equal(canonicalAudioURL(source),'');});
 test('invalid retry limits and nonce values are rejected',()=>{for(const attempt of [-1,3,99,1.5])assert.throws(()=>retryAudioURL(original,attempt,'123'));assert.throws(()=>retryAudioURL(original,1,'bad value'));assert.throws(()=>retryAudioURL(original+'?dr_retry=1-old',1,'123'));});
+
+test('native WebKit explicit HTTP5xx code4 remains a bounded recoverable transport error',()=>{for(const message of ['R1: Received 500 HTTP error code','Received 503 HTTP error code','HTTP 502','HTTP error code: 504'])assert.equal(retryableMediaError({code:4,message}),true,message);assert.equal(retryableMediaError({code:2}),true);assert.equal(retryableMediaError({code:3}),true);});
+test('unsupported media, 4xx and unrelated numbers are not treated as transient server failures',()=>{for(const message of ['', 'Unsupported codec','R1: Received 404 HTTP error code','HTTP 403','HTTP 5000','500 samples failed'])assert.equal(retryableMediaError({code:4,message}),false,message);assert.equal(retryableMediaError({code:1,message:'HTTP 500'}),false);assert.equal(retryableMediaError(null),false);});
