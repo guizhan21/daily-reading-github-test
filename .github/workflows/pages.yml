@@ -1,3 +1,4 @@
+# Definition refresh after documented GitHub startup errors; validation and deployment conditions unchanged.
 name: Test and deploy Pages
 on:
   push:
