@@ -20,3 +20,22 @@ export function createPlaybackHealth({read,recover,status,now=()=>performance.no
  }
  return {tick,reset(){token=undefined;lastStatus='';}};
 }
+
+// Native decoders can report a completed stream after a bad restored seek.
+// Keep a separate, elapsed-time-bounded position witness before persisting it.
+export function createPlaybackClock({wallNow=()=>Date.now(),monoNow=()=>performance.now(),maxRate=2,tolerance=2}={}){
+ let last=null;
+ const anchor=(token,position,playing)=>{last={token,position,playing,wall:wallNow(),mono:monoNow()};};
+ return {
+  reset(token,position,playing=false){anchor(token,position,playing);},
+  seek(token,position,playing=false){if(Number.isFinite(position)&&position>=0)anchor(token,position,playing);},
+  observe({token,position,playing}){
+   if(!Number.isFinite(position)||position<0)return{valid:false,position:last?.position??0,reason:'invalid-clock'};
+   if(!last||last.token!==token){anchor(token,position,playing);return{valid:true,position};}
+   const elapsed=last.playing?Math.max(0,(wallNow()-last.wall)/1000,(monoNow()-last.mono)/1000):0;
+   if(position<last.position-1||position>last.position+elapsed*maxRate+tolerance)
+    return{valid:false,position:last.position,observed:position,reason:'clock-discontinuity'};
+   anchor(token,position,playing);return{valid:true,position};
+  }
+ };
+}
