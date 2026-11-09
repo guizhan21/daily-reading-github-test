@@ -16,6 +16,8 @@ export function canonicalAudioURL(actual){
 // Unsupported codecs, decode errors, explicit4xx and arbitrary text remain rejected.
 export function retryableMediaError(error){
  if([2,3].includes(error?.code))return true;
- if(error?.code===4&&error.message==='Failed to open media')return true;
+ // Chrome ORB can expose a rejected transport response as generic Format error.
+ // The caller requires the same SHA-verified catalog source and stops after max2.
+ if(error?.code===4&&['Failed to open media','MEDIA_ELEMENT_ERROR: Format error'].includes(error.message))return true;
  return error?.code===4&&/\b(?:received\s+5\d\d\s+http\s+error\s+code|http(?:\s+error)?(?:\s+code)?\s*[:=]?\s*5\d\d)\b/i.test(String(error.message||''));
 }

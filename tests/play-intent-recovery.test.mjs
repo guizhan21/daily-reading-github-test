@@ -7,7 +7,7 @@ function harness(error,reason='NotSupportedError'){
  c.recoverAudio=reason=>{events.push({reason,intent:c.wantsPlayback,position:c.requestedSeek});c.selection++;c.audio.error=null;};
  vm.createContext(c);vm.runInContext(play+'\n'+media,c);return{c,events,status,retry};
 }
-for(const [name,message]of[['WebKit','R1: Received 500 HTTP error code'],['Firefox','Failed to open media']])test(name+' pre-open rejected play promise retains intent until late native error and recovers once at saved position',async()=>{
+for(const [name,message]of[['WebKit','R1: Received 500 HTTP error code'],['Firefox','Failed to open media'],['Chrome','MEDIA_ELEMENT_ERROR: Format error']])test(name+' pre-open rejected play promise retains intent until late native error and recovers once at saved position',async()=>{
  const h=harness({code:4,message});await h.c.play(true);await Promise.resolve();h.c.mediaError();await Promise.resolve();assert.equal(h.events.length,1);assert.equal(h.events[0].reason,'media-error-4');assert.equal(h.events[0].intent,true);assert.equal(h.events[0].position,73);assert.equal(h.c.wantsPlayback,true);
 });
 test('autoplay denial and genuine unsupported format retain manual fallback without reconnecting',async()=>{for(const [error,name]of[[{code:4,message:'Failed to open media'},'NotAllowedError'],[{code:4,message:'Unsupported codec'},'NotSupportedError']]){const h=harness(error,name);await h.c.play(true);await Promise.resolve();assert.equal(h.events.length,0);assert.equal(h.c.wantsPlayback,false);assert.equal(h.retry.hidden,false);}});
