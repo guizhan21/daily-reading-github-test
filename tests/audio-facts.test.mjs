@@ -18,6 +18,18 @@ test('Markdown dividers are not facts, but every substantive line still requires
  assert.throws(()=>loadFacts(workspace,{id:'chapter'},{sourcePath:'source.md'}),/cover every/);
 });
 
+test('R bibliography URL rows are excluded while in-body R citations and non-reference bullets remain required',t=>{
+ const workspace=fs.mkdtempSync(path.join(path.dirname(import.meta.filename),'audio-facts-test-'));
+ t.after(()=>fs.rmSync(workspace,{recursive:true}));
+ const source='# Chapter\n\nFact with [R01].\n\n- Important non-reference claim.\n\n## 本章參考資料\n- [R01] Original source https://example.org/reference\n';
+ fs.writeFileSync(path.join(workspace,'source.md'),source);
+ const row=line=>({line,quote:source.split('\n')[line-1],fact:'Covered body',conclusion:'Preserve meaning',condition:'Limited scope',terms:'Original terms',exclude:'No additions',pitfall:'No overstatement'});
+ const facts={chapterId:'chapter',sourceSha256:sha(source),paragraphs:[row(3),row(5)]};
+ fs.writeFileSync(path.join(workspace,'fact_constraints.json'),JSON.stringify(facts));
+ assert.equal(loadFacts(workspace,{id:'chapter'},{sourcePath:'source.md'}).facts.paragraphs.length,2);
+ for(const omitted of[3,5]){fs.writeFileSync(path.join(workspace,'fact_constraints.json'),JSON.stringify({...facts,paragraphs:facts.paragraphs.filter(r=>r.line!==omitted)}));assert.throws(()=>loadFacts(workspace,{id:'chapter'},{sourcePath:'source.md'}),/cover every/);}
+});
+
 test('gates bind the source, attempt, audio, transcript and original-audio review', t => {
  const workspace=fs.mkdtempSync(path.join(path.dirname(import.meta.filename),'audio-facts-test-'));
  t.after(()=>fs.rmSync(workspace,{recursive:true}));

@@ -3266,6 +3266,154 @@
           "durationSec": 325.288345
         }
       ]
+    },
+    {
+      "bookId": "2026-11-10_ai-consultant",
+      "title": "用 AI 製作容易照做的操作說明書",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-10",
+      "description": "以操作說明書為單一交付物，從使用者任務、介面觀察、圖文核對、錯誤恢復、讀者測試到版本維護，說明 AI 如何協助撰寫但不取代事實與人工責任。",
+      "version": 1,
+      "cover": "covers/2026-11-10_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-10_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-10-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch01",
+          "title": "先確認讀者要完成哪個操作",
+          "markdown": "chapters/2026-11-10_ai-consultant_ch01.md",
+          "textSha256": "9a89a10e45e3a431b38f4c78b6dceab8576a4a20260d80ff5a15b9e89dffd555",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-ai-consultant-v1/2026-11-10_ai-consultant_ch01-ab8860591d08.m4a",
+          "sha256": "ab8860591d088db81784340623de0262daa85deccef2f781728e3bd538c9de2f",
+          "bytes": 8722705,
+          "durationSec": 271.000091
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch02",
+          "title": "把實際畫面整理成正確步驟",
+          "markdown": "chapters/2026-11-10_ai-consultant_ch02.md",
+          "textSha256": "a0347b5b3799ff9d0f5f4381be6d3688b42efdc14ce97b60aaf108a224bdc24b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-ai-consultant-v1/2026-11-10_ai-consultant_ch02-f4ac1195c83b.m4a",
+          "sha256": "f4ac1195c83b82739d0c1584e0ab6b92c9b9837584ded668c201793ea910b665",
+          "bytes": 11430154,
+          "durationSec": 355.125986
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch03",
+          "title": "讓截圖和文字真正對得上",
+          "markdown": "chapters/2026-11-10_ai-consultant_ch03.md",
+          "textSha256": "a76d30a4668821ae75e91884a59e874cbffc96a4c3ed8b3ea1c7c7197b35b8d0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-ai-consultant-v1/2026-11-10_ai-consultant_ch03-38ba4708bab9.m4a",
+          "sha256": "38ba4708bab96f83f62a7cb2108bd9cdd8f41354260eaf5b2d47d5e7c2c97afd",
+          "bytes": 11957048,
+          "durationSec": 371.496054
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch04",
+          "title": "把常見錯誤寫成能恢復的指引",
+          "markdown": "chapters/2026-11-10_ai-consultant_ch04.md",
+          "textSha256": "bb513ebecfc3e29e29c9906eab16229dba68464f03419495fbd29960e14d6abf",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-ai-consultant-v1/2026-11-10_ai-consultant_ch04-75a051bc754e.m4a",
+          "sha256": "75a051bc754e1774ec7bb969d241a500b15b3b2f2423b2d9e76d9cd3d2ebd540",
+          "bytes": 8397628,
+          "durationSec": 260.89941
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch05",
+          "title": "讓別人不靠作者也能照著完成",
+          "markdown": "chapters/2026-11-10_ai-consultant_ch05.md",
+          "textSha256": "4b20fc2c738371040cddd070ea7e8bf25a091fdeffd192da178fbdcdbe2669d7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-ai-consultant-v1/2026-11-10_ai-consultant_ch05-3956af2b1591.m4a",
+          "sha256": "3956af2b15911800de1e28b6da8d2a8ac6292c33680ea8843e630dcb852e884e",
+          "bytes": 12879989,
+          "durationSec": 400.172698
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch06",
+          "title": "版本更新後，怎樣維持說明書可信",
+          "markdown": "chapters/2026-11-10_ai-consultant_ch06.md",
+          "textSha256": "292e6f1c4530ac3761188ada656f3e2e762929eb34990effa7751c03f011ffe3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-ai-consultant-v1/2026-11-10_ai-consultant_ch06-47729ebe5d02.m4a",
+          "sha256": "47729ebe5d0248a5b39f4bfeed8c1278dcb1e83636c45cd22f229909d69da9e7",
+          "bytes": 12731959,
+          "durationSec": 395.575147
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-10_general-knowledge",
+      "title": "文字為什麼會變亂碼：UTF-8、字型、換行與檔案交換",
+      "category": "跨領域知識探索",
+      "date": "2026-11-10",
+      "description": "理解中文字如何在電腦、網站、試算表與字幕之間交換，釐清亂碼、字型、Unicode、UTF-8、舊編碼、換行、CSV與字串比對的不同原因。",
+      "version": 1,
+      "cover": "covers/2026-11-10_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-10_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-10-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch01",
+          "title": "同一份文字為什麼會變成亂碼",
+          "markdown": "chapters/2026-11-10_general-knowledge_ch01.md",
+          "textSha256": "b8d7f42e53ab5a56c507f7755228f608fe3354fe95a8cc67334cd62e47d6d139",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-general-knowledge-v1/2026-11-10_general-knowledge_ch01-24c0a7bd81fc.m4a",
+          "sha256": "24c0a7bd81fc642106ac3b252a26988fc0ae0d1ab81aa9c164326e193724b8c2",
+          "bytes": 14485208,
+          "durationSec": 450.049161
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch02",
+          "title": "UTF-8與舊編碼如何影響中文檔案",
+          "markdown": "chapters/2026-11-10_general-knowledge_ch02.md",
+          "textSha256": "de86cb5e986a10635f585f2650b5931249536fcf088b95dc86f63b7b5ee11ed6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-general-knowledge-v1/2026-11-10_general-knowledge_ch02-c60a700dfefd.m4a",
+          "sha256": "c60a700dfefd4bd825c6294c8bd2cb243c2e2188f4d257115367a86a440e2f9e",
+          "bytes": 8366252,
+          "durationSec": 259.924172
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch03",
+          "title": "文字看起來正常，為何搜尋和比對仍失敗",
+          "markdown": "chapters/2026-11-10_general-knowledge_ch03.md",
+          "textSha256": "bf4b20ea221409579ebeba29463dd9f81efd92c4bb51f95275f86a928eb43656",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-general-knowledge-v1/2026-11-10_general-knowledge_ch03-432c17f063c8.m4a",
+          "sha256": "432c17f063c8b2166f6034b7163364820cd95e571940a86ec1b92c85f9c8bca6",
+          "bytes": 12202824,
+          "durationSec": 379.13542
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch04",
+          "title": "換行、CSV和字幕為什麼容易出問題",
+          "markdown": "chapters/2026-11-10_general-knowledge_ch04.md",
+          "textSha256": "c7a70be95752e5cc8241927eb4cd194b858ae4c8349da1ecdee7528ac3f7e80d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-general-knowledge-v1/2026-11-10_general-knowledge_ch04-42f45a9dd9aa.m4a",
+          "sha256": "42f45a9dd9aa32ddaafa7f388d82af9773c21773157752f48cd9c4dbab93d221",
+          "bytes": 9636566,
+          "durationSec": 299.398095
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch05",
+          "title": "網站和程式如何決定文字的編碼",
+          "markdown": "chapters/2026-11-10_general-knowledge_ch05.md",
+          "textSha256": "9c16609aafd7f85e27a27279cc435974d8652e75da30b4cc40d67fa714636f01",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-general-knowledge-v1/2026-11-10_general-knowledge_ch05-4573fe5e742d.m4a",
+          "sha256": "4573fe5e742d125d6f4b6b6c89eb76df21eb4e8f685d4eb2cfa3613843e01532",
+          "bytes": 9934003,
+          "durationSec": 308.639637
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch06",
+          "title": "文字檔交給別人前，如何確認真的沒出錯",
+          "markdown": "chapters/2026-11-10_general-knowledge_ch06.md",
+          "textSha256": "438c4d8295c94a9862aebfc9ed309d69da006facba22686c8e75ccf238009e85",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-10-general-knowledge-v1/2026-11-10_general-knowledge_ch06-49b9efd6b2f8.m4a",
+          "sha256": "49b9efd6b2f850dafa8461e67ef514c7cfeba7f9c64fb1e9567926f179ffa2fb",
+          "bytes": 10781493,
+          "durationSec": 334.971066
+        }
+      ]
     }
   ]
 }

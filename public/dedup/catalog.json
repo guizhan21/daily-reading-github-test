@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 129,
-  "ledgerSha256": "a4255be4e86cb723ec131a1708253eb26828371311648dac695c63aa0abf7bd9",
+  "revision": 136,
+  "ledgerSha256": "b5e829cd6c29813078eafd2d1b428d42246852a4445b27de39d69d17efe4af47",
   "coverage": {
-    "publishedBooks": 44,
-    "publishedChapters": 265,
+    "publishedBooks": 46,
+    "publishedChapters": 277,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 26,
+    "bodySemanticReviewedBooks": 28,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2845,6 +2845,144 @@
             "恢復技巧、現實資源及求助如何配合，為何不能保證療效或用自助取代評估？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-09_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-10_ai-consultant",
+      "workId": "work-8805b6149aa3760991ccbbee",
+      "version": 1,
+      "title": "用 AI 製作容易照做的操作說明書",
+      "subtitle": null,
+      "description": "以操作說明書為單一交付物，從使用者任務、介面觀察、圖文核對、錯誤恢復、讀者測試到版本維護，說明 AI 如何協助撰寫但不取代事實與人工責任。",
+      "date": "2026-11-10",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "以可獨立執行的操作說明書為成品：任務邊界、介面觀察、圖文時序、錯誤退路、讀者完成測試與改版維護。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch01",
+          "title": "先確認讀者要完成哪個操作",
+          "textSha256": "9a89a10e45e3a431b38f4c78b6dceab8576a4a20260d80ff5a15b9e89dffd555",
+          "coreQuestions": [
+            "如何界定讀者起點、完成狀態、任務範圍和不能繼續的情況？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch02",
+          "title": "把實際畫面整理成正確步驟",
+          "textSha256": "a0347b5b3799ff9d0f5f4381be6d3688b42efdc14ce97b60aaf108a224bdc24b",
+          "coreQuestions": [
+            "如何把實際介面證據轉成動作與完成確認，避免模型猜按鈕？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch03",
+          "title": "讓截圖和文字真正對得上",
+          "textSha256": "a76d30a4668821ae75e91884a59e874cbffc96a4c3ed8b3ea1c7c7197b35b8d0",
+          "coreQuestions": [
+            "如何把圖號、步驟、畫面時間點、可及性與隱私一一核對？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch04",
+          "title": "把常見錯誤寫成能恢復的指引",
+          "textSha256": "bb513ebecfc3e29e29c9906eab16229dba68464f03419495fbd29960e14d6abf",
+          "coreQuestions": [
+            "如何按實際症狀安排最小安全檢查、退路與敏感情況停止？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch05",
+          "title": "讓別人不靠作者也能照著完成",
+          "textSha256": "4b20fc2c738371040cddd070ea7e8bf25a091fdeffd192da178fbdcdbe2669d7",
+          "coreQuestions": [
+            "如何分開主觀可讀與無作者提示的實際任務完成及高後果錯誤？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-10_ai-consultant_ch06",
+          "title": "版本更新後，怎樣維持說明書可信",
+          "textSha256": "292e6f1c4530ac3761188ada656f3e2e762929eb34990effa7751c03f011ffe3",
+          "coreQuestions": [
+            "改版後如何維持適用裝置、版號、核實者、批准與撤回狀態？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-10_general-knowledge",
+      "workId": "work-642a7d1af4894250ee4463fe",
+      "version": 1,
+      "title": "文字為什麼會變亂碼：UTF-8、字型、換行與檔案交換",
+      "subtitle": null,
+      "description": "理解中文字如何在電腦、網站、試算表與字幕之間交換，釐清亂碼、字型、Unicode、UTF-8、舊編碼、換行、CSV與字串比對的不同原因。",
+      "date": "2026-11-10",
+      "series": "跨領域知識探索",
+      "scope": "以中文字元表示與交換失敗為核心，分開位元組/解碼/字型/字素/結構格式，展開UTF-8、BOM、正規化、行尾、CSV、字幕和HTML/程式邊界。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch01",
+          "title": "同一份文字為什麼會變成亂碼",
+          "textSha256": "b8d7f42e53ab5a56c507f7755228f608fe3354fe95a8cc67334cd62e47d6d139",
+          "coreQuestions": [
+            "如何用位元組、解碼、字符與字形四層區分亂碼和缺字？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch02",
+          "title": "UTF-8與舊編碼如何影響中文檔案",
+          "textSha256": "de86cb5e986a10635f585f2650b5931249536fcf088b95dc86f63b7b5ee11ed6",
+          "coreQuestions": [
+            "如何理解UTF-8、舊編碼、轉碼順序、BOM與偵測的條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch03",
+          "title": "文字看起來正常，為何搜尋和比對仍失敗",
+          "textSha256": "bf4b20ea221409579ebeba29463dd9f81efd92c4bb51f95275f86a928eb43656",
+          "coreQuestions": [
+            "如何區分同形異碼、正規化、字素叢集、字數與身分比對？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch04",
+          "title": "換行、CSV和字幕為什麼容易出問題",
+          "textSha256": "c7a70be95752e5cc8241927eb4cd194b858ae4c8349da1ecdee7528ac3f7e80d",
+          "coreQuestions": [
+            "為何行尾、CSV引號/欄位與字幕時間結構不能靠換編碼修正？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch05",
+          "title": "網站和程式如何決定文字的編碼",
+          "textSha256": "9c16609aafd7f85e27a27279cc435974d8652e75da30b4cc40d67fa714636f01",
+          "coreQuestions": [
+            "如何沿HTML標頭/宣告、程式字串與bytes、下載接收器定位文字邊界？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-10_general-knowledge_ch06",
+          "title": "文字檔交給別人前，如何確認真的沒出錯",
+          "textSha256": "438c4d8295c94a9862aebfc9ed309d69da006facba22686c8e75ccf238009e85",
+          "coreQuestions": [
+            "如何依位元組、結構、意義及接收端條件驗收交付，保留不能確認部分？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch06.md"
         }
       ]
     }

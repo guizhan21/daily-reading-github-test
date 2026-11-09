@@ -26,7 +26,7 @@ export function validateFactConstraints(chapterId,source,facts){
  const bodyEnd = lines.findIndex(line => line.startsWith('## 本章實際查閱來源'));
  const expected = lines.slice(0, bodyEnd < 0 ? lines.length : bodyEnd)
   .flatMap((line, index) => line.trim() && !/^\s*#/.test(line) && !/^\s{0,3}(?:-{3,}|\*{3,}|_{3,})\s*$/.test(line) &&
-   !/^\s*[-*]\s+\[S\d+\].*https:\/\//.test(line) ? [index + 1] : []);
+   !/^\s*[-*]\s+\[(?:S|R)\d+\].*https:\/\//.test(line) ? [index + 1] : []);
  if (!expected.length || !Array.isArray(facts.paragraphs) || facts.paragraphs.map(row => row.line).join() !== expected.join()) throw Error('Fact constraints must cover every source body line in order');
  for (const row of facts.paragraphs) {
   if (!row.quote || !lines[row.line - 1].includes(row.quote) ||
