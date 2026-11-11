@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 145,
-  "ledgerSha256": "1ae2a57e01cb1c9a49ee7945e7ce53b3415263b71321ce657bcdab06fdbf0595",
+  "revision": 146,
+  "ledgerSha256": "fed01a1b8aa409eecb664fb96a4f8db526be8e5487c899fbdd494546096a9d24",
   "coverage": {
-    "publishedBooks": 48,
-    "publishedChapters": 291,
+    "publishedBooks": 49,
+    "publishedChapters": 298,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 30,
+    "bodySemanticReviewedBooks": 31,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3139,6 +3139,84 @@
             "住家與教室怎麼依污染源、外氣條件及過濾能力安排可持續的改善？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-12_ai-consultant",
+      "workId": "work-b5e1b064fc18d2d497b7c9e9",
+      "version": 1,
+      "title": "用 AI 把課程錄影做成精華短片",
+      "subtitle": null,
+      "description": "以虛構的成人 AI 課堂錄影為連續案例，學會用 AI 找出值得剪的片段、校對逐字稿與語意、安排四十五秒短片、製作可理解字幕、確認公開素材的權利，以及建立發佈與修訂驗收。",
+      "date": "2026-11-12",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "讀現行48筆書目、候選七章的議題與主要案例及提示，並與近期實際段落及同日空氣書首章比較。舊書正文只查列明段落，不宣稱讀完其全文。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch01",
+          "title": "從一堂課找出值得剪的重點",
+          "textSha256": "97578069507c164c9f2b2100123807619e33ed6f3916fc60aa6221303598066b",
+          "coreQuestions": [
+            "如何從用途、完整教學證據及理解成本選出可獨立成立的精華，並寫成可追溯素材卡？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch02",
+          "title": "逐字稿不能代替觀看原片",
+          "textSha256": "6f7ca8aed08aeac29610e3332becf4b2704cb1ab3a268be3491b5025591b3448",
+          "coreQuestions": [
+            "如何從自動轉錄回到原片的聲畫證據，核對否定詞、指涉、條件與時間軸？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch03",
+          "title": "剪短時如何保留講師的原意",
+          "textSha256": "ee211f063aa340f702308a66355293e33e22ca12c6a4ebcfe2630156e929de44",
+          "coreQuestions": [
+            "剪接後如何用陌生觀眾、完整語句與畫面對照驗證講師立場沒有被翻轉？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch04",
+          "title": "四十五秒如何安排畫面與說明",
+          "textSha256": "7d9bd920caf90ff9175327f67a341698c81feda307d077245a2ffc87590773f5",
+          "coreQuestions": [
+            "如何讓四十五秒的畫面、旁白、字幕與相同時間軸都能呈現主要教學對照？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch05",
+          "title": "字幕與聲音怎樣讓人看得懂",
+          "textSha256": "9de90a0b5c5504a8fc2a5614a6e85eabd56b50f7fc84f7a98d8e723ffd530f5d",
+          "coreQuestions": [
+            "如何建立最終短片的同步字幕、聲音優先順序與實機畫面檢查？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch06",
+          "title": "公開前如何處理人物與素材授權",
+          "textSha256": "0f6d1d3b4b89d349fa627e668750f6182a8743c44c1eeab45a91274956e30b49",
+          "coreQuestions": [
+            "如何逐一確認對外公開的人物、錄音、投影片及配樂用途和權利，決定替代或停止？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch07",
+          "title": "怎樣驗收、發佈並保留可修改版本",
+          "textSha256": "53c57de7b9e374a29830865fb3fb2cb099acbd9f6eddec36a5b697603645f3f9",
+          "coreQuestions": [
+            "如何用正式發行檔獨立驗收內容、媒體及權利，並保存可回查的修訂和撤回路徑？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch07.md"
         }
       ]
     }

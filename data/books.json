@@ -3582,6 +3582,90 @@
           "durationSec": 292.571429
         }
       ]
+    },
+    {
+      "bookId": "2026-11-12_ai-consultant",
+      "title": "用 AI 把課程錄影做成精華短片",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-12",
+      "description": "以虛構的成人 AI 課堂錄影為連續案例，學會用 AI 找出值得剪的片段、校對逐字稿與語意、安排四十五秒短片、製作可理解字幕、確認公開素材的權利，以及建立發佈與修訂驗收。",
+      "version": 1,
+      "cover": "covers/2026-11-12_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-12_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-12-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch01",
+          "title": "從一堂課找出值得剪的重點",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch01.md",
+          "textSha256": "97578069507c164c9f2b2100123807619e33ed6f3916fc60aa6221303598066b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch01-c453d40b23c1.m4a",
+          "sha256": "c453d40b23c1ff5effef76fcfc4c4b47194a5f37678fdb81bfd401998d45ef41",
+          "bytes": 10161219,
+          "durationSec": 315.698503
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch02",
+          "title": "逐字稿不能代替觀看原片",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch02.md",
+          "textSha256": "6f7ca8aed08aeac29610e3332becf4b2704cb1ab3a268be3491b5025591b3448",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch02-91c81e76d3f3.m4a",
+          "sha256": "91c81e76d3f32fecf3faa697afaf5d88efb55be5dca7ee2c9dd9c4adb4010afa",
+          "bytes": 14287126,
+          "durationSec": 443.895873
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch03",
+          "title": "剪短時如何保留講師的原意",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch03.md",
+          "textSha256": "ee211f063aa340f702308a66355293e33e22ca12c6a4ebcfe2630156e929de44",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch03-286549ecbdf8.m4a",
+          "sha256": "286549ecbdf8a3765de48b19c477108a831e9b017f35239a21001c04821b57b7",
+          "bytes": 8373722,
+          "durationSec": 260.156372
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch04",
+          "title": "四十五秒如何安排畫面與說明",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch04.md",
+          "textSha256": "7d9bd920caf90ff9175327f67a341698c81feda307d077245a2ffc87590773f5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch04-7a54181532fc.m4a",
+          "sha256": "7a54181532fc6cc67e523a0c7d12459f8833cb91cd122f8476c943d9b5af5fd4",
+          "bytes": 10418316,
+          "durationSec": 323.686168
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch05",
+          "title": "字幕與聲音怎樣讓人看得懂",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch05.md",
+          "textSha256": "9de90a0b5c5504a8fc2a5614a6e85eabd56b50f7fc84f7a98d8e723ffd530f5d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch05-92d3e585d93a.m4a",
+          "sha256": "92d3e585d93ab7315c470cd140665685b8179711577be2b1b54d5eb7aa14b608",
+          "bytes": 10271780,
+          "durationSec": 319.135057
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch06",
+          "title": "公開前如何處理人物與素材授權",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch06.md",
+          "textSha256": "0f6d1d3b4b89d349fa627e668750f6182a8743c44c1eeab45a91274956e30b49",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch06-68a272d6cc1d.m4a",
+          "sha256": "68a272d6cc1d53af06e4c106e6c5bdc9055b525c70dd470343202dff7595e715",
+          "bytes": 8350448,
+          "durationSec": 259.436553
+        },
+        {
+          "chapterId": "2026-11-12_ai-consultant_ch07",
+          "title": "怎樣驗收、發佈並保留可修改版本",
+          "markdown": "chapters/2026-11-12_ai-consultant_ch07.md",
+          "textSha256": "53c57de7b9e374a29830865fb3fb2cb099acbd9f6eddec36a5b697603645f3f9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-ai-consultant-v1/2026-11-12_ai-consultant_ch07-388c9a9fe058.m4a",
+          "sha256": "388c9a9fe0580527f5a2383fdbbf1efc63bf2d44340909ba3151831bb24105b2",
+          "bytes": 11892795,
+          "durationSec": 369.499138
+        }
+      ]
     }
   ]
 }
