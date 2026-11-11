@@ -48,7 +48,7 @@ jobs:
       fail-fast: false
       matrix:
         browser: [chrome, firefox, webkit]
-    runs-on: ubuntu-24.04
+    runs-on: ${{ matrix.browser == 'firefox' && 'macos-15' || 'ubuntu-24.04' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -64,23 +64,10 @@ jobs:
           fi
           google-chrome --version
           command -v xvfb-run
-      - name: Install Firefox, its AAC decoder and an audio output service
+      # The macOS runner supplies the system AAC decoder and audio service.
+      - name: Install the Playwright Firefox build on macOS
         if: matrix.browser == 'firefox'
-        run: |
-          npx playwright install firefox
-          if ! node --input-type=module -e "import {firefox} from 'playwright'; const browser=await firefox.launch(); await browser.close();"; then
-            npx playwright install-deps firefox
-          fi
-          # AAC is loaded at playback time; browser launch is not a codec test.
-          bash scripts/install-firefox-audio-ci.sh
-          export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
-          mkdir -p "$XDG_RUNTIME_DIR"
-          chmod 700 "$XDG_RUNTIME_DIR"
-          echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" >> "$GITHUB_ENV"
-          pulseaudio --start --exit-idle-time=-1
-          pactl load-module module-null-sink sink_name=ci_audio
-          pactl set-default-sink ci_audio
-          pactl list short sinks
+        run: npx playwright install firefox
       - run: npm run build
       - name: Test isolated migration before deployment
         if: matrix.browser != 'webkit'
@@ -119,7 +106,7 @@ jobs:
       fail-fast: false
       matrix:
         browser: [chrome, firefox, webkit]
-    runs-on: ubuntu-24.04
+    runs-on: ${{ matrix.browser == 'firefox' && 'macos-15' || 'ubuntu-24.04' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -135,23 +122,9 @@ jobs:
           fi
           google-chrome --version
           command -v xvfb-run
-      - name: Install Firefox, its AAC decoder and an audio output service
+      - name: Install the Playwright Firefox build on macOS
         if: matrix.browser == 'firefox'
-        run: |
-          npx playwright install firefox
-          if ! node --input-type=module -e "import {firefox} from 'playwright'; const browser=await firefox.launch(); await browser.close();"; then
-            npx playwright install-deps firefox
-          fi
-          # AAC is loaded at playback time; browser launch is not a codec test.
-          bash scripts/install-firefox-audio-ci.sh
-          export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
-          mkdir -p "$XDG_RUNTIME_DIR"
-          chmod 700 "$XDG_RUNTIME_DIR"
-          echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" >> "$GITHUB_ENV"
-          pulseaudio --start --exit-idle-time=-1
-          pactl load-module module-null-sink sink_name=ci_audio
-          pactl set-default-sink ci_audio
-          pactl list short sinks
+        run: npx playwright install firefox
       - name: Verify actual public website and Release playback
         if: matrix.browser != 'webkit'
         run: npm run test:browser
