@@ -3498,6 +3498,90 @@
           "durationSec": 301.97551
         }
       ]
+    },
+    {
+      "bookId": "2026-11-12_general-knowledge",
+      "title": "室內空氣為什麼會變差：二氧化碳、PM2.5、通風與清淨機",
+      "category": "跨領域知識探索",
+      "date": "2026-11-12",
+      "description": "從教室悶熱、烹調油煙、家中霉斑和空氣監測器入手，解釋CO₂、PM2.5、外氣交換、清淨機CADR、VOC、燃燒氣體與濕度的機制與判斷界線。",
+      "version": 1,
+      "cover": "covers/2026-11-12_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-12_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-12-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch01",
+          "title": "房間很悶，究竟是缺氧、二氧化碳，還是別的問題？",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch01.md",
+          "textSha256": "5025852cb78907acaa3f635f2ed7c4cdaf1ca4b8b584ac0761ac5b1c67bc7671",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch01-98602c98e8c2.m4a",
+          "sha256": "98602c98e8c2da2ca6208a170d7d25d71447d808d43507467d5a5dce909c8e94",
+          "bytes": 10073068,
+          "durationSec": 312.958549
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch02",
+          "title": "PM2.5 從哪裡來，為什麼看不到也可能吸進去？",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch02.md",
+          "textSha256": "59f8cc2afed0fed930618842f6362d03e8079c08bde12fc8df964d426405abe6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch02-75e6de61080f.m4a",
+          "sha256": "75e6de61080f75663099bc2512628eeb919213f294dd124b34ee250c9581bcfe",
+          "bytes": 10921936,
+          "durationSec": 339.336417
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch03",
+          "title": "開窗、電風扇、冷氣與排風機，哪一種真的能換氣？",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch03.md",
+          "textSha256": "fa1b224741ee302ddc82dd25495b7a41e10fd91e81ed8d2d3c89f10bed556535",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch03-5f525994fbaa.m4a",
+          "sha256": "5f525994fbaaff011d18a336198ee02abb85cb3949f289a3570a45a758de6bda",
+          "bytes": 9611166,
+          "durationSec": 298.608617
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch04",
+          "title": "空氣清淨機真的有效嗎？看懂 HEPA、CADR 與濾網限制",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch04.md",
+          "textSha256": "01cb138e53ab3d3f1da259a47c595442f9ef0bc54b9b73a1af60f49ece0b3489",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch04-5d23324980ea.m4a",
+          "sha256": "5d23324980ea5b81cd23508d5688b902b3fe777eabe757028fb30e71729ad8f5",
+          "bytes": 10110420,
+          "durationSec": 314.119546
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch05",
+          "title": "聞到油漆味、看到發霉，為什麼只靠清淨機不夠？",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch05.md",
+          "textSha256": "f3f109598ee763eaa87d8aba9983f1871a7f71c5acb946f8e80fabe95e2e6a2f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch05-7737064a44c1.m4a",
+          "sha256": "7737064a44c1fb29391ff61521f7bb6e9aae153b4d98ea4b5293da24429c373d",
+          "bytes": 11020661,
+          "durationSec": 342.401451
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch06",
+          "title": "空氣監測器數字一直跳，怎麼知道哪個問題真的存在？",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch06.md",
+          "textSha256": "9233799fcce66ba241c4ce945043b102d8a3bac97599d299a489f2f8b7b02ca1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch06-dcfd27489de5.m4a",
+          "sha256": "dcfd27489de563888a3538f5c51750fc7f5d74025fc6431d1b9f28b0fc728a72",
+          "bytes": 9429636,
+          "durationSec": 292.966168
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch07",
+          "title": "家裡與教室空氣不好，怎麼依真正風險安排改善？",
+          "markdown": "chapters/2026-11-12_general-knowledge_ch07.md",
+          "textSha256": "1449124ee562e23d16be50e5a98fcf384fb467c64786e731257f1a9dac6b8164",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-12-general-knowledge-v1/2026-11-12_general-knowledge_ch07-9dd8cb804ede.m4a",
+          "sha256": "9dd8cb804ede11da3793432d4b51be86e93f254a45082f49b64962507c4c4ae8",
+          "bytes": 9416936,
+          "durationSec": 292.571429
+        }
+      ]
     }
   ]
 }

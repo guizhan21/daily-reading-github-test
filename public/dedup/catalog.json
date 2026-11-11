@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 139,
-  "ledgerSha256": "8df54e3dfa777b7e4b6e229bff727365e2e6fd633df773278e517b3521f97173",
+  "revision": 145,
+  "ledgerSha256": "1ae2a57e01cb1c9a49ee7945e7ce53b3415263b71321ce657bcdab06fdbf0595",
   "coverage": {
-    "publishedBooks": 47,
-    "publishedChapters": 284,
+    "publishedBooks": 48,
+    "publishedChapters": 291,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 29,
+    "bodySemanticReviewedBooks": 30,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3061,6 +3061,84 @@
             "如何以桌上演練找出設備、人力、通知的中斷並重新驗收？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-12_general-knowledge",
+      "workId": "work-5b8de38ea9ffa00c95aa2ce3",
+      "version": 1,
+      "title": "室內空氣為什麼會變差：二氧化碳、PM2.5、通風與清淨機",
+      "subtitle": null,
+      "description": "從教室悶熱、烹調油煙、家中霉斑和空氣監測器入手，解釋CO₂、PM2.5、外氣交換、清淨機CADR、VOC、燃燒氣體與濕度的機制與判斷界線。",
+      "date": "2026-11-12",
+      "series": "跨領域知識探索",
+      "scope": "原始審查讀了當時47本書目、新稿完整7章及提示與所列舊書節錄。此補查核對最新49筆書目及同日AI稿七章主題與案例，其中同日稿第一章節錄綁定SHA。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch01",
+          "title": "房間很悶，究竟是缺氧、二氧化碳，還是別的問題？",
+          "textSha256": "5025852cb78907acaa3f635f2ed7c4cdaf1ca4b8b584ac0761ac5b1c67bc7671",
+          "coreQuestions": [
+            "主觀悶熱、冷房與外氣交換要如何區分，CO₂數字在哪些條件下是通風線索？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch02",
+          "title": "PM2.5 從哪裡來，為什麼看不到也可能吸進去？",
+          "textSha256": "59f8cc2afed0fed930618842f6362d03e8079c08bde12fc8df964d426405abe6",
+          "coreQuestions": [
+            "如何用粒徑、烹調與室外來源、暴露時間解讀 PM2.5？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch03",
+          "title": "開窗、電風扇、冷氣與排風機，哪一種真的能換氣？",
+          "textSha256": "fa1b224741ee302ddc82dd25495b7a41e10fd91e81ed8d2d3c89f10bed556535",
+          "coreQuestions": [
+            "如何辨識空氣循環、室外換氣與等效過濾，如何算及限制 ACH？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch04",
+          "title": "空氣清淨機真的有效嗎？看懂 HEPA、CADR 與濾網限制",
+          "textSha256": "01cb138e53ab3d3f1da259a47c595442f9ef0bc54b9b73a1af60f49ece0b3489",
+          "coreQuestions": [
+            "怎麼以粒子 CADR、風量、風速和空間條件判斷清淨機？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch05",
+          "title": "聞到油漆味、看到發霉，為什麼只靠清淨機不夠？",
+          "textSha256": "f3f109598ee763eaa87d8aba9983f1871a7f71c5acb946f8e80fabe95e2e6a2f",
+          "coreQuestions": [
+            "如何區分 VOC、燃燒氣體及霉害，為什麼排風與修漏是不同手段？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch06",
+          "title": "空氣監測器數字一直跳，怎麼知道哪個問題真的存在？",
+          "textSha256": "9233799fcce66ba241c4ce945043b102d8a3bac97599d299a489f2f8b7b02ca1",
+          "coreQuestions": [
+            "如何比較感測器趨勢與準確性，避免以單點判斷全室暴露？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-12_general-knowledge_ch07",
+          "title": "家裡與教室空氣不好，怎麼依真正風險安排改善？",
+          "textSha256": "1449124ee562e23d16be50e5a98fcf384fb467c64786e731257f1a9dac6b8164",
+          "coreQuestions": [
+            "住家與教室怎麼依污染源、外氣條件及過濾能力安排可持續的改善？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_general-knowledge_ch07.md"
         }
       ]
     }
