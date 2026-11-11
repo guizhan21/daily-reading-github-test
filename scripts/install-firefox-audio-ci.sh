@@ -3,10 +3,21 @@ set -euo pipefail
 
 # Use Ubuntu's signed HTTPS archive for this runner's audio dependencies.
 sources="${RUNNER_TEMP:?}/firefox-audio.sources"
-sed -E \
-  -e 's|https?://(azure\.)?archive\.ubuntu\.com/ubuntu/?|https://archive.ubuntu.com/ubuntu/|g' \
-  -e 's|https?://security\.ubuntu\.com/ubuntu/?|https://security.ubuntu.com/ubuntu/|g' \
-  /etc/apt/sources.list.d/ubuntu.sources > "$sources"
+. /etc/os-release
+test "$VERSION_CODENAME" = noble
+cat > "$sources" <<'EOF'
+Types: deb
+URIs: https://archive.ubuntu.com/ubuntu/
+Suites: noble noble-updates noble-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+Types: deb
+URIs: https://security.ubuntu.com/ubuntu/
+Suites: noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+EOF
 
 apt_options=(
   -o "Dir::Etc::sourcelist=$sources"
