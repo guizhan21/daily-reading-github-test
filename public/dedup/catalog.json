@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 136,
-  "ledgerSha256": "b5e829cd6c29813078eafd2d1b428d42246852a4445b27de39d69d17efe4af47",
+  "revision": 139,
+  "ledgerSha256": "8df54e3dfa777b7e4b6e229bff727365e2e6fd633df773278e517b3521f97173",
   "coverage": {
-    "publishedBooks": 46,
-    "publishedChapters": 277,
+    "publishedBooks": 47,
+    "publishedChapters": 284,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 28,
+    "bodySemanticReviewedBooks": 29,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -2983,6 +2983,84 @@
             "如何依位元組、結構、意義及接收端條件驗收交付，保留不能確認部分？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-10_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-11_ai-consultant",
+      "workId": "work-114f92aa8f8dfba28f87a86a",
+      "version": 1,
+      "title": "用 AI 規劃活動突發狀況與備援方案",
+      "subtitle": null,
+      "description": "以一場假設的社區 AI 講座為連續案例，學會用 AI 準備活動備案、辨別停止條件、安排現場角色、發布變更消息與演練修正；安全決策仍由人和現場專業負責。",
+      "date": "2026-11-11",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "檢視46本現行書目、完整讀新稿7章與7份提示，完整選讀最近候選各一指定章。當日跨領域書尚未取得。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch01",
+          "title": "辦活動前，先找出真正需要備案的風險",
+          "textSha256": "43af8ddab5d5e68462627cf02fdcc7d8ea9b2b4b0b8ddeaf5cb72c07f67a61fb",
+          "coreQuestions": [
+            "如何按場地、人身後果和可驗條件排序備案並設停止點？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch02",
+          "title": "投影與網路故障時，如何調整課程",
+          "textSha256": "2d51e969a459f7ac33576fdae69a2fb91d61f81729e750ba59b7a4db29bea18a",
+          "coreQuestions": [
+            "如何區分呈現故障與場地安全故障，設計離線教學降級？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch03",
+          "title": "人手不足與出入口擁擠時，怎麼重新安排",
+          "textSha256": "cfd1d98a859710c50dfbe926601e834f053bd1038c06243b39c8f77359686af6",
+          "coreQuestions": [
+            "缺人和入口堵塞時，如何按尖峰職務與可及性調整規模？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch04",
+          "title": "天候變差時，如何決定延期、改辦或取消",
+          "textSha256": "f3c5933258cf996cd220ebf27bb55281727b0c7dbc352a8e70612c1da76907f5",
+          "coreQuestions": [
+            "如何分開預報、權責公告及改期、改辦、取消的決策？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch05",
+          "title": "有人不舒服或現場出現危險，誰先處理",
+          "textSha256": "ffcc5797aad10624a722c0a4f4b88a65dcaee6d3428c566408fa0a6cdeade848",
+          "coreQuestions": [
+            "有人身危險時，如何先求援、分配現場角色並安排交接？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch06",
+          "title": "突發通知怎麼說，才能讓學員知道下一步",
+          "textSha256": "e309e647af2c1104245de9a0b1d915caaa113e886e4a8b1329b283e4959bf8a0",
+          "coreQuestions": [
+            "如何把未決事件轉為有核准版本、有下一步的分眾通知？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-11_ai-consultant_ch07",
+          "title": "活動前怎麼演練，活動後怎麼修改備案",
+          "textSha256": "9b59b6f0d96e2f535cd0cc76834973bdae0d3d5324adc6b7882bdef9b0e2b5e1",
+          "coreQuestions": [
+            "如何以桌上演練找出設備、人力、通知的中斷並重新驗收？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-11_ai-consultant_ch07.md"
         }
       ]
     }
