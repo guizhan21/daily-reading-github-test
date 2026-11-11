@@ -72,10 +72,7 @@ jobs:
             npx playwright install-deps firefox
           fi
           # AAC is loaded at playback time; browser launch is not a codec test.
-          if ! sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60; then
-            sudo apt-get update
-            sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60
-          fi
+          bash scripts/install-firefox-audio-ci.sh
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
@@ -146,10 +143,7 @@ jobs:
             npx playwright install-deps firefox
           fi
           # AAC is loaded at playback time; browser launch is not a codec test.
-          if ! sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60; then
-            sudo apt-get update
-            sudo apt-get install -y pulseaudio pulseaudio-utils libavcodec60
-          fi
+          bash scripts/install-firefox-audio-ci.sh
           export XDG_RUNTIME_DIR="$RUNNER_TEMP/audio-runtime"
           mkdir -p "$XDG_RUNTIME_DIR"
           chmod 700 "$XDG_RUNTIME_DIR"
