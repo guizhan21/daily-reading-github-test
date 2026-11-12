@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 146,
-  "ledgerSha256": "fed01a1b8aa409eecb664fb96a4f8db526be8e5487c899fbdd494546096a9d24",
+  "revision": 149,
+  "ledgerSha256": "71ab55cb0db8f2423f7a66ab1ed15e5b00441e59452af6ac16823b0949031bec",
   "coverage": {
-    "publishedBooks": 49,
-    "publishedChapters": 298,
+    "publishedBooks": 50,
+    "publishedChapters": 305,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 31,
+    "bodySemanticReviewedBooks": 32,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3217,6 +3217,84 @@
             "如何用正式發行檔獨立驗收內容、媒體及權利，並保存可回查的修訂和撤回路徑？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-12_ai-consultant_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-13_ai-consultant",
+      "workId": "work-5dc7dc1af0a60c4847709c48",
+      "version": 1,
+      "title": "用 AI 規劃課程收費與優惠方案",
+      "subtitle": null,
+      "description": "以虛構成人 AI 課程為連續案例，從釐清一對一、一對二與小班交付內容，估算成本與損益兩平名額，設計透明舊生優惠，處理既有預付款及退費改期邊界，最後交出能由人核對的報價方案。",
+      "date": "2026-11-13",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "核對目前49本書目的資料及候選七章全文。比較最近鄰與另兩本相近書的實際段落，未讀舊書全文。同日期通識原稿未到。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch01",
+          "title": "先說清楚賣的是哪一種課程",
+          "textSha256": "3cd423cdd4873b59ca2c986e95b1676480c3f53e95419f23d21b3308da76dd4d",
+          "coreQuestions": [
+            "如何依授課人數、時間、指導與材料，把教學服務拆成可比較的報價單位？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch02",
+          "title": "開課前把真正會花的成本算清楚",
+          "textSha256": "c207efb2473867050414f5d2f37917aff4929aba8770d75c82b97582f6dc5a6a",
+          "coreQuestions": [
+            "如何按課前、課中、課後及每位學員拆分固定成本、變動成本及現金支出？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch03",
+          "title": "名額不同，如何計算不虧損的門檻",
+          "textSha256": "3fb1be765ad159d98f2bd6cd11e751edca38e8b2b2ea4ddac96c7ce2953d601b",
+          "coreQuestions": [
+            "如何從班級容量、每席貢獻與混合票價算出損益門檻並辨識臨界情境？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch04",
+          "title": "一對一改成兩人上課，要怎麼重新報價",
+          "textSha256": "e7ce46f42981443f37453e111d69e45e9f9c3ec95067e0121ad099410a98066e",
+          "coreQuestions": [
+            "一對一加入第二人時，如何重新估價、確認同意、保留已預付服務與設置合班停止條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch05",
+          "title": "優惠價怎麼設定才不會誤導學員",
+          "textSha256": "60b4c77acacd4a1c49706b2eed859408e9a4b9097031e12bf1a8769eb78dfab3",
+          "coreQuestions": [
+            "如何使優惠的比較基準、資格、可用席次及必要總額都能被實際取得和核實？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch06",
+          "title": "預收費用、退款和改期要怎麼先講清楚",
+          "textSha256": "157215bfce7facd9374c9791fac4657142b33cda89d21abf162d557158c2ceae",
+          "coreQuestions": [
+            "如何分開記錄已收款、已履約和申請，辨識適用退款與改期規則並安排有權人員處理？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch07",
+          "title": "用 AI 比較方案並交出正式報價",
+          "textSha256": "0e73301f1058601a2165f61b31c79ac07cc0450aa90afe9e3c1cee96ccda025d",
+          "coreQuestions": [
+            "如何把有條件的價格模型轉成可公開報價，保留需求未知、停發條件與承諾責任？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch07.md"
         }
       ]
     }

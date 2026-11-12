@@ -3666,6 +3666,90 @@
           "durationSec": 369.499138
         }
       ]
+    },
+    {
+      "bookId": "2026-11-13_ai-consultant",
+      "title": "用 AI 規劃課程收費與優惠方案",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-13",
+      "description": "以虛構成人 AI 課程為連續案例，從釐清一對一、一對二與小班交付內容，估算成本與損益兩平名額，設計透明舊生優惠，處理既有預付款及退費改期邊界，最後交出能由人核對的報價方案。",
+      "version": 1,
+      "cover": "covers/2026-11-13_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-13_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-13-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch01",
+          "title": "先說清楚賣的是哪一種課程",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch01.md",
+          "textSha256": "3cd423cdd4873b59ca2c986e95b1676480c3f53e95419f23d21b3308da76dd4d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch01-d585fb52a726.m4a",
+          "sha256": "d585fb52a7268ae7504c9cd4b70d5cbd700fe1c72480a7455367b10f7106ef50",
+          "bytes": 10222476,
+          "durationSec": 317.60254
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch02",
+          "title": "開課前把真正會花的成本算清楚",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch02.md",
+          "textSha256": "c207efb2473867050414f5d2f37917aff4929aba8770d75c82b97582f6dc5a6a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch02-c3c8222ece07.m4a",
+          "sha256": "c3c8222ece07e54d3a888b3de60b4b5af3aff7c36d128454a7df546fc356a624",
+          "bytes": 10578929,
+          "durationSec": 328.678458
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch03",
+          "title": "名額不同，如何計算不虧損的門檻",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch03.md",
+          "textSha256": "3fb1be765ad159d98f2bd6cd11e751edca38e8b2b2ea4ddac96c7ce2953d601b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch03-f84b082723bf.m4a",
+          "sha256": "f84b082723bf700f461fb53b42cb799a4a433ec1b12f9d049a60f778d30a3458",
+          "bytes": 9440094,
+          "durationSec": 293.291247
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch04",
+          "title": "一對一改成兩人上課，要怎麼重新報價",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch04.md",
+          "textSha256": "e7ce46f42981443f37453e111d69e45e9f9c3ec95067e0121ad099410a98066e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch04-4840b428b3c4.m4a",
+          "sha256": "4840b428b3c4f29dc251d11780d39d39a78f5a49240a70b16b7efbadc4d9a740",
+          "bytes": 8802639,
+          "durationSec": 273.484626
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch05",
+          "title": "優惠價怎麼設定才不會誤導學員",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch05.md",
+          "textSha256": "60b4c77acacd4a1c49706b2eed859408e9a4b9097031e12bf1a8769eb78dfab3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch05-4f9bdb9451b3.m4a",
+          "sha256": "4f9bdb9451b36f07ec231c8fd21e68d8bed77563933df243ce7d2bc2253f3571",
+          "bytes": 10608911,
+          "durationSec": 329.607256
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch06",
+          "title": "預收費用、退款和改期要怎麼先講清楚",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch06.md",
+          "textSha256": "157215bfce7facd9374c9791fac4657142b33cda89d21abf162d557158c2ceae",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch06-245f7b87b88f.m4a",
+          "sha256": "245f7b87b88f4fa2eac7e521e817a44057d176ecfd7b9065824998dca918bc61",
+          "bytes": 7148862,
+          "durationSec": 222.098866
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch07",
+          "title": "用 AI 比較方案並交出正式報價",
+          "markdown": "chapters/2026-11-13_ai-consultant_ch07.md",
+          "textSha256": "0e73301f1058601a2165f61b31c79ac07cc0450aa90afe9e3c1cee96ccda025d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-ai-consultant-v1/2026-11-13_ai-consultant_ch07-0c742f844dd7.m4a",
+          "sha256": "0c742f844dd7058f3d560a36c32fc011bd54a5d57d3090cfe6ff3089a70fd083",
+          "bytes": 11504858,
+          "durationSec": 357.447982
+        }
+      ]
     }
   ]
 }

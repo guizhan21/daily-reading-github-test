@@ -2029,6 +2029,52 @@
         }
       ],
       "contentReview": "All seven complete source chapters were checked against independent primary sources before generation. Original provider audio verified by source identity, SHA, format, duration, and full decode."
+    },
+    {
+      "bookId": "2026-11-13_ai-consultant",
+      "version": 1,
+      "decision": "approved",
+      "reviewedAt": "2026-11-12T16:57:27.035Z",
+      "basis": "User-authorized complete 2026-11-13 original GPT book for the established public 日讀 website and per-book Release. Original explanatory prose cites public sources; the instructor, students, prices, dialogue, and transactions are explicitly fictional, with public references and no private identifying material or credentials. Artwork is an original built-in Image cover. Chapter recordings are NotebookLM outputs bound to the reviewed sources and checked for identity and integrity.",
+      "coverSha256": "1a2bf4b30df270b934ad933dce6ab67ef3dc2a762d0c0d2d9b8b9d8421e74369",
+      "chapters": [
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch01",
+          "textSha256": "3cd423cdd4873b59ca2c986e95b1676480c3f53e95419f23d21b3308da76dd4d",
+          "audioSha256": "d585fb52a7268ae7504c9cd4b70d5cbd700fe1c72480a7455367b10f7106ef50"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch02",
+          "textSha256": "c207efb2473867050414f5d2f37917aff4929aba8770d75c82b97582f6dc5a6a",
+          "audioSha256": "c3c8222ece07e54d3a888b3de60b4b5af3aff7c36d128454a7df546fc356a624"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch03",
+          "textSha256": "3fb1be765ad159d98f2bd6cd11e751edca38e8b2b2ea4ddac96c7ce2953d601b",
+          "audioSha256": "f84b082723bf700f461fb53b42cb799a4a433ec1b12f9d049a60f778d30a3458"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch04",
+          "textSha256": "e7ce46f42981443f37453e111d69e45e9f9c3ec95067e0121ad099410a98066e",
+          "audioSha256": "4840b428b3c4f29dc251d11780d39d39a78f5a49240a70b16b7efbadc4d9a740"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch05",
+          "textSha256": "60b4c77acacd4a1c49706b2eed859408e9a4b9097031e12bf1a8769eb78dfab3",
+          "audioSha256": "4f9bdb9451b36f07ec231c8fd21e68d8bed77563933df243ce7d2bc2253f3571"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch06",
+          "textSha256": "157215bfce7facd9374c9791fac4657142b33cda89d21abf162d557158c2ceae",
+          "audioSha256": "245f7b87b88f4fa2eac7e521e817a44057d176ecfd7b9065824998dca918bc61"
+        },
+        {
+          "chapterId": "2026-11-13_ai-consultant_ch07",
+          "textSha256": "0e73301f1058601a2165f61b31c79ac07cc0450aa90afe9e3c1cee96ccda025d",
+          "audioSha256": "0c742f844dd7058f3d560a36c32fc011bd54a5d57d3090cfe6ff3089a70fd083"
+        }
+      ],
+      "contentReview": "All source chapters web cross-checked before generation; audio original format, duration, SHA, full decode and provider identity checked."
     }
   ],
   "skipped": []
