@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 149,
-  "ledgerSha256": "71ab55cb0db8f2423f7a66ab1ed15e5b00441e59452af6ac16823b0949031bec",
+  "revision": 156,
+  "ledgerSha256": "b5ee584faad519ba90ea85243bff02dfb7b62349fe0d90fded5da79732d57b49",
   "coverage": {
-    "publishedBooks": 50,
-    "publishedChapters": 305,
+    "publishedBooks": 52,
+    "publishedChapters": 318,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 32,
+    "bodySemanticReviewedBooks": 34,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3295,6 +3295,153 @@
             "如何把有條件的價格模型轉成可公開報價，保留需求未知、停發條件與承諾責任？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_ai-consultant_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-13_general-knowledge",
+      "workId": "work-7baeeae04e2adb36fd7938e4",
+      "version": 1,
+      "title": "藥物如何在身體裡作用：吸收、半衰期、交互作用與用藥安全",
+      "subtitle": null,
+      "description": "以六個日常用藥情境解釋藥物進入人體、產生效應、濃度隨時間改變、同時使用多種產品的交互作用、不同人的反應差異，以及如何閱讀藥袋和辨識學名藥。",
+      "date": "2026-11-13",
+      "series": "跨領域知識探索",
+      "scope": "實讀候選六章全部正文；核對本版 50 本公開書目，讀取三本機制最近鄰及三本健康相近書的所列章段，沒有宣稱閱讀既有全庫全文。同出版日 AI 原書已發布，主題是課程成本、收費、優惠與退款。11/14 新入帳的 AI 候選已實讀七章，主題是外部影像來源與憑證查核；其中虛構的展館、舊圖、轉傳字幕及引用查核與藥物機制和安全無核心問題重疊。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch01",
+          "title": "藥吞下去後，如何進入身體？",
+          "textSha256": "e6a59d723993f09ed2bd69e48b4fbae77d2cfdb891dc6b09d344b75ed92d45f4",
+          "coreQuestions": [
+            "口服劑型與途徑如何影響吸收、首渡及全身暴露？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch02",
+          "title": "藥物如何產生效果，也可能產生副作用？",
+          "textSha256": "1130ee662f9f96c143e153ed461277ad6facda03522631799d4c45f51cef1faf",
+          "coreQuestions": [
+            "如何區分靶點、臨床效益、效價和疑似不良反應？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch03",
+          "title": "藥效為什麼會隨時間改變？",
+          "textSha256": "3eb527c02727b86440e0f98b4365621f555d1a6f73f1dd9e8950a5b81f3fd2a4",
+          "coreQuestions": [
+            "半衰期、穩態、緩釋和臨床藥效為何不等於服藥間隔？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch04",
+          "title": "兩種藥一起吃，為什麼可能互相影響？",
+          "textSha256": "8c5fefa3bbc3d94f3512490c08cd63c3c210c39a9a2e557aea4a917d42fe8321",
+          "coreQuestions": [
+            "如何辨識重複活性成分、代謝或藥效交互作用？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch05",
+          "title": "為什麼同一種藥，每個人的反應不同？",
+          "textSha256": "f332ad4ad9f589af6a0afd8b7f72dc6cfdcea8385d857a46ac0c74a6d584f61f",
+          "coreQuestions": [
+            "器官功能、年齡、遺傳與研究適用性如何影響用藥反應？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch06",
+          "title": "怎麼看懂藥袋、學名藥與用藥提醒？",
+          "textSha256": "3fd4942ecc04fbf96917d1ef470afad9db6513815484bde13b6ab5edb719a14f",
+          "coreQuestions": [
+            "如何核對不同外觀的藥袋、成分、劑型及學名藥審查？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-13_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-14_ai-consultant",
+      "workId": "work-b5d3b4d23acdd7865a35a7da",
+      "version": 1,
+      "title": "用 AI 查證網路照片與影片：分辨舊圖、錯誤標題與合成內容",
+      "subtitle": null,
+      "description": "以完全虛構的科技展排隊照片與短片為主案例，學習從影像與文字拆分主張、追查較早來源、核對時間地點、理解 AI 合成與內容憑證、檢查短片字幕，再由人審核證據並作負責任的對外說明。",
+      "date": "2026-11-14",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "讀完候選七章正文與現有書目，對照三本指定最近鄰與三本題材最相關舊書的實際章段；另看已收錄待製的11/13通識藥物科普，無題目重疊。11/14同日通識尚未見原稿，不宣稱全部正文或遠端候選可見。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch01",
+          "title": "先分清照片能證明什麼",
+          "textSha256": "cb1e762a65e7995a8b0f584b397c463722d0c4a3b97f2c0aae8b2f40bda966ab",
+          "coreQuestions": [
+            "照片直接可見和圖說各能支持哪些可檢驗主張？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch02",
+          "title": "追查圖片最早從哪裡出現",
+          "textSha256": "afbf81a24d95e65c785cb3b9a2c43e552686df38169c6f1961bfa65c15a794c5",
+          "coreQuestions": [
+            "如何確認較早公開同圖，並分開相似圖、索引日期與拍攝者？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch03",
+          "title": "照片的日期和地點怎麼核對",
+          "textSha256": "beedea8cf1916490d47c5e79b3787bb4f200edda7c21790635543a8f2ff413ea",
+          "coreQuestions": [
+            "怎樣以公開場館、時間和獨立來源交叉排除錯置？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch04",
+          "title": "怎麼看待AI合成和圖片來源標記",
+          "textSha256": "a6348ceecde2e3363278e5881767166b06a395f442ded192d1f9711aadebb9fc",
+          "coreQuestions": [
+            "合成偵測、一般中繼資料、水印和內容憑證各能證明什麼？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch05",
+          "title": "短影片和字幕怎麼驗證",
+          "textSha256": "0589ca76613688756cf97e18e8a31712c7be8f58e061bf398df276a9e637c05a",
+          "coreQuestions": [
+            "怎樣驗證外部短片的同源影格、原聲與字幕的實際條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch06",
+          "title": "讓AI整理查證證據但保留人工判斷",
+          "textSha256": "7dae85849db70373e4eaf888cb3491905618eb98ef4d711dd6caf085544bbdaf",
+          "coreQuestions": [
+            "怎樣用 AI 整理可重查來源、矛盾和未知並由人獨立覆核？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch07",
+          "title": "查證後怎麼發布和教給別人",
+          "textSha256": "21b739d9fb61629ffd8817f8f247d63205cc75e675309776e228117fe17fb685",
+          "coreQuestions": [
+            "如何針對有證據的原主張澄清，保留權利與改判依據？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch07.md"
         }
       ]
     }

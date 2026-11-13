@@ -3750,6 +3750,164 @@
           "durationSec": 357.447982
         }
       ]
+    },
+    {
+      "bookId": "2026-11-13_general-knowledge",
+      "title": "藥物如何在身體裡作用：吸收、半衰期、交互作用與用藥安全",
+      "category": "跨領域知識探索",
+      "date": "2026-11-13",
+      "description": "以六個日常用藥情境解釋藥物進入人體、產生效應、濃度隨時間改變、同時使用多種產品的交互作用、不同人的反應差異，以及如何閱讀藥袋和辨識學名藥。",
+      "version": 1,
+      "cover": "covers/2026-11-13_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-13_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-13-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch01",
+          "title": "藥吞下去後，如何進入身體？",
+          "markdown": "chapters/2026-11-13_general-knowledge_ch01.md",
+          "textSha256": "e6a59d723993f09ed2bd69e48b4fbae77d2cfdb891dc6b09d344b75ed92d45f4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-general-knowledge-v1/2026-11-13_general-knowledge_ch01-97e80c5cd273.m4a",
+          "sha256": "97e80c5cd2732413228187a15c96f06086644467575f089b8a8936c7cbb82cd1",
+          "bytes": 3728720,
+          "durationSec": 304.692245
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch02",
+          "title": "藥物如何產生效果，也可能產生副作用？",
+          "markdown": "chapters/2026-11-13_general-knowledge_ch02.md",
+          "textSha256": "1130ee662f9f96c143e153ed461277ad6facda03522631799d4c45f51cef1faf",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-general-knowledge-v1/2026-11-13_general-knowledge_ch02-8a3974afb311.m4a",
+          "sha256": "8a3974afb311e1b1a4e334e79837d771ace43868c0836194179b6198b68edcac",
+          "bytes": 3967394,
+          "durationSec": 324.289887
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch03",
+          "title": "藥效為什麼會隨時間改變？",
+          "markdown": "chapters/2026-11-13_general-knowledge_ch03.md",
+          "textSha256": "3eb527c02727b86440e0f98b4365621f555d1a6f73f1dd9e8950a5b81f3fd2a4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-general-knowledge-v1/2026-11-13_general-knowledge_ch03-bbaca89af8ca.m4a",
+          "sha256": "bbaca89af8ca8d6486a2435041edbb20f55bba6aa375ccdbdad84e57b7dc8e8d",
+          "bytes": 3823148,
+          "durationSec": 312.44771
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch04",
+          "title": "兩種藥一起吃，為什麼可能互相影響？",
+          "markdown": "chapters/2026-11-13_general-knowledge_ch04.md",
+          "textSha256": "8c5fefa3bbc3d94f3512490c08cd63c3c210c39a9a2e557aea4a917d42fe8321",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-general-knowledge-v1/2026-11-13_general-knowledge_ch04-77440c5f1919.m4a",
+          "sha256": "77440c5f19191a9860b3f069459b6613ac4e49bc1f91f087eaa2f15b71eb13b1",
+          "bytes": 3729248,
+          "durationSec": 304.738685
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch05",
+          "title": "為什麼同一種藥，每個人的反應不同？",
+          "markdown": "chapters/2026-11-13_general-knowledge_ch05.md",
+          "textSha256": "f332ad4ad9f589af6a0afd8b7f72dc6cfdcea8385d857a46ac0c74a6d584f61f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-general-knowledge-v1/2026-11-13_general-knowledge_ch05-79736dcb0aa5.m4a",
+          "sha256": "79736dcb0aa5a0e15b1649af9ccf360f6f63b50e47a94d8f7ea31c2d78eb8d04",
+          "bytes": 4465136,
+          "durationSec": 365.133787
+        },
+        {
+          "chapterId": "2026-11-13_general-knowledge_ch06",
+          "title": "怎麼看懂藥袋、學名藥與用藥提醒？",
+          "markdown": "chapters/2026-11-13_general-knowledge_ch06.md",
+          "textSha256": "3fd4942ecc04fbf96917d1ef470afad9db6513815484bde13b6ab5edb719a14f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-13-general-knowledge-v1/2026-11-13_general-knowledge_ch06-006e6ac5a294.m4a",
+          "sha256": "006e6ac5a2946680ba33fb557ae5cafa85083c30dcc62d1d03f8bdf6fe7dd97f",
+          "bytes": 3844079,
+          "durationSec": 314.165986
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-14_ai-consultant",
+      "title": "用 AI 查證網路照片與影片：分辨舊圖、錯誤標題與合成內容",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-14",
+      "description": "以完全虛構的科技展排隊照片與短片為主案例，學習從影像與文字拆分主張、追查較早來源、核對時間地點、理解 AI 合成與內容憑證、檢查短片字幕，再由人審核證據並作負責任的對外說明。",
+      "version": 1,
+      "cover": "covers/2026-11-14_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-14_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-14-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch01",
+          "title": "先分清照片能證明什麼",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch01.md",
+          "textSha256": "cb1e762a65e7995a8b0f584b397c463722d0c4a3b97f2c0aae8b2f40bda966ab",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch01-1e57fc17019c.m4a",
+          "sha256": "1e57fc17019cbf10897aafd23bac029480e9d92acec6920eb976cf21a14b0513",
+          "bytes": 3584561,
+          "durationSec": 292.850068
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch02",
+          "title": "追查圖片最早從哪裡出現",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch02.md",
+          "textSha256": "afbf81a24d95e65c785cb3b9a2c43e552686df38169c6f1961bfa65c15a794c5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch02-e5deea139a14.m4a",
+          "sha256": "e5deea139a14c25ec44cd1391739174ee527343abd985d14fd39fb07109a0834",
+          "bytes": 3570866,
+          "durationSec": 291.73551
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch03",
+          "title": "照片的日期和地點怎麼核對",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch03.md",
+          "textSha256": "beedea8cf1916490d47c5e79b3787bb4f200edda7c21790635543a8f2ff413ea",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch03-b5882a503dda.m4a",
+          "sha256": "b5882a503ddada9527568e1c4c65b759075768f1669ae0404ecd8a1a0d7e70e4",
+          "bytes": 3338976,
+          "durationSec": 272.695147
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch04",
+          "title": "怎麼看待AI合成和圖片來源標記",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch04.md",
+          "textSha256": "a6348ceecde2e3363278e5881767166b06a395f442ded192d1f9711aadebb9fc",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch04-f610169b0608.m4a",
+          "sha256": "f610169b0608bc3996c35ea987b7f99323b48f228d0e256d5dfd2d2b1e3b93a1",
+          "bytes": 3386743,
+          "durationSec": 276.61932
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch05",
+          "title": "短影片和字幕怎麼驗證",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch05.md",
+          "textSha256": "0589ca76613688756cf97e18e8a31712c7be8f58e061bf398df276a9e637c05a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch05-4afe653dde65.m4a",
+          "sha256": "4afe653dde653ef876218eff1298880025b7afdaeeeeafd7fcb5901713cea972",
+          "bytes": 2626593,
+          "durationSec": 214.204082
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch06",
+          "title": "讓AI整理查證證據但保留人工判斷",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch06.md",
+          "textSha256": "7dae85849db70373e4eaf888cb3491905618eb98ef4d711dd6caf085544bbdaf",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch06-b8b0d7920fd8.m4a",
+          "sha256": "b8b0d7920fd8a41dfb4a03a2e601867823deae3c9eef524fee307031d7ee6535",
+          "bytes": 3834003,
+          "durationSec": 313.330068
+        },
+        {
+          "chapterId": "2026-11-14_ai-consultant_ch07",
+          "title": "查證後怎麼發布和教給別人",
+          "markdown": "chapters/2026-11-14_ai-consultant_ch07.md",
+          "textSha256": "21b739d9fb61629ffd8817f8f247d63205cc75e675309776e228117fe17fb685",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-ai-consultant-v1/2026-11-14_ai-consultant_ch07-55aa63146e04.m4a",
+          "sha256": "55aa63146e04da75c9fd84c7213621b935ac611a97f5ca035608183867c91116",
+          "bytes": 3694560,
+          "durationSec": 301.88263
+        }
+      ]
     }
   ]
 }
