@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 162,
-  "ledgerSha256": "fafecb3666996d6fe9ecaabb3dd9c97d93654791febe9ce6a40908e129b685c1",
+  "revision": 163,
+  "ledgerSha256": "faff5e89ff9fbc4ddb25f7007b063f0c136297cbda34d2a6a097758780976e98",
   "coverage": {
-    "publishedBooks": 53,
-    "publishedChapters": 325,
+    "publishedBooks": 54,
+    "publishedChapters": 332,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 35,
+    "bodySemanticReviewedBooks": 36,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3520,6 +3520,84 @@
             "如何按網頁、投影和印刷目標設定轉換、打樣與驗收？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-15_ai-consultant",
+      "workId": "work-184e45f90e9fc7a53906a69f",
+      "version": 1,
+      "title": "用 AI 管理課程素材授權：圖片、音樂與生成內容的查核",
+      "subtitle": null,
+      "description": "以虛構成人 AI 課程的海報、講義與宣傳短片為連續案例，學會將來源不一的圖片、配樂、人物影像及 AI 生成內容拆成可核對的素材，辨讀許可與修改條件，保留證據，並在改成收費教材或公開廣告時重新審核，而不讓 AI 代替權利人和人的判斷。",
+      "date": "2026-11-15",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "候選七章全文、目前發布總帳書目、三本相近舊書所列章節的段落；明列課程剪輯章6與AI圖像章6的實質重疊，並對照11/14通識稿的色彩技術。11/15通識原稿未出現，未比較。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch01",
+          "title": "一份課程作品有哪些素材需要確認",
+          "textSha256": "cab8688a54a19fa23ebdeef0e8286eb4ade3e6187c9de11678155e84524fed66",
+          "coreQuestions": [
+            "如何按來源、使用行為及第三方權益拆成可追蹤的課程素材？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch02",
+          "title": "免費圖片能不能放在付費課程",
+          "textSha256": "be2d9d6fbfce13a3307e41a6db33e103dd04320507caa49f206387f722fb4620",
+          "coreQuestions": [
+            "如何核對收費或促銷用途、NC、平台自訂條款和合理使用的邊界？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch03",
+          "title": "裁切加字之後授權條件怎麼處理",
+          "textSha256": "24c546d390dfe834e0d512c401e14e3e1d65f98d2773733c9fd38c4f60307a21",
+          "coreQuestions": [
+            "如何區分技術性修改、改作與分享，核對ND／SA與相應署名？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch04",
+          "title": "音樂和人物影像需要哪些不同許可",
+          "textSha256": "7df110424899082040d17da897659e18491974534bdaad08d335b174c18d83cb",
+          "coreQuestions": [
+            "如何把詞曲、錄音、演出、網路傳輸與可辨識學員的宣傳目的分開？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch05",
+          "title": "AI 生成圖片的使用權和著作權怎麼分",
+          "textSha256": "6fd1d4b3e71d5eea160370e52ce48558982c6ae54cbab40820d3ca4e8975d0e0",
+          "coreQuestions": [
+            "如何分開服務使用契約、可受保護的人類表達及第三方素材權利？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch06",
+          "title": "建立能交接的素材與授權紀錄",
+          "textSha256": "6a25e1ef9f5e73962290e35633e8669bdb0ae9f4c508b64241d6e9ec37990ccb",
+          "coreQuestions": [
+            "如何留下可追溯的素材卡、版本、证据、管道與核准觸發條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-15_ai-consultant_ch07",
+          "title": "作品改成廣告或商品前怎麼重新查核",
+          "textSha256": "57bc82012039524d14e39e5c37e4e35b4a9bd14c89fa9ac69af247cb0e50f081",
+          "coreQuestions": [
+            "如何就廣告、公開商品、合作方再使用及爭議重新開啟權利驗收？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch07.md"
         }
       ]
     }
