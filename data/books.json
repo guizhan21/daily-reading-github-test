@@ -3908,6 +3908,90 @@
           "durationSec": 301.88263
         }
       ]
+    },
+    {
+      "bookId": "2026-11-14_general-knowledge",
+      "title": "圖片顏色為什麼在不同螢幕不一樣：白平衡、色域、HDR與色彩管理",
+      "category": "跨領域知識探索",
+      "date": "2026-11-14",
+      "description": "從手機拍照偏黃、P3海報轉到舊螢幕褪色、圖片上傳後顏色變動，到HDR與印刷的差異，說明光、RGB、白平衡、ICC描述檔、螢幕亮度及輸出條件如何共同影響看見的顏色。",
+      "version": 1,
+      "cover": "covers/2026-11-14_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-14_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-14-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch01",
+          "title": "照片裡的顏色從哪裡來：光、感光元件和RGB",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch01.md",
+          "textSha256": "a693a8f7a8ed7648e5ef8fd1327eda9310eb54df2a1bdfa0d09fe7c7721292fa",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch01-63c61086e6d8.m4a",
+          "sha256": "63c61086e6d85cd002ef8fb13597ae2c905d6d3f729d09c3627db6f5e79644dd",
+          "bytes": 4305218,
+          "durationSec": 352.014512
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch02",
+          "title": "照片為什麼偏黃或偏藍：白平衡與現場光線",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch02.md",
+          "textSha256": "1694c3bd030dcf03e464e57b644d6097dafe7bd6780137fba3895b6dc9d54b8d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch02-95e7f68b05b1.m4a",
+          "sha256": "95e7f68b05b1b13bee250c86fcb4690c0d39e5eca26cbb54ee2b42f46401aa90",
+          "bytes": 4326880,
+          "durationSec": 353.802449
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch03",
+          "title": "sRGB和Display P3有什麼不同：色域、色彩空間與ICC描述檔",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch03.md",
+          "textSha256": "d57a63ca079b634443c26336b0c55804d10f309b8a88b9b5ee2671c24a09f50d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch03-2c9e5b98c415.m4a",
+          "sha256": "2c9e5b98c4150577a2c42e6f60494682f1bd36c06ddf9e9e4a9f6b993901ae49",
+          "bytes": 5307812,
+          "durationSec": 434.329252
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch04",
+          "title": "同一張照片在兩台螢幕為什麼不一樣：亮度、環境光與顯示器設定",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch04.md",
+          "textSha256": "79c78c0ffa784fab54a577a4bdb76d951a5b7aa763886a874355d2a6fb0252d4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch04-934b7a677042.m4a",
+          "sha256": "934b7a6770421e3c9b36346a463992c77049ebd08cec81adb47c7108ab77f1d9",
+          "bytes": 4307435,
+          "durationSec": 352.200272
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch05",
+          "title": "圖片傳出去後顏色為什麼變了：匯出、標記與網頁顯示",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch05.md",
+          "textSha256": "c109355bb0c0cbeff9686327ffcf297dfcad9d6287ad5a126bf29840209a7b35",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch05-a6b5187f7c25.m4a",
+          "sha256": "a6b5187f7c2565594827f31106af4422968959f208201aa02b459a240ee9b765",
+          "bytes": 4228160,
+          "durationSec": 345.698685
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch06",
+          "title": "HDR照片和影片為什麼有時很亮、有時發灰：亮度範圍與色調映射",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch06.md",
+          "textSha256": "2009191276fad53938c2607024e45056a1c146560b1fb4ba83fa55e27787139d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch06-851e040e036a.m4a",
+          "sha256": "851e040e036a55d2b69fdefc81d3cf3ebf530cc3daee1a402c58a74661497844",
+          "bytes": 3997674,
+          "durationSec": 326.774422
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch07",
+          "title": "網頁、手機與印刷如何交付顏色較可靠的圖片",
+          "markdown": "chapters/2026-11-14_general-knowledge_ch07.md",
+          "textSha256": "767de285a0782687f2591691b03fe0af7d4b918a1fea40bbde3d6c2bf6e23b7d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-14-general-knowledge-v1/2026-11-14_general-knowledge_ch07-b750843eff9f.m4a",
+          "sha256": "b750843eff9f1556e3af9e7ede8dada92f3526626aeb8904ff8911461d4c8bf9",
+          "bytes": 3999918,
+          "durationSec": 326.960181
+        }
+      ]
     }
   ]
 }

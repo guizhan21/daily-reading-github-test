@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 156,
-  "ledgerSha256": "b5ee584faad519ba90ea85243bff02dfb7b62349fe0d90fded5da79732d57b49",
+  "revision": 162,
+  "ledgerSha256": "fafecb3666996d6fe9ecaabb3dd9c97d93654791febe9ce6a40908e129b685c1",
   "coverage": {
-    "publishedBooks": 52,
-    "publishedChapters": 318,
+    "publishedBooks": 53,
+    "publishedChapters": 325,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 34,
+    "bodySemanticReviewedBooks": 35,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3442,6 +3442,84 @@
             "如何針對有證據的原主張澄清，保留權利與改判依據？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_ai-consultant_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-14_general-knowledge",
+      "workId": "work-f45ec197daa1d7583cd219e2",
+      "version": 1,
+      "title": "圖片顏色為什麼在不同螢幕不一樣：白平衡、色域、HDR與色彩管理",
+      "subtitle": null,
+      "description": "從手機拍照偏黃、P3海報轉到舊螢幕褪色、圖片上傳後顏色變動，到HDR與印刷的差異，說明光、RGB、白平衡、ICC描述檔、螢幕亮度及輸出條件如何共同影響看見的顏色。",
+      "date": "2026-11-14",
+      "series": "跨領域知識探索",
+      "scope": "實讀候選七章全部正文、總帳52筆書目與章名、三本指定比對及三本實務近鄰的所列段落；同日AI書第4章以來源驗證與創作證明為主。不宣稱讀完全庫舊正文。 已補讀取當期新增AI素材授權七章全文，抽引第3章的改作、色調與發布內容作比對。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch01",
+          "title": "照片裡的顏色從哪裡來：光、感光元件和RGB",
+          "textSha256": "a693a8f7a8ed7648e5ef8fd1327eda9310eb54df2a1bdfa0d09fe7c7721292fa",
+          "coreQuestions": [
+            "如何區分現場光、相機取樣和RGB數字的色度解讀？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch02",
+          "title": "照片為什麼偏黃或偏藍：白平衡與現場光線",
+          "textSha256": "1694c3bd030dcf03e464e57b644d6097dafe7bd6780137fba3895b6dc9d54b8d",
+          "coreQuestions": [
+            "如何判斷全域白平衡、混合照明與局部調整的界線？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch03",
+          "title": "sRGB和Display P3有什麼不同：色域、色彩空間與ICC描述檔",
+          "textSha256": "d57a63ca079b634443c26336b0c55804d10f309b8a88b9b5ee2671c24a09f50d",
+          "coreQuestions": [
+            "如何分辨色域、ICC標記、指派與轉換？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch04",
+          "title": "同一張照片在兩台螢幕為什麼不一樣：亮度、環境光與顯示器設定",
+          "textSha256": "79c78c0ffa784fab54a577a4bdb76d951a5b7aa763886a874355d2a6fb0252d4",
+          "coreQuestions": [
+            "如何隔離來源檔、面板校準、白點、亮度與觀看環境？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch05",
+          "title": "圖片傳出去後顏色為什麼變了：匯出、標記與網頁顯示",
+          "textSha256": "c109355bb0c0cbeff9686327ffcf297dfcad9d6287ad5a126bf29840209a7b35",
+          "coreQuestions": [
+            "怎樣用單一變因對照判斷圖片編碼、有損壓縮、ICC標記和網頁預設？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch06",
+          "title": "HDR照片和影片為什麼有時很亮、有時發灰：亮度範圍與色調映射",
+          "textSha256": "2009191276fad53938c2607024e45056a1c146560b1fb4ba83fa55e27787139d",
+          "coreQuestions": [
+            "HDR、SDR、PQ、HLG與色調映射如何導致亮部或暗部差異？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-14_general-knowledge_ch07",
+          "title": "網頁、手機與印刷如何交付顏色較可靠的圖片",
+          "textSha256": "767de285a0782687f2591691b03fe0af7d4b918a1fea40bbde3d6c2bf6e23b7d",
+          "coreQuestions": [
+            "如何按網頁、投影和印刷目標設定轉換、打樣與驗收？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-14_general-knowledge_ch07.md"
         }
       ]
     }
