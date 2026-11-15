@@ -86,7 +86,9 @@ function selectChapter(next,autoplay=false,targetBook=book,restart=false,recover
  // URL needlessly tears down Firefox's decoder and can report old abort errors.
  if(same&&restart&&!recovering&&!loading&&!audio.error&&audio.readyState>=2&&Number.isFinite(audio.duration)&&currentSource()===targetBook.chapters[next].audioUrl){seekTo(0);if(autoplay)void play(userInitiated);return;}
  persist();if(!recovering){recoveryCount=0;requestedSeek=null;pendingUserSeek=null;}wantsPlayback=autoplay;loading=true;pendingRestore=null;previewSeek=null;const token=++selection;audio.pause();book=targetBook;index=next;const ch=book.chapters[index],s=localBook(book.bookId),saved=chapterProgress(s.chapters[ch.chapterId],ch.durationSec),position=recovering&&requestedSeek!==null?requestedSeek:restart?0:saved.positionSec;
- playbackClock.reset(token,position,false);clockJumpPending=null;
+ // Keep the selected start before metadata. A connection failure can arrive
+ // before pendingRestore exists; a finished chapter may still store its old end.
+ requestedSeek=position;playbackClock.reset(token,position,false);clockJumpPending=null;
  if(restart)s.chapters[ch.chapterId]=updateChapterProgress(s.chapters[ch.chapterId],ch.durationSec,{positionSec:0,completed:false});
  // Selection is user intent and can be saved before bytes arrive. Position stays
  // untouched until restoration is verified, so a quick reopen cannot pick the
