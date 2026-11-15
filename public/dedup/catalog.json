@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 163,
-  "ledgerSha256": "faff5e89ff9fbc4ddb25f7007b063f0c136297cbda34d2a6a097758780976e98",
+  "revision": 169,
+  "ledgerSha256": "220f4a5a684cf4af89252b629b5dcb05a408321d4c69bc70b1d4fa0fe92b5b01",
   "coverage": {
-    "publishedBooks": 54,
-    "publishedChapters": 332,
+    "publishedBooks": 55,
+    "publishedChapters": 338,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 36,
+    "bodySemanticReviewedBooks": 37,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3598,6 +3598,75 @@
             "如何就廣告、公開商品、合作方再使用及爭議重新開啟權利驗收？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-15_ai-consultant_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-16_general-knowledge",
+      "workId": "work-9260cc0a22deacb29a8cc24a",
+      "version": 1,
+      "title": "情緒為什麼會越想越強烈：命名感受、重新理解與避免反覆內耗",
+      "subtitle": null,
+      "description": "由一句訊息引發的不安、為情緒命名、壓住表情與重新評估的差別，到反覆思考、情境可控制性及求助判斷，理解日常情緒如何形成、被維持與調節的心理機制及證據限制。",
+      "date": "2026-11-16",
+      "series": "跨領域知識探索",
+      "scope": "全讀候選六章正文與逐章提示；54本書目比對。參考舊作品採實讀相關段落及章名逐章比較，非舊書全文。沒有11/16另一系列原稿可作同日期作品比對，不冒稱遠端原子協調。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch01",
+          "title": "情緒怎樣從一件小事變強烈",
+          "textSha256": "fa8e0989ba29c0a6c0717a33979c2514fc7a2a9a551610c47253ac7589da5558",
+          "coreQuestions": [
+            "同一件小事如何經由注意、評價、身體與互動使情緒升高？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-16_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch02",
+          "title": "把感受說清楚有什麼用",
+          "textSha256": "d9c02967a1051c9860677b33814af177f93cb4c50ef710b1290ef11da4863069",
+          "coreQuestions": [
+            "如何命名當下感受，同時保留不確定的意圖推論與行動選擇？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-16_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch03",
+          "title": "忍住不表現和重新理解有何不同",
+          "textSha256": "c5c99878f29ea610837e7576b0395a78d491458051720f976b391f357918b51c",
+          "coreQuestions": [
+            "抑制外顯表情與重新評估意義，對感受、表情和記憶各有什麼影響？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-16_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch04",
+          "title": "為什麼越想越生氣",
+          "textSha256": "ac6e6d7d90113d3ba9078319e65a826e42fe5555a5dec4539fef85fc6ba4e228",
+          "coreQuestions": [
+            "如何根據新資訊與下一步區分反覆負向思考和有用的反思？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-16_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch05",
+          "title": "何時該改變想法，何時該改變環境",
+          "textSha256": "ad5f334b0e4feedd97c6eaf056b57307869f42b8077f92332d33fc45a4c92373",
+          "coreQuestions": [
+            "何時先調整對事件的解讀，何時應嘗試改變可控制的環境條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-16_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch06",
+          "title": "情緒困擾影響生活時如何判斷與求助",
+          "textSha256": "d23579a9162cfc9c70c95115fbee9725a4bc6f26a1cdfc17714a3b968615d8c2",
+          "coreQuestions": [
+            "如何依情緒困擾的持續、生活功能和安全判斷何時求助，並避免自我診斷？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-16_general-knowledge_ch06.md"
         }
       ]
     }

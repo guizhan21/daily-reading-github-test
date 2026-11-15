@@ -2254,6 +2254,47 @@
         }
       ],
       "contentReview": "Source checked per paragraph before generation; audio checked for identity, hash, format, positive duration and complete decode only."
+    },
+    {
+      "bookId": "2026-11-16_general-knowledge",
+      "version": 1,
+      "decision": "approved",
+      "reviewedAt": "2026-11-15T16:51:41.702Z",
+      "basis": "Standing public 日讀 per-book publication authorization. Original GPT educational prose with fictional characters and examples. Only citations to publisher resources; no third-party image, music, or personal source. Visually reviewed built-in Image cover. NotebookLM originals bound to each source and technically verified.",
+      "coverSha256": "82f849f3399c636f77c4eb008bacbf1a75fec91d03df8a892e12cac483a30a1a",
+      "chapters": [
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch01",
+          "textSha256": "fa8e0989ba29c0a6c0717a33979c2514fc7a2a9a551610c47253ac7589da5558",
+          "audioSha256": "520d9291e464fe89fdf328d7c418a3e606352e86406b98b99c7dbcb7b803c963"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch02",
+          "textSha256": "d9c02967a1051c9860677b33814af177f93cb4c50ef710b1290ef11da4863069",
+          "audioSha256": "b6c4c305c8fca93bfb4291e7ff7878af00c8897fdcd7cd0d7fba69be3258000d"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch03",
+          "textSha256": "c5c99878f29ea610837e7576b0395a78d491458051720f976b391f357918b51c",
+          "audioSha256": "476bcde02a480bbf18433d23fe45fc99dace7fd1b2b4b8919092280343ba1584"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch04",
+          "textSha256": "ac6e6d7d90113d3ba9078319e65a826e42fe5555a5dec4539fef85fc6ba4e228",
+          "audioSha256": "2a0c1569573aa1133115d2f3901ab83bb86eff29901bfb564355677cb1c1130f"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch05",
+          "textSha256": "ad5f334b0e4feedd97c6eaf056b57307869f42b8077f92332d33fc45a4c92373",
+          "audioSha256": "1ca541057dcc9f68748c00a5fffaa0c25a0059b22558033e38e9d757e907b420"
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch06",
+          "textSha256": "d23579a9162cfc9c70c95115fbee9725a4bc6f26a1cdfc17714a3b968615d8c2",
+          "audioSha256": "26679e335ae317df99bb9e275365c85042f7ca3b969513b9650b7339ca4688e8"
+        }
+      ],
+      "contentReview": "Source checked per paragraph before generation; audio checked for identity, hash, format, positive duration and complete decode only."
     }
   ],
   "skipped": []

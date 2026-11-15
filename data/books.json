@@ -4076,6 +4076,80 @@
           "durationSec": 297.958458
         }
       ]
+    },
+    {
+      "bookId": "2026-11-16_general-knowledge",
+      "title": "情緒為什麼會越想越強烈：命名感受、重新理解與避免反覆內耗",
+      "category": "跨領域知識探索",
+      "date": "2026-11-16",
+      "description": "由一句訊息引發的不安、為情緒命名、壓住表情與重新評估的差別，到反覆思考、情境可控制性及求助判斷，理解日常情緒如何形成、被維持與調節的心理機制及證據限制。",
+      "version": 1,
+      "cover": "covers/2026-11-16_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-16_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-16-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch01",
+          "title": "情緒怎樣從一件小事變強烈",
+          "markdown": "chapters/2026-11-16_general-knowledge_ch01.md",
+          "textSha256": "fa8e0989ba29c0a6c0717a33979c2514fc7a2a9a551610c47253ac7589da5558",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-16-general-knowledge-v1/2026-11-16_general-knowledge_ch01-520d9291e464.m4a",
+          "sha256": "520d9291e464fe89fdf328d7c418a3e606352e86406b98b99c7dbcb7b803c963",
+          "bytes": 3695711,
+          "durationSec": 301.97551
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch02",
+          "title": "把感受說清楚有什麼用",
+          "markdown": "chapters/2026-11-16_general-knowledge_ch02.md",
+          "textSha256": "d9c02967a1051c9860677b33814af177f93cb4c50ef710b1290ef11da4863069",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-16-general-knowledge-v1/2026-11-16_general-knowledge_ch02-b6c4c305c8fc.m4a",
+          "sha256": "b6c4c305c8fca93bfb4291e7ff7878af00c8897fdcd7cd0d7fba69be3258000d",
+          "bytes": 3582007,
+          "durationSec": 292.641088
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch03",
+          "title": "忍住不表現和重新理解有何不同",
+          "markdown": "chapters/2026-11-16_general-knowledge_ch03.md",
+          "textSha256": "c5c99878f29ea610837e7576b0395a78d491458051720f976b391f357918b51c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-16-general-knowledge-v1/2026-11-16_general-knowledge_ch03-476bcde02a48.m4a",
+          "sha256": "476bcde02a480bbf18433d23fe45fc99dace7fd1b2b4b8919092280343ba1584",
+          "bytes": 3191701,
+          "durationSec": 260.597551
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch04",
+          "title": "為什麼越想越生氣",
+          "markdown": "chapters/2026-11-16_general-knowledge_ch04.md",
+          "textSha256": "ac6e6d7d90113d3ba9078319e65a826e42fe5555a5dec4539fef85fc6ba4e228",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-16-general-knowledge-v1/2026-11-16_general-knowledge_ch04-2a0c1569573a.m4a",
+          "sha256": "2a0c1569573aa1133115d2f3901ab83bb86eff29901bfb564355677cb1c1130f",
+          "bytes": 3589814,
+          "durationSec": 293.291247
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch05",
+          "title": "何時該改變想法，何時該改變環境",
+          "markdown": "chapters/2026-11-16_general-knowledge_ch05.md",
+          "textSha256": "ad5f334b0e4feedd97c6eaf056b57307869f42b8077f92332d33fc45a4c92373",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-16-general-knowledge-v1/2026-11-16_general-knowledge_ch05-1ca541057dcc.m4a",
+          "sha256": "1ca541057dcc9f68748c00a5fffaa0c25a0059b22558033e38e9d757e907b420",
+          "bytes": 3360813,
+          "durationSec": 274.483084
+        },
+        {
+          "chapterId": "2026-11-16_general-knowledge_ch06",
+          "title": "情緒困擾影響生活時如何判斷與求助",
+          "markdown": "chapters/2026-11-16_general-knowledge_ch06.md",
+          "textSha256": "d23579a9162cfc9c70c95115fbee9725a4bc6f26a1cdfc17714a3b968615d8c2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-16-general-knowledge-v1/2026-11-16_general-knowledge_ch06-26679e335ae3.m4a",
+          "sha256": "26679e335ae317df99bb9e275365c85042f7ca3b969513b9650b7339ca4688e8",
+          "bytes": 3740453,
+          "durationSec": 305.644263
+        }
+      ]
     }
   ]
 }
