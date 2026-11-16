@@ -1,0 +1,17 @@
+# 全書參考來源｜研究查閱：2026-11-17
+
+本書採用官方機構出版品、原始學術研究及研究者訪談。來源之間並不保證立場一致；具體章節使用範圍和限制請以各章末註記為準。
+
+- [S01] OECD（2017-11-23），*OECD Guidelines on Measuring Trust*。網址：https://www.oecd.org/en/publications/oecd-guidelines-on-measuring-trust_9789264278219-en.html 。實際查閱範圍：官方書目、摘要、測量建議。查閱日期：2026-11-17。
+- [S02] Murtin et al. / OECD（2018-06-30），*Trust and its determinants: Evidence from the Trustlab experiment*。網址：https://www.oecd.org/en/publications/trust-and-its-determinants_869ef2ec-en.html 。實際查閱範圍：工作論文摘要、方法與結果。查閱日期：2026-11-17。
+- [S03] OECD（2026-06-29），*OECD Survey on Drivers of Trust in Public Institutions 2026 Results: Executive summary*。網址：https://www.oecd.org/en/publications/oecd-survey-on-drivers-of-trust-in-public-institutions-2026-results_9eb63fec-en/full-report/executive-summary_4319a992.html 。實際查閱範圍：調查範圍、2025年數據、指標與分析。查閱日期：2026-11-17。
+- [S04] OECD（2026-06-29），*Socioeconomic conditions, political agency and trust*。網址：https://www.oecd.org/en/publications/2026/06/results-of-the-2025-oecd-survey-on-drivers-of-trust-in-public-institutions_96323a65/full-report/socioeconomic-conditions-political-agency-and-trust_bb385ad9.html 。實際查閱範圍：政治能動感、群體差異、方法。查閱日期：2026-11-17。
+- [S05] OECD（2025-10-16），*Social Connections and Loneliness in OECD Countries: Social connections across OECD countries*。網址：https://www.oecd.org/en/publications/social-connections-and-loneliness-in-oecd-countries_6df2d6a0-en/full-report/social-connections-across-oecd-countries_4e46a241.html 。實際查閱範圍：各種社交連結定義與跨國官方資料。查閱日期：2026-11-17。
+- [S06] World Bank（2017），*World Development Report 2017: Governance and the Law*。網址：https://www.worldbank.org/en/publication/wdr2017 。實際查閱範圍：主訊息、治理功能、權力不對稱。查閱日期：2026-11-17。
+- [S07] NobelPrize.org / Elinor Ostrom（2009），*Interview Transcript with Elinor Ostrom and Oliver E. Williamson*。網址：https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/164465-ostrom-williamson-interview-transcript/ 。實際查閱範圍：搜尋可讀原訪談摘錄；重開頁面403，未閱讀全文。查閱日期：2026-11-17。
+- [S08] Romano, Balliet, Yamagishi & Liu（2017-11-13），*Parochial trust and cooperation across 17 societies*。網址：https://pmc.ncbi.nlm.nih.gov/articles/PMC5715771/ 。實際查閱範圍：原始研究開放全文：研究設計與結果。查閱日期：2026-11-17。
+- [S09] Wu, Balliet & Van Lange（2016-04-04），*Gossip Versus Punishment: The Efficiency of Reputation to Promote and Maintain Cooperation*。網址：https://www.nature.com/articles/srep23919 。實際查閱範圍：原始期刊公開全文摘要、設計、主要結果。查閱日期：2026-11-17。
+- [S10] Bauer, Keusch & Kreuter（2019-08-21），*Trust and cooperative behavior: Evidence from the realm of data-sharing*。網址：https://pmc.ncbi.nlm.nih.gov/articles/PMC6703688/ 。實際查閱範圍：PLOS ONE開放研究摘要、方法與討論。查閱日期：2026-11-17。
+- [S11] Jensen, Busch, Piovesan & Haerter（2023-09-12），*Nudging cooperation among agents in an experimental social network*。網址：https://pmc.ncbi.nlm.nih.gov/articles/PMC10497665/ 。實際查閱範圍：開放研究摘要、方法、結果。查閱日期：2026-11-17。
+- [S12] OECD（2026-06-29），*Day-to-day interactions with public institutions and their implications for trust*。網址：https://www.oecd.org/en/publications/oecd-survey-on-drivers-of-trust-in-public-institutions-2026-results_9eb63fec-en/full-report/day-to-day-interactions-with-public-institutions-and-their-implications-for-trust_a84f7740.html 。實際查閱範圍：原報告行政互動與信任專章。查閱日期：2026-11-17。
+- [S14] Carlin, Love & Smith / OECD（2017-10-19），*Measures of interpersonal trust: Evidence on their cross-national validity and reliability based on surveys and experimental data*。網址：https://www.oecd.org/en/publications/2017/10/measures-of-interpersonal-trust_ae3058df.html 。實際查閱範圍：原始工作論文摘要、方法與資料範圍。查閱日期：2026-11-17。

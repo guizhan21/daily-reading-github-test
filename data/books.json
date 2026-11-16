@@ -4150,6 +4150,174 @@
           "durationSec": 305.644263
         }
       ]
+    },
+    {
+      "bookId": "2026-11-17_ai-consultant",
+      "title": "用 AI 準備政府採購投標文件：讀懂招標條件、編寫服務方案與交件核對",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-17",
+      "description": "以完全虛構的三人教育工作室準備臺灣政府勞務採購案為主案例，從辨認案件性質與資格、追蹤招標附件、核對實績證明、撰寫可履行的服務建議書、計算內部成本，到封版送件與履約驗收，說明 AI 能整理什麼、不能替人認定什麼。",
+      "version": 1,
+      "cover": "covers/2026-11-17_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-17_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-17-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch01",
+          "title": "先判斷政府標案適不適合自己投",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch01.md",
+          "textSha256": "d448dad4e6d75f7477c1cf6ba0adb150c79116ac683fb4d417a899d8488c209a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch01-40704cbaa436.m4a",
+          "sha256": "40704cbaa436df018005d8a2061c4ef8c7f260e898b62412c694a2b89d798f7e",
+          "bytes": 4552002,
+          "durationSec": 372.285533
+        },
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch02",
+          "title": "把招標公告和全部附件讀成可核對的條件",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch02.md",
+          "textSha256": "a993f3b8b3209b1d82237cfc7bcdaca219dc7aafc5216c6a09610f37ef4d8bc2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch02-bfc3e06e0d34.m4a",
+          "sha256": "bfc3e06e0d343fd86fce938cc8e89187a451034cf346fc628a0cd3b754bc1dca",
+          "bytes": 3284360,
+          "durationSec": 268.213696
+        },
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch03",
+          "title": "資格和證明文件不能讓 AI 自行補齊",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch03.md",
+          "textSha256": "d49ec28bbf771f0b081627554abc97f3b2bb7eafeba0521ac465834c7ca4a438",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch03-b67396f51249.m4a",
+          "sha256": "b67396f512492ac8caf64585371dda742e8b512d87e0b65ee434f8596af452e3",
+          "bytes": 4851234,
+          "durationSec": 396.852245
+        },
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch04",
+          "title": "把課程需求寫成有證據的服務建議書",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch04.md",
+          "textSha256": "bfa24f2744061c92465e0f45fb7cef7631b3e67be20882327b64071e50e0a497",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch04-742161764493.m4a",
+          "sha256": "742161764493c855a52fedd7afdbe08b535dc0851d165eb3fca5b8472d67afd8",
+          "bytes": 3534015,
+          "durationSec": 288.693696
+        },
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch05",
+          "title": "報價之前先算清履約成本和契約責任",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch05.md",
+          "textSha256": "ae8f8779dcc5f81e439b44c30f35322542e02550ef98814e21fd27c40b549d7c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch05-b978dd3636ec.m4a",
+          "sha256": "b978dd3636ecac7926cc0b50745d22e881592224937bec1f6b054f7fff6c2053",
+          "bytes": 3425365,
+          "durationSec": 279.777234
+        },
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch06",
+          "title": "送件前核對頁數、簽名、附件與版本",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch06.md",
+          "textSha256": "7ed4cd6b5dffc29c3b176a75c0a0c05a9612dd92f7fb11e9f3fcf4634eaaa7ba",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch06-9344d174617e.m4a",
+          "sha256": "9344d174617ee8f1598a00dd8587ca825575275c4c15a9cf0aa02c4cb04a769a",
+          "bytes": 3653266,
+          "durationSec": 298.492517
+        },
+        {
+          "chapterId": "2026-11-17_ai-consultant_ch07",
+          "title": "投標送達之後如何準備履約與驗收",
+          "markdown": "chapters/2026-11-17_ai-consultant_ch07.md",
+          "textSha256": "048590395f9e68941af129163dfe490b02b7559cfd81792c910fb7b7d242e647",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-ai-consultant-v1/2026-11-17_ai-consultant_ch07-e68740df43c6.m4a",
+          "sha256": "e68740df43c636c73a19100c227839a0ea479a03a8c26625f807b9b4a121122e",
+          "bytes": 3321735,
+          "durationSec": 271.27873
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-17_general-knowledge",
+      "title": "社會信任怎麼建立：陌生人合作、社群規則與公共制度",
+      "category": "跨領域知識探索",
+      "date": "2026-11-17",
+      "description": "從委託陌生人、社區讀書會、志工協作與共享空間出發，理解信任的不同形式、熟人網絡、名聲與互惠、共同資源治理、程序公平、公共機構信任，以及如何閱讀信任調查和修復合作。",
+      "version": 1,
+      "cover": "covers/2026-11-17_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-17_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-17-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch01",
+          "title": "信任不是喜歡：怎麼判斷能否交給別人",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch01.md",
+          "textSha256": "aee841dd3b9e2ccee39f8b43e3aed8bd3317008917b56c8951ec0520ec8890ca",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch01-945f2d4dd7c6.m4a",
+          "sha256": "945f2d4dd7c6a159216f243da175e3e3f944a19444af40b2bf1f6dc86e508f06",
+          "bytes": 3950880,
+          "durationSec": 322.919909
+        },
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch02",
+          "title": "熟人與陌生人為何有不同信任",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch02.md",
+          "textSha256": "6427c7133db3910403448ea30cc777819060820a7fd5a23a596f7b76353e317b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch02-d2beda813749.m4a",
+          "sha256": "d2beda813749d69fcc154477d9967eee829102fd9c198e4375870f7d6b49d0ec",
+          "bytes": 3597275,
+          "durationSec": 293.894966
+        },
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch03",
+          "title": "好名聲為什麼會影響合作",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch03.md",
+          "textSha256": "a9477816dcf52688fe51afa3995b16f20c36b8365974f97c5cc833038dfa4b6f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch03-c87235b38468.m4a",
+          "sha256": "c87235b3846866ad657c6aebe7115c6f476f3595996e5ad9093c9c55299885bf",
+          "bytes": 4348931,
+          "durationSec": 355.613605
+        },
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch04",
+          "title": "共同資源為什麼容易引發衝突",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch04.md",
+          "textSha256": "e0f2f5ca957eb58f27f8d77eff1758f3cd51cce5eb7afa0d8aacbbcb4658d4d5",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch04-1866952be194.m4a",
+          "sha256": "1866952be194f96562f54f272c4b4578711463644b70568758f6b04323fe0c48",
+          "bytes": 3513039,
+          "durationSec": 286.97542
+        },
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch05",
+          "title": "公平的規則為何能降低不信任",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch05.md",
+          "textSha256": "0884bff663a36dc187cea0c76a105be11b66a4db414b2cbbc1bed38c74af8723",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch05-771283b260e1.m4a",
+          "sha256": "771283b260e13782c250cbac996652d3f07a8270fd7a4b35b8b26c9bfc738cc5",
+          "bytes": 3238072,
+          "durationSec": 264.405624
+        },
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch06",
+          "title": "為什麼信任鄰居卻不一定信任政府",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch06.md",
+          "textSha256": "f1c2393d09835c0bbff6081dcf43aac0c4806452f2fdb2d9469b7307f2af1035",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch06-4c75be5d6612.m4a",
+          "sha256": "4c75be5d66127fc047b85fce18b9479c65843659af02354e2efd2b54667cf283",
+          "bytes": 4017680,
+          "durationSec": 328.399819
+        },
+        {
+          "chapterId": "2026-11-17_general-knowledge_ch07",
+          "title": "怎麼知道一個社群真的值得信任",
+          "markdown": "chapters/2026-11-17_general-knowledge_ch07.md",
+          "textSha256": "a50b1f362c7ab5739f6857b77ae4ce85af70007402300f4ac580968d4f734c98",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-17-general-knowledge-v1/2026-11-17_general-knowledge_ch07-3612eaf67745.m4a",
+          "sha256": "3612eaf6774582a9876c43b7ac4d75034aabecbb4292ece64d2684abc805795a",
+          "bytes": 3483187,
+          "durationSec": 284.537324
+        }
+      ]
     }
   ]
 }
