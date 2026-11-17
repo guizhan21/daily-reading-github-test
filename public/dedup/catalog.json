@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 177,
-  "ledgerSha256": "f69d7e604a742fa69ce418001bff62e162491db3c2626508c62c577343f49d47",
+  "revision": 184,
+  "ledgerSha256": "fd6aae88b2ac610c75e1c01c631aa629963ea4882ff1b2e809ed5c475d1c4aa7",
   "coverage": {
-    "publishedBooks": 57,
-    "publishedChapters": 352,
+    "publishedBooks": 58,
+    "publishedChapters": 359,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 39,
+    "bodySemanticReviewedBooks": 40,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3823,6 +3823,84 @@
             "如何結合態度調查、實際行為、未回答者和程序紀錄評估社群信任？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-17_general-knowledge_ch07.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-18_general-knowledge",
+      "workId": "work-e7fd705ea8ff41a7203a6141",
+      "version": 1,
+      "title": "物價與利率怎麼影響生活：通膨、薪水、存款、貸款與匯率",
+      "subtitle": null,
+      "description": "以七章完整解釋物價指數、供需與預期、薪水購買力、存款利息、貸款成本、中央銀行利率和匯率的相互關係，讓讀者能夠分辨金融新聞數字與生活負擔之間的真實差異。",
+      "date": "2026-11-18",
+      "series": "跨領域知識探索",
+      "scope": "完整閱讀跨領域稿七章正文、各章原提示並核對兩系列當前全庫目錄；六本舊作依已列選段比較。另實讀同日 AI 稿，主題為數位教材障礙，與本稿的物價、金融契約與央行新能力無重複。沒有宣稱閱讀全庫舊書全文或驗證舊 GPT 遠端讀取。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch01",
+          "title": "物價指數為什麼和自己的帳單不同",
+          "textSha256": "1580058fe42ac22ec8f35a7a9f41f1654efe62faa009034238cca0a13fbf00f8",
+          "coreQuestions": [
+            "為何群體 CPI 與家庭帳單不同，價格水準與漲速如何分辨？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch02",
+          "title": "物價上漲的原因怎麼分辨",
+          "textSha256": "db1e1cb5c54d685967b9dcfdb7b16923e49b5a74bbbb535b04beb013e32aa934",
+          "coreQuestions": [
+            "怎麼區分需求、成本、預期與個別相對價格，並核對通膨成因？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch03",
+          "title": "薪水增加為什麼仍覺得變窮",
+          "textSha256": "a12f29f7f2c7077f36b49ca1782552a65d544f369d1169f178baee492ad5b9c6",
+          "coreQuestions": [
+            "如何把名目薪資以同期間物價換算，並保留家庭差異？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch04",
+          "title": "存款利率和實際報酬怎麼算",
+          "textSha256": "4fb3b83fe278c86f34021fc6b697011ec5d2a6692657d8243acb2776c1fbff81",
+          "coreQuestions": [
+            "怎麼分開本金、複利、有效年報酬、費後與實質報酬？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch05",
+          "title": "貸款月付金額為什麼會改變",
+          "textSha256": "17876d418ec1a6ab6b10cca77d7c4aa90dc6506ee54a73d41a6657400a6dcca1",
+          "coreQuestions": [
+            "哪些還款、利率與費用條件會改變貸款月付和總成本？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch06",
+          "title": "中央銀行升降息怎麼影響物價",
+          "textSha256": "54d90b2dada816ce6f5c88c9ab98cf1048754dc2dba8a717515406d60b2db182",
+          "coreQuestions": [
+            "政策利率如何循信用、需求與預期傳到物價，何時失效或延遲？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch06.md"
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch07",
+          "title": "匯率與新聞數字怎麼一起看",
+          "textSha256": "9a5850839a7a8b7496da152d1d898422bd4a086eec86b55482de91fe2bf4f681",
+          "coreQuestions": [
+            "如何換算匯率、判讀進口成本轉嫁與區分財經觀測和因果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-18_general-knowledge_ch07.md"
         }
       ]
     }

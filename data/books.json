@@ -4318,6 +4318,90 @@
           "durationSec": 284.537324
         }
       ]
+    },
+    {
+      "bookId": "2026-11-18_general-knowledge",
+      "title": "物價與利率怎麼影響生活：通膨、薪水、存款、貸款與匯率",
+      "category": "跨領域知識探索",
+      "date": "2026-11-18",
+      "description": "以七章完整解釋物價指數、供需與預期、薪水購買力、存款利息、貸款成本、中央銀行利率和匯率的相互關係，讓讀者能夠分辨金融新聞數字與生活負擔之間的真實差異。",
+      "version": 1,
+      "cover": "covers/2026-11-18_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-18_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-18-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch01",
+          "title": "物價指數為什麼和自己的帳單不同",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch01.md",
+          "textSha256": "1580058fe42ac22ec8f35a7a9f41f1654efe62faa009034238cca0a13fbf00f8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch01-bbe41cad9f63.m4a",
+          "sha256": "bbe41cad9f636bd9acbf7180c601cb6c713a5f00f288fb4146f95978eb643cad",
+          "bytes": 3382322,
+          "durationSec": 276.2478
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch02",
+          "title": "物價上漲的原因怎麼分辨",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch02.md",
+          "textSha256": "db1e1cb5c54d685967b9dcfdb7b16923e49b5a74bbbb535b04beb013e32aa934",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch02-b309f2e58f19.m4a",
+          "sha256": "b309f2e58f197b52757d32e2edbc939984e4c98376a6e83dc3c8708c2514c98d",
+          "bytes": 4291012,
+          "durationSec": 350.853515
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch03",
+          "title": "薪水增加為什麼仍覺得變窮",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch03.md",
+          "textSha256": "a12f29f7f2c7077f36b49ca1782552a65d544f369d1169f178baee492ad5b9c6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch03-25b315939566.m4a",
+          "sha256": "25b315939566e1d46ccf2716e6122c540123ad267799b01f0f37fa7bbad247e4",
+          "bytes": 3313001,
+          "durationSec": 270.558912
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch04",
+          "title": "存款利率和實際報酬怎麼算",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch04.md",
+          "textSha256": "4fb3b83fe278c86f34021fc6b697011ec5d2a6692657d8243acb2776c1fbff81",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch04-a540b1ef9b33.m4a",
+          "sha256": "a540b1ef9b3347e986c2769d3122d89248d5e13fa6eb7d5797f3bad2169cc764",
+          "bytes": 3458299,
+          "durationSec": 282.493968
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch05",
+          "title": "貸款月付金額為什麼會改變",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch05.md",
+          "textSha256": "17876d418ec1a6ab6b10cca77d7c4aa90dc6506ee54a73d41a6657400a6dcca1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch05-37da79de04bc.m4a",
+          "sha256": "37da79de04bc0754b55c804535d2950cfada2dfc98349a677b62f029195bcd56",
+          "bytes": 3608341,
+          "durationSec": 294.800544
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch06",
+          "title": "中央銀行升降息怎麼影響物價",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch06.md",
+          "textSha256": "54d90b2dada816ce6f5c88c9ab98cf1048754dc2dba8a717515406d60b2db182",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch06-e8e6992c5ec1.m4a",
+          "sha256": "e8e6992c5ec1eda2a77969bfad9063f562912631afa321532c8ce0a1fd3d5d12",
+          "bytes": 3350660,
+          "durationSec": 273.647166
+        },
+        {
+          "chapterId": "2026-11-18_general-knowledge_ch07",
+          "title": "匯率與新聞數字怎麼一起看",
+          "markdown": "chapters/2026-11-18_general-knowledge_ch07.md",
+          "textSha256": "9a5850839a7a8b7496da152d1d898422bd4a086eec86b55482de91fe2bf4f681",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-18-general-knowledge-v1/2026-11-18_general-knowledge_ch07-82c78f749d0d.m4a",
+          "sha256": "82c78f749d0d8f75199ba43d12b7297bc27e829f28241326d428f1da69054615",
+          "bytes": 4212121,
+          "durationSec": 344.375147
+        }
+      ]
     }
   ]
 }
