@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 192,
-  "ledgerSha256": "84431ea3425e58cd2fa8c255f1b177e9ea7a9fc7c0841fe3744725e7f3f55b83",
+  "revision": 201,
+  "ledgerSha256": "76bc4733d95bb5b3023c97d055effd00a6da63e8528e76e64e2a484bdd765e67",
   "coverage": {
-    "publishedBooks": 59,
-    "publishedChapters": 364,
+    "publishedBooks": 61,
+    "publishedChapters": 376,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 41,
+    "bodySemanticReviewedBooks": 43,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -3961,6 +3961,144 @@
             "怎樣安排兩版圖面，讓人能指出差異並加以查核？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-19_general-knowledge_change-blindness_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-20_ai-consultant",
+      "workId": "work-6d7d47c3767efd0fb009b8ba",
+      "version": 1,
+      "title": "用 AI 安排課程時段、講師與教室",
+      "subtitle": null,
+      "description": "從兩間教室的一日工作坊出發，帶讀者把口頭限制寫成可檢查的排課條件，核算衝堂與不可行原因，比較師生偏好，並在臨時改期時找出最少必須異動的課。",
+      "date": "2026-11-20",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "兩站投影只涵蓋已發布作品。本機含未發布的 11/18 通識書與被判重候選；11/19 GPT 正式兩稿據交接核題名，非已讀全稿。10/22 與 10/28 睡眠書的既有重複關係保留。近鄰比較限所列選段，歷史未知欄位保留未知。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch01",
+          "title": "先說清楚一堂課要占用哪些資源",
+          "textSha256": "4d053fdd45a18e37a0c0f66a068e6e8fab022167a3b746fa38bd6a71450d4163",
+          "coreQuestions": [
+            "一堂課在何時、何地、多長時間占用哪些資源，尚缺哪些資料？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch02",
+          "title": "把不能違反的條件和可以商量的偏好分開",
+          "textSha256": "571b5822ab3260a7d3abbdfffcc37a9d5f0c229c45e1d45c4fae50a02a5b0031",
+          "coreQuestions": [
+            "同一句「最好在上午」在誰確認後才算非守不可的條件？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch03",
+          "title": "逐堂核對教室容量、設備和講師衝堂",
+          "textSha256": "91ef980c83a0afbfd2567d4bdc67fcc985f9214259f1da3a6a2829c43074e5c3",
+          "coreQuestions": [
+            "看起來每格只排一堂的課表，如何找出同時跨格的雙重占用？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch04",
+          "title": "所有安排都卡住時，怎麼找出原因",
+          "textSha256": "b1f7ab6e7932db52a10775a003a1863ca57d2a8731d518ffb057aa04887b09c7",
+          "coreQuestions": [
+            "排不進去是這一稿碰撞，還是現有選項確實容不下所有課？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch05",
+          "title": "兩張可行課表，怎麼比較誰受影響",
+          "textSha256": "3cab949113aa824ee9a8989a238fb60b4f5c0115a626bffa64ec6c8e06c1fe6f",
+          "coreQuestions": [
+            "都守住必要條件的安排，如何按受影響的人與優先順序比較？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch06",
+          "title": "講師臨時改時間，哪些課真的要跟著動",
+          "textSha256": "7fa2be6cce0dc0fd7b85d13fd37d9a0e0e7a81f722d866d86ae9c37e9b283cc0",
+          "coreQuestions": [
+            "接到單一異動後，如何保留已通知的安排並驗證改動範圍？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-20_general-knowledge",
+      "workId": "work-4e6896a8675d2d5700b18803",
+      "version": 1,
+      "title": "為什麼會忘記原本打算做的事",
+      "subtitle": null,
+      "description": "從把借來的書帶到聚會卻忘了交還談起，讀懂心理學如何區分記住內容和及時想起行動，並判斷事件線索、看鐘、打斷、外部提醒及已完成意圖各會怎樣影響下一次行動。",
+      "date": "2026-11-20",
+      "series": "跨領域知識探索",
+      "scope": "兩站投影只涵蓋已發布作品。本機含未發布的 11/18 通識書與被判重候選；11/19 GPT 正式兩稿據交接核題名，非已讀全稿。10/22 與 10/28 睡眠書的既有重複關係保留。近鄰比較限所列選段，歷史未知欄位保留未知。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch01",
+          "title": "知道要做什麼，為什麼當場沒有想起",
+          "textSha256": "301284b28735824bf6afc7f0d26ee5ee70401897755ce7c3e886014fb65568d7",
+          "coreQuestions": [
+            "事後能說出原計畫，如何仍會錯過原本可以行動的時機？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch02",
+          "title": "哪種線索會在你做別的事時被注意到",
+          "textSha256": "200af5d85d437fcca3b4f7943460173ebe2a2ff359bfa94f6c56012732ca6dc2",
+          "coreQuestions": [
+            "同一個提示換到不同手邊工作，為什麼可能變得難以察覺？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch03",
+          "title": "約好幾點做，什麼時候會想起來看鐘",
+          "textSha256": "07479c4cda4b253d37fa761ce49153703046c4e04cf51f93faa4dd3650909824",
+          "coreQuestions": [
+            "指定時間沒有外部事件提醒時，如何分清估時與主動看鐘的作用？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch04",
+          "title": "被打斷以後，原來的事情怎麼接回去",
+          "textSha256": "541d93dea0c3b013ccc64c31205c1cecefeda350ceedc35b807410fa3ec59b5f",
+          "coreQuestions": [
+            "被插進來的新任務打斷時，怎樣分開想起返回與找回進度？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch05",
+          "title": "要靠自己記，還是把提醒放到外面",
+          "textSha256": "2407f23510da6d0e2b5c23dbf074273151769201354fad55ef5e75ee2976de41",
+          "coreQuestions": [
+            "把意圖移到環境裡有什麼代價，什麼提醒才有機會被用到？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch06",
+          "title": "事情已經做完，為什麼還會想再做一次",
+          "textSha256": "e1ced2307a7a52b980fe5aa8fa2a96e2732093010d0cb5dd0521fa5125397c8b",
+          "coreQuestions": [
+            "已經完成或取消的事又被線索喚起，如何判斷要不要照做？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch06.md"
         }
       ]
     }

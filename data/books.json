@@ -4466,6 +4466,154 @@
           "durationSec": 300.117914
         }
       ]
+    },
+    {
+      "bookId": "2026-11-20_ai-consultant",
+      "title": "用 AI 安排課程時段、講師與教室",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-20",
+      "description": "從兩間教室的一日工作坊出發，帶讀者把口頭限制寫成可檢查的排課條件，核算衝堂與不可行原因，比較師生偏好，並在臨時改期時找出最少必須異動的課。",
+      "version": 1,
+      "cover": "covers/2026-11-20_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-20_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-20-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch01",
+          "title": "先說清楚一堂課要占用哪些資源",
+          "markdown": "chapters/2026-11-20_ai-consultant_ch01.md",
+          "textSha256": "4d053fdd45a18e37a0c0f66a068e6e8fab022167a3b746fa38bd6a71450d4163",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-ai-consultant-v1/2026-11-20_ai-consultant_ch01-8647f0467e6c.m4a",
+          "sha256": "8647f0467e6c6b6ad977a8279b4503d5dc5c5d9181a228e99469d22dff13cf09",
+          "bytes": 3829499,
+          "durationSec": 312.958549
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch02",
+          "title": "把不能違反的條件和可以商量的偏好分開",
+          "markdown": "chapters/2026-11-20_ai-consultant_ch02.md",
+          "textSha256": "571b5822ab3260a7d3abbdfffcc37a9d5f0c229c45e1d45c4fae50a02a5b0031",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-ai-consultant-v1/2026-11-20_ai-consultant_ch02-06f9a7c3bb71.m4a",
+          "sha256": "06f9a7c3bb714a34caeac5029f114c24b85c78ee1ee0cd4b14f6f6852f33ea32",
+          "bytes": 4355958,
+          "durationSec": 356.170884
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch03",
+          "title": "逐堂核對教室容量、設備和講師衝堂",
+          "markdown": "chapters/2026-11-20_ai-consultant_ch03.md",
+          "textSha256": "91ef980c83a0afbfd2567d4bdc67fcc985f9214259f1da3a6a2829c43074e5c3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-ai-consultant-v1/2026-11-20_ai-consultant_ch03-97cea497b725.m4a",
+          "sha256": "97cea497b7250c38a7fd072d2ddcdcb316abf8a528cb74dfa0460ccd3690965f",
+          "bytes": 3477813,
+          "durationSec": 284.096145
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch04",
+          "title": "所有安排都卡住時，怎麼找出原因",
+          "markdown": "chapters/2026-11-20_ai-consultant_ch04.md",
+          "textSha256": "b1f7ab6e7932db52a10775a003a1863ca57d2a8731d518ffb057aa04887b09c7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-ai-consultant-v1/2026-11-20_ai-consultant_ch04-cd3e3fed23f5.m4a",
+          "sha256": "cd3e3fed23f5fda40d6a1af212410da3bbf58cdc6197bf2e1c54d7f403972e49",
+          "bytes": 2808354,
+          "durationSec": 229.134512
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch05",
+          "title": "兩張可行課表，怎麼比較誰受影響",
+          "markdown": "chapters/2026-11-20_ai-consultant_ch05.md",
+          "textSha256": "3cab949113aa824ee9a8989a238fb60b4f5c0115a626bffa64ec6c8e06c1fe6f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-ai-consultant-v1/2026-11-20_ai-consultant_ch05-913b470c586c.m4a",
+          "sha256": "913b470c586c31e95aecd120b7f4b4a8142f1092cdfc0c1225d3407f773fa9c2",
+          "bytes": 2944920,
+          "durationSec": 240.326531
+        },
+        {
+          "chapterId": "2026-11-20_ai-consultant_ch06",
+          "title": "講師臨時改時間，哪些課真的要跟著動",
+          "markdown": "chapters/2026-11-20_ai-consultant_ch06.md",
+          "textSha256": "7fa2be6cce0dc0fd7b85d13fd37d9a0e0e7a81f722d866d86ae9c37e9b283cc0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-ai-consultant-v1/2026-11-20_ai-consultant_ch06-dca964ff60c6.m4a",
+          "sha256": "dca964ff60c62b8cb0ad77ac403f27839e24cfb765191d24e7df6a05b74660b9",
+          "bytes": 3429582,
+          "durationSec": 280.125533
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-20_general-knowledge",
+      "title": "為什麼會忘記原本打算做的事",
+      "category": "跨領域知識探索",
+      "date": "2026-11-20",
+      "description": "從把借來的書帶到聚會卻忘了交還談起，讀懂心理學如何區分記住內容和及時想起行動，並判斷事件線索、看鐘、打斷、外部提醒及已完成意圖各會怎樣影響下一次行動。",
+      "version": 1,
+      "cover": "covers/2026-11-20_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-20_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-20-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch01",
+          "title": "知道要做什麼，為什麼當場沒有想起",
+          "markdown": "chapters/2026-11-20_general-knowledge_ch01.md",
+          "textSha256": "301284b28735824bf6afc7f0d26ee5ee70401897755ce7c3e886014fb65568d7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-general-knowledge-v1/2026-11-20_general-knowledge_ch01-0a7680a67afb.m4a",
+          "sha256": "0a7680a67afb20e4f74e3ab378b3ca73896028430a3589344dbcb23e0b4acad5",
+          "bytes": 2766495,
+          "durationSec": 225.697959
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch02",
+          "title": "哪種線索會在你做別的事時被注意到",
+          "markdown": "chapters/2026-11-20_general-knowledge_ch02.md",
+          "textSha256": "200af5d85d437fcca3b4f7943460173ebe2a2ff359bfa94f6c56012732ca6dc2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-general-knowledge-v1/2026-11-20_general-knowledge_ch02-75c05a695b13.m4a",
+          "sha256": "75c05a695b13e4ee1e5893efc6ff76821756752a6d2e1cc7bfcf64ac908d9af4",
+          "bytes": 3565491,
+          "durationSec": 291.294331
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch03",
+          "title": "約好幾點做，什麼時候會想起來看鐘",
+          "markdown": "chapters/2026-11-20_general-knowledge_ch03.md",
+          "textSha256": "07479c4cda4b253d37fa761ce49153703046c4e04cf51f93faa4dd3650909824",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-general-knowledge-v1/2026-11-20_general-knowledge_ch03-667f697ab0ba.m4a",
+          "sha256": "667f697ab0bae29a8d89b8fcc7ddc6d256f63beb9030f2eb42a4ce89d15a5ec9",
+          "bytes": 3168804,
+          "durationSec": 258.716735
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch04",
+          "title": "被打斷以後，原來的事情怎麼接回去",
+          "markdown": "chapters/2026-11-20_general-knowledge_ch04.md",
+          "textSha256": "541d93dea0c3b013ccc64c31205c1cecefeda350ceedc35b807410fa3ec59b5f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-general-knowledge-v1/2026-11-20_general-knowledge_ch04-1b0ade3f0022.m4a",
+          "sha256": "1b0ade3f0022e503a9b88d0343d1abef9b55771ff7688be86d3f53a2f8f6e6b6",
+          "bytes": 3443086,
+          "durationSec": 281.240091
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch05",
+          "title": "要靠自己記，還是把提醒放到外面",
+          "markdown": "chapters/2026-11-20_general-knowledge_ch05.md",
+          "textSha256": "2407f23510da6d0e2b5c23dbf074273151769201354fad55ef5e75ee2976de41",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-general-knowledge-v1/2026-11-20_general-knowledge_ch05-c862bad4f5d2.m4a",
+          "sha256": "c862bad4f5d290906dac37d2fa789c7d3dea0da1de74edb831c78ce2bb3c2d56",
+          "bytes": 3363834,
+          "durationSec": 274.738503
+        },
+        {
+          "chapterId": "2026-11-20_general-knowledge_ch06",
+          "title": "事情已經做完，為什麼還會想再做一次",
+          "markdown": "chapters/2026-11-20_general-knowledge_ch06.md",
+          "textSha256": "e1ced2307a7a52b980fe5aa8fa2a96e2732093010d0cb5dd0521fa5125397c8b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-20-general-knowledge-v1/2026-11-20_general-knowledge_ch06-f19b3f8be55f.m4a",
+          "sha256": "f19b3f8be55f3aa0809c8ddb405a8a771d834d5551122b3737d7111c619543eb",
+          "bytes": 3497665,
+          "durationSec": 285.721542
+        }
+      ]
     }
   ]
 }
