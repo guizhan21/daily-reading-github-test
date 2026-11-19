@@ -2387,6 +2387,88 @@
         }
       ],
       "contentReview": "Paragraph-level source review before generation. Audio acceptance checks identity, SHA-256, container, duration and complete decode."
+    },
+    {
+      "bookId": "2026-11-19_ai-consultant_chart-text",
+      "version": 1,
+      "decision": "approved",
+      "reviewedAt": "2026-11-19T02:31:23.550Z",
+      "basis": "日讀本次單次公開加刊授權。原創教育正文與自擬例子，研究及機構資料作出處引用。封面為獨立生成並已目視驗收的原圖。音訊為該章來源與提示產生的 NotebookLM 原檔。",
+      "coverSha256": "c94f6d1b1cb1b61ecb00e6c188bd2d2ed0bf110545c5e456fe528012fdbd917a",
+      "chapters": [
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch01",
+          "textSha256": "5d778215f9638bc5e6daec20ee5039f977d19a3b94179a4e868c23c44d539395",
+          "audioSha256": "8226b54cb26c8d55360233f4dcc313f435f6def7794882db16a0c6053c7f341e"
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch02",
+          "textSha256": "cde4af2f094191e8ecbab1d3bcd522f36092764aff4ece3c14d680a3d3f9509c",
+          "audioSha256": "1e0f1746a4650f4aaefc39e4b669ce2235726ae605a08e8b75bc2f181fa9d997"
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch03",
+          "textSha256": "fad78fef78873a4b182469435925a2048f39afb9a15f808a5de83d201d3811b7",
+          "audioSha256": "f1a46633b9a06fc22b34b7e2fb4111f953c5d0af2b21d15aecd1fb253c7e75a9"
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch04",
+          "textSha256": "1c1f2b78c991310e90fb16e5cce82f6d2640507e4e80c62dc80b7ed35e76ab62",
+          "audioSha256": "2421abf47c985753ff864c5d4275308acd6bc0f76afe7cccf22213314b82a496"
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch05",
+          "textSha256": "0c461e4322bc06461fc5d4e2ba9a1b40823c027de0fb6a36bbb3aa206c4c28c3",
+          "audioSha256": "563125db2338249ac114f3130d269510d0f03c68c76655d7b3f773066f6fbb47"
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch06",
+          "textSha256": "5b7bc92f8d9608eb8e311aea91952d5b0361be26a69b34393e03e15fe1cb641e",
+          "audioSha256": "c304dbb2a02f39104def1a486dba878cf525f13f47f2762b393e00276d6f1b89"
+        }
+      ],
+      "contentReview": "逐章查證正文，發行音訊核對來源、提示、身分、檔案 SHA、長度及全檔解碼。"
+    },
+    {
+      "bookId": "2026-11-19_general-knowledge_change-blindness",
+      "version": 1,
+      "decision": "approved",
+      "reviewedAt": "2026-11-19T02:49:06.974Z",
+      "basis": "日讀本次單次公開加刊授權。原創教育正文與自擬例子，研究及機構資料作出處引用。封面為獨立生成並已目視驗收的原圖。音訊為該章來源與提示產生的 NotebookLM 原檔。",
+      "coverSha256": "10d14dbbbc62fd4942877c27a71de751659694bf2212cdb65d76533d8d5f28f9",
+      "chapters": [
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch01",
+          "textSha256": "3dd9437b49b76028c4fe873a84c9180e8f3b14170c349946e7dd63b0f37aebe2",
+          "audioSha256": "c9af4fed1aff041b71bb46f43897e827ed756c35db432809d732376b90048f48"
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch02",
+          "textSha256": "0fd465b16181784545b86588a8ddcde5bccbdf0a9c534579d14e079cfd9c102f",
+          "audioSha256": "2b95ce34d78eade54a9b8677c6fd577d16539a7b052f3fdda9853210ddcbec56"
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch03",
+          "textSha256": "d8e674b1b59b9eba114997e4ad5ec4b1a51503067a1f7348b6f573e1f943a721",
+          "audioSha256": "c11d3b241b6ccd161cfcfd07fedf51441decd5933374579fce155d88d3d00a15"
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch04",
+          "textSha256": "dff7e33b5d85e45340ae7a4441844357ab2d628ef4b52b4198d9687ba98089a3",
+          "audioSha256": "3d8f8a4cbdf886ff905d0a338fe0e3a06d8455b986068e49482fa32190a39603"
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch05",
+          "textSha256": "8e13bba7303589208f54db836ccd31d96ca5d4ce82a44c6bf0d04827ff603295",
+          "audioSha256": "efb8e72e6a4073fcda42c45fc0b7e5ee3503e004dae60f3d01c79b0daac8c938"
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch06",
+          "textSha256": "0438841e471ce10a4a204faa3e40ecef6890ebbaf3dd3c7cec04cc67a84c7323",
+          "audioSha256": "c598e14baf37f1708264b7b8c28ac78d8cb1f8f8466440fbed2bceffaeeff643"
+        }
+      ],
+      "contentReview": "逐章查證正文，發行音訊核對來源、提示、身分、檔案 SHA、長度及全檔解碼。"
     }
   ],
   "skipped": []

@@ -4318,6 +4318,154 @@
           "durationSec": 284.537324
         }
       ]
+    },
+    {
+      "bookId": "2026-11-19_ai-consultant_chart-text",
+      "title": "用 AI 把統計圖表寫成讀得懂的文字",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-19",
+      "description": "如何從圖表與底表核對 AI 所寫的數字、比較與限制，交出看不見圖也能使用的說明？",
+      "version": 1,
+      "cover": "covers/2026-11-19_ai-consultant_chart-text.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-19_ai-consultant_chart-text.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-19-ai-consultant_chart-text-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch01",
+          "title": "先弄清楚讀者要讀哪個比較",
+          "markdown": "chapters/2026-11-19_ai-consultant_chart-text_ch01.md",
+          "textSha256": "5d778215f9638bc5e6daec20ee5039f977d19a3b94179a4e868c23c44d539395",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-ai-consultant_chart-text-v1/2026-11-19_ai-consultant_chart-text_ch01-8226b54cb26c.m4a",
+          "sha256": "8226b54cb26c8d55360233f4dcc313f435f6def7794882db16a0c6053c7f341e",
+          "bytes": 3351201,
+          "durationSec": 273.693605
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch02",
+          "title": "回到底表找單位與分母",
+          "markdown": "chapters/2026-11-19_ai-consultant_chart-text_ch02.md",
+          "textSha256": "cde4af2f094191e8ecbab1d3bcd522f36092764aff4ece3c14d680a3d3f9509c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-ai-consultant_chart-text-v1/2026-11-19_ai-consultant_chart-text_ch02-1e0f1746a465.m4a",
+          "sha256": "1e0f1746a4650f4aaefc39e4b669ce2235726ae605a08e8b75bc2f181fa9d997",
+          "bytes": 4279748,
+          "durationSec": 349.924717
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch03",
+          "title": "從折線核對時間與缺口",
+          "markdown": "chapters/2026-11-19_ai-consultant_chart-text_ch03.md",
+          "textSha256": "fad78fef78873a4b182469435925a2048f39afb9a15f808a5de83d201d3811b7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-ai-consultant_chart-text-v1/2026-11-19_ai-consultant_chart-text_ch03-f1a46633b9a0.m4a",
+          "sha256": "f1a46633b9a06fc22b34b7e2fb4111f953c5d0af2b21d15aecd1fb253c7e75a9",
+          "bytes": 4634426,
+          "durationSec": 379.04254
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch04",
+          "title": "比較兩組時辨認組成改變",
+          "markdown": "chapters/2026-11-19_ai-consultant_chart-text_ch04.md",
+          "textSha256": "1c1f2b78c991310e90fb16e5cce82f6d2640507e4e80c62dc80b7ed35e76ab62",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-ai-consultant_chart-text-v1/2026-11-19_ai-consultant_chart-text_ch04-2421abf47c98.m4a",
+          "sha256": "2421abf47c985753ff864c5d4275308acd6bc0f76afe7cccf22213314b82a496",
+          "bytes": 3783406,
+          "durationSec": 309.173696
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch05",
+          "title": "寫出不確定性與無法推論的原因",
+          "markdown": "chapters/2026-11-19_ai-consultant_chart-text_ch05.md",
+          "textSha256": "0c461e4322bc06461fc5d4e2ba9a1b40823c027de0fb6a36bbb3aa206c4c28c3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-ai-consultant_chart-text-v1/2026-11-19_ai-consultant_chart-text_ch05-563125db2338.m4a",
+          "sha256": "563125db2338249ac114f3130d269510d0f03c68c76655d7b3f773066f6fbb47",
+          "bytes": 3602947,
+          "durationSec": 294.359365
+        },
+        {
+          "chapterId": "2026-11-19_ai-consultant_chart-text_ch06",
+          "title": "交付簡短說明、長說明與可讀資料表",
+          "markdown": "chapters/2026-11-19_ai-consultant_chart-text_ch06.md",
+          "textSha256": "5b7bc92f8d9608eb8e311aea91952d5b0361be26a69b34393e03e15fe1cb641e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-ai-consultant_chart-text-v1/2026-11-19_ai-consultant_chart-text_ch06-c304dbb2a02f.m4a",
+          "sha256": "c304dbb2a02f39104def1a486dba878cf525f13f47f2762b393e00276d6f1b89",
+          "bytes": 3121269,
+          "durationSec": 254.815782
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-19_general-knowledge_change-blindness",
+      "title": "為什麼眼前的變化會看漏",
+      "category": "跨領域知識探索",
+      "date": "2026-11-19",
+      "description": "注意、比較與任務要求如何影響一個人能否發現眼前的差異？",
+      "version": 1,
+      "cover": "covers/2026-11-19_general-knowledge_change-blindness.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-19_general-knowledge_change-blindness.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-19-general-knowledge_change-blindness-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch01",
+          "title": "找東西時為什麼會漏掉意外物件",
+          "markdown": "chapters/2026-11-19_general-knowledge_change-blindness_ch01.md",
+          "textSha256": "3dd9437b49b76028c4fe873a84c9180e8f3b14170c349946e7dd63b0f37aebe2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-general-knowledge_change-blindness-v1/2026-11-19_general-knowledge_change-blindness_ch01-c9af4fed1aff.m4a",
+          "sha256": "c9af4fed1aff041b71bb46f43897e827ed756c35db432809d732376b90048f48",
+          "bytes": 3170735,
+          "durationSec": 258.879274
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch02",
+          "title": "畫面切換時怎麼找出變化",
+          "markdown": "chapters/2026-11-19_general-knowledge_change-blindness_ch02.md",
+          "textSha256": "0fd465b16181784545b86588a8ddcde5bccbdf0a9c534579d14e079cfd9c102f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-general-knowledge_change-blindness-v1/2026-11-19_general-knowledge_change-blindness_ch02-2b95ce34d78e.m4a",
+          "sha256": "2b95ce34d78eade54a9b8677c6fd577d16539a7b052f3fdda9853210ddcbec56",
+          "bytes": 3704359,
+          "durationSec": 302.695329
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch03",
+          "title": "記得看過為什麼仍無法指出哪裡不同",
+          "markdown": "chapters/2026-11-19_general-knowledge_change-blindness_ch03.md",
+          "textSha256": "d8e674b1b59b9eba114997e4ad5ec4b1a51503067a1f7348b6f573e1f943a721",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-general-knowledge_change-blindness-v1/2026-11-19_general-knowledge_change-blindness_ch03-c11d3b241b6c.m4a",
+          "sha256": "c11d3b241b6ccd161cfcfd07fedf51441decd5933374579fce155d88d3d00a15",
+          "bytes": 3283906,
+          "durationSec": 268.167256
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch04",
+          "title": "眼睛看向物件時注意力在哪裡",
+          "markdown": "chapters/2026-11-19_general-knowledge_change-blindness_ch04.md",
+          "textSha256": "dff7e33b5d85e45340ae7a4441844357ab2d628ef4b52b4198d9687ba98089a3",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-general-knowledge_change-blindness-v1/2026-11-19_general-knowledge_change-blindness_ch04-3d8f8a4cbdf8.m4a",
+          "sha256": "3d8f8a4cbdf886ff905d0a338fe0e3a06d8455b986068e49482fa32190a39603",
+          "bytes": 3037337,
+          "durationSec": 247.919456
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch05",
+          "title": "稀少目標為什麼容易被漏掉",
+          "markdown": "chapters/2026-11-19_general-knowledge_change-blindness_ch05.md",
+          "textSha256": "8e13bba7303589208f54db836ccd31d96ca5d4ce82a44c6bf0d04827ff603295",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-general-knowledge_change-blindness-v1/2026-11-19_general-knowledge_change-blindness_ch05-efb8e72e6a40.m4a",
+          "sha256": "efb8e72e6a4073fcda42c45fc0b7e5ee3503e004dae60f3d01c79b0daac8c938",
+          "bytes": 3455861,
+          "durationSec": 282.284989
+        },
+        {
+          "chapterId": "2026-11-19_general-knowledge_change-blindness_ch06",
+          "title": "如何安排比較讓人更容易發現差異",
+          "markdown": "chapters/2026-11-19_general-knowledge_change-blindness_ch06.md",
+          "textSha256": "0438841e471ce10a4a204faa3e40ecef6890ebbaf3dd3c7cec04cc67a84c7323",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-19-general-knowledge_change-blindness-v1/2026-11-19_general-knowledge_change-blindness_ch06-c598e14baf37.m4a",
+          "sha256": "c598e14baf37f1708264b7b8c28ac78d8cb1f8f8466440fbed2bceffaeeff643",
+          "bytes": 3673084,
+          "durationSec": 300.117914
+        }
+      ]
     }
   ]
 }
