@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 201,
-  "ledgerSha256": "76bc4733d95bb5b3023c97d055effd00a6da63e8528e76e64e2a484bdd765e67",
+  "revision": 210,
+  "ledgerSha256": "8b059320d040037e17a575d214684baa49271f965fb09689e9eef4fe90ac607a",
   "coverage": {
-    "publishedBooks": 61,
-    "publishedChapters": 376,
+    "publishedBooks": 63,
+    "publishedChapters": 388,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 43,
+    "bodySemanticReviewedBooks": 45,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4099,6 +4099,144 @@
             "已經完成或取消的事又被線索喚起，如何判斷要不要照做？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-20_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-21_ai-consultant",
+      "workId": "work-4433bc1223d09fee6f0f6d7a",
+      "version": 1,
+      "title": "給 AI 看範例，它學到哪一條規則？",
+      "subtitle": null,
+      "description": "用一套需要分流的文字材料，逐步拆開格式、標籤字義、巧合線索與示例順序，再把判斷遷移到另一份委託。",
+      "date": "2026-11-21",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "比對完整兩系列書目與加刊、未上架候選及最接近章段；未聲稱全庫逐句比較。語意未知欄未視為沒有重疊。 比對任務目標與原段、核對相同期次另一書的實際章問題。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch01",
+          "title": "示範後答對了，哪一部分幫了忙",
+          "textSha256": "071ebfab774f1d7243ddc1c0767ed3763b1eabe316faff4dc8bcb1713b64a0c1",
+          "coreQuestions": [
+            "模型答對熟悉分類時，怎麼拆開格式提示、任務辨識與個別配對的作用？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch02",
+          "title": "把標籤換成暗號，還認得規則嗎",
+          "textSha256": "4f80287bfc7c76c83911a411e89c77479cf798c9e4276c9f393cf26377a8e5ae",
+          "coreQuestions": [
+            "任意代號與語意反轉各能測出什麼，兩套評分標準如何避免誤判？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch03",
+          "title": "兩種規則都說得通，該補哪個例子",
+          "textSha256": "34dd48ccea59a859ef841e0206079b670d2af75c744fb4aa4b3e77d2d07cca01",
+          "coreQuestions": [
+            "當兩種線索在所有示例總是同行，哪一對新材料能讓兩條候選規則分岔？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch04",
+          "title": "同樣幾個例子，為什麼順序值得重試",
+          "textSha256": "0993c623d46f399c1e19ac8b579b7129f14a3937fced093b6cb9917939bf1ba7",
+          "coreQuestions": [
+            "如何用同一批示例的排列，把順序敏感與挑到好題、模型隨機波動分開？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch05",
+          "title": "篇幅有限，哪幾個範例放在一起最好",
+          "textSha256": "03fd96af6c871e2362569de47dfceebe04940e887a768cf333e29bdac3cc5019",
+          "coreQuestions": [
+            "在固定篇幅下，如何選出互補而且涵蓋必要組合的示例，並發現仍未示範的關係？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch06",
+          "title": "換一份委託，哪些證據足以把工作交出去",
+          "textSha256": "effe71b6a58e0e46b1af94653024abb32823f91897d01da2f11a057122e6304b",
+          "coreQuestions": [
+            "另一個組織交來新規則時，怎麼用保留材料、錯誤代價與可判定性決定哪些項目能委派？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-21_general-knowledge",
+      "workId": "work-9d11ac3def0a15ecf20c8b25",
+      "version": 1,
+      "title": "排隊為什麼會等這麼久",
+      "subtitle": null,
+      "description": "從一張有到場、開始、離開時間的服務紀錄出發，算清尖峰、服務時間差異、共用隊伍和優先順序如何影響真正等候的人。",
+      "date": "2026-11-21",
+      "series": "跨領域知識探索",
+      "scope": "比對完整兩系列書目與加刊、未上架候選及最接近章段；未聲稱全庫逐句比較。語意未知欄未視為沒有重疊。 比對任務目標與原段、核對相同期次另一書的實際章問題。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch01",
+          "title": "排隊的人很多，平均要等幾分鐘",
+          "textSha256": "dc286a76fa4b4c6f5f0977abce967a333993ec5d059a27f73d2ea66838b24195",
+          "coreQuestions": [
+            "怎麼從一段完整紀錄辨別排隊時間、在場時間和時間平均人數？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch02",
+          "title": "一天做得完，為什麼早上還會塞住",
+          "textSha256": "e2e9fadf9a0ef9a2ce06ab88b53e94c951df6b13d0c5a9a1455403ea63de60e2",
+          "coreQuestions": [
+            "總服務能力夠用時，到場成批與已錯過的空閒時段怎樣造成積壓？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch03",
+          "title": "平均每人三分鐘，為什麼有人等特別久",
+          "textSha256": "22d9108e3e28afcbf849dc85f586658eb427556a0c17fe70b75f5986e909ec8f",
+          "coreQuestions": [
+            "服務長短的變動和剩餘工作量如何改變後來者等候，即使平均不變？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch04",
+          "title": "兩個窗口共用一條隊伍，何時比較快",
+          "textSha256": "d014781baf6d325bc535a00950356845d3db8632a1ae3238ddc657cc5cd4eae0",
+          "coreQuestions": [
+            "合隊何時能利用閒置窗口，哪些技能或行為條件會改變效益？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch05",
+          "title": "讓快件先走，誰的等待被拉長",
+          "textSha256": "203416ffabc0dae085b143e9b9f2fe5cbf78a2cc5ea25f7a00eec0da677bb42b",
+          "coreQuestions": [
+            "先到先辦與短件先辦怎樣重新分配等待，未事先知道長短時要如何判讀？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch06",
+          "title": "隊伍看起來變短，服務真的改善了嗎",
+          "textSha256": "b5d9889f79c20c15abc83537da06e4fe762d098754afd64605dd1f1941f65dd2",
+          "coreQuestions": [
+            "剩下的人等得更短時，如何把放棄加入、中途離開及尾端等待的人計回比較？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch06.md"
         }
       ]
     }

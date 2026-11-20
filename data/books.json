@@ -4614,6 +4614,154 @@
           "durationSec": 285.721542
         }
       ]
+    },
+    {
+      "bookId": "2026-11-21_ai-consultant",
+      "title": "給 AI 看範例，它學到哪一條規則？",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-21",
+      "description": "用一套需要分流的文字材料，逐步拆開格式、標籤字義、巧合線索與示例順序，再把判斷遷移到另一份委託。",
+      "version": 1,
+      "cover": "covers/2026-11-21_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-21_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-21-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch01",
+          "title": "示範後答對了，哪一部分幫了忙",
+          "markdown": "chapters/2026-11-21_ai-consultant_ch01.md",
+          "textSha256": "071ebfab774f1d7243ddc1c0767ed3763b1eabe316faff4dc8bcb1713b64a0c1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-ai-consultant-v1/2026-11-21_ai-consultant_ch01-ddd5d726f3f0.m4a",
+          "sha256": "ddd5d726f3f00636798154d58137e7cd1841a38375ec37b00a43ce4b3a7f3295",
+          "bytes": 3121557,
+          "durationSec": 254.839002
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch02",
+          "title": "把標籤換成暗號，還認得規則嗎",
+          "markdown": "chapters/2026-11-21_ai-consultant_ch02.md",
+          "textSha256": "4f80287bfc7c76c83911a411e89c77479cf798c9e4276c9f393cf26377a8e5ae",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-ai-consultant-v1/2026-11-21_ai-consultant_ch02-ea2da950161e.m4a",
+          "sha256": "ea2da950161e255751e426146031b9ebe6bb02e60ac30b64664f3ed3e1de9c29",
+          "bytes": 3301433,
+          "durationSec": 269.606893
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch03",
+          "title": "兩種規則都說得通，該補哪個例子",
+          "markdown": "chapters/2026-11-21_ai-consultant_ch03.md",
+          "textSha256": "34dd48ccea59a859ef841e0206079b670d2af75c744fb4aa4b3e77d2d07cca01",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-ai-consultant-v1/2026-11-21_ai-consultant_ch03-9187c3a540f6.m4a",
+          "sha256": "9187c3a540f633684621fea38b2f0cd187970d4e2eca68b05535e45bc4844d37",
+          "bytes": 2860961,
+          "durationSec": 233.453424
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch04",
+          "title": "同樣幾個例子，為什麼順序值得重試",
+          "markdown": "chapters/2026-11-21_ai-consultant_ch04.md",
+          "textSha256": "0993c623d46f399c1e19ac8b579b7129f14a3937fced093b6cb9917939bf1ba7",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-ai-consultant-v1/2026-11-21_ai-consultant_ch04-cf14d5dcdb19.m4a",
+          "sha256": "cf14d5dcdb19e3d448d588396cdd3f85344795e0a5439ec1457cac50e2ecdd5d",
+          "bytes": 4131577,
+          "durationSec": 337.75746
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch05",
+          "title": "篇幅有限，哪幾個範例放在一起最好",
+          "markdown": "chapters/2026-11-21_ai-consultant_ch05.md",
+          "textSha256": "03fd96af6c871e2362569de47dfceebe04940e887a768cf333e29bdac3cc5019",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-ai-consultant-v1/2026-11-21_ai-consultant_ch05-3f4467d990eb.m4a",
+          "sha256": "3f4467d990ebed9852cc103d7e3aa4da47ead3706569d8ec8b3afaf1cd636f70",
+          "bytes": 3234741,
+          "durationSec": 264.126984
+        },
+        {
+          "chapterId": "2026-11-21_ai-consultant_ch06",
+          "title": "換一份委託，哪些證據足以把工作交出去",
+          "markdown": "chapters/2026-11-21_ai-consultant_ch06.md",
+          "textSha256": "effe71b6a58e0e46b1af94653024abb32823f91897d01da2f11a057122e6304b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-ai-consultant-v1/2026-11-21_ai-consultant_ch06-b80d12c1cd6d.m4a",
+          "sha256": "b80d12c1cd6d2f13cfdc59b7ae0d510bb92c440c8f22d5f49ee9fb43dc4f0db3",
+          "bytes": 3238653,
+          "durationSec": 264.452063
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-21_general-knowledge",
+      "title": "排隊為什麼會等這麼久",
+      "category": "跨領域知識探索",
+      "date": "2026-11-21",
+      "description": "從一張有到場、開始、離開時間的服務紀錄出發，算清尖峰、服務時間差異、共用隊伍和優先順序如何影響真正等候的人。",
+      "version": 1,
+      "cover": "covers/2026-11-21_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-21_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-21-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch01",
+          "title": "排隊的人很多，平均要等幾分鐘",
+          "markdown": "chapters/2026-11-21_general-knowledge_ch01.md",
+          "textSha256": "dc286a76fa4b4c6f5f0977abce967a333993ec5d059a27f73d2ea66838b24195",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-general-knowledge-v1/2026-11-21_general-knowledge_ch01-971bbde331b8.m4a",
+          "sha256": "971bbde331b8808122dcd7049a04945f223c47337f28751c03cb3f4f2e89b158",
+          "bytes": 3174228,
+          "durationSec": 259.157914
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch02",
+          "title": "一天做得完，為什麼早上還會塞住",
+          "markdown": "chapters/2026-11-21_general-knowledge_ch02.md",
+          "textSha256": "e2e9fadf9a0ef9a2ce06ab88b53e94c951df6b13d0c5a9a1455403ea63de60e2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-general-knowledge-v1/2026-11-21_general-knowledge_ch02-fa575d414b33.m4a",
+          "sha256": "fa575d414b33050225fd8d4d1afbd499b7703ff74418ce23cdc5d4aef496d4cb",
+          "bytes": 3715516,
+          "durationSec": 303.600907
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch03",
+          "title": "平均每人三分鐘，為什麼有人等特別久",
+          "markdown": "chapters/2026-11-21_general-knowledge_ch03.md",
+          "textSha256": "22d9108e3e28afcbf849dc85f586658eb427556a0c17fe70b75f5986e909ec8f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-general-knowledge-v1/2026-11-21_general-knowledge_ch03-a073d257a079.m4a",
+          "sha256": "a073d257a079cca39635a088ae8e0c290464005e5a0e04aecacddaeee38fa91b",
+          "bytes": 3639591,
+          "durationSec": 297.377959
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch04",
+          "title": "兩個窗口共用一條隊伍，何時比較快",
+          "markdown": "chapters/2026-11-21_general-knowledge_ch04.md",
+          "textSha256": "d014781baf6d325bc535a00950356845d3db8632a1ae3238ddc657cc5cd4eae0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-general-knowledge-v1/2026-11-21_general-knowledge_ch04-e92d64b9782a.m4a",
+          "sha256": "e92d64b9782a6da3d9eabdd37b3084772e6d780fefa2289f7dfa7de41ef267a6",
+          "bytes": 3563239,
+          "durationSec": 291.085351
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch05",
+          "title": "讓快件先走，誰的等待被拉長",
+          "markdown": "chapters/2026-11-21_general-knowledge_ch05.md",
+          "textSha256": "203416ffabc0dae085b143e9b9f2fe5cbf78a2cc5ea25f7a00eec0da677bb42b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-general-knowledge-v1/2026-11-21_general-knowledge_ch05-083bb847c1e4.m4a",
+          "sha256": "083bb847c1e4c87c7693df7d96d973b721ac1919fc2b411bbabe645d3c75a9a0",
+          "bytes": 2443144,
+          "durationSec": 199.134331
+        },
+        {
+          "chapterId": "2026-11-21_general-knowledge_ch06",
+          "title": "隊伍看起來變短，服務真的改善了嗎",
+          "markdown": "chapters/2026-11-21_general-knowledge_ch06.md",
+          "textSha256": "b5d9889f79c20c15abc83537da06e4fe762d098754afd64605dd1f1941f65dd2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-21-general-knowledge-v1/2026-11-21_general-knowledge_ch06-ecd47d65020b.m4a",
+          "sha256": "ecd47d65020b72479a6aa79fcc1cc65bc1766ebde1d1ab42a030d2b1b2321743",
+          "bytes": 3141068,
+          "durationSec": 256.441179
+        }
+      ]
     }
   ]
 }
