@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 210,
-  "ledgerSha256": "8b059320d040037e17a575d214684baa49271f965fb09689e9eef4fe90ac607a",
+  "revision": 219,
+  "ledgerSha256": "ff0e6df36c10baca7f434311eda81fe3731ea365c5eba1e480294687886dd99c",
   "coverage": {
-    "publishedBooks": 63,
-    "publishedChapters": 388,
+    "publishedBooks": 65,
+    "publishedChapters": 400,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 45,
+    "bodySemanticReviewedBooks": 47,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4237,6 +4237,144 @@
             "剩下的人等得更短時，如何把放棄加入、中途離開及尾端等待的人計回比較？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-21_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-22_ai-consultant",
+      "workId": "work-0e83472f890d19b1c2417523",
+      "version": 1,
+      "title": "用 AI 想點子，為什麼好作品可能越來越像",
+      "subtitle": null,
+      "description": "從八份展覽提案追蹤點子的來歷，把單件品質、整組選擇與範例流動分開，為委託方保留真正不同且可用的方向。",
+      "date": "2026-11-22",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch01",
+          "title": "單篇得分提高，整份提案多了哪些選擇",
+          "textSha256": "e2e2a18f32393feb3c312c4e3133e56778245da65929ba1df79fabddc44363fe",
+          "coreQuestions": [
+            "單篇作品的盲評與全組可替換的方向各用什麼比較，兩者會怎樣同時朝相反方向移動？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch02",
+          "title": "六個新名字，背後有幾種做法",
+          "textSha256": "2d96b39486f07e44aea046d2b73014bc9b8c4ee212edd07a4f271299c7345ad1",
+          "coreQuestions": [
+            "如何把任務本來要求的共通成分、文字表面相似與解法機制重複分開？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch03",
+          "title": "大家為什麼留住同一個多餘細節",
+          "textSha256": "3f9a53cdfb2cfe573117d4c0ee05712f93331a21cfd20bbf6025db5d22bca109",
+          "coreQuestions": [
+            "同一個非必要特徵反覆出現時，怎樣區分模型先提供的錨點、任務限制與人本來的偏好？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch04",
+          "title": "建議傳給下一個人，點子會越來越像嗎",
+          "textSha256": "7315e5ceafc6141d1e5f3e1615c37663174908f42d62fa652ce2483466bcc40e",
+          "coreQuestions": [
+            "每人獨自取得建議與後人看見前人點子時，刺激來源和傳遞方式如何改變群體差異的解讀？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch05",
+          "title": "該讓誰先看 AI 的點子",
+          "textSha256": "fc3cdeae8cdf619466f2096f631572b5b275092f284cde0cecd520f51e089e61",
+          "coreQuestions": [
+            "誰可能從早給建議得益，如何把起點、是否索取與接觸時機分開後再決定是否分流？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch06",
+          "title": "只能打樣兩件，怎麼保住有用的差異",
+          "textSha256": "07c16fc4a96c339d945e1ea27af6d03a70e2dfe11ecc913d943932864d17d5a6",
+          "coreQuestions": [
+            "當只能試做少數方案，如何同時考慮各案底線、失敗條件重疊與補進另一個起點的成本？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-22_general-knowledge",
+      "workId": "work-68841d7e0be33a3504ef03bf",
+      "version": 1,
+      "title": "拍賣怎麼決定誰得標、付多少錢",
+      "subtitle": null,
+      "description": "跟著一場虛構的器物義賣，從三張密封出價單走到未知價值、最後一秒與流標，用實際可以重算的帳本讀懂成交價。",
+      "date": "2026-11-22",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch01",
+          "title": "三張出價單，誰得標又付多少",
+          "textSha256": "efdeb28b30553f60a4389c1acfbc274a3b644a2670fdba4797833096d50f8cfd",
+          "coreQuestions": [
+            "同一組出價在最高價付款、第二價付款與設底價時如何結算？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch02",
+          "title": "付第二高價，照實寫有什麼好處",
+          "textSha256": "125b72bceb706a893e1393cf0c2aa9ec18cf4ca56a833f7eee9ae9dd8c15ed98",
+          "coreQuestions": [
+            "單件私人價值的第二價規則，何時報高或報低才會改變自己的結果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch03",
+          "title": "付自己的出價，少寫一點值得嗎",
+          "textSha256": "4873b23572b394db0612a5f033f5343ad08fbbc8e09fa9eb47c8226bc5af712b",
+          "coreQuestions": [
+            "第一價密封競標中，降低報價所省的付款如何和失去得標的機會交換？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch04",
+          "title": "為什麼得標本身也是一個消息",
+          "textSha256": "abdfcea441f784adc75b748beb63cef12661232bbec39ef674cc25c29eb2e0b9",
+          "coreQuestions": [
+            "多人各自估計同一筆未知價值時，得知自己勝出如何改變原本的估計？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch05",
+          "title": "最後一秒才出價，規則改變了什麼",
+          "textSha256": "34dd13c780c3e48d8e675f261ed34bd9fcf223815b5f57ef8e035cc627595024",
+          "coreQuestions": [
+            "固定結標和遇新標就延長，如何改變晚到的出價與可見歷史的意義？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch06",
+          "title": "賣得更貴，收入一定更高嗎",
+          "textSha256": "b8a632a481f3d4343107f21e5ce95c17b9d179e38e5b3d975a97aa1a18a9d33d",
+          "coreQuestions": [
+            "在有流標的多場紀錄裡，如何比較成交條件、全場收入和資源由誰取得？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch06.md"
         }
       ]
     }

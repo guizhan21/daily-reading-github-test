@@ -4762,6 +4762,154 @@
           "durationSec": 256.441179
         }
       ]
+    },
+    {
+      "bookId": "2026-11-22_ai-consultant",
+      "title": "用 AI 想點子，為什麼好作品可能越來越像",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-22",
+      "description": "從八份展覽提案追蹤點子的來歷，把單件品質、整組選擇與範例流動分開，為委託方保留真正不同且可用的方向。",
+      "version": 1,
+      "cover": "covers/2026-11-22_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-22_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-22-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch01",
+          "title": "單篇得分提高，整份提案多了哪些選擇",
+          "markdown": "chapters/2026-11-22_ai-consultant_ch01.md",
+          "textSha256": "e2e2a18f32393feb3c312c4e3133e56778245da65929ba1df79fabddc44363fe",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-ai-consultant-v1/2026-11-22_ai-consultant_ch01-81dad56a235d.m4a",
+          "sha256": "81dad56a235df0527bf36d3d773754ec66724fbd8bec0604c90f16cae8a6da01",
+          "bytes": 2590111,
+          "durationSec": 211.208707
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch02",
+          "title": "六個新名字，背後有幾種做法",
+          "markdown": "chapters/2026-11-22_ai-consultant_ch02.md",
+          "textSha256": "2d96b39486f07e44aea046d2b73014bc9b8c4ee212edd07a4f271299c7345ad1",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-ai-consultant-v1/2026-11-22_ai-consultant_ch02-2ba8d06f2805.m4a",
+          "sha256": "2ba8d06f280568aa65dcf87824221ad08e0ccb99542edf6c44395ce9bf42bf1e",
+          "bytes": 3729248,
+          "durationSec": 304.738685
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch03",
+          "title": "大家為什麼留住同一個多餘細節",
+          "markdown": "chapters/2026-11-22_ai-consultant_ch03.md",
+          "textSha256": "3f9a53cdfb2cfe573117d4c0ee05712f93331a21cfd20bbf6025db5d22bca109",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-ai-consultant-v1/2026-11-22_ai-consultant_ch03-edd92e385f03.m4a",
+          "sha256": "edd92e385f032384581ff8c576a1db0cac40904f3d413b2d1ffe35e95e77d8dc",
+          "bytes": 3547017,
+          "durationSec": 289.761814
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch04",
+          "title": "建議傳給下一個人，點子會越來越像嗎",
+          "markdown": "chapters/2026-11-22_ai-consultant_ch04.md",
+          "textSha256": "7315e5ceafc6141d1e5f3e1615c37663174908f42d62fa652ce2483466bcc40e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-ai-consultant-v1/2026-11-22_ai-consultant_ch04-70a7569f3fd7.m4a",
+          "sha256": "70a7569f3fd7cbdfad8ef9b28c3fdcd069c95dcb68a55f10ea4e1f7ca14eb93d",
+          "bytes": 3940065,
+          "durationSec": 322.037551
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch05",
+          "title": "該讓誰先看 AI 的點子",
+          "markdown": "chapters/2026-11-22_ai-consultant_ch05.md",
+          "textSha256": "fc3cdeae8cdf619466f2096f631572b5b275092f284cde0cecd520f51e089e61",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-ai-consultant-v1/2026-11-22_ai-consultant_ch05-52cf4274d7c9.m4a",
+          "sha256": "52cf4274d7c9c816d97de9540b9a887eb6f259a8861417f10f8c3a1dd1cca754",
+          "bytes": 4439499,
+          "durationSec": 363.043991
+        },
+        {
+          "chapterId": "2026-11-22_ai-consultant_ch06",
+          "title": "只能打樣兩件，怎麼保住有用的差異",
+          "markdown": "chapters/2026-11-22_ai-consultant_ch06.md",
+          "textSha256": "07c16fc4a96c339d945e1ea27af6d03a70e2dfe11ecc913d943932864d17d5a6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-ai-consultant-v1/2026-11-22_ai-consultant_ch06-709ffda30e2b.m4a",
+          "sha256": "709ffda30e2b2150d600f483f42f8a9738a7d23bfed14b63aa3a6eb7b94232e9",
+          "bytes": 4237341,
+          "durationSec": 346.441723
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-22_general-knowledge",
+      "title": "拍賣怎麼決定誰得標、付多少錢",
+      "category": "跨領域知識探索",
+      "date": "2026-11-22",
+      "description": "跟著一場虛構的器物義賣，從三張密封出價單走到未知價值、最後一秒與流標，用實際可以重算的帳本讀懂成交價。",
+      "version": 1,
+      "cover": "covers/2026-11-22_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-22_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-22-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch01",
+          "title": "三張出價單，誰得標又付多少",
+          "markdown": "chapters/2026-11-22_general-knowledge_ch01.md",
+          "textSha256": "efdeb28b30553f60a4389c1acfbc274a3b644a2670fdba4797833096d50f8cfd",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-general-knowledge-v1/2026-11-22_general-knowledge_ch01-f7bef0ec6a32.m4a",
+          "sha256": "f7bef0ec6a329250e862693837da4ce6d1174e68b80b99ef7d446a73febf74c9",
+          "bytes": 3925915,
+          "durationSec": 320.876553
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch02",
+          "title": "付第二高價，照實寫有什麼好處",
+          "markdown": "chapters/2026-11-22_general-knowledge_ch02.md",
+          "textSha256": "125b72bceb706a893e1393cf0c2aa9ec18cf4ca56a833f7eee9ae9dd8c15ed98",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-general-knowledge-v1/2026-11-22_general-knowledge_ch02-a8da8678250f.m4a",
+          "sha256": "a8da8678250fc26c394f8bc91d32f4660c96b629f9f98c1db3c4647764728259",
+          "bytes": 3902727,
+          "durationSec": 318.972517
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch03",
+          "title": "付自己的出價，少寫一點值得嗎",
+          "markdown": "chapters/2026-11-22_general-knowledge_ch03.md",
+          "textSha256": "4873b23572b394db0612a5f033f5343ad08fbbc8e09fa9eb47c8226bc5af712b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-general-knowledge-v1/2026-11-22_general-knowledge_ch03-966e25b87ae4.m4a",
+          "sha256": "966e25b87ae411057642ec54ae056a39235adaa3d2b518e2f52bc940c0f53f6c",
+          "bytes": 4075529,
+          "durationSec": 333.159909
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch04",
+          "title": "為什麼得標本身也是一個消息",
+          "markdown": "chapters/2026-11-22_general-knowledge_ch04.md",
+          "textSha256": "abdfcea441f784adc75b748beb63cef12661232bbec39ef674cc25c29eb2e0b9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-general-knowledge-v1/2026-11-22_general-knowledge_ch04-23a5ab6c90be.m4a",
+          "sha256": "23a5ab6c90bea08329d2554f291ea763e59751b66e69477febacc323c4541e68",
+          "bytes": 4540688,
+          "durationSec": 371.356735
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch05",
+          "title": "最後一秒才出價，規則改變了什麼",
+          "markdown": "chapters/2026-11-22_general-knowledge_ch05.md",
+          "textSha256": "34dd13c780c3e48d8e675f261ed34bd9fcf223815b5f57ef8e035cc627595024",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-general-knowledge-v1/2026-11-22_general-knowledge_ch05-5ad83cc323be.m4a",
+          "sha256": "5ad83cc323be47ff264fe705b9b0f03bd998a9b0d299183ce1bf87cf5bf65029",
+          "bytes": 4034706,
+          "durationSec": 329.816236
+        },
+        {
+          "chapterId": "2026-11-22_general-knowledge_ch06",
+          "title": "賣得更貴，收入一定更高嗎",
+          "markdown": "chapters/2026-11-22_general-knowledge_ch06.md",
+          "textSha256": "b8a632a481f3d4343107f21e5ce95c17b9d179e38e5b3d975a97aa1a18a9d33d",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-22-general-knowledge-v1/2026-11-22_general-knowledge_ch06-96ccc19cc6ea.m4a",
+          "sha256": "96ccc19cc6eaa25f45f6ac6097d9559fc565b83bb0ba9bf0c1a4a83e1925d33e",
+          "bytes": 4110666,
+          "durationSec": 336.039184
+        }
+      ]
     }
   ]
 }
