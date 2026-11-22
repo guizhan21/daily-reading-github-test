@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 219,
-  "ledgerSha256": "ff0e6df36c10baca7f434311eda81fe3731ea365c5eba1e480294687886dd99c",
+  "revision": 227,
+  "ledgerSha256": "53b479a4d77c99307366dc5c80b8b3eabb89b94f4afc288aea1fe79e62aa1f69",
   "coverage": {
-    "publishedBooks": 65,
-    "publishedChapters": 400,
+    "publishedBooks": 66,
+    "publishedChapters": 406,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 47,
+    "bodySemanticReviewedBooks": 48,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4375,6 +4375,75 @@
             "在有流標的多場紀錄裡，如何比較成交條件、全場收入和資源由誰取得？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-22_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-23_general-knowledge",
+      "workId": "work-75397c7cc8649012c62913ae",
+      "version": 1,
+      "title": "同一批選票，為什麼換個算法就換人當選",
+      "subtitle": null,
+      "description": "跟著一份社區表決的排序票，親手算出首選、兩兩多數、淘汰轉票與名次積分，分清楚票箱裡有的資訊，以及計票規則替大家做的選擇。",
+      "date": "2026-11-23",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch01",
+          "title": "拿到最多第一名，代表多少人支持",
+          "textSha256": "7f90e9ab37e8b9c9fbf4fe0a815c82732971642ed852efa9a9be9fb286e9c333",
+          "coreQuestions": [
+            "只收到第一志願票數，能否判定誰在兩案直接對決時有過半支持？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch02",
+          "title": "每兩案都能表決，為什麼排不出總名次",
+          "textSha256": "9f3fe0e48b626277ccf93e6bd82f5a4fd4c6aa035af83d8e6622871a48ffa420",
+          "coreQuestions": [
+            "當多數關係循環時，先表決哪兩案如何影響最後結果？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch03",
+          "title": "淘汰最後一名後，選票流去哪裡",
+          "textSha256": "36d7ce6f14fbeb539777828962ed27628c4f7a86eb9bba6fb3a22080a7d4defa",
+          "coreQuestions": [
+            "有些人只排一名時，如何逐輪轉票並說清最後多數的分母？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch04",
+          "title": "把第一名多給一分，勝者會換嗎",
+          "textSha256": "59df87e80476aebb91abde2ea0cb435885a8b5fa58190fcd2f994003a76c33ce",
+          "coreQuestions": [
+            "位置給分中，怎麼用名次分布算出勝者更替的權重門檻？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch05",
+          "title": "多幾張票把你排前面，反而會落選嗎",
+          "textSha256": "b6100d3f397b5c2078ea9cdf8e2dcc80aec401777d4dcb7f1d873c585ce445ee",
+          "coreQuestions": [
+            "僅提高某案在部分票上的排名，怎麼可能透過改變淘汰順序使它落選？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch06",
+          "title": "只有各輪總票，還能查清楚哪些事",
+          "textSha256": "e873e9973b8ba7f90d006f1a1e5c2e039a3ae0b7682dec824dd779bc6c43e0eb",
+          "coreQuestions": [
+            "當個別排序未公布時，如何用相容的兩份票箱證明尚不能回答的問題？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch06.md"
         }
       ]
     }

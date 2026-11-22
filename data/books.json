@@ -4910,6 +4910,80 @@
           "durationSec": 336.039184
         }
       ]
+    },
+    {
+      "bookId": "2026-11-23_general-knowledge",
+      "title": "同一批選票，為什麼換個算法就換人當選",
+      "category": "跨領域知識探索",
+      "date": "2026-11-23",
+      "description": "跟著一份社區表決的排序票，親手算出首選、兩兩多數、淘汰轉票與名次積分，分清楚票箱裡有的資訊，以及計票規則替大家做的選擇。",
+      "version": 1,
+      "cover": "covers/2026-11-23_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-23_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-23-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch01",
+          "title": "拿到最多第一名，代表多少人支持",
+          "markdown": "chapters/2026-11-23_general-knowledge_ch01.md",
+          "textSha256": "7f90e9ab37e8b9c9fbf4fe0a815c82732971642ed852efa9a9be9fb286e9c333",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-23-general-knowledge-v1/2026-11-23_general-knowledge_ch01-434e091d89c1.m4a",
+          "sha256": "434e091d89c1628f798952cfc707d376428179db8838b075d12c59fce76124dc",
+          "bytes": 4193092,
+          "durationSec": 342.81941
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch02",
+          "title": "每兩案都能表決，為什麼排不出總名次",
+          "markdown": "chapters/2026-11-23_general-knowledge_ch02.md",
+          "textSha256": "9f3fe0e48b626277ccf93e6bd82f5a4fd4c6aa035af83d8e6622871a48ffa420",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-23-general-knowledge-v1/2026-11-23_general-knowledge_ch02-de6c4ae24360.m4a",
+          "sha256": "de6c4ae24360fe55649022c7edde7230fa421f56aeb2c2532bfca69896d3af84",
+          "bytes": 3830016,
+          "durationSec": 313.004989
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch03",
+          "title": "淘汰最後一名後，選票流去哪裡",
+          "markdown": "chapters/2026-11-23_general-knowledge_ch03.md",
+          "textSha256": "36d7ce6f14fbeb539777828962ed27628c4f7a86eb9bba6fb3a22080a7d4defa",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-23-general-knowledge-v1/2026-11-23_general-knowledge_ch03-656804306cda.m4a",
+          "sha256": "656804306cda8249267040b92072432befb80f9cc584c7fefd738d871c692387",
+          "bytes": 3377532,
+          "durationSec": 275.853061
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch04",
+          "title": "把第一名多給一分，勝者會換嗎",
+          "markdown": "chapters/2026-11-23_general-knowledge_ch04.md",
+          "textSha256": "59df87e80476aebb91abde2ea0cb435885a8b5fa58190fcd2f994003a76c33ce",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-23-general-knowledge-v1/2026-11-23_general-knowledge_ch04-b1b7082e699c.m4a",
+          "sha256": "b1b7082e699c931e4252740eb82cb5fe2eda92159aaf32b2acd0b64ae3a52ec0",
+          "bytes": 3557188,
+          "durationSec": 290.597732
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch05",
+          "title": "多幾張票把你排前面，反而會落選嗎",
+          "markdown": "chapters/2026-11-23_general-knowledge_ch05.md",
+          "textSha256": "b6100d3f397b5c2078ea9cdf8e2dcc80aec401777d4dcb7f1d873c585ce445ee",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-23-general-knowledge-v1/2026-11-23_general-knowledge_ch05-bf702e9dbf2c.m4a",
+          "sha256": "bf702e9dbf2c8cdbe5cbf02f63ecbabe9ddc9cf9fd05fe9e93dffc79511348ab",
+          "bytes": 4374667,
+          "durationSec": 357.726621
+        },
+        {
+          "chapterId": "2026-11-23_general-knowledge_ch06",
+          "title": "只有各輪總票，還能查清楚哪些事",
+          "markdown": "chapters/2026-11-23_general-knowledge_ch06.md",
+          "textSha256": "e873e9973b8ba7f90d006f1a1e5c2e039a3ae0b7682dec824dd779bc6c43e0eb",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-23-general-knowledge-v1/2026-11-23_general-knowledge_ch06-c9403e24fecc.m4a",
+          "sha256": "c9403e24fecc699e4e965bb66470447faea691ae9682ae178e35744966b45510",
+          "bytes": 3456305,
+          "durationSec": 282.331429
+        }
+      ]
     }
   ]
 }
