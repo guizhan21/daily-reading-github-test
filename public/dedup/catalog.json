@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 227,
-  "ledgerSha256": "53b479a4d77c99307366dc5c80b8b3eabb89b94f4afc288aea1fe79e62aa1f69",
+  "revision": 236,
+  "ledgerSha256": "10d267d76bf0296024eb0eb1c11ba1b4154845c25206af8a8220cb15158cdf7b",
   "coverage": {
-    "publishedBooks": 66,
-    "publishedChapters": 406,
+    "publishedBooks": 68,
+    "publishedChapters": 418,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 48,
+    "bodySemanticReviewedBooks": 50,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4444,6 +4444,144 @@
             "當個別排序未公布時，如何用相容的兩份票箱證明尚不能回答的問題？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-23_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-24_ai-consultant",
+      "workId": "work-9607318f4a4f0d64d5df922c",
+      "version": 1,
+      "title": "用 AI 評兩份答案，怎麼知道它選對了",
+      "subtitle": null,
+      "description": "從同一對答案換位後的兩張評單開始，拆開內容、長度、參考解與裁判偏好，再依錯放和錯退的代價設計人工複查。",
+      "date": "2026-11-24",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-24_ai-consultant_ch01",
+          "title": "先分清讀者喜歡與答案合格",
+          "textSha256": "3a1ab8c082f1feac75e256182b6ae3eb0f71b29adb6b96342c28b3a68c018638",
+          "coreQuestions": [
+            "一份整體偏好票和一項可驗的必要條件衝突時，怎麼界定交付的合格集合？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-24_ai-consultant_ch02",
+          "title": "交換出場順序後，如何讀兩張評單",
+          "textSha256": "dfc5190839c30dd3b9e738b72713f310d8eb965b4ff6bda99416469a07c12e8d",
+          "coreQuestions": [
+            "正反順序各判一次，如何辨認穩定勝出、跟位置走及單純波動？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-24_ai-consultant_ch03",
+          "title": "回答寫得長，分數為什麼會變",
+          "textSha256": "d4d6ff4bdb12c764289c4e75608b216f8e2b7235ba51acd500884fb4ce5d9e6d",
+          "coreQuestions": [
+            "若長答案獲選，如何拆開新增資訊的價值、贅述與同長度估計的假設？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-24_ai-consultant_ch04",
+          "title": "給裁判一份參考答案，還要查什麼",
+          "textSha256": "90f7e5be5d2295d24d318c4e2a9f746afef2f0274c5a2b46a728bab649f78c0b",
+          "coreQuestions": [
+            "有可驗證的答案時，怎樣設計獨立對照並發現參考解本身的錯誤或狹窄？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-24_ai-consultant_ch05",
+          "title": "同一家模型寫又評，怎麼辨認偏好",
+          "textSha256": "e55321a8721edeb2a0a564bc3d5579333eba2d54d8a196b0a127933a2d714009",
+          "coreQuestions": [
+            "同家裁判常選自家答案時，怎樣把品質差和額外偏好分開，又知道何時資料不足？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-24_ai-consultant_ch06",
+          "title": "人工複查有限，哪些評決可以放行",
+          "textSha256": "cfe07503a5018fafc569e1d8df578a4ee488a4ff91df3c98b99da1b9be3b10d9",
+          "coreQuestions": [
+            "如何在錯放代價不對稱、可以暫緩時，用抽樣標記推估剩餘錯誤並分配複查？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-24_general-knowledge",
+      "workId": "work-96209745305586101eaaf594",
+      "version": 1,
+      "title": "目擊記憶怎麼變：從第一句描述到後來的確信",
+      "subtitle": null,
+      "description": "跟著一段最初的描述、一個暗示性的問句和幾份看似一致的回憶，辨認哪個細節親眼可見、哪個可能沿著對話傳來，以及信心是在何時留下的。",
+      "date": "2026-11-24",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-24_general-knowledge_ch01",
+          "title": "第一個問句，怎麼改變後來的回答",
+          "textSha256": "8668bbf759fff6246708c31fe48779db93432fc96c65363492e2073b165b67ff",
+          "coreQuestions": [
+            "如何用有無碎玻璃的影片實驗，分開字詞對當場估計及稍後回報的影響？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-24_general-knowledge_ch02",
+          "title": "兩個人記得一樣，算幾份線索",
+          "textSha256": "54862b722ee8569a2e7f7f841a5184aef6bc022a031c9ba1caf42db40c5b7d7d",
+          "coreQuestions": [
+            "兩人接觸過彼此的說法後，如何辨認同一細節有幾條可追溯的獨立來源？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-24_general-knowledge_ch03",
+          "title": "認出熟面孔，能說明在哪裡見過嗎",
+          "textSha256": "1b4a34e7f5099bfdc456665f214eb39041d35d551494aa11e20cdef4f6d2882f",
+          "coreQuestions": [
+            "看過照片再認出一張臉時，如何區分對臉的熟悉與對當時在場的記憶？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-24_general-knowledge_ch04",
+          "title": "一句肯定，怎麼改變當初有多確定",
+          "textSha256": "7cf6e7a46a867e9bea55f2302f9ddd6d340f62fd54f36021b92923f469ac31ca",
+          "coreQuestions": [
+            "為什麼指認後才給的回饋，仍會改變人對自己當時信心和視野的描述？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-24_general-knowledge_ch05",
+          "title": "有信心的指認，在什麼條件下較準",
+          "textSha256": "8d946b8c660ce4c21e7e67884da2ec043d5e58d8ec863e00466237a7a56d5029",
+          "coreQuestions": [
+            "要解讀高信心組的答對比例，須核對哪些測量條件和分母？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-24_general-knowledge_ch06",
+          "title": "看一份事件紀錄，怎麼保留真正的分歧",
+          "textSha256": "1d9606c8c65d5caca9ba0bb704259b071b47e5e48a260707ddaba1da111acab8",
+          "coreQuestions": [
+            "遇見有衝突的紀錄，怎樣保存首述、後來的資訊及獨立旁證並留下可查的缺口？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch06.md"
         }
       ]
     }
