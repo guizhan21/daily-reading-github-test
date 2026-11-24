@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 236,
-  "ledgerSha256": "10d267d76bf0296024eb0eb1c11ba1b4154845c25206af8a8220cb15158cdf7b",
+  "revision": 245,
+  "ledgerSha256": "687864234aafb49c5f3219640f91ed03ff7e3ecd3af6d4b96e81edeaaffca64d",
   "coverage": {
-    "publishedBooks": 68,
-    "publishedChapters": 418,
+    "publishedBooks": 70,
+    "publishedChapters": 430,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 50,
+    "bodySemanticReviewedBooks": 52,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4582,6 +4582,144 @@
             "遇見有衝突的紀錄，怎樣保存首述、後來的資訊及獨立旁證並留下可查的缺口？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-24_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-25_ai-consultant",
+      "workId": "work-86f14f77fe9f020d6361edea",
+      "version": 1,
+      "title": "把長文件交給 AI，怎麼知道它讀到了關鍵條件",
+      "subtitle": null,
+      "description": "從一條藏在附件的例外開始，對調位置、換掉題目的關鍵字，再拆開跨頁條件。讀者能用同一批文件判斷何時保留全文、縮小材料或交人核對。",
+      "date": "2026-11-25",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch01",
+          "title": "整份文件都放進去了，為什麼還會漏答",
+          "textSha256": "5154a5e822f00d6221ee995ebeeca5e554581901f4095fb55c75a31cb1594c90",
+          "coreQuestions": [
+            "怎麼用有根據、無根據與直接給證據三種題，分開猜中、找不到及看了仍不會答？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch02",
+          "title": "把同一句移到中間，答案會變嗎",
+          "textSha256": "d29add9be923e02500576e16b124982dff135e9a530e03e9017484bcb326f54b",
+          "coreQuestions": [
+            "如何把證據的位置和文件長度分開測量，辨認單次成功可能掩蓋的遺漏？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch03",
+          "title": "題目換個說法，AI 還找得到根據嗎",
+          "textSha256": "4c27894ec5f2601a7bbffb2cd94b7fc11873fd8f40e5ff022af50450ec91c77e",
+          "coreQuestions": [
+            "題面與原文共用詞消失後，怎麼區分字面搜尋失效、推論缺橋與問題本身有歧義？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch04",
+          "title": "找到兩段話，為什麼還會把條件接錯",
+          "textSha256": "5213e7007e26e18e9631d2d9bc0a23e501bd2d4d9fed6240b3b79f6381d73bf0",
+          "coreQuestions": [
+            "兩段各自找得到，怎麼辨認錯在找不全、對錯對象或套錯適用次序？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch05",
+          "title": "只給相關段落，什麼時候反而漏掉例外",
+          "textSha256": "abd1b22d419b97226e2a55234cb76ecf8ba18e61e0d438c12257d73dc680bf5a",
+          "coreQuestions": [
+            "怎麼把檢索漏件和模型判錯拆開，判斷節錄、補相鄰段或保留全文的代價？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch06",
+          "title": "一份新文件該怎麼驗收",
+          "textSha256": "a46d5c736ad743405d21c38f02f97699f76d28fcd2073878d06288e673e08424",
+          "coreQuestions": [
+            "不同錯誤代價與文件族群下，如何安排小規模驗收及對不能自動回答的交接？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-25_general-knowledge",
+      "workId": "work-7c0201308c1fc710d794b594",
+      "version": 1,
+      "title": "志願怎麼分發：名額、優先順序與抽籤",
+      "subtitle": null,
+      "description": "跟著三張志願單逐輪分位子，讀懂先到手與暫時保留如何改變結果，再查優先權、同分抽籤與漏填志願各自能解釋什麼。",
+      "date": "2026-11-25",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch01",
+          "title": "同樣三個名額，為什麼有人想和別人換",
+          "textSha256": "d732c07c4ca44da3b4b02fe8496d8dd76dda3ce3c79e1d56b5a18b4036c55320",
+          "coreQuestions": [
+            "如何從各人志願、名額與各處優先順序，找出會對配對結果提出正當異議的組合？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch02",
+          "title": "第一輪就錄取，誰會想改填志願",
+          "textSha256": "b2a6c2859c6d050a0eaf321d206262af119c521bdec121949a2d30d9253e32d2",
+          "coreQuestions": [
+            "第一輪即確定席位時，哪些情況使申請人壓低真正偏好的風險看似值得承擔？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch03",
+          "title": "先保留名額，下一輪誰可以換進來",
+          "textSha256": "c86c5f983cf3f7b34c97f3d2f9258c00549efcc9703a98c0725f83a557bf34b9",
+          "coreQuestions": [
+            "暫留、替換及拒絕如何一路傳下去，為什麼最後可以停下？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch04",
+          "title": "沒上第一志願，怎麼查有沒有被插隊",
+          "textSha256": "7ffb6097c2c9398145808a25aed548a56fb9b7e0b53c1e6dce6cb762ddd95a30",
+          "coreQuestions": [
+            "學生提議的分發在哪些前提下能放心依真實偏好排序，名單長度受限時又缺什麼？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch05",
+          "title": "同一優先等級，抽籤會改變誰的去處",
+          "textSha256": "8d0c057a1545e06ef7b569476af6bc695c76145490c64afbf29ea7dd416eb313",
+          "coreQuestions": [
+            "在同級者間抽籤，如何區分事前機會、已抽出次序和分發後可核查的異議？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch06",
+          "title": "只公布第一志願錄取率，還缺哪些資料",
+          "textSha256": "c1e20adb2eeeb245918b1fbccc1c92060842cbe097e25be54c12a0b299d489c9",
+          "coreQuestions": [
+            "第一志願錄取率、無位者與未列志願如何一起影響兩種制度的比較？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch06.md"
         }
       ]
     }

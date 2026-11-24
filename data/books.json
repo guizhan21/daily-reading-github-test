@@ -5132,6 +5132,154 @@
           "durationSec": 308.802177
         }
       ]
+    },
+    {
+      "bookId": "2026-11-25_ai-consultant",
+      "title": "把長文件交給 AI，怎麼知道它讀到了關鍵條件",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-25",
+      "description": "從一條藏在附件的例外開始，對調位置、換掉題目的關鍵字，再拆開跨頁條件。讀者能用同一批文件判斷何時保留全文、縮小材料或交人核對。",
+      "version": 1,
+      "cover": "covers/2026-11-25_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-25_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-25-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch01",
+          "title": "整份文件都放進去了，為什麼還會漏答",
+          "markdown": "chapters/2026-11-25_ai-consultant_ch01.md",
+          "textSha256": "5154a5e822f00d6221ee995ebeeca5e554581901f4095fb55c75a31cb1594c90",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-ai-consultant-v1/2026-11-25_ai-consultant_ch01-69c9edb39847.m4a",
+          "sha256": "69c9edb3984734e5cb7d13e6434e6ce0fd83e98dc158acaa2dc30a7397d65295",
+          "bytes": 3587340,
+          "durationSec": 293.082268
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch02",
+          "title": "把同一句移到中間，答案會變嗎",
+          "markdown": "chapters/2026-11-25_ai-consultant_ch02.md",
+          "textSha256": "d29add9be923e02500576e16b124982dff135e9a530e03e9017484bcb326f54b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-ai-consultant-v1/2026-11-25_ai-consultant_ch02-f497d1b9655e.m4a",
+          "sha256": "f497d1b9655e71bbe6d89c462284e2056166c340c1d58c2024f98f45887c1380",
+          "bytes": 4398525,
+          "durationSec": 359.677098
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch03",
+          "title": "題目換個說法，AI 還找得到根據嗎",
+          "markdown": "chapters/2026-11-25_ai-consultant_ch03.md",
+          "textSha256": "4c27894ec5f2601a7bbffb2cd94b7fc11873fd8f40e5ff022af50450ec91c77e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-ai-consultant-v1/2026-11-25_ai-consultant_ch03-ffa984be6767.m4a",
+          "sha256": "ffa984be6767169d1c9a2684962edb55b3b1ab9bc3d7a4f7e1747f64bf1f8ff8",
+          "bytes": 2971090,
+          "durationSec": 242.485986
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch04",
+          "title": "找到兩段話，為什麼還會把條件接錯",
+          "markdown": "chapters/2026-11-25_ai-consultant_ch04.md",
+          "textSha256": "5213e7007e26e18e9631d2d9bc0a23e501bd2d4d9fed6240b3b79f6381d73bf0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-ai-consultant-v1/2026-11-25_ai-consultant_ch04-5c86e8631494.m4a",
+          "sha256": "5c86e86314947b0353cb9d6c21292e1ef140edae4479205c531314f33d49aa56",
+          "bytes": 3786199,
+          "durationSec": 309.405896
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch05",
+          "title": "只給相關段落，什麼時候反而漏掉例外",
+          "markdown": "chapters/2026-11-25_ai-consultant_ch05.md",
+          "textSha256": "abd1b22d419b97226e2a55234cb76ecf8ba18e61e0d438c12257d73dc680bf5a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-ai-consultant-v1/2026-11-25_ai-consultant_ch05-8e3a1055721b.m4a",
+          "sha256": "8e3a1055721b80eb43c3966b1e459749e4114aad7678db1cbac5d5f206da202f",
+          "bytes": 3428987,
+          "durationSec": 280.079093
+        },
+        {
+          "chapterId": "2026-11-25_ai-consultant_ch06",
+          "title": "一份新文件該怎麼驗收",
+          "markdown": "chapters/2026-11-25_ai-consultant_ch06.md",
+          "textSha256": "a46d5c736ad743405d21c38f02f97699f76d28fcd2073878d06288e673e08424",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-ai-consultant-v1/2026-11-25_ai-consultant_ch06-1e260656e169.m4a",
+          "sha256": "1e260656e1696147efdc3c63f166543ffa85142833830dc02dcb312fc06148d4",
+          "bytes": 3486894,
+          "durationSec": 284.839184
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-25_general-knowledge",
+      "title": "志願怎麼分發：名額、優先順序與抽籤",
+      "category": "跨領域知識探索",
+      "date": "2026-11-25",
+      "description": "跟著三張志願單逐輪分位子，讀懂先到手與暫時保留如何改變結果，再查優先權、同分抽籤與漏填志願各自能解釋什麼。",
+      "version": 1,
+      "cover": "covers/2026-11-25_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-25_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-25-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch01",
+          "title": "同樣三個名額，為什麼有人想和別人換",
+          "markdown": "chapters/2026-11-25_general-knowledge_ch01.md",
+          "textSha256": "d732c07c4ca44da3b4b02fe8496d8dd76dda3ce3c79e1d56b5a18b4036c55320",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-general-knowledge-v1/2026-11-25_general-knowledge_ch01-9b33d0bb15e5.m4a",
+          "sha256": "9b33d0bb15e59569fb648ea70a6d4910a4ed8d6f11f5be621881745e0d199f4c",
+          "bytes": 3026290,
+          "durationSec": 247.013878
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch02",
+          "title": "第一輪就錄取，誰會想改填志願",
+          "markdown": "chapters/2026-11-25_general-knowledge_ch02.md",
+          "textSha256": "b2a6c2859c6d050a0eaf321d206262af119c521bdec121949a2d30d9253e32d2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-general-knowledge-v1/2026-11-25_general-knowledge_ch02-3c8ceb6d28e6.m4a",
+          "sha256": "3c8ceb6d28e647ab8f08de721ad7cdc1e2ddacffd849ab9351789f231fb03a59",
+          "bytes": 3143664,
+          "durationSec": 256.650159
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch03",
+          "title": "先保留名額，下一輪誰可以換進來",
+          "markdown": "chapters/2026-11-25_general-knowledge_ch03.md",
+          "textSha256": "c86c5f983cf3f7b34c97f3d2f9258c00549efcc9703a98c0725f83a557bf34b9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-general-knowledge-v1/2026-11-25_general-knowledge_ch03-6528e20e5b0d.m4a",
+          "sha256": "6528e20e5b0dede360c3dbb7c233dfaefea5303fda21874dcc2f90f06dc7daae",
+          "bytes": 3933171,
+          "durationSec": 321.480272
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch04",
+          "title": "沒上第一志願，怎麼查有沒有被插隊",
+          "markdown": "chapters/2026-11-25_general-knowledge_ch04.md",
+          "textSha256": "7ffb6097c2c9398145808a25aed548a56fb9b7e0b53c1e6dce6cb762ddd95a30",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-general-knowledge-v1/2026-11-25_general-knowledge_ch04-f208a9bb2c21.m4a",
+          "sha256": "f208a9bb2c21c103c0593ae8a9668822c0bd66c26137e43b6e8a542af7f86d63",
+          "bytes": 3472863,
+          "durationSec": 283.678186
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch05",
+          "title": "同一優先等級，抽籤會改變誰的去處",
+          "markdown": "chapters/2026-11-25_general-knowledge_ch05.md",
+          "textSha256": "8d0c057a1545e06ef7b569476af6bc695c76145490c64afbf29ea7dd416eb313",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-general-knowledge-v1/2026-11-25_general-knowledge_ch05-ca52362522fc.m4a",
+          "sha256": "ca52362522fc82cbe725c819313c89455eb9d6c95925f54f7761286b1e63dfde",
+          "bytes": 4201858,
+          "durationSec": 343.539229
+        },
+        {
+          "chapterId": "2026-11-25_general-knowledge_ch06",
+          "title": "只公布第一志願錄取率，還缺哪些資料",
+          "markdown": "chapters/2026-11-25_general-knowledge_ch06.md",
+          "textSha256": "c1e20adb2eeeb245918b1fbccc1c92060842cbe097e25be54c12a0b299d489c9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-25-general-knowledge-v1/2026-11-25_general-knowledge_ch06-014d67e90070.m4a",
+          "sha256": "014d67e90070ddc0f20696cf992a22bf8a743fbf6b14a2cedef74b9e21480c06",
+          "bytes": 3529370,
+          "durationSec": 288.322177
+        }
+      ]
     }
   ]
 }
