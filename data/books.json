@@ -5280,6 +5280,80 @@
           "durationSec": 288.322177
         }
       ]
+    },
+    {
+      "bookId": "2026-11-27_general-knowledge",
+      "title": "大家都受益，為什麼出力的人愈來愈少",
+      "category": "跨領域知識探索",
+      "date": "2026-11-27",
+      "description": "沿著一筆公共投入，看清一人付出與全組受益的差額。讀者能用條件式選擇解讀合作的起落，把制裁的方向、時間與成本算回集體成果。",
+      "version": 1,
+      "cover": "covers/2026-11-27_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-27_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-27-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch01",
+          "title": "多放一點，全組和自己各得多少",
+          "markdown": "chapters/2026-11-27_general-knowledge_ch01.md",
+          "textSha256": "a239c31725f7f2821cf7c29458eaa2d5e0fa9eb7da374e716a62724f2f118920",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-27-general-knowledge-v1/2026-11-27_general-knowledge_ch01-6b17f802cfa8.m4a",
+          "sha256": "6b17f802cfa8dd68224e28acaaf8a5b1b5f950241134bde92292d5d1b9350f30",
+          "bytes": 3318014,
+          "durationSec": 270.976871
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch02",
+          "title": "同樣只出兩點，兩個人在等同一件事嗎",
+          "markdown": "chapters/2026-11-27_general-knowledge_ch02.md",
+          "textSha256": "5cb96ebe3f703ed68bd7a88a65b8942c906a5e1cb59df152068fd49c47be48b4",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-27-general-knowledge-v1/2026-11-27_general-knowledge_ch02-dcb1239d97bb.m4a",
+          "sha256": "dcb1239d97bb550b08cdf7f50d5f73c5a2e3c6498418cfa5b04685e6dc9a51b6",
+          "bytes": 3521251,
+          "durationSec": 287.648798
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch03",
+          "title": "大家願意跟，投入怎麼還會下降",
+          "markdown": "chapters/2026-11-27_general-knowledge_ch03.md",
+          "textSha256": "5cca81e0f76b2895a1d1c2d654274baf0dd5cfad99a64e5e91273d7e6460852e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-27-general-knowledge-v1/2026-11-27_general-knowledge_ch03-e0dc28c4590f.m4a",
+          "sha256": "e0dc28c4590fde965b4f7c4f506aff3c9e3b26bb3eb75f9510564b974a07544d",
+          "bytes": 3797412,
+          "durationSec": 310.334694
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch04",
+          "title": "出力增加以後，全組過得更好嗎",
+          "markdown": "chapters/2026-11-27_general-knowledge_ch04.md",
+          "textSha256": "e40a1536ace46acc0788778a528d16e24aa0da4fc95a07b484aa6f5a3c13c4be",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-27-general-knowledge-v1/2026-11-27_general-knowledge_ch04-0022c66c35af.m4a",
+          "sha256": "0022c66c35af8e7c1fc17b4a7aca6ece70448276dba85d8f383b95118158d788",
+          "bytes": 3551815,
+          "durationSec": 290.156553
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch05",
+          "title": "誰在罰誰，會改變整個局面嗎",
+          "markdown": "chapters/2026-11-27_general-knowledge_ch05.md",
+          "textSha256": "9e73b0a024f8339ff885b4a3869587faf6c777aab947d790d67a801035e18ac9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-27-general-knowledge-v1/2026-11-27_general-knowledge_ch05-4fc5fdd66fb2.m4a",
+          "sha256": "4fc5fdd66fb2dced3e16ea2310b1cdc32cc3a21d7aff333466be2b82fd243750",
+          "bytes": 2648627,
+          "durationSec": 216.015238
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch06",
+          "title": "准許成員換組後，制度成績怎麼讀",
+          "markdown": "chapters/2026-11-27_general-knowledge_ch06.md",
+          "textSha256": "3ac0792cfe40501e7428dc19185b9555601423ff151db3212af5c6f00abe158a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-27-general-knowledge-v1/2026-11-27_general-knowledge_ch06-18cd2325c1f7.m4a",
+          "sha256": "18cd2325c1f7cd836ccc77dd3f352b6c4ad55a495aeb11955f1f2bd70a0f8d7c",
+          "bytes": 3477330,
+          "durationSec": 284.049705
+        }
+      ]
     }
   ]
 }

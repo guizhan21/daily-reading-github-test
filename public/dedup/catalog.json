@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 245,
-  "ledgerSha256": "687864234aafb49c5f3219640f91ed03ff7e3ecd3af6d4b96e81edeaaffca64d",
+  "revision": 261,
+  "ledgerSha256": "b762a68ad4b91ee059563bc53592f03883cadbe433797fd1775d5c2ef4b5568a",
   "coverage": {
-    "publishedBooks": 70,
-    "publishedChapters": 430,
+    "publishedBooks": 71,
+    "publishedChapters": 436,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 52,
+    "bodySemanticReviewedBooks": 53,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4720,6 +4720,75 @@
             "第一志願錄取率、無位者與未列志願如何一起影響兩種制度的比較？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-25_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-27_general-knowledge",
+      "workId": "work-d2349af28c0257433f945173",
+      "version": 1,
+      "title": "大家都受益，為什麼出力的人愈來愈少",
+      "subtitle": null,
+      "description": "沿著一筆公共投入，看清一人付出與全組受益的差額。讀者能用條件式選擇解讀合作的起落，把制裁的方向、時間與成本算回集體成果。",
+      "date": "2026-11-27",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch01",
+          "title": "多放一點，全組和自己各得多少",
+          "textSha256": "a239c31725f7f2821cf7c29458eaa2d5e0fa9eb7da374e716a62724f2f118920",
+          "coreQuestions": [
+            "如何用個人與全組的邊際回報辨認公共投入困境？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch02",
+          "title": "同樣只出兩點，兩個人在等同一件事嗎",
+          "textSha256": "5cb96ebe3f703ed68bd7a88a65b8942c906a5e1cb59df152068fd49c47be48b4",
+          "coreQuestions": [
+            "怎樣用不同他人投入下的條件選擇區別搭便車和等待他人合作？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch03",
+          "title": "大家願意跟，投入怎麼還會下降",
+          "textSha256": "5cca81e0f76b2895a1d1c2d654274baf0dd5cfad99a64e5e91273d7e6460852e",
+          "coreQuestions": [
+            "信念與不完全跟進如何讓投入一輪比一輪低，怎樣設計觀察區分兩者？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch04",
+          "title": "出力增加以後，全組過得更好嗎",
+          "textSha256": "e40a1536ace46acc0788778a528d16e24aa0da4fc95a07b484aa6f5a3c13c4be",
+          "coreQuestions": [
+            "制裁提高出力時，如何把執行與受罰損失、觀察期長短算進群體所得？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch05",
+          "title": "誰在罰誰，會改變整個局面嗎",
+          "textSha256": "9e73b0a024f8339ff885b4a3869587faf6c777aab947d790d67a801035e18ac9",
+          "coreQuestions": [
+            "如何從成對的處罰紀錄識別處罰的方向，以及哪些動機仍無法辨認？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-27_general-knowledge_ch06",
+          "title": "准許成員換組後，制度成績怎麼讀",
+          "textSha256": "3ac0792cfe40501e7428dc19185b9555601423ff151db3212af5c6f00abe158a",
+          "coreQuestions": [
+            "成員能自由加入或退出時，如何辨認制度效果、自我選擇與比較所缺的資料？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch06.md"
         }
       ]
     }
