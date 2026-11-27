@@ -5354,6 +5354,154 @@
           "durationSec": 284.049705
         }
       ]
+    },
+    {
+      "bookId": "2026-11-28_ai-consultant",
+      "title": "AI 逐字稿裡，哪些話真的有人說過",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-28",
+      "description": "同一段停頓，有時該保留安靜，有時藏著一句很輕的否定。沿著口述史訪談的字幕、姓名、錯字率及公開引文，學會判斷哪些文字有足夠的聲音依據。",
+      "version": 1,
+      "cover": "covers/2026-11-28_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-28_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-28-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch01",
+          "title": "一句通順的話，在錄音裡找得到嗎",
+          "markdown": "chapters/2026-11-28_ai-consultant_ch01.md",
+          "textSha256": "6a209d99977be25841d74e7106ce1c17494ade6a14c7687aa1fd7c00c1914f4f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-ai-consultant-v1/2026-11-28_ai-consultant_ch01-3966bc979089.m4a",
+          "sha256": "3966bc9790894a1f9fe05adf7b2f1faf03230ade21a837c671f1bf328df65471",
+          "bytes": 4105233,
+          "durationSec": 335.598005
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch02",
+          "title": "切掉安靜處，會不會連回答也剪掉",
+          "markdown": "chapters/2026-11-28_ai-consultant_ch02.md",
+          "textSha256": "0690214939a28c4fd07edb714bdce40bf3a2e964f9157f8e0da8f83c25122e9f",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-ai-consultant-v1/2026-11-28_ai-consultant_ch02-1e29d4dee221.m4a",
+          "sha256": "1e29d4dee221da380b03f5cdbdfa894ab6d601a84fcd54bdadd36b420d694036",
+          "bytes": 3823889,
+          "durationSec": 312.49415
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch03",
+          "title": "提供姓名表後，哪一個名字可信",
+          "markdown": "chapters/2026-11-28_ai-consultant_ch03.md",
+          "textSha256": "e854fbbbd8855403e7052d666f79e63c36719148a8862e47d58b8ec3381fc2a2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-ai-consultant-v1/2026-11-28_ai-consultant_ch03-a4b91d821853.m4a",
+          "sha256": "a4b91d8218538e824f9c4ee032a7682d226a528a5c627533cd17f96a6dab386e",
+          "bytes": 3809188,
+          "durationSec": 311.286712
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch04",
+          "title": "兩份逐字稿的錯字率相同，該選哪份",
+          "markdown": "chapters/2026-11-28_ai-consultant_ch04.md",
+          "textSha256": "64c4efb08bf2e39bfa5690dcfeda05a8dd6d1e2338a518520749813a1938dcf2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-ai-consultant-v1/2026-11-28_ai-consultant_ch04-24856d574698.m4a",
+          "sha256": "24856d5746984b85c7a1e80d7fb89a7b09a66f1eea1f672863b04dbc0c04c7fe",
+          "bytes": 3722886,
+          "durationSec": 304.204626
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch05",
+          "title": "平均錯得少，哪一群人的話仍會漏掉",
+          "markdown": "chapters/2026-11-28_ai-consultant_ch05.md",
+          "textSha256": "15b95afd3287f69423982c9422efa0b95b08c3b562c1565507d10ef4067eee2a",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-ai-consultant-v1/2026-11-28_ai-consultant_ch05-0505a1ddb779.m4a",
+          "sha256": "0505a1ddb7793d6aeebb87640451d8fd89700ce352187cf8846a795fed215e50",
+          "bytes": 3666179,
+          "durationSec": 299.560635
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch06",
+          "title": "從搜尋字幕到公開引文，需要補什麼證據",
+          "markdown": "chapters/2026-11-28_ai-consultant_ch06.md",
+          "textSha256": "84efa53a2c8a2486384f3018dbb55fc82e861b7819f3f7387f9fccbb5bdf2cf0",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-ai-consultant-v1/2026-11-28_ai-consultant_ch06-0dc2ee8c3e78.m4a",
+          "sha256": "0dc2ee8c3e78d3afd3b68783b265e68b6cc8f86b8600aad30d286087261b9cba",
+          "bytes": 3119575,
+          "durationSec": 254.676463
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-28_general-knowledge",
+      "title": "同樣十分鐘，為什麼當下和回想時感覺不同",
+      "category": "跨領域知識探索",
+      "date": "2026-11-28",
+      "description": "一趟展覽可以過得很快，也可以在回憶裡占掉整個下午。從時間感受、注意力、按鍵重現與故事轉場，分辨手錶量的時間和人實際回答的問題。",
+      "version": 1,
+      "cover": "covers/2026-11-28_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-28_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-28-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch01",
+          "title": "覺得時間過得快，等於少估了幾分鐘嗎",
+          "markdown": "chapters/2026-11-28_general-knowledge_ch01.md",
+          "textSha256": "bc671aeea66e82bd6dbb3bbd63d14b654e891bb8e6de3144f09a1c8f2dcd5372",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-general-knowledge-v1/2026-11-28_general-knowledge_ch01-4c6dad38f72a.m4a",
+          "sha256": "4c6dad38f72a4f497bcf9b70d5ab12308f21e071bfa1e9cb97054b6887db7fe8",
+          "bytes": 3998608,
+          "durationSec": 326.844082
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch02",
+          "title": "先告訴你要估時間，答案會怎麼變",
+          "markdown": "chapters/2026-11-28_general-knowledge_ch02.md",
+          "textSha256": "18d613cbbd24b8b1523614982aa8f9839d57f0e4fda34dbc31105010729a6f58",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-general-knowledge-v1/2026-11-28_general-knowledge_ch02-b9369fb45e56.m4a",
+          "sha256": "b9369fb45e5614c56b50ca9987528e5129b4dab7d5b397608ae2315d69dc9d8e",
+          "bytes": 3407105,
+          "durationSec": 278.291156
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch03",
+          "title": "同一個間隔，為什麼會按出不同長度",
+          "markdown": "chapters/2026-11-28_general-knowledge_ch03.md",
+          "textSha256": "09d73f91b76124ddb8e2a4ac892d8a83b9b09f3000acfa7cbf49b6ebf111b0e6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-general-knowledge-v1/2026-11-28_general-knowledge_ch03-a44c808fbe4f.m4a",
+          "sha256": "a44c808fbe4fd133d1f54adf7b103fc93ed8c257a151e6f89894a05c4316b971",
+          "bytes": 3146977,
+          "durationSec": 256.928798
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch04",
+          "title": "畫面只換一下，哪一段看起來比較久",
+          "markdown": "chapters/2026-11-28_general-knowledge_ch04.md",
+          "textSha256": "34a0cc096af3f2b463907682dec07e12473153f6d12f73f273ae421deeeb7d17",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-general-knowledge-v1/2026-11-28_general-knowledge_ch04-38bccb31030d.m4a",
+          "sha256": "38bccb31030dfd36daa00b148cc124d6bcdbe5382443b3cd42b56301e062386f",
+          "bytes": 3621629,
+          "durationSec": 295.891882
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch05",
+          "title": "回想兩幕相隔多久，故事轉場提供了什麼",
+          "markdown": "chapters/2026-11-28_general-knowledge_ch05.md",
+          "textSha256": "05d46f1f5a5bb82bd00510322ff897b0fc02675d5ae296f1461d73aa8488bb23",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-general-knowledge-v1/2026-11-28_general-knowledge_ch05-9740eb0892ee.m4a",
+          "sha256": "9740eb0892eec19558abf1a2cf7f07d59c70b6463e0abc287791012caba679d5",
+          "bytes": 3350646,
+          "durationSec": 273.647166
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch06",
+          "title": "怎樣分辨等太久和覺得等太久",
+          "markdown": "chapters/2026-11-28_general-knowledge_ch06.md",
+          "textSha256": "4fdf917c2e1098a8b671b34f5af45a999698f36daf9df69c0b2cdd63cf36436e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-28-general-knowledge-v1/2026-11-28_general-knowledge_ch06-b7127f330d40.m4a",
+          "sha256": "b7127f330d40ae242fe4e0f85a07fe485458f0228339df1975f4615beb68181e",
+          "bytes": 3142096,
+          "durationSec": 256.534059
+        }
+      ]
     }
   ]
 }

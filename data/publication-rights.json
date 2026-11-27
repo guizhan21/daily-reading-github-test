@@ -2961,6 +2961,88 @@
         }
       ],
       "contentReview": "Paragraph-level source review before generation. Audio acceptance checks identity, SHA-256, container, duration and complete decode."
+    },
+    {
+      "bookId": "2026-11-28_ai-consultant",
+      "version": 1,
+      "decision": "approved",
+      "reviewedAt": "2026-11-27T16:33:22.863Z",
+      "basis": "Standing public 日讀 per-book authorization. Codex-authored 2026-11-28 original educational text with labeled fictional cases, ordinary source citations, and no private or third-party source files. Reviewed original built-in Image cover and exact chapter-owned NotebookLM output.",
+      "coverSha256": "dd9daa23829c636c1d33766b164c47178f0231a4f5eb4fa92c3166fced392268",
+      "chapters": [
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch01",
+          "textSha256": "6a209d99977be25841d74e7106ce1c17494ade6a14c7687aa1fd7c00c1914f4f",
+          "audioSha256": "3966bc9790894a1f9fe05adf7b2f1faf03230ade21a837c671f1bf328df65471"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch02",
+          "textSha256": "0690214939a28c4fd07edb714bdce40bf3a2e964f9157f8e0da8f83c25122e9f",
+          "audioSha256": "1e29d4dee221da380b03f5cdbdfa894ab6d601a84fcd54bdadd36b420d694036"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch03",
+          "textSha256": "e854fbbbd8855403e7052d666f79e63c36719148a8862e47d58b8ec3381fc2a2",
+          "audioSha256": "a4b91d8218538e824f9c4ee032a7682d226a528a5c627533cd17f96a6dab386e"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch04",
+          "textSha256": "64c4efb08bf2e39bfa5690dcfeda05a8dd6d1e2338a518520749813a1938dcf2",
+          "audioSha256": "24856d5746984b85c7a1e80d7fb89a7b09a66f1eea1f672863b04dbc0c04c7fe"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch05",
+          "textSha256": "15b95afd3287f69423982c9422efa0b95b08c3b562c1565507d10ef4067eee2a",
+          "audioSha256": "0505a1ddb7793d6aeebb87640451d8fd89700ce352187cf8846a795fed215e50"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch06",
+          "textSha256": "84efa53a2c8a2486384f3018dbb55fc82e861b7819f3f7387f9fccbb5bdf2cf0",
+          "audioSha256": "0dc2ee8c3e78d3afd3b68783b265e68b6cc8f86b8600aad30d286087261b9cba"
+        }
+      ],
+      "contentReview": "Paragraph-level source review before generation. Audio acceptance checks identity, SHA-256, container, duration and complete decode."
+    },
+    {
+      "bookId": "2026-11-28_general-knowledge",
+      "version": 1,
+      "decision": "approved",
+      "reviewedAt": "2026-11-27T16:39:23.325Z",
+      "basis": "Standing public 日讀 per-book authorization. Codex-authored 2026-11-28 original educational text with labeled fictional cases, ordinary source citations, and no private or third-party source files. Reviewed original built-in Image cover and exact chapter-owned NotebookLM output.",
+      "coverSha256": "2163b9534df3828f286a2bcfeab303befd5c09b24ffbd4418de7593ab214455c",
+      "chapters": [
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch01",
+          "textSha256": "bc671aeea66e82bd6dbb3bbd63d14b654e891bb8e6de3144f09a1c8f2dcd5372",
+          "audioSha256": "4c6dad38f72a4f497bcf9b70d5ab12308f21e071bfa1e9cb97054b6887db7fe8"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch02",
+          "textSha256": "18d613cbbd24b8b1523614982aa8f9839d57f0e4fda34dbc31105010729a6f58",
+          "audioSha256": "b9369fb45e5614c56b50ca9987528e5129b4dab7d5b397608ae2315d69dc9d8e"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch03",
+          "textSha256": "09d73f91b76124ddb8e2a4ac892d8a83b9b09f3000acfa7cbf49b6ebf111b0e6",
+          "audioSha256": "a44c808fbe4fd133d1f54adf7b103fc93ed8c257a151e6f89894a05c4316b971"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch04",
+          "textSha256": "34a0cc096af3f2b463907682dec07e12473153f6d12f73f273ae421deeeb7d17",
+          "audioSha256": "38bccb31030dfd36daa00b148cc124d6bcdbe5382443b3cd42b56301e062386f"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch05",
+          "textSha256": "05d46f1f5a5bb82bd00510322ff897b0fc02675d5ae296f1461d73aa8488bb23",
+          "audioSha256": "9740eb0892eec19558abf1a2cf7f07d59c70b6463e0abc287791012caba679d5"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch06",
+          "textSha256": "4fdf917c2e1098a8b671b34f5af45a999698f36daf9df69c0b2cdd63cf36436e",
+          "audioSha256": "b7127f330d40ae242fe4e0f85a07fe485458f0228339df1975f4615beb68181e"
+        }
+      ],
+      "contentReview": "Paragraph-level source review before generation. Audio acceptance checks identity, SHA-256, container, duration and complete decode."
     }
   ],
   "skipped": []

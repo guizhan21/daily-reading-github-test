@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 261,
-  "ledgerSha256": "b762a68ad4b91ee059563bc53592f03883cadbe433797fd1775d5c2ef4b5568a",
+  "revision": 270,
+  "ledgerSha256": "7bf270f41dc10d94608a6d4da0298f300f64480299e235b6604a495b29822078",
   "coverage": {
-    "publishedBooks": 71,
-    "publishedChapters": 436,
+    "publishedBooks": 73,
+    "publishedChapters": 448,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 53,
+    "bodySemanticReviewedBooks": 55,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4789,6 +4789,144 @@
             "成員能自由加入或退出時，如何辨認制度效果、自我選擇與比較所缺的資料？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-27_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-28_ai-consultant",
+      "workId": "work-a8fbc7ea69ef3a662fb6ac7a",
+      "version": 1,
+      "title": "AI 逐字稿裡，哪些話真的有人說過",
+      "subtitle": null,
+      "description": "同一段停頓，有時該保留安靜，有時藏著一句很輕的否定。沿著口述史訪談的字幕、姓名、錯字率及公開引文，學會判斷哪些文字有足夠的聲音依據。",
+      "date": "2026-11-28",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch01",
+          "title": "一句通順的話，在錄音裡找得到嗎",
+          "textSha256": "6a209d99977be25841d74e7106ce1c17494ade6a14c7687aa1fd7c00c1914f4f",
+          "coreQuestions": [
+            "如何用有聲、無語音與聽不清三種材料，區分聽錯字和憑空出現的陳述？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch02",
+          "title": "切掉安靜處，會不會連回答也剪掉",
+          "textSha256": "0690214939a28c4fd07edb714bdce40bf3a2e964f9157f8e0da8f83c25122e9f",
+          "coreQuestions": [
+            "如何用逐段標註比較靜音篩選前後的添句與漏語，判斷門檻應用在哪裡？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch03",
+          "title": "提供姓名表後，哪一個名字可信",
+          "textSha256": "e854fbbbd8855403e7052d666f79e63c36719148a8862e47d58b8ec3381fc2a2",
+          "coreQuestions": [
+            "同一段錄音遇到相反姓名提示時，哪些觀察足以把候選名字升為具名引文？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch04",
+          "title": "兩份逐字稿的錯字率相同，該選哪份",
+          "textSha256": "64c4efb08bf2e39bfa5690dcfeda05a8dd6d1e2338a518520749813a1938dcf2",
+          "coreQuestions": [
+            "如何分開計算逐詞編輯錯誤與關鍵陳述反轉，處理無字片段的分母？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch05",
+          "title": "平均錯得少，哪一群人的話仍會漏掉",
+          "textSha256": "15b95afd3287f69423982c9422efa0b95b08c3b562c1565507d10ef4067eee2a",
+          "coreQuestions": [
+            "遇到群體平均落差，怎樣拆開說話條件與部署組成，判斷哪些結果還不能外推？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-28_ai-consultant_ch06",
+          "title": "從搜尋字幕到公開引文，需要補什麼證據",
+          "textSha256": "84efa53a2c8a2486384f3018dbb55fc82e861b7819f3f7387f9fccbb5bdf2cf0",
+          "coreQuestions": [
+            "依檢索、字幕與署名引用的不同用途，如何保存可追溯的證據並決定何時交付？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-28_general-knowledge",
+      "workId": "work-42021d1cf029322f720bd4a3",
+      "version": 1,
+      "title": "同樣十分鐘，為什麼當下和回想時感覺不同",
+      "subtitle": null,
+      "description": "一趟展覽可以過得很快，也可以在回憶裡占掉整個下午。從時間感受、注意力、按鍵重現與故事轉場，分辨手錶量的時間和人實際回答的問題。",
+      "date": "2026-11-28",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch01",
+          "title": "覺得時間過得快，等於少估了幾分鐘嗎",
+          "textSha256": "bc671aeea66e82bd6dbb3bbd63d14b654e891bb8e6de3144f09a1c8f2dcd5372",
+          "coreQuestions": [
+            "經過感、時長估計與鐘錶經過時間，要如何各自量出來？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch02",
+          "title": "先告訴你要估時間，答案會怎麼變",
+          "textSha256": "18d613cbbd24b8b1523614982aa8f9839d57f0e4fda34dbc31105010729a6f58",
+          "coreQuestions": [
+            "如何區分事先留意時間和事後才問，以及誰能提供未預告的回答？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch03",
+          "title": "同一個間隔，為什麼會按出不同長度",
+          "textSha256": "09d73f91b76124ddb8e2a4ac892d8a83b9b09f3000acfa7cbf49b6ebf111b0e6",
+          "coreQuestions": [
+            "相同物理間隔在不同長度背景出現時，如何辨認重現結果向背景靠攏？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch04",
+          "title": "畫面只換一下，哪一段看起來比較久",
+          "textSha256": "34a0cc096af3f2b463907682dec07e12473153f6d12f73f273ae421deeeb7d17",
+          "coreQuestions": [
+            "在重複畫面中插入新圖時，兩者相比顯得不同究竟支持哪些解釋？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch05",
+          "title": "回想兩幕相隔多久，故事轉場提供了什麼",
+          "textSha256": "05d46f1f5a5bb82bd00510322ff897b0fc02675d5ae296f1461d73aa8488bb23",
+          "coreQuestions": [
+            "已看過故事的人回憶兩幕間隔時，如何利用相同實際長度與沒聽過故事的人檢查事件線索？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-28_general-knowledge_ch06",
+          "title": "怎樣分辨等太久和覺得等太久",
+          "textSha256": "4fdf917c2e1098a8b671b34f5af45a999698f36daf9df69c0b2cdd63cf36436e",
+          "coreQuestions": [
+            "怎樣為真實等候設計測量，分別檢查流程縮時、感受改變和回憶重組？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch06.md"
         }
       ]
     }
