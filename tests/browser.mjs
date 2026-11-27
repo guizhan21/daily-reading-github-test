@@ -1,3 +1,4 @@
+import {checkReaderOriginal} from './reader-original-check.mjs';
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {chromium,firefox,webkit} from 'playwright';import {root,load} from '../scripts/catalog.mjs';
 import {resumeChecks} from './resume-checks.mjs';
 import {shelfChecks} from './shelf-checks.mjs';
@@ -39,7 +40,7 @@ for(const [name,[engine,options]] of Object.entries(engines)){
   for(const b of books){
    await openBook(b);assert.equal(await page.locator('[data-play]').count(),b.chapters.length);
    await page.waitForFunction(()=>{const e=document.querySelector('#cover');return e&&(e.tagName==='IMG'?e.complete&&e.naturalWidth>0:e.getBoundingClientRect().width>0);},{},{timeout:60000});const decodedCover=await page.locator('#cover').evaluate(async e=>{if(e.tagName!=='IMG')return {kind:'original-template'};await e.decode();return {kind:'image',width:e.naturalWidth,height:e.naturalHeight};});check('book detail, chapter order and original cover: '+b.bookId,{decodedCover});
-   await page.locator('[data-read="'+b.chapters[0].chapterId+'"]').click();assert.ok((await page.locator('#reader-content').innerText()).length>1500);assert.ok((await page.locator('#markdown-download').getAttribute('href')).endsWith('.md'));check('complete original Markdown and source download: '+b.bookId);
+   await page.locator('[data-read="'+b.chapters[0].chapterId+'"]').click();await checkReaderOriginal(page,b.chapters[0]);check('complete original Markdown and source download: '+b.bookId);
    await page.locator('#close-reader').click();
    const sample=name==='chrome'?b.chapters:b.chapters.slice(0,2);
    for(const ch of sample){
