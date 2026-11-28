@@ -5502,6 +5502,154 @@
           "durationSec": 256.534059
         }
       ]
+    },
+    {
+      "bookId": "2026-11-29_ai-consultant",
+      "title": "AI 推薦的熱門選項，真是大家最想要的嗎",
+      "category": "AI 講師與顧問專業養成",
+      "date": "2026-11-29",
+      "description": "從線上書架的第一個推薦位開始，追查誰有機會看到一本書、點擊如何成為下一輪訓練資料，以及怎樣用小規模試驗決定要不要換排序。",
+      "version": 1,
+      "cover": "covers/2026-11-29_ai-consultant.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-29_ai-consultant.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-29-ai-consultant-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch01",
+          "title": "沒被點的書，讀者有機會看過嗎",
+          "markdown": "chapters/2026-11-29_ai-consultant_ch01.md",
+          "textSha256": "208cd9f5a39c64d805fe15bbe34de144046e4c2043a871e32d4bcca38631b7a2",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-ai-consultant-v1/2026-11-29_ai-consultant_ch01-1c10045ccbd7.m4a",
+          "sha256": "1c10045ccbd7319b570647c3bb29fbd818c66033778c5b0d6f1b8cf2991bf9ac",
+          "bytes": 2834783,
+          "durationSec": 231.293968
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch02",
+          "title": "把兩本書交換位置，能分清什麼",
+          "markdown": "chapters/2026-11-29_ai-consultant_ch02.md",
+          "textSha256": "45e35bb3461d148ce5f3ad52200126cb830e35995169f8b63ed94ff027e41460",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-ai-consultant-v1/2026-11-29_ai-consultant_ch02-c4827cabef9e.m4a",
+          "sha256": "c4827cabef9e101abd70b9fd94e65337f2e8ba8fea57628e9bf534332a1b57ea",
+          "bytes": 4291346,
+          "durationSec": 350.876735
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch03",
+          "title": "舊紀錄能替沒上線的新排序作答嗎",
+          "markdown": "chapters/2026-11-29_ai-consultant_ch03.md",
+          "textSha256": "4ab56d98589140141df917c772169e59d9443448cedaaa09af56cd980c224c3e",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-ai-consultant-v1/2026-11-29_ai-consultant_ch03-b83356f0e92e.m4a",
+          "sha256": "b83356f0e92e1d8c69bcdbeaeef404042432d499b41950f80d6cfd3171eaa931",
+          "bytes": 4640921,
+          "durationSec": 379.576599
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch04",
+          "title": "為什麼每一輪都更像上一輪",
+          "markdown": "chapters/2026-11-29_ai-consultant_ch04.md",
+          "textSha256": "de257cc7b1725363a0a83ca36a94872936f2eec0f1d29c4aea7cc7f4c1a46b0c",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-ai-consultant-v1/2026-11-29_ai-consultant_ch04-f7916ec22e67.m4a",
+          "sha256": "f7916ec22e67bcd2ba9329e5f00c3c8e6093b4beeb9ead7ea51d435edd433454",
+          "bytes": 3306768,
+          "durationSec": 270.048073
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch05",
+          "title": "全站讀得更廣，每個人也讀得更廣嗎",
+          "markdown": "chapters/2026-11-29_ai-consultant_ch05.md",
+          "textSha256": "a0b276d5fa98028e5ace99d14612fa11a70c0742a973b8cf2a7766f8ec593548",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-ai-consultant-v1/2026-11-29_ai-consultant_ch05-56677eff9e01.m4a",
+          "sha256": "56677eff9e0100d3fc0a356fa14f0249b8731fe6ed106eb5ef57d6b6a3b33ba9",
+          "bytes": 3528559,
+          "durationSec": 288.252517
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch06",
+          "title": "換上新推薦後，什麼結果值得留下",
+          "markdown": "chapters/2026-11-29_ai-consultant_ch06.md",
+          "textSha256": "e0eec9bd7d401550cabd596a5188c4818c51ea09d8e45805985226e055ae7a7b",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-ai-consultant-v1/2026-11-29_ai-consultant_ch06-eb64fe1f93ab.m4a",
+          "sha256": "eb64fe1f93abf0fcf5545e20ec6a1c7bed3da01701c06de2460545d726f1745b",
+          "bytes": 3411464,
+          "durationSec": 278.639456
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-29_general-knowledge",
+      "title": "閉上一隻眼，怎麼還看得出遠近",
+      "category": "跨領域知識探索",
+      "date": "2026-11-29",
+      "description": "沿著一座紙模型展台，從遮住半扇窗的樹、側頭時滑動的欄杆，一路看到雙眼視差與立體螢幕。每換一種觀察方式，就多問一句，現在究竟能知道多少。",
+      "version": 1,
+      "cover": "covers/2026-11-29_general-knowledge.png",
+      "coverKind": "original-image",
+      "references": "references/2026-11-29_general-knowledge.md",
+      "releaseUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/tag/audio-2026-11-29-general-knowledge-v1",
+      "chapters": [
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch01",
+          "title": "一張相片能告訴你誰在前面嗎",
+          "markdown": "chapters/2026-11-29_general-knowledge_ch01.md",
+          "textSha256": "db2d38dc0f5e6ed9e9bdaf926a25364c8f070d9ed54630a6096eb9d303a39ed8",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-general-knowledge-v1/2026-11-29_general-knowledge_ch01-05b4723cbecc.m4a",
+          "sha256": "05b4723cbecc64cc3b4f7a225d9b934ce15d2e9fe7d423a648f4369ed5494f46",
+          "bytes": 3344406,
+          "durationSec": 273.136327
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch02",
+          "title": "側移一步，為什麼近處滑得快",
+          "markdown": "chapters/2026-11-29_general-knowledge_ch02.md",
+          "textSha256": "72152532a72bf65d549e19a99a3843c73084c862e83826fd37d37b5db9cbe2d6",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-general-knowledge-v1/2026-11-29_general-knowledge_ch02-3677debf0406.m4a",
+          "sha256": "3677debf04064a559c6176466dc4829cb3daea32e508a145d3a0725d67294fae",
+          "bytes": 3441611,
+          "durationSec": 281.123991
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch03",
+          "title": "兩眼看到的那點不同，怎樣變成深度",
+          "markdown": "chapters/2026-11-29_general-knowledge_ch03.md",
+          "textSha256": "67106c5efd4f92cad584e6011b73646fda78f71e9659ed5d4e119ffe68eb1285",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-general-knowledge-v1/2026-11-29_general-knowledge_ch03-d6f5c4c4c80a.m4a",
+          "sha256": "d6f5c4c4c80a498067b364c7bc670e6cc506cc311c864c623e5f603161c11ecb",
+          "bytes": 3762711,
+          "durationSec": 307.478639
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch04",
+          "title": "地面花紋與雙眼意見不同時聽誰的",
+          "markdown": "chapters/2026-11-29_general-knowledge_ch04.md",
+          "textSha256": "f28041ae033e4b6e1546873684b97a0aba88be09de465af8f80a7c590da8e316",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-general-knowledge-v1/2026-11-29_general-knowledge_ch04-f25aff7e63f0.m4a",
+          "sha256": "f25aff7e63f0fb7e87882050d42efff745cc5153851ee0bcb3775dfe9bee171c",
+          "bytes": 3242485,
+          "durationSec": 264.777143
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch05",
+          "title": "螢幕上的東西凸出來，眼睛對焦在哪",
+          "markdown": "chapters/2026-11-29_general-knowledge_ch05.md",
+          "textSha256": "41117b6b82731343977e32cca4170160186c5de96e7f66791021a7e653d7d611",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-general-knowledge-v1/2026-11-29_general-knowledge_ch05-3618d66dda12.m4a",
+          "sha256": "3618d66dda1235fccb3f6631dbb91ff87991e198c2d82161554068841369b21a",
+          "bytes": 3625734,
+          "durationSec": 296.240181
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch06",
+          "title": "看得出前後，就能把東西放穩嗎",
+          "markdown": "chapters/2026-11-29_general-knowledge_ch06.md",
+          "textSha256": "59161e8d45519d02888ebd81959cf1b4bf286f5251d102969b6366f60e086ce9",
+          "audioUrl": "https://github.com/guizhan21/daily-reading-github-test/releases/download/audio-2026-11-29-general-knowledge-v1/2026-11-29_general-knowledge_ch06-cded4691b726.m4a",
+          "sha256": "cded4691b72637d7f3ec111e7c614cb4063cbf338acf35675fc39fd863e47dd8",
+          "bytes": 3567836,
+          "durationSec": 291.480091
+        }
+      ]
     }
   ]
 }

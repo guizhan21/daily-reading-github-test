@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": 270,
-  "ledgerSha256": "7bf270f41dc10d94608a6d4da0298f300f64480299e235b6604a495b29822078",
+  "revision": 279,
+  "ledgerSha256": "3e34d35d4fe442a97cea0bfcb1ee00b865b8ca40d00d8a0c61ef50a3bef9467f",
   "coverage": {
-    "publishedBooks": 73,
-    "publishedChapters": 448,
+    "publishedBooks": 75,
+    "publishedChapters": 460,
     "metadataComplete": true,
-    "bodySemanticReviewedBooks": 55,
+    "bodySemanticReviewedBooks": 57,
     "remainingSemanticAnalysis": "unknown"
   },
   "rules": [
@@ -4927,6 +4927,144 @@
             "怎樣為真實等候設計測量，分別檢查流程縮時、感受改變和回憶重組？"
           ],
           "textUrl": "https://guizhan21.github.io/chapters/2026-11-28_general-knowledge_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-29_ai-consultant",
+      "workId": "work-263df9cd9bc8ee7bfe73be61",
+      "version": 1,
+      "title": "AI 推薦的熱門選項，真是大家最想要的嗎",
+      "subtitle": null,
+      "description": "從線上書架的第一個推薦位開始，追查誰有機會看到一本書、點擊如何成為下一輪訓練資料，以及怎樣用小規模試驗決定要不要換排序。",
+      "date": "2026-11-29",
+      "series": "AI 講師與顧問專業養成",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch01",
+          "title": "沒被點的書，讀者有機會看過嗎",
+          "textSha256": "208cd9f5a39c64d805fe15bbe34de144046e4c2043a871e32d4bcca38631b7a2",
+          "coreQuestions": [
+            "如何從候選、展示、可見與點擊的紀錄判定一次未點擊能支持哪個推論？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_ai-consultant_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch02",
+          "title": "把兩本書交換位置，能分清什麼",
+          "textSha256": "45e35bb3461d148ce5f3ad52200126cb830e35995169f8b63ed94ff027e41460",
+          "coreQuestions": [
+            "怎樣在配對交換位置的條件下區分書的吸引力、位置效果與原有讀者差異？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_ai-consultant_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch03",
+          "title": "舊紀錄能替沒上線的新排序作答嗎",
+          "textSha256": "4ab56d98589140141df917c772169e59d9443448cedaaa09af56cd980c224c3e",
+          "coreQuestions": [
+            "在哪些抽樣條件下可以重用隨機展示的回饋估計新策略，缺少哪一類展示就不能比較？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_ai-consultant_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch04",
+          "title": "為什麼每一輪都更像上一輪",
+          "textSha256": "de257cc7b1725363a0a83ca36a94872936f2eec0f1d29c4aea7cc7f4c1a46b0c",
+          "coreQuestions": [
+            "如何查明模型從自己的曝光歷史再學習，並用獨立觀察區分偏好趨同與選擇範圍收窄？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_ai-consultant_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch05",
+          "title": "全站讀得更廣，每個人也讀得更廣嗎",
+          "textSha256": "a0b276d5fa98028e5ace99d14612fa11a70c0742a973b8cf2a7766f8ec593548",
+          "coreQuestions": [
+            "如何同時核算個人與全站的選擇範圍，辨認兩個多樣性結論分岔的原因？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_ai-consultant_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-29_ai-consultant_ch06",
+          "title": "換上新推薦後，什麼結果值得留下",
+          "textSha256": "e0eec9bd7d401550cabd596a5188c4818c51ea09d8e45805985226e055ae7a7b",
+          "coreQuestions": [
+            "如何在目標、留存的對照、跨次接觸與停止條件之間作取捨，判斷新排序能否擴用？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_ai-consultant_ch06.md"
+        }
+      ]
+    },
+    {
+      "bookId": "2026-11-29_general-knowledge",
+      "workId": "work-c5732812d562431d5398fd19",
+      "version": 1,
+      "title": "閉上一隻眼，怎麼還看得出遠近",
+      "subtitle": null,
+      "description": "沿著一座紙模型展台，從遮住半扇窗的樹、側頭時滑動的欄杆，一路看到雙眼視差與立體螢幕。每換一種觀察方式，就多問一句，現在究竟能知道多少。",
+      "date": "2026-11-29",
+      "series": "跨領域知識探索",
+      "scope": "兩系列完整目錄、未上架工作與同日另書；原文核對範圍為列明選段。比較的是機制與章問題，非以檢索分數或改名判定不同。",
+      "semanticReview": "chapter_questions_and_recorded_comparisons",
+      "relationship": null,
+      "chapters": [
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch01",
+          "title": "一張相片能告訴你誰在前面嗎",
+          "textSha256": "db2d38dc0f5e6ed9e9bdaf926a25364c8f070d9ed54630a6096eb9d303a39ed8",
+          "coreQuestions": [
+            "遮擋和投影大小各能排除哪些場景，為什麼僅憑輪廓排不出公分數？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_general-knowledge_ch01.md"
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch02",
+          "title": "側移一步，為什麼近處滑得快",
+          "textSha256": "72152532a72bf65d549e19a99a3843c73084c862e83826fd37d37b5db9cbe2d6",
+          "coreQuestions": [
+            "眼睛平移時，如何把相對影像位移與物體自己在動區分開來？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_general-knowledge_ch02.md"
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch03",
+          "title": "兩眼看到的那點不同，怎樣變成深度",
+          "textSha256": "67106c5efd4f92cad584e6011b73646fda78f71e9659ed5d4e119ffe68eb1285",
+          "coreQuestions": [
+            "在對應點、注視基準和觀看距離已知或缺失時，雙眼視差各支持什麼深度判斷？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_general-knowledge_ch03.md"
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch04",
+          "title": "地面花紋與雙眼意見不同時聽誰的",
+          "textSha256": "f28041ae033e4b6e1546873684b97a0aba88be09de465af8f80a7c590da8e316",
+          "coreQuestions": [
+            "怎麼用各線索單獨的辨別精度，預測兩者略為矛盾時表面看來朝哪裡傾斜？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_general-knowledge_ch04.md"
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch05",
+          "title": "螢幕上的東西凸出來，眼睛對焦在哪",
+          "textSha256": "41117b6b82731343977e32cca4170160186c5de96e7f66791021a7e653d7d611",
+          "coreQuestions": [
+            "立體顯示的會聚距離與焦距需求如何分開，哪種對照可以檢驗衝突的影響？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_general-knowledge_ch05.md"
+        },
+        {
+          "chapterId": "2026-11-29_general-knowledge_ch06",
+          "title": "看得出前後，就能把東西放穩嗎",
+          "textSha256": "59161e8d45519d02888ebd81959cf1b4bf286f5251d102969b6366f60e086ce9",
+          "coreQuestions": [
+            "如何用不同的真實間距、觀察條件與回應方式，分開檢驗看出前後、估量距離及手部動作？"
+          ],
+          "textUrl": "https://guizhan21.github.io/chapters/2026-11-29_general-knowledge_ch06.md"
         }
       ]
     }
